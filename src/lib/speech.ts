@@ -1,7 +1,8 @@
-// Narração com a voz do próprio navegador (Web Speech API, pt-BR).
-// Quando houver gravações, `playClip` toca arquivos de public/sounds no lugar.
+// Narração com a voz do próprio navegador (Web Speech API, pt-BR), intercalada
+// com gravações de public/sounds via `say(...)`.
 
 import { getSettings } from './settings'
+import { playClipUrl, stopClip } from './sfx'
 
 const synth: SpeechSynthesis | null = 'speechSynthesis' in window ? window.speechSynthesis : null
 export const speechSupported = synth !== null
@@ -39,8 +40,7 @@ interface SpeakOptions {
   pitch?: number
 }
 
-/** Fala o texto, interrompendo a fala anterior. Resolve quando terminar (ou for interrompida). */
-export function speak(text: string, { rate = 0.85, pitch = 1.15 }: SpeakOptions = {}): Promise<void> {
+function speakNow(text: string, { rate = 0.85, pitch = 1.15 }: SpeakOptions = {}): Promise<void> {
   if (!canSpeak() || !text) return Promise.resolve()
   synth!.cancel()
 
@@ -68,31 +68,48 @@ export function speak(text: string, { rate = 0.85, pitch = 1.15 }: SpeakOptions 
   })
 }
 
+/** Um passo de uma sequência: texto falado ou gravação de public/sounds. */
+export type Part =
+  | string
+  | { text: string; pitch?: number }
+  /** `fallback` é falado se a gravação não carregar. */
+  | { clip: string; fallback?: string }
+
+let sequence = 0
+
+/**
+ * Fala/toca as partes em ordem. Uma chamada nova interrompe a anterior.
+ * Resolve quando termina ou é interrompida.
+ */
+export async function say(...parts: Part[]): Promise<void> {
+  const id = ++sequence
+  synth?.cancel()
+  stopClip()
+  for (const part of parts) {
+    if (id !== sequence) return
+    if (typeof part === 'string') {
+      await speakNow(part)
+    } else if ('text' in part) {
+      await speakNow(part.text, { pitch: part.pitch })
+    } else {
+      try {
+        await playClipUrl(`${import.meta.env.BASE_URL}sounds/${part.clip}`)
+      } catch {
+        if (part.fallback && id === sequence) await speakNow(part.fallback, { pitch: 1.3 })
+      }
+    }
+  }
+}
+
+/** Fala um texto, interrompendo qualquer fala/som anterior. */
+export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
+  return say({ text, pitch: options.pitch })
+}
+
 export function stopSpeaking() {
+  sequence++
   synth?.cancel()
   stopClip()
-}
-
-let clip: HTMLAudioElement | null = null
-
-/** Toca um arquivo de public/sounds. Rejeita se o arquivo não existir ou falhar. */
-export function playClip(file: string): Promise<void> {
-  if (!getSettings().sound) return Promise.resolve()
-  stopClip()
-  synth?.cancel()
-  return new Promise((resolve, reject) => {
-    const a = new Audio(`${import.meta.env.BASE_URL}sounds/${file}`)
-    clip = a
-    a.onended = () => resolve()
-    a.onerror = () => reject(new Error(`som não encontrado: ${file}`))
-    a.play().catch(reject)
-  })
-}
-
-function stopClip() {
-  if (!clip) return
-  clip.pause()
-  clip = null
 }
 
 // iOS só libera a fala depois de uma primeira fala disparada por um toque.

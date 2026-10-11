@@ -13,8 +13,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg', 'favicon.ico', 'apple-touch-icon-180x180.png'],
       manifest: {
-        name: 'Conta pra Mim',
-        short_name: 'Conta pra Mim',
+        name: 'Fala Falinha',
+        short_name: 'Fala Falinha',
         description: 'Histórias e brincadeiras para bebês aprenderem a falar.',
         lang: 'pt-BR',
         start_url: './',

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useAnimationControls, useIsPresent } from 'framer-motion'
 import type { Hotspot, StoryPage } from '../../types'
 import { playPop, playSuccess } from '../../lib/sfx'
-import { playClip, speak, stopSpeaking, wait } from '../../lib/speech'
+import { say, speak, stopSpeaking, wait } from '../../lib/speech'
 import { useSettings } from '../../lib/settings'
 
 /** Quanto tempo a narração espera a criança tentar completar a frase. */
@@ -26,7 +26,7 @@ export function StoryPageView({ page, background }: Props) {
     setRevealed(true)
     setYourTurn(false)
     playSuccess()
-    void speak(page.reveal, { pitch: 1.25 })
+    void say({ text: page.reveal, pitch: 1.25 }, ...(page.revealAudio ? [{ clip: page.revealAudio }] : []))
   }
 
   // Ao trocar de página a antiga continua montada durante a animação de saída;
@@ -150,8 +150,9 @@ function HotspotItem({ hotspot }: { hotspot: Hotspot }) {
 
   function onTap() {
     if (hotspot.audio) {
-      // Gravação real; se faltar o arquivo, cai para a voz.
-      playClip(hotspot.audio).catch(() => speak(hotspotSpeech(hotspot), { pitch: 1.3 }))
+      // Som de verdade primeiro, depois o nome ("[muuu] vaca!").
+      // Se a gravação falhar, a voz fala "vaca! muuu!".
+      void say({ clip: hotspot.audio, fallback: hotspotSpeech(hotspot) }, { text: hotspot.word, pitch: 1.3 })
     } else {
       playPop()
       void speak(hotspotSpeech(hotspot), { pitch: 1.3 })

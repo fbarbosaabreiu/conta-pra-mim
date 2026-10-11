@@ -1,0 +1,122 @@
+[
+  {
+    "id": "vaca",
+    "file": "vaca.mp3",
+    "title": "Mudchute cow 1.ogg",
+    "author": "Secretlondon",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Mudchute_cow_1.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "porco",
+    "file": "porco.mp3",
+    "title": "Pig grunt - Erdie.ogg",
+    "author": "erdie",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pig_grunt_-_Erdie.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "pato",
+    "file": "pato.mp3",
+    "title": "Domestic duck sound 01.wav",
+    "author": "Ganesh Mohan T",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Domestic_duck_sound_01.wav",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "ovelha",
+    "file": "ovelha.mp3",
+    "title": "Sheep bleating.ogg",
+    "author": "earthcalling",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Sheep_bleating.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "galo",
+    "file": "galo.mp3",
+    "title": "Young rooster crowing.ogg",
+    "author": "Filo gèn'",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Young_rooster_crowing.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "galinha",
+    "file": "galinha.mp3",
+    "title": "Hen announcing shes lain an egg.ogg",
+    "author": "alys",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Hen_announcing_shes_lain_an_egg.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "gato",
+    "file": "gato.mp3",
+    "title": "Maullido de gata hembra joven.ogg",
+    "author": "George Miquilena",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Maullido_de_gata_hembra_joven.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "cachorro",
+    "file": "cachorro.mp3",
+    "title": "Barking of a dog.ogg",
+    "author": "Amada44",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barking_of_a_dog.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "sapo",
+    "file": "sapo.mp3",
+    "title": "Banded Bull Frog Call.ogg",
+    "author": "Inspector",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Banded_Bull_Frog_Call.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "leao",
+    "file": "leao.mp3",
+    "title": "Lionroar.wav",
+    "author": "Jonathan Growcott, Alex Lobora, Andrew Markham, Charlotte E. Searle, Johan Wahlström, Matthew Wijers, Benno I. Simmons",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lionroar.wav",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "abelha",
+    "file": "abelha.mp3",
+    "title": "Bombus buzz.ogg",
+    "author": "Mysid",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Bombus_buzz.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "passarinho",
+    "file": "passarinho.mp3",
+    "title": "House Sparrows chirping.ogg",
+    "author": "QWerk",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:House_Sparrows_chirping.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  }
+]

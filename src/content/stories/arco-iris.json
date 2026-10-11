@@ -41,7 +41,7 @@
     {
       "background": "linear-gradient(#f0fdf4, #bbf7d0)",
       "elements": [
-        { "emoji": "🐸", "word": "sapo", "sound": "verde!", "x": 58, "y": 52, "size": 30 },
+        { "emoji": "🐸", "word": "sapo", "sound": "verde!", "audio": "sapo.mp3", "x": 58, "y": 52, "size": 30 },
         { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
       ],
       "text": "Olha, um sapo! O sapo é...",
@@ -66,7 +66,7 @@
       "elements": [
         { "emoji": "☁️", "word": "nuvem", "x": 30, "y": 28, "size": 20 },
         { "emoji": "☁️", "word": "nuvem", "x": 74, "y": 40, "size": 16 },
-        { "emoji": "🐦", "word": "passarinho", "sound": "piu piu!", "x": 56, "y": 64, "size": 14 },
+        { "emoji": "🐦", "word": "passarinho", "sound": "piu piu!", "audio": "passarinho.mp3", "x": 56, "y": 64, "size": 14 },
         { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 80, "size": 15 }
       ],
       "text": "Lelê olhou para cima. O céu é...",

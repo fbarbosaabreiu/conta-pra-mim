@@ -5,8 +5,8 @@ export interface Hotspot {
   /** Onomatopeia ou complemento mostrado abaixo da palavra (ex.: "muuu!"). */
   sound?: string
   /**
-   * Arquivo em public/sounds tocado ao tocar (ex.: "vaca.mp3").
-   * Sem arquivo, a voz do navegador fala a palavra e o som.
+   * Gravação em public/sounds tocada ao tocar (ex.: "vaca.mp3"), seguida do nome.
+   * Sem gravação (ou se falhar), a voz fala a palavra e o som.
    */
   audio?: string
   /** Posição do centro, em % da cena. */
@@ -26,6 +26,8 @@ export interface StoryPage {
    * a criança tenta completar e depois toca para revelar.
    */
   reveal?: string
+  /** Gravação tocada depois de revelar (ex.: "vaca.mp3" depois do "muuu!"). */
+  revealAudio?: string
   /** Cor do texto revelado (ex.: a própria cor na história das cores). */
   accent?: string
   /** Palavras do texto que ficam em destaque. */

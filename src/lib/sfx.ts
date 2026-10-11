@@ -47,6 +47,59 @@ function withAudio(play: (c: AudioContext) => void) {
   else void c.resume().then(() => play(c), () => {})
 }
 
+// ---------- Gravações (MP3) ----------
+// Tocadas pelo mesmo AudioContext (já destravado no primeiro toque), o que funciona
+// no iOS mesmo fora de um gesto — ao contrário de new Audio().play().
+
+const buffers = new Map<string, Promise<AudioBuffer>>()
+let clipSource: AudioBufferSourceNode | null = null
+
+function loadClip(c: AudioContext, url: string): Promise<AudioBuffer> {
+  let p = buffers.get(url)
+  if (!p) {
+    p = fetch(url)
+      .then((r) => {
+        if (!r.ok) throw new Error(`${r.status} ${url}`)
+        return r.arrayBuffer()
+      })
+      .then((data) => c.decodeAudioData(data))
+    p.catch(() => buffers.delete(url))
+    buffers.set(url, p)
+  }
+  return p
+}
+
+/** Toca um arquivo de áudio; resolve quando termina (ou é interrompido). */
+export async function playClipUrl(url: string): Promise<void> {
+  if (!getSettings().sound) return
+  const c = getContext()
+  if (!c) throw new Error('sem Web Audio')
+  if (c.state !== 'running') await c.resume()
+  const buffer = await loadClip(c, url)
+  stopClip()
+  await new Promise<void>((resolve) => {
+    const src = c.createBufferSource()
+    src.buffer = buffer
+    src.connect(c.destination)
+    src.onended = () => {
+      if (clipSource === src) clipSource = null
+      resolve()
+    }
+    clipSource = src
+    src.start()
+  })
+}
+
+export function stopClip() {
+  const src = clipSource
+  clipSource = null
+  try {
+    src?.stop()
+  } catch {
+    // já parou
+  }
+}
+
 function note(c: AudioContext, freq: number, at: number, dur: number, type: OscillatorType, vol: number) {
   const osc = c.createOscillator()
   const gain = c.createGain()

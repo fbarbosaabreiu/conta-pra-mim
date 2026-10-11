@@ -9,7 +9,7 @@ import { makeQuestion, themes, type QuizOption, type ThemeId } from './questions
 import { OptionButton, OptionVisual } from './OptionButton'
 import { CountScene } from './CountScene'
 import { VoiceToggle } from '../../components/AudioToggles'
-import { speak, stopSpeaking } from '../../lib/speech'
+import { say, speak, stopSpeaking, type Part } from '../../lib/speech'
 
 const TOTAL = 5
 /** Acertos de primeira necessários para passar de 2 para 3 opções. */
@@ -33,26 +33,33 @@ function QuizSession({ themeId, title }: { themeId: ThemeId; title: string }) {
 
   const answer = question.options.find((o) => o.id === question.answerId)!
 
+  // A pergunta falada, seguida do som de verdade quando é "Quem faz…?".
+  const promptParts: Part[] = [question.prompt, ...(question.promptAudio ? [{ clip: question.promptAudio }] : [])]
+  const askAgain = () => void say(...promptParts)
+
   // Lê cada pergunta nova em voz alta.
   useEffect(() => {
-    const t = setTimeout(() => void speak(question.prompt), 400)
+    const t = setTimeout(askAgain, 400)
     return () => clearTimeout(t)
+    // Uma vez por pergunta.
   }, [question])
 
   useEffect(() => stopSpeaking, [])
+
+  const clipOf = (o: QuizOption): Part[] => (o.audio ? [{ clip: o.audio, fallback: o.soundText }] : [])
 
   function pickOption(option: QuizOption): boolean {
     if (celebrating) return true
     if (option.id === question.answerId) {
       playSuccess()
-      void speak(`Isso! ${question.success}`)
+      void say(`Isso! ${question.success}`, ...clipOf(option))
       if (!missed) setFirstTryHits((n) => n + 1)
       setCelebrating(true)
       return true
     }
     playTryAgain()
-    // Nomeia o que a criança tocou e repete a pergunta: o erro também ensina.
-    void speak(`${option.thisIs} ${question.prompt}`)
+    // Nomeia (e toca o som de) o que a criança tocou, depois repete a pergunta: o erro também ensina.
+    void say(option.thisIs, ...clipOf(option), ...promptParts)
     setMissed(true)
     return false
   }
@@ -108,7 +115,7 @@ function QuizSession({ themeId, title }: { themeId: ThemeId; title: string }) {
         className="flex flex-1 flex-col items-center justify-center gap-6"
       >
         <h2 className="text-center text-4xl font-bold sm:text-5xl">
-          <button onClick={() => void speak(question.prompt)} aria-label={`Ouvir: ${question.prompt}`}>
+          <button onClick={askAgain} aria-label={`Ouvir: ${question.prompt}`}>
             {question.prompt}
           </button>
         </h2>
@@ -141,7 +148,7 @@ function QuizSession({ themeId, title }: { themeId: ThemeId; title: string }) {
             title="Isso!"
             subtitle={question.success}
             onDone={nextQuestion}
-            durationMs={2800}
+            durationMs={answer.audio ? 3800 : 2800}
           />
         )}
       </AnimatePresence>

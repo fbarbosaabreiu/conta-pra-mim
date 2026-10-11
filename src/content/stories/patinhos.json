@@ -57,7 +57,7 @@
     {
       "background": "linear-gradient(#fde68a 0%, #fed7aa 38%, #7dd3fc 38%, #38bdf8 100%)",
       "elements": [
-        { "emoji": "🦆", "word": "mamãe pata", "sound": "quá quá!", "x": 26, "y": 58, "size": 26 },
+        { "emoji": "🦆", "word": "mamãe pata", "sound": "quá quá!", "audio": "pato.mp3", "x": 26, "y": 58, "size": 26 },
         { "emoji": "🐥", "word": "1", "x": 52, "y": 72, "size": 10 },
         { "emoji": "🐥", "word": "2", "x": 62, "y": 66, "size": 10 },
         { "emoji": "🐥", "word": "3", "x": 72, "y": 74, "size": 10 },

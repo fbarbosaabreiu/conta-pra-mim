@@ -18,10 +18,15 @@ export interface QuizOption {
   number?: number
   /** Falado quando a criança toca nesta opção errada: "Esse é o cachorro". */
   thisIs: string
+  /** Gravação do bicho (public/sounds) e o som por escrito, usado se ela falhar. */
+  audio?: string
+  soundText?: string
 }
 
 export interface Question {
   prompt: string
+  /** Gravação tocada logo depois da pergunta ("Quem faz…?" + o som de verdade). */
+  promptAudio?: string
   answerId: string
   options: QuizOption[]
   /** Comemoração mostrada no acerto, ex.: "O gato faz miau!". */
@@ -56,7 +61,9 @@ function animalQuestion(numOptions: number, avoidId?: string): Question {
     id: a.id,
     label: a.name,
     emoji: a.emoji,
-    thisIs: `${a.article === 'a' ? 'Essa' : 'Esse'} é ${a.article} ${a.name}, faz ${a.sound}.`,
+    thisIs: `${a.article === 'a' ? 'Essa' : 'Esse'} é ${a.article} ${a.name}.`,
+    audio: a.audio,
+    soundText: a.sound,
   }))
   const subject = `${answer.article} ${answer.name}`
 
@@ -70,6 +77,7 @@ function animalQuestion(numOptions: number, avoidId?: string): Question {
   }
   return {
     prompt: `Quem faz “${answer.sound}”?`,
+    promptAudio: answer.audio,
     answerId: answer.id,
     options: opts,
     success: `${capitalize(subject)} faz ${answer.sound}!`,

@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { motion } from 'framer-motion'
 import { Screen } from '../components/Screen'
 import { Tile } from '../components/Tile'
@@ -23,7 +24,7 @@ export default function Home() {
           >
             🧸
           </motion.div>
-          <h1 className="mt-2 text-5xl font-bold sm:text-6xl">Conta pra Mim</h1>
+          <h1 className="mt-2 text-5xl font-bold sm:text-6xl">Fala Falinha</h1>
           <p className="mt-2 text-xl opacity-70">Histórias e brincadeiras para falar</p>
         </div>
 
@@ -31,6 +32,10 @@ export default function Home() {
           <Tile to="/historias" emoji="📖" label="Histórias" color="var(--color-coral)" big />
           <Tile to="/quiz" emoji="🎯" label="Brincar" color="var(--color-sky)" big />
         </div>
+
+        <Link to="/creditos" className="text-base underline opacity-60">
+          Créditos dos sons
+        </Link>
       </div>
     </Screen>
   )
