@@ -63,6 +63,19 @@ Para cada idioma: lista mostra todas as histórias; cada história até a tela d
 cada página, o ❓ toca a gravação, tocar no bicho toca o som); os 3 quizzes até o troféu; cada som da
 tela de créditos toca; nenhum erro de JavaScript nem arquivo faltando. Leva vários minutos.
 
+## 4b. Login (Supabase simulado)
+
+Suba um segundo servidor com chaves de mentira e rode o teste — ele responde no lugar do Supabase:
+
+```bash
+VITE_SUPABASE_URL=https://fake-projeto.supabase.co VITE_SUPABASE_ANON_KEY=teste npx vite --port 5174 &
+APP_URL=http://localhost:5174/# node .claude/skills/validar-app/scripts/auth.mjs <pasta-de-saida>
+```
+
+Confere: sem sessão só abre a tela de entrar (e a privacidade); e-mail inválido e código errado mostram
+aviso; código certo entra e a sessão sobrevive a recarregar; “Sair” e “Apagar minha conta” funcionam.
+Pare o servidor da porta 5174 no fim.
+
 ## 5. Qualidade dos sons
 
 ```bash

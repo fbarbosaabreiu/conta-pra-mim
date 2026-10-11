@@ -8,6 +8,10 @@ import { useLang, useT } from '../i18n'
 import { HOW_TO_LINK } from './HowTo'
 import { PRIVACY_LINK } from './Privacy'
 import { BedtimeTile } from '../modules/bedtime/BedtimeTile'
+import { authEnabled, signOut } from '../lib/auth'
+import type { Lang } from '../i18n'
+
+const SIGN_OUT: Record<Lang, string> = { pt: 'Sair', en: 'Sign out', es: 'Salir', fr: 'Se déconnecter' }
 
 export default function Home() {
   const t = useT()
@@ -53,6 +57,14 @@ export default function Home() {
           <Link to="/privacidade" className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60">
             {PRIVACY_LINK[lang]}
           </Link>
+          {authEnabled && (
+            <button
+              onClick={() => void signOut()}
+              className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60"
+            >
+              {SIGN_OUT[lang]}
+            </button>
+          )}
         </div>
       </div>
     </Screen>

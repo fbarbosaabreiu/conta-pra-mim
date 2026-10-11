@@ -5,6 +5,7 @@ import { useLang, type Lang } from '../i18n'
 import { Screen } from '../components/Screen'
 import { analyticsEnabled, forgetMe, getDeviceId, setConsent, shortCode, useConsent } from '../lib/analytics'
 import { playTap } from '../lib/sfx'
+import { authEnabled, deleteAccount, signOut, useSession } from '../lib/auth'
 
 // Aviso de consentimento (tela inicial) e tela "Privacidade". Escrito para o adulto.
 
@@ -30,6 +31,13 @@ interface Copy {
   erase: string
   erased: string
   eraseFailed: string
+  accountTitle: string
+  account: string[]
+  signedInAs: (email: string) => string
+  signOut: string
+  deleteAccount: string
+  deleteConfirm: string
+  deleteFailed: string
 }
 
 const COPY: Record<Lang, Copy> = {
@@ -51,7 +59,7 @@ const COPY: Record<Lang, Copy> = {
       'Cidade e país aproximados, deduzidos da conexão de internet.',
     ],
     neverTitle: 'O que nunca é registrado',
-    never: ['Nomes, e-mail ou telefone.', 'Fotos, voz ou o que a criança fala.', 'Localização exata (GPS) ou o endereço de internet.'],
+    never: ['Nomes, e-mail ou telefone (a medição nunca usa o e-mail da sua conta).', 'Fotos, voz ou o que a criança fala.', 'Localização exata (GPS) ou o endereço de internet.'],
     why: 'Os dados servem só para saber quais histórias as famílias mais usam e melhorar o app. Não são vendidos nem compartilhados.',
     statusOn: 'A medição está ligada.',
     statusOff: 'A medição está desligada.',
@@ -61,6 +69,17 @@ const COPY: Record<Lang, Copy> = {
     erase: 'Apagar os dados deste aparelho',
     erased: 'Pronto: os dados deste aparelho foram apagados e a medição foi desligada.',
     eraseFailed: 'A medição foi desligada, mas não deu para apagar agora (sem internet?). Tente de novo mais tarde.',
+    accountTitle: 'Sua conta',
+    account: [
+      'Para entrar, guardamos só o e-mail do adulto, no Supabase (servidores em São Paulo, Brasil).',
+      'O e-mail serve apenas para o acesso: não mandamos propaganda nem o compartilhamos.',
+      'Você pode apagar a conta quando quiser, aqui embaixo.',
+    ],
+    signedInAs: (e) => `Conectado como ${e}`,
+    signOut: 'Sair',
+    deleteAccount: 'Apagar minha conta',
+    deleteConfirm: 'Apagar sua conta e seu e-mail? Isso não pode ser desfeito.',
+    deleteFailed: 'Não deu para apagar agora (sem internet?). Tente de novo mais tarde.',
   },
   en: {
     link: 'Privacy',
@@ -80,7 +99,7 @@ const COPY: Record<Lang, Copy> = {
       'Approximate city and country, inferred from the internet connection.',
     ],
     neverTitle: 'What is never recorded',
-    never: ['Names, email or phone number.', 'Photos, voice or what your child says.', 'Exact location (GPS) or the IP address.'],
+    never: ['Names, email or phone number (measurement never uses your account email).', 'Photos, voice or what your child says.', 'Exact location (GPS) or the IP address.'],
     why: 'The data is only used to learn which stories families use most and to improve the app. It is never sold or shared.',
     statusOn: 'Measurement is on.',
     statusOff: 'Measurement is off.',
@@ -90,6 +109,17 @@ const COPY: Record<Lang, Copy> = {
     erase: 'Erase this device’s data',
     erased: 'Done: this device’s data was erased and measurement was turned off.',
     eraseFailed: 'Measurement was turned off, but the data couldn’t be erased right now (offline?). Please try again later.',
+    accountTitle: 'Your account',
+    account: [
+      'To sign in, we only store the grown-up’s email, at Supabase (servers in São Paulo, Brazil).',
+      'The email is only used for access: we don’t send ads or share it.',
+      'You can delete your account at any time, below.',
+    ],
+    signedInAs: (e) => `Signed in as ${e}`,
+    signOut: 'Sign out',
+    deleteAccount: 'Delete my account',
+    deleteConfirm: 'Delete your account and email? This cannot be undone.',
+    deleteFailed: 'Couldn’t delete it now (offline?). Please try again later.',
   },
   es: {
     link: 'Privacidad',
@@ -109,7 +139,7 @@ const COPY: Record<Lang, Copy> = {
       'Ciudad y país aproximados, deducidos de la conexión a internet.',
     ],
     neverTitle: 'Qué nunca se registra',
-    never: ['Nombres, correo o teléfono.', 'Fotos, voz ni lo que dice el niño.', 'Ubicación exacta (GPS) ni la dirección IP.'],
+    never: ['Nombres, correo o teléfono (la medición nunca usa el correo de tu cuenta).', 'Fotos, voz ni lo que dice el niño.', 'Ubicación exacta (GPS) ni la dirección IP.'],
     why: 'Los datos solo sirven para saber qué cuentos usan más las familias y mejorar la app. Nunca se venden ni se comparten.',
     statusOn: 'La medición está activada.',
     statusOff: 'La medición está desactivada.',
@@ -119,6 +149,17 @@ const COPY: Record<Lang, Copy> = {
     erase: 'Borrar los datos de este dispositivo',
     erased: 'Listo: se borraron los datos de este dispositivo y se desactivó la medición.',
     eraseFailed: 'La medición se desactivó, pero no se pudieron borrar los datos ahora (¿sin internet?). Inténtalo más tarde.',
+    accountTitle: 'Tu cuenta',
+    account: [
+      'Para entrar, solo guardamos el correo del adulto, en Supabase (servidores en São Paulo, Brasil).',
+      'El correo solo sirve para el acceso: no enviamos publicidad ni lo compartimos.',
+      'Puedes borrar tu cuenta cuando quieras, aquí abajo.',
+    ],
+    signedInAs: (e) => `Conectado como ${e}`,
+    signOut: 'Salir',
+    deleteAccount: 'Borrar mi cuenta',
+    deleteConfirm: '¿Borrar tu cuenta y tu correo? No se puede deshacer.',
+    deleteFailed: 'No se pudo borrar ahora (¿sin internet?). Inténtalo más tarde.',
   },
   fr: {
     link: 'Confidentialité',
@@ -138,7 +179,7 @@ const COPY: Record<Lang, Copy> = {
       'Ville et pays approximatifs, déduits de la connexion internet.',
     ],
     neverTitle: 'Ce qui n’est jamais enregistré',
-    never: ['Noms, e-mail ou téléphone.', 'Photos, voix ou ce que dit l’enfant.', 'Position exacte (GPS) ou l’adresse IP.'],
+    never: ['Noms, e-mail ou téléphone (la mesure n’utilise jamais l’e-mail de votre compte).', 'Photos, voix ou ce que dit l’enfant.', 'Position exacte (GPS) ou l’adresse IP.'],
     why: 'Les données servent uniquement à savoir quelles histoires les familles utilisent le plus et à améliorer l’appli. Elles ne sont jamais vendues ni partagées.',
     statusOn: 'La mesure est activée.',
     statusOff: 'La mesure est désactivée.',
@@ -148,6 +189,17 @@ const COPY: Record<Lang, Copy> = {
     erase: 'Effacer les données de cet appareil',
     erased: 'C’est fait : les données de cet appareil ont été effacées et la mesure est désactivée.',
     eraseFailed: 'La mesure est désactivée, mais l’effacement n’a pas pu se faire (hors ligne ?). Réessayez plus tard.',
+    accountTitle: 'Votre compte',
+    account: [
+      'Pour se connecter, nous gardons uniquement l’e-mail de l’adulte, chez Supabase (serveurs à São Paulo, Brésil).',
+      'L’e-mail sert seulement à l’accès : pas de publicité, aucun partage.',
+      'Vous pouvez supprimer votre compte à tout moment, ci-dessous.',
+    ],
+    signedInAs: (e) => `Connecté : ${e}`,
+    signOut: 'Se déconnecter',
+    deleteAccount: 'Supprimer mon compte',
+    deleteConfirm: 'Supprimer votre compte et votre e-mail ? C’est définitif.',
+    deleteFailed: 'Impossible de supprimer maintenant (hors ligne ?). Réessayez plus tard.',
   },
 }
 
@@ -216,6 +268,8 @@ export default function Privacy() {
   const consent = useConsent()
   const [message, setMessage] = useState<string | null>(null)
   const device = consent === 'granted' ? getDeviceId() : null
+  const session = useSession()
+  const [accountMsg, setAccountMsg] = useState<string | null>(null)
 
   return (
     <Screen title={t.title} back="/">
@@ -238,6 +292,44 @@ export default function Privacy() {
           </ul>
         </section>
         <p className="opacity-80">{t.why}</p>
+
+        {authEnabled && (
+          <section>
+            <h2 className="mb-2 text-xl font-semibold">{t.accountTitle}</h2>
+            <ul className="flex flex-col gap-1.5">
+              {t.account.map((c) => (
+                <li key={c}>🔐 {c}</li>
+              ))}
+            </ul>
+            {session && (
+              <div className="mt-3 rounded-3xl bg-white p-4 shadow-sm">
+                <p className="font-semibold">{t.signedInAs(session.user.email ?? '')}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <button
+                    onClick={() => void signOut()}
+                    className="min-h-11 rounded-full bg-black/5 px-5 py-2.5 font-semibold active:scale-95"
+                  >
+                    {t.signOut}
+                  </button>
+                  <button
+                    onClick={async () => {
+                      if (!window.confirm(t.deleteConfirm)) return
+                      try {
+                        await deleteAccount()
+                      } catch {
+                        setAccountMsg(t.deleteFailed)
+                      }
+                    }}
+                    className="min-h-11 rounded-full bg-coral px-5 py-2.5 font-semibold text-white active:scale-95"
+                  >
+                    {t.deleteAccount}
+                  </button>
+                </div>
+                {accountMsg && <p className="mt-2 text-base">{accountMsg}</p>}
+              </div>
+            )}
+          </section>
+        )}
 
         {analyticsEnabled && (
           <section className="rounded-3xl bg-white p-4 shadow-sm">

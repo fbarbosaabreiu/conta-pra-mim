@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Navigate, Route, Routes } from 'react-router'
+import { Navigate, Route, Routes, useLocation } from 'react-router'
 import { LANG_INFO, tr, useLang } from './i18n'
 import Privacy, { ConsentBanner } from './pages/Privacy'
 import { initAnalytics } from './lib/analytics'
@@ -15,6 +15,8 @@ import QuizRunner from './modules/quiz/QuizRunner'
 import BedtimeHome from './modules/bedtime/BedtimeHome'
 import BedtimePlayer from './modules/bedtime/BedtimePlayer'
 import { bedtimeAnalyticsId, bedtimeStories } from './content/bedtime'
+import { authEnabled, useSession } from './lib/auth'
+import Login from './pages/Login'
 
 /** Avaliado a cada vez que "/" abre (o App não re-renderiza ao trocar de rota). */
 function HomeOrOnboarding() {
@@ -36,6 +38,14 @@ export default function App() {
       ]),
     [],
   )
+
+  // Login (só quando o Supabase está configurado): sem sessão, abre a tela de entrar.
+  // A privacidade fica aberta, para ser lida antes de criar a conta.
+  const session = useSession()
+  const { pathname } = useLocation()
+  if (authEnabled && !session && pathname !== '/privacidade') {
+    return session === undefined ? null : <Login />
+  }
 
   return (
     <>
