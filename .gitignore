@@ -2,3 +2,7 @@ node_modules
 dist
 dev-dist
 *.local
+validacao
+# Worker de medição: senha local e estado do wrangler
+analytics/.dev.vars
+analytics/.wrangler

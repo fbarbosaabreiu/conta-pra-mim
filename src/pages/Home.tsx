@@ -6,6 +6,7 @@ import { SoundToggle, VoiceToggle } from '../components/AudioToggles'
 import { LanguagePicker } from '../components/LanguagePicker'
 import { useLang, useT } from '../i18n'
 import { HOW_TO_LINK } from './HowTo'
+import { PRIVACY_LINK } from './Privacy'
 
 export default function Home() {
   const t = useT()
@@ -40,12 +41,15 @@ export default function Home() {
 
         <LanguagePicker />
 
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <Link to="/como-usar" className="text-base underline opacity-60">
             ❓ {HOW_TO_LINK[lang]}
           </Link>
           <Link to="/creditos" className="text-base underline opacity-60">
             {t.soundCredits}
+          </Link>
+          <Link to="/privacidade" className="text-base underline opacity-60">
+            {PRIVACY_LINK[lang]}
           </Link>
         </div>
       </div>

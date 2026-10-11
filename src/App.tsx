@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router'
-import { LANG_INFO, useLang } from './i18n'
+import { LANG_INFO, tr, useLang } from './i18n'
+import Privacy, { ConsentBanner } from './pages/Privacy'
+import { initAnalytics } from './lib/analytics'
+import { stories } from './content/stories'
 import Home from './pages/Home'
 import Credits from './pages/Credits'
 import HowTo from './pages/HowTo'
@@ -21,7 +24,12 @@ export default function App() {
     document.documentElement.lang = LANG_INFO[lang].locale
   }, [lang])
 
+  // Medição de uso (só envia algo se a família aceitar no aviso da tela inicial).
+  useEffect(() => initAnalytics(stories.map((s) => ({ id: s.id, title: tr(s.title, 'pt') }))), [])
+
   return (
+    <>
+    <ConsentBanner />
     <Routes>
       {/* Primeira abertura: mostra o "Como usar" (que tem "Pular"). Links diretos não são desviados. */}
       <Route path="/" element={<HomeOrOnboarding />} />
@@ -31,7 +39,9 @@ export default function App() {
       <Route path="/quiz" element={<QuizHome />} />
       <Route path="/quiz/:theme" element={<QuizRunner />} />
       <Route path="/creditos" element={<Credits />} />
+      <Route path="/privacidade" element={<Privacy />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    </>
   )
 }

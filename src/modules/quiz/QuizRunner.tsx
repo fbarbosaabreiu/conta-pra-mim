@@ -6,6 +6,7 @@ import { Celebration } from '../../components/Celebration'
 import { Narrator } from '../../components/Narrator'
 import { FallingStars } from '../../components/FallingStars'
 import { markQuizDone } from '../../lib/progress'
+import { track } from '../../lib/analytics'
 import { playSuccess, playTap, playTryAgain } from '../../lib/sfx'
 import { say, speak, stopSpeaking, wait, type Part } from '../../lib/speech'
 import { NUDGE, OOPS, PRAISE, QUIZ_DONE, vary } from '../../lib/phrases'
@@ -74,6 +75,13 @@ function QuizSession({ themeId, lang, title }: { themeId: ThemeId; lang: Lang; t
   }, [question, pokes, celebrating, finished])
 
   useEffect(() => stopSpeaking, [])
+  // Uma vez por sessão de quiz (o ref evita contar duas vezes quando o React repete o efeito).
+  const started = useRef(false)
+  useEffect(() => {
+    if (started.current) return
+    started.current = true
+    track('quiz_start', { theme: themeId })
+  }, [themeId])
 
   const clipOf = (o: QuizOption): Part[] => (o.audio ? [{ clip: o.audio, fallback: o.soundText }] : [])
   const poke = () => setPokes((n) => n + 1)
@@ -109,6 +117,7 @@ function QuizSession({ themeId, lang, title }: { themeId: ThemeId; lang: Lang; t
     if (step + 1 >= TOTAL) {
       const text = vary(QUIZ_DONE[lang])
       markQuizDone(themeId)
+      track('quiz_complete', { theme: themeId, value: firstTryHits.current })
       setDoneText(text)
       setFinished(true)
       void wait(500).then(() => speak(text))
@@ -122,6 +131,7 @@ function QuizSession({ themeId, lang, title }: { themeId: ThemeId; lang: Lang; t
 
   function restart() {
     playTap()
+    track('quiz_start', { theme: themeId })
     setStep(0)
     firstTryHits.current = 0
     setQuestion(makeQuestion(themeId, lang, 2))

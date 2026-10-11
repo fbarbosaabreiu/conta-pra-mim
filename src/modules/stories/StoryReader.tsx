@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { track } from '../../lib/analytics'
 import { Link, Navigate, useParams } from 'react-router'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Screen } from '../../components/Screen'
@@ -26,6 +27,14 @@ export default function StoryReader() {
   const story = getStory(id, lang)
   const [[index, dir], setPage] = useState<[number, number]>([0, 1])
 
+  // Uma vez por história aberta (o ref evita contar duas vezes quando o React repete o efeito).
+  const tracked = useRef<string | undefined>(undefined)
+  useEffect(() => {
+    if (!story || tracked.current === id) return
+    tracked.current = id
+    track('story_open', { story: story.id })
+  }, [id])
+
   if (!story) return <Navigate to="/historias" replace />
 
   const total = story.pages.length
@@ -36,6 +45,7 @@ export default function StoryReader() {
     if (next < 0 || next > total) return
     if (next === total) {
       markStoryRead(story!.id)
+      track('story_complete', { story: story!.id })
       playSuccess()
       void wait(700).then(() => speak(vary(STORY_END[lang])))
     } else {
@@ -46,6 +56,7 @@ export default function StoryReader() {
 
   function restart() {
     playTap()
+    track('story_open', { story: story!.id }) // "De novo!" conta como nova leitura
     setPage([0, 1])
   }
 

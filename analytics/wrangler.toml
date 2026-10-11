@@ -1,0 +1,22 @@
+# Medição de uso do Fala Falinha: recebe eventos anônimos do app e mostra um painel.
+# Publicar: veja analytics/README.md.
+name = "fala-falinha-analytics"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+# O painel serializa uma função para dentro da página; sem isto o esbuild insere
+# chamadas a `__name(...)` que não existem no navegador.
+keep_names = false
+
+# Endereço próprio (o Cloudflare cria o DNS e o certificado sozinho).
+routes = [{ pattern = "api.falafalinha.com", custom_domain = true }]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fala-falinha-analytics"
+database_id = "40be2272-91eb-44de-a029-8c5ca556ee1b"
+
+[vars]
+# Sites que podem enviar eventos (o app publicado e o servidor de desenvolvimento).
+ALLOWED_ORIGINS = "https://falafalinha.com,http://falafalinha.com,https://www.falafalinha.com,http://www.falafalinha.com,https://fbarbosaabreiu.github.io,http://localhost:5173"
+
+# A senha do painel NÃO fica aqui: `wrangler secret put DASHBOARD_PASSWORD`.

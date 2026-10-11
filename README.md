@@ -69,3 +69,13 @@ o quiz e a voz da narração (cada idioma usa uma voz do próprio idioma).
   é uma lista por idioma). Um texto igual em todas pode ser uma string só (ex.: `"word": "1"`). Bichos, cores e
   itens de contagem têm o nome por idioma e `"fem": true` quando são femininos naquela língua.
 - Francês: escreva com espaço normal antes de `!` `?` `:` `»`; o app troca por espaço inseparável.
+
+## Medição de uso
+
+Com o consentimento do adulto (aviso na tela inicial; tela **Privacidade** para mudar ou apagar os dados),
+o app envia eventos anônimos — app aberto, história aberta/concluída, quiz começado/concluído — para um
+Worker no Cloudflare (`analytics/`). Painel com senha: https://api.falafalinha.com/painel.
+
+- Cliente: `src/lib/analytics.ts` (fila, envio em lotes, código anônimo do aparelho, consentimento).
+- O endereço vem de `VITE_ANALYTICS_URL` (`.env.production`); em desenvolvimento não é definido e nada é enviado.
+- Servidor, painel e operação: `analytics/README.md`.
