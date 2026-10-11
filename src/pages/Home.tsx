@@ -7,6 +7,7 @@ import { LanguagePicker } from '../components/LanguagePicker'
 import { useLang, useT } from '../i18n'
 import { HOW_TO_LINK } from './HowTo'
 import { PRIVACY_LINK } from './Privacy'
+import { BedtimeTile } from '../modules/bedtime/BedtimeTile'
 
 export default function Home() {
   const t = useT()
@@ -37,6 +38,7 @@ export default function Home() {
         <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
           <Tile to="/historias" emoji="📖" label={t.stories} color="var(--color-coral)" big />
           <Tile to="/quiz" emoji="🎯" label={t.play} color="var(--color-sky)" big />
+          <BedtimeTile />
         </div>
 
         <LanguagePicker />

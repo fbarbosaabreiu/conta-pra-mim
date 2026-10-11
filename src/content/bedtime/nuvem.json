@@ -1,0 +1,79 @@
+{
+  "id": "nuvem",
+  "title": { "pt": "A nuvem que queria dormir", "en": "The cloud who wanted to sleep", "es": "La nube que quería dormir", "fr": "Le nuage qui voulait dormir" },
+  "cover": "☁️",
+  "sky": "linear-gradient(#17204a, #34407a 70%, #4a4f8c)",
+  "pages": [
+    {
+      "elements": [{ "emoji": "☁️", "x": 50, "y": 46, "size": 32 }],
+      "text": {
+        "pt": "Era uma vez uma nuvem branquinha e fofinha.",
+        "en": "Once upon a time there was a soft little white cloud.",
+        "es": "Había una vez una nube blanquita y suavecita.",
+        "fr": "Il était une fois un petit nuage tout blanc et tout doux."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "☁️", "x": 40, "y": 44, "size": 26 },
+        { "emoji": "🌤️", "x": 76, "y": 22, "size": 14 }
+      ],
+      "text": {
+        "pt": "Ela passeou o dia inteiro pelo céu azul.",
+        "en": "She drifted across the blue sky all day long.",
+        "es": "Paseó todo el día por el cielo azul.",
+        "fr": "Il s’est promené toute la journée dans le ciel bleu."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "☁️", "x": 50, "y": 44, "size": 28 },
+        { "emoji": "🌇", "x": 50, "y": 76, "size": 16 }
+      ],
+      "text": {
+        "pt": "Quando o sol foi embora, a nuvem bocejou: uaaa...",
+        "en": "When the sun went away, the cloud yawned: yaaawn...",
+        "es": "Cuando el sol se fue, la nube bostezó: aaah...",
+        "fr": "Quand le soleil est parti, le nuage a bâillé : aaah..."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "☁️", "x": 50, "y": 58, "size": 24 },
+        { "emoji": "⭐", "x": 24, "y": 24, "size": 9 },
+        { "emoji": "⭐", "x": 50, "y": 18, "size": 8 },
+        { "emoji": "⭐", "x": 78, "y": 28, "size": 9 }
+      ],
+      "text": {
+        "pt": "As estrelas acenderam uma por uma, para iluminar a cama dela.",
+        "en": "The stars lit up one by one, to light up her bed.",
+        "es": "Las estrellas se encendieron una por una, para iluminar su cama.",
+        "fr": "Les étoiles se sont allumées une à une, pour éclairer son lit."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 66, "y": 30, "size": 22 },
+        { "emoji": "☁️", "x": 38, "y": 60, "size": 22 }
+      ],
+      "text": {
+        "pt": "A Lua arrumou um cantinho macio no céu.",
+        "en": "The Moon made a soft little spot in the sky.",
+        "es": "La Luna le preparó un rinconcito suave en el cielo.",
+        "fr": "La Lune lui a préparé un petit coin tout doux dans le ciel."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "☁️", "x": 50, "y": 52, "size": 28 },
+        { "emoji": "💤", "x": 68, "y": 34, "size": 10 }
+      ],
+      "text": {
+        "pt": "E a nuvem dormiu, leve, levinha, até o amanhecer.",
+        "en": "And the cloud fell asleep, light as a feather, until dawn.",
+        "es": "Y la nube se durmió, ligera, ligerita, hasta el amanecer.",
+        "fr": "Et le nuage s’est endormi, léger, tout léger, jusqu’au matin."
+      }
+    }
+  ]
+}

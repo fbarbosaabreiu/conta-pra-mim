@@ -12,6 +12,9 @@ import StoryList from './modules/stories/StoryList'
 import StoryReader from './modules/stories/StoryReader'
 import QuizHome from './modules/quiz/QuizHome'
 import QuizRunner from './modules/quiz/QuizRunner'
+import BedtimeHome from './modules/bedtime/BedtimeHome'
+import BedtimePlayer from './modules/bedtime/BedtimePlayer'
+import { bedtimeAnalyticsId, bedtimeStories } from './content/bedtime'
 
 /** Avaliado a cada vez que "/" abre (o App não re-renderiza ao trocar de rota). */
 function HomeOrOnboarding() {
@@ -25,7 +28,14 @@ export default function App() {
   }, [lang])
 
   // Medição de uso (só envia algo se a família aceitar no aviso da tela inicial).
-  useEffect(() => initAnalytics(stories.map((s) => ({ id: s.id, title: tr(s.title, 'pt') }))), [])
+  useEffect(
+    () =>
+      initAnalytics([
+        ...stories.map((s) => ({ id: s.id, title: tr(s.title, 'pt') })),
+        ...bedtimeStories.map((s) => ({ id: bedtimeAnalyticsId(s.id), title: `🌙 ${tr(s.title, 'pt')}` })),
+      ]),
+    [],
+  )
 
   return (
     <>
@@ -38,6 +48,8 @@ export default function App() {
       <Route path="/historias/:id" element={<StoryReader />} />
       <Route path="/quiz" element={<QuizHome />} />
       <Route path="/quiz/:theme" element={<QuizRunner />} />
+      <Route path="/dormir" element={<BedtimeHome />} />
+      <Route path="/dormir/:id" element={<BedtimePlayer />} />
       <Route path="/creditos" element={<Credits />} />
       <Route path="/privacidade" element={<Privacy />} />
       <Route path="*" element={<Navigate to="/" replace />} />

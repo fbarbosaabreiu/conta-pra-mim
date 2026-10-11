@@ -101,9 +101,11 @@ function forSpeech(text: string): string {
 interface SpeakOptions {
   /** Recebe o índice (no texto original) da palavra sendo falada, se a voz informar. */
   onWord?: (charIndex: number) => void
+  /** Voz de hora de dormir: mais lenta e um pouco mais grave. */
+  calm?: boolean
 }
 
-function speakNow(text: string, { onWord }: SpeakOptions = {}): Promise<void> {
+function speakNow(text: string, { onWord, calm }: SpeakOptions = {}): Promise<void> {
   if (!canSpeak() || !text) return Promise.resolve()
   synth!.cancel()
 
@@ -119,8 +121,8 @@ function speakNow(text: string, { onWord }: SpeakOptions = {}): Promise<void> {
     if (voice) u.voice = voice
     const naturalVoice = !!voice && voiceScore(voice, lang) >= 30
     // Vozes neurais já têm entonação boa; nas antigas, um pouco mais devagar e agudo soa mais "fala com bebê".
-    u.rate = naturalVoice ? 0.92 : 0.88
-    u.pitch = naturalVoice ? 1.05 : 1.15
+    u.rate = (naturalVoice ? 0.92 : 0.88) * (calm ? 0.82 : 1)
+    u.pitch = (naturalVoice ? 1.05 : 1.15) * (calm ? 0.92 : 1)
 
     if (onWord) {
       u.onboundary = (e) => {
@@ -151,7 +153,7 @@ function speakNow(text: string, { onWord }: SpeakOptions = {}): Promise<void> {
 /** Um passo de uma sequência. */
 export type Part =
   | string
-  | { text: string; onWord?: (charIndex: number) => void }
+  | { text: string; onWord?: (charIndex: number) => void; calm?: boolean }
   /** Gravação de public/sounds; `fallback` é falado se ela não carregar. */
   | { clip: string; fallback?: string }
   /** Silêncio, em ms. */
@@ -179,7 +181,7 @@ export async function say(...parts: Part[]): Promise<void> {
       if (typeof part === 'string') {
         await speakNow(part)
       } else if ('text' in part) {
-        await speakNow(part.text, { onWord: part.onWord })
+        await speakNow(part.text, { onWord: part.onWord, calm: part.calm })
       } else if ('pause' in part) {
         await wait(part.pause)
         continue

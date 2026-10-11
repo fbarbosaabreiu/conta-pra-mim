@@ -1,0 +1,81 @@
+{
+  "id": "barquinho",
+  "title": { "pt": "O barquinho no mar", "en": "The little boat at sea", "es": "El barquito en el mar", "fr": "Le petit bateau sur la mer" },
+  "cover": "⛵",
+  "sky": "linear-gradient(#0a1633 0%, #1b2d5c 55%, #12305a 55%, #0b2142 100%)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "⛵", "x": 50, "y": 56, "size": 26 },
+        { "emoji": "🌊", "x": 26, "y": 74, "size": 16 },
+        { "emoji": "🌊", "x": 74, "y": 76, "size": 14 }
+      ],
+      "text": {
+        "pt": "Um barquinho balançava no mar, para lá e para cá.",
+        "en": "A little boat rocked on the sea, back and forth.",
+        "es": "Un barquito se mecía en el mar, de aquí para allá.",
+        "fr": "Un petit bateau se balançait sur la mer, de-ci, de-là."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌊", "x": 30, "y": 66, "size": 20 },
+        { "emoji": "🌊", "x": 68, "y": 70, "size": 20 }
+      ],
+      "text": {
+        "pt": "As ondas cantavam: shhh... shhh...",
+        "en": "The waves sang: shhh... shhh...",
+        "es": "Las olas cantaban: shhh... shhh...",
+        "fr": "Les vagues chantaient : chhh... chhh..."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🐬", "x": 38, "y": 66, "size": 20 },
+        { "emoji": "⛵", "x": 70, "y": 54, "size": 18 }
+      ],
+      "text": {
+        "pt": "Um golfinho passou e disse: boa noite, barquinho.",
+        "en": "A dolphin swam by and said: good night, little boat.",
+        "es": "Un delfín pasó y dijo: buenas noches, barquito.",
+        "fr": "Un dauphin est passé et a dit : bonne nuit, petit bateau."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 50, "y": 22, "size": 20 },
+        { "emoji": "✨", "x": 50, "y": 70, "size": 12 }
+      ],
+      "text": {
+        "pt": "A Lua desenhou um caminho de luz na água.",
+        "en": "The Moon drew a path of light on the water.",
+        "es": "La Luna dibujó un camino de luz en el agua.",
+        "fr": "La Lune a dessiné un chemin de lumière sur l’eau."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 76, "y": 20, "size": 14 },
+        { "emoji": "⛵", "x": 44, "y": 60, "size": 22 }
+      ],
+      "text": {
+        "pt": "O barquinho seguiu o caminho, balançando, balançando...",
+        "en": "The little boat followed the path, rocking, rocking...",
+        "es": "El barquito siguió el camino, meciéndose, meciéndose...",
+        "fr": "Le petit bateau a suivi le chemin, en se balançant, en se balançant..."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🏝️", "x": 62, "y": 58, "size": 24 },
+        { "emoji": "⛵", "x": 34, "y": 64, "size": 16 }
+      ],
+      "text": {
+        "pt": "Até chegar no porto, quietinho, para dormir.",
+        "en": "Until it reached the harbor, all quiet, ready to sleep.",
+        "es": "Hasta llegar al puerto, calladito, para dormir.",
+        "fr": "Jusqu’au port, tout calme, pour s’endormir."
+      }
+    }
+  ]
+}

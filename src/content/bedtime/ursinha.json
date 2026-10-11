@@ -1,0 +1,81 @@
+{
+  "id": "ursinha",
+  "title": { "pt": "A ursinha e a estrela", "en": "The little bear and the star", "es": "La osita y la estrella", "fr": "La petite ourse et l’étoile" },
+  "cover": "🧸",
+  "sky": "linear-gradient(#140f33, #2a2160 70%, #3a2d74)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "🛏️", "x": 50, "y": 70, "size": 30 },
+        { "emoji": "🧸", "x": 50, "y": 54, "size": 18 }
+      ],
+      "text": {
+        "pt": "A ursinha Bia estava na cama, mas não conseguia dormir.",
+        "en": "Little Bear Bia was in bed, but she couldn’t fall asleep.",
+        "es": "La osita Bia estaba en la cama, pero no podía dormir.",
+        "fr": "La petite ourse Bia était au lit, mais elle n’arrivait pas à dormir."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "⭐", "x": 70, "y": 22, "size": 16 },
+        { "emoji": "🧸", "x": 34, "y": 66, "size": 18 }
+      ],
+      "text": {
+        "pt": "Lá no céu, uma estrelinha piscou para ela.",
+        "en": "Up in the sky, a little star twinkled at her.",
+        "es": "Allá en el cielo, una estrellita le guiñó un ojo.",
+        "fr": "Là-haut dans le ciel, une petite étoile lui a fait un clin d’œil."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🪟", "x": 50, "y": 50, "size": 32 },
+        { "emoji": "⭐", "x": 50, "y": 46, "size": 12 }
+      ],
+      "text": {
+        "pt": "A estrelinha desceu bem devagar e sentou na janela.",
+        "en": "The little star came down very slowly and sat on the window.",
+        "es": "La estrellita bajó muy despacio y se sentó en la ventana.",
+        "fr": "La petite étoile est descendue tout doucement et s’est assise sur la fenêtre."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "⭐", "x": 64, "y": 30, "size": 14 },
+        { "emoji": "🎵", "x": 46, "y": 40, "size": 9 },
+        { "emoji": "🧸", "x": 40, "y": 66, "size": 18 }
+      ],
+      "text": {
+        "pt": "Ela cantou baixinho: dorme, ursinha, dorme...",
+        "en": "She sang softly: sleep, little bear, sleep...",
+        "es": "Cantó bajito: duerme, osita, duerme...",
+        "fr": "Elle a chanté tout bas : dors, petite ourse, dors..."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🧸", "x": 50, "y": 62, "size": 22 },
+        { "emoji": "💤", "x": 66, "y": 40, "size": 10 }
+      ],
+      "text": {
+        "pt": "Os olhinhos da Bia foram ficando pesados... pesados...",
+        "en": "Bia’s little eyes got heavy... so heavy...",
+        "es": "Los ojitos de Bia se pusieron pesados... pesados...",
+        "fr": "Les petits yeux de Bia sont devenus lourds... tout lourds..."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "⭐", "x": 50, "y": 30, "size": 16 },
+        { "emoji": "🧸", "x": 50, "y": 64, "size": 20 }
+      ],
+      "text": {
+        "pt": "E a ursinha dormiu, abraçada com a luz da estrela.",
+        "en": "And the little bear fell asleep, hugging the starlight.",
+        "es": "Y la osita se durmió, abrazada a la luz de la estrella.",
+        "fr": "Et la petite ourse s’est endormie, blottie dans la lumière de l’étoile."
+      }
+    }
+  ]
+}

@@ -78,6 +78,19 @@ o quiz e a voz da narração (cada idioma usa uma voz do próprio idioma).
   itens de contagem têm o nome por idioma e `"fem": true` quando são femininos naquela língua.
 - Francês: escreva com espaço normal antes de `!` `?` `:` `»`; o app troca por espaço inseparável.
 
+## Soninho (histórias para dormir)
+
+Módulo em `/dormir` (`src/modules/bedtime`), com 5 histórias calmas em `src/content/bedtime` (4 idiomas).
+
+- **Leitura automática:** lê cada página com voz mais lenta e grave (`calm` em `say`), vira sozinha e termina
+  com "Boa noite". Botões para pausar e voltar/avançar. Sem narração, dá tempo para o adulto ler.
+- **Sons para dormir:** chuva, mar, ruído branco e canção de ninar (Brahms), gerados no app como WAV em loop
+  (`src/lib/sleepSounds.ts`), tocados por um `<audio>` (funciona no silencioso do iPhone).
+- **Timer de sono:** 10/20/30 min; ao acabar, para a história e diminui o som até parar (no iPhone o volume
+  não é ajustável pelo app, então o som para no fim). Ao sair do módulo, som e timer param.
+- Enquanto lê ou toca som, pede para manter a tela acesa (Wake Lock), porque com a tela apagada o iPhone para a voz.
+- Medição: aberturas/conclusões entram como histórias `soninho-<id>` (com 🌙 no painel).
+
 ## Medição de uso
 
 Com o consentimento do adulto (aviso na tela inicial; tela **Privacidade** para mudar ou apagar os dados),

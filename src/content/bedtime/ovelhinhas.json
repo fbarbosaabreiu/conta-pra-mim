@@ -1,0 +1,86 @@
+{
+  "id": "ovelhinhas",
+  "title": { "pt": "Contando ovelhinhas", "en": "Counting little sheep", "es": "Contando ovejitas", "fr": "On compte les moutons" },
+  "cover": "🐑",
+  "sky": "linear-gradient(#101a3f 0%, #233066 62%, #1f4a3a 62%, #163628 100%)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "🌾", "x": 22, "y": 74, "size": 14 },
+        { "emoji": "🐑", "x": 56, "y": 70, "size": 22 },
+        { "emoji": "⭐", "x": 74, "y": 20, "size": 8 }
+      ],
+      "text": {
+        "pt": "No campo, as ovelhinhas também estão com sono.",
+        "en": "In the meadow, the little sheep are sleepy too.",
+        "es": "En el campo, las ovejitas también tienen sueño.",
+        "fr": "Dans le pré, les petits moutons ont sommeil, eux aussi."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🪵", "x": 50, "y": 76, "size": 18 },
+        { "emoji": "🐑", "x": 50, "y": 50, "size": 20 }
+      ],
+      "text": {
+        "pt": "Uma ovelhinha pulou a cerca... e bocejou.",
+        "en": "One little sheep jumped over the fence... and yawned.",
+        "es": "Una ovejita saltó la cerca... y bostezó.",
+        "fr": "Un petit mouton a sauté la barrière... et il a bâillé."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🪵", "x": 50, "y": 76, "size": 18 },
+        { "emoji": "🐑", "x": 34, "y": 52, "size": 18 },
+        { "emoji": "🐑", "x": 66, "y": 52, "size": 18 }
+      ],
+      "text": {
+        "pt": "Duas ovelhinhas pularam a cerca... bem devagar.",
+        "en": "Two little sheep jumped over the fence... very slowly.",
+        "es": "Dos ovejitas saltaron la cerca... muy despacito.",
+        "fr": "Deux petits moutons ont sauté la barrière... tout doucement."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🪵", "x": 50, "y": 76, "size": 18 },
+        { "emoji": "🐑", "x": 24, "y": 54, "size": 16 },
+        { "emoji": "🐑", "x": 50, "y": 46, "size": 16 },
+        { "emoji": "🐑", "x": 76, "y": 54, "size": 16 }
+      ],
+      "text": {
+        "pt": "Três ovelhinhas pularam a cerca... e fecharam os olhinhos.",
+        "en": "Three little sheep jumped over the fence... and closed their eyes.",
+        "es": "Tres ovejitas saltaron la cerca... y cerraron los ojitos.",
+        "fr": "Trois petits moutons ont sauté la barrière... et ont fermé les yeux."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🐑", "x": 34, "y": 70, "size": 16 },
+        { "emoji": "🐑", "x": 50, "y": 66, "size": 16 },
+        { "emoji": "🐑", "x": 66, "y": 70, "size": 16 },
+        { "emoji": "💤", "x": 62, "y": 44, "size": 10 }
+      ],
+      "text": {
+        "pt": "Agora todas dormem juntinhas, quentinhas na lã.",
+        "en": "Now they all sleep close together, warm in their wool.",
+        "es": "Ahora todas duermen juntitas, calentitas en su lana.",
+        "fr": "Maintenant, ils dorment tous serrés, bien au chaud dans leur laine."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 50, "y": 34, "size": 24 },
+        { "emoji": "🐑", "x": 50, "y": 72, "size": 14 }
+      ],
+      "text": {
+        "pt": "Shhh... boa noite, ovelhinhas. Boa noite, você.",
+        "en": "Shhh... good night, little sheep. Good night, you.",
+        "es": "Shhh... buenas noches, ovejitas. Buenas noches a ti.",
+        "fr": "Chut... bonne nuit, petits moutons. Bonne nuit à toi."
+      }
+    }
+  ]
+}

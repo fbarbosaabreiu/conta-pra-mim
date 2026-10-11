@@ -1,0 +1,80 @@
+{
+  "id": "lua",
+  "title": { "pt": "Boa noite, Lua", "en": "Good night, Moon", "es": "Buenas noches, Luna", "fr": "Bonne nuit, la Lune" },
+  "cover": "🌙",
+  "sky": "linear-gradient(#0b1437, #1e2a5e 70%, #2b3a78)",
+  "pages": [
+    {
+      "elements": [{ "emoji": "🌙", "x": 50, "y": 40, "size": 34 }],
+      "text": {
+        "pt": "A noite chegou devagarinho. A Lua acendeu lá no céu.",
+        "en": "Night came slowly. The Moon lit up in the sky.",
+        "es": "La noche llegó despacito. La Luna se encendió en el cielo.",
+        "fr": "La nuit est arrivée tout doucement. La Lune s’est allumée dans le ciel."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 80, "y": 20, "size": 16 },
+        { "emoji": "🌳", "x": 40, "y": 62, "size": 34 },
+        { "emoji": "🐦", "x": 46, "y": 44, "size": 10 }
+      ],
+      "text": {
+        "pt": "A Lua olhou para a árvore e disse: boa noite, passarinho.",
+        "en": "The Moon looked at the tree and said: good night, little bird.",
+        "es": "La Luna miró el árbol y dijo: buenas noches, pajarito.",
+        "fr": "La Lune a regardé l’arbre et a dit : bonne nuit, petit oiseau."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 20, "y": 20, "size": 16 },
+        { "emoji": "🐄", "x": 52, "y": 64, "size": 30 }
+      ],
+      "text": {
+        "pt": "Boa noite, vaquinha. Boa noite, campo verdinho.",
+        "en": "Good night, little cow. Good night, green field.",
+        "es": "Buenas noches, vaquita. Buenas noches, campo verde.",
+        "fr": "Bonne nuit, petite vache. Bonne nuit, le pré tout vert."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 78, "y": 18, "size": 16 },
+        { "emoji": "🌊", "x": 30, "y": 70, "size": 22 },
+        { "emoji": "🐟", "x": 62, "y": 66, "size": 18 }
+      ],
+      "text": {
+        "pt": "Boa noite, peixinho, lá no fundo do mar.",
+        "en": "Good night, little fish, deep down in the sea.",
+        "es": "Buenas noches, pececito, allá en el fondo del mar.",
+        "fr": "Bonne nuit, petit poisson, tout au fond de la mer."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 22, "y": 18, "size": 16 },
+        { "emoji": "🏠", "x": 56, "y": 60, "size": 32 }
+      ],
+      "text": {
+        "pt": "A Lua espiou pela janela e viu um bebê com sono.",
+        "en": "The Moon peeked through the window and saw a sleepy baby.",
+        "es": "La Luna se asomó por la ventana y vio a un bebé con sueño.",
+        "fr": "La Lune a regardé par la fenêtre et a vu un bébé qui avait sommeil."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "x": 50, "y": 38, "size": 30 },
+        { "emoji": "✨", "x": 26, "y": 24, "size": 10 },
+        { "emoji": "✨", "x": 76, "y": 62, "size": 9 }
+      ],
+      "text": {
+        "pt": "Boa noite, meu amor. Durma bem até amanhã.",
+        "en": "Good night, my love. Sleep well until morning.",
+        "es": "Buenas noches, mi amor. Que duermas bien hasta mañana.",
+        "fr": "Bonne nuit, mon amour. Dors bien jusqu’à demain."
+      }
+    }
+  ]
+}
