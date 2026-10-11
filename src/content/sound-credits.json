@@ -22,11 +22,11 @@
   {
     "id": "pato",
     "file": "pato.mp3",
-    "title": "Domestic duck sound 01.wav",
-    "author": "Ganesh Mohan T",
+    "title": "Mallard (Anas platyrhynchos) (W1CDR0001518 BD17).ogg",
+    "author": "Aubrey John Williams (The British Library)",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Domestic_duck_sound_01.wav",
+    "source": "https://commons.wikimedia.org/wiki/File:Mallard_(Anas_platyrhynchos)_(W1CDR0001518_BD17).ogg",
     "changes": "recortado, volume normalizado e convertido para MP3"
   },
   {
@@ -82,12 +82,12 @@
   {
     "id": "sapo",
     "file": "sapo.mp3",
-    "title": "Banded Bull Frog Call.ogg",
-    "author": "Inspector",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Banded_Bull_Frog_Call.ogg",
-    "changes": "recortado, volume normalizado e convertido para MP3"
+    "title": "Marsh frog (Pelophylax ridibundus) call.ogg",
+    "author": "Llivermore",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marsh_frog_(Pelophylax_ridibundus)_call.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3; ruído reduzido"
   },
   {
     "id": "leao",
@@ -97,7 +97,7 @@
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Lionroar.wav",
-    "changes": "recortado, volume normalizado e convertido para MP3"
+    "changes": "trecho de dois rugidos recortado, equalizado, ruído reduzido, volume normalizado e convertido para MP3"
   },
   {
     "id": "abelha",
@@ -117,6 +117,56 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:House_Sparrows_chirping.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "cavalo",
+    "file": "cavalo.mp3",
+    "title": "Wiehern.ogg",
+    "author": "Hü.",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Wiehern.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3; ruído reduzido"
+  },
+  {
+    "id": "elefante",
+    "file": "elefante.mp3",
+    "title": "Elephant voice - trumpeting.ogg",
+    "author": "தகவலுழவன்",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Elephant_voice_-_trumpeting.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "macaco",
+    "file": "macaco.mp3",
+    "title": "Hylobates-pileatus-pileated-gibbon-calling-singing-1.oga",
+    "author": "Rushenb",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hylobates-pileatus-pileated-gibbon-calling-singing-1.oga",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "coruja",
+    "file": "coruja.mp3",
+    "title": "Strix aluco male.oga",
+    "author": "Vianney Bajart",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Strix_aluco_male.oga",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "grilo",
+    "file": "grilo.mp3",
+    "title": "Gryllus campestris 02 (HS).ogg",
+    "author": "Harald Süpfle",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gryllus_campestris_02_(HS).ogg",
     "changes": "recortado, volume normalizado e convertido para MP3"
   }
 ]

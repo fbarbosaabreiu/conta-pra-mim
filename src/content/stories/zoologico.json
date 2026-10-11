@@ -1,0 +1,149 @@
+{
+  "id": "zoologico",
+  "title": { "pt": "Passeio no zoológico", "en": "A day at the zoo", "es": "Paseo por el zoológico", "fr": "Une visite au zoo" },
+  "cover": "🦁",
+  "color": "#f97316",
+  "background": "linear-gradient(#fde68a 0%, #fef3c7 55%, #bef264 55%, #84cc16 100%)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "☀️", "word": { "pt": "sol", "en": "sun", "es": "sol", "fr": "soleil" }, "x": 82, "y": 18, "size": 15 },
+        { "emoji": "🌴", "word": { "pt": "palmeira", "en": "palm tree", "es": "palmera", "fr": "palmier" }, "x": 22, "y": 52, "size": 26 },
+        { "emoji": "🎈", "word": { "pt": "balão", "en": "balloon", "es": "globo", "fr": "ballon" }, "x": 62, "y": 40, "size": 16 }
+      ],
+      "text": {
+        "pt": "Hoje é dia de passear no zoológico!",
+        "en": "Today we’re going to the zoo!",
+        "es": "¡Hoy vamos de paseo al zoológico!",
+        "fr": "Aujourd’hui, on va au zoo !"
+      },
+      "highlight": { "pt": ["zoológico"], "en": ["zoo"], "es": ["zoológico"], "fr": ["zoo"] },
+      "parentTip": {
+        "pt": "Pergunte: “que bichos será que vamos ver?”",
+        "en": "Ask: “which animals do you think we’ll see?”",
+        "es": "Pregunte: “¿qué animales crees que veremos?”",
+        "fr": "Demandez : « quels animaux allons-nous voir ? »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦁", "word": { "pt": "leão", "en": "lion", "es": "león", "fr": "lion" },
+          "sound": { "pt": "rrroar!", "en": "roar!", "es": "¡grrr!", "fr": "grrr !" },
+          "audio": "leao.mp3", "x": 50, "y": 62, "size": 34
+        }
+      ],
+      "text": {
+        "pt": "O leão é o rei e faz...",
+        "en": "The lion is the king and goes...",
+        "es": "El león es el rey y hace...",
+        "fr": "Le lion est le roi et fait..."
+      },
+      "reveal": { "pt": "rrroar!", "en": "roar!", "es": "¡grrr!", "fr": "grrr !" },
+      "revealAudio": "leao.mp3",
+      "accent": "#c2410c",
+      "highlight": { "pt": ["leão"], "en": ["lion"], "es": ["león"], "fr": ["lion"] },
+      "parentTip": {
+        "pt": "Ruja junto: primeiro baixinho, depois bem forte.",
+        "en": "Roar together — first softly, then really loud.",
+        "es": "Rujan juntos: primero bajito y después bien fuerte.",
+        "fr": "Rugissez ensemble : d’abord doucement, puis très fort."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐘", "word": { "pt": "elefante", "en": "elephant", "es": "elefante", "fr": "éléphant" },
+          "sound": { "pt": "fuuum!", "en": "toot!", "es": "¡tuuu!", "fr": "pouêt !" },
+          "audio": "elefante.mp3", "x": 48, "y": 60, "size": 36
+        },
+        { "emoji": "💦", "word": { "pt": "água", "en": "water", "es": "agua", "fr": "eau" }, "x": 82, "y": 34, "size": 12 }
+      ],
+      "text": {
+        "pt": "O elefante levanta a tromba e faz...",
+        "en": "The elephant lifts his trunk and goes...",
+        "es": "El elefante levanta la trompa y hace...",
+        "fr": "L’éléphant lève sa trompe et fait..."
+      },
+      "reveal": { "pt": "fuuum!", "en": "toot!", "es": "¡tuuu!", "fr": "pouêt !" },
+      "revealAudio": "elefante.mp3",
+      "accent": "#64748b",
+      "highlight": { "pt": ["elefante"], "en": ["elephant"], "es": ["elefante"], "fr": ["l’éléphant"] },
+      "parentTip": {
+        "pt": "Faça uma tromba com o braço no nariz.",
+        "en": "Make a trunk with your arm on your nose.",
+        "es": "Haga una trompa con el brazo en la nariz.",
+        "fr": "Faites une trompe avec votre bras sur le nez."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐒", "word": { "pt": "macaco", "en": "monkey", "es": "mono", "fr": "singe" },
+          "sound": { "pt": "uh uh ah ah!", "en": "ooh ooh ah ah!", "es": "¡uh uh ah ah!", "fr": "ouh ouh ah ah !" },
+          "audio": "macaco.mp3", "x": 44, "y": 56, "size": 30
+        },
+        { "emoji": "🍌", "word": { "pt": "banana", "en": "banana", "es": "plátano", "fr": "banane" }, "x": 78, "y": 74, "size": 14 },
+        { "emoji": "🌳", "word": { "pt": "árvore", "en": "tree", "es": "árbol", "fr": "arbre" }, "x": 16, "y": 36, "size": 20 }
+      ],
+      "text": {
+        "pt": "O macaco pula de galho em galho e faz...",
+        "en": "The monkey jumps from branch to branch and goes...",
+        "es": "El mono salta de rama en rama y hace...",
+        "fr": "Le singe saute de branche en branche et fait..."
+      },
+      "reveal": { "pt": "uh uh ah ah!", "en": "ooh ooh ah ah!", "es": "¡uh uh ah ah!", "fr": "ouh ouh ah ah !" },
+      "revealAudio": "macaco.mp3",
+      "accent": "#a16207",
+      "highlight": { "pt": ["macaco"], "en": ["monkey"], "es": ["mono"], "fr": ["singe"] },
+      "parentTip": {
+        "pt": "Coce a cabeça e pule como um macaquinho.",
+        "en": "Scratch your head and jump like a little monkey.",
+        "es": "Rásquese la cabeza y salte como un monito.",
+        "fr": "Grattez-vous la tête et sautez comme un petit singe."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🦒", "word": { "pt": "girafa", "en": "giraffe", "es": "jirafa", "fr": "girafe" }, "x": 46, "y": 52, "size": 40 },
+        { "emoji": "🌳", "word": { "pt": "árvore", "en": "tree", "es": "árbol", "fr": "arbre" }, "x": 82, "y": 40, "size": 22 }
+      ],
+      "text": {
+        "pt": "A girafa tem o pescoço bem...",
+        "en": "The giraffe’s neck is very...",
+        "es": "La jirafa tiene el cuello muy...",
+        "fr": "La girafe a un cou très..."
+      },
+      "reveal": { "pt": "comprido!", "en": "long!", "es": "¡largo!", "fr": "long !" },
+      "accent": "#ca8a04",
+      "highlight": { "pt": ["girafa"], "en": ["giraffe’s"], "es": ["jirafa"], "fr": ["girafe"] },
+      "parentTip": {
+        "pt": "Estique o pescoço bem alto, como a girafa.",
+        "en": "Stretch your neck up high, like the giraffe.",
+        "es": "Estire el cuello bien alto, como la jirafa.",
+        "fr": "Étirez votre cou bien haut, comme la girafe."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🦁", "word": { "pt": "leão", "en": "lion", "es": "león", "fr": "lion" }, "audio": "leao.mp3", "x": 18, "y": 66, "size": 18 },
+        { "emoji": "🐘", "word": { "pt": "elefante", "en": "elephant", "es": "elefante", "fr": "éléphant" }, "audio": "elefante.mp3", "x": 44, "y": 62, "size": 22 },
+        { "emoji": "🐒", "word": { "pt": "macaco", "en": "monkey", "es": "mono", "fr": "singe" }, "audio": "macaco.mp3", "x": 66, "y": 36, "size": 15 },
+        { "emoji": "🦒", "word": { "pt": "girafa", "en": "giraffe", "es": "jirafa", "fr": "girafe" }, "x": 84, "y": 56, "size": 24 }
+      ],
+      "text": {
+        "pt": "Tchau, zoológico! Até a próxima!",
+        "en": "Bye-bye, zoo! See you next time!",
+        "es": "¡Adiós, zoológico! ¡Hasta la próxima!",
+        "fr": "Au revoir, le zoo ! À la prochaine !"
+      },
+      "highlight": { "pt": ["tchau"], "en": ["bye-bye"], "es": ["adiós"], "fr": ["au", "revoir"] },
+      "parentTip": {
+        "pt": "Pergunte: “qual bicho fez o barulho mais forte?”",
+        "en": "Ask: “which animal made the loudest sound?”",
+        "es": "Pregunte: “¿qué animal hizo el ruido más fuerte?”",
+        "fr": "Demandez : « quel animal a fait le plus de bruit ? »"
+      }
+    }
+  ]
+}

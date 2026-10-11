@@ -3,9 +3,12 @@ import { tr, type Lang } from '../../i18n/langs'
 import fazenda from './fazenda.json'
 import arcoIris from './arco-iris.json'
 import patinhos from './patinhos.json'
+import bichinhosDeCasa from './bichinhos-de-casa.json'
+import zoologico from './zoologico.json'
+import boaNoite from './boa-noite.json'
 
 // Para adicionar uma história: crie o JSON nesta pasta e inclua-o aqui.
-export const stories: StorySource[] = [fazenda, arcoIris, patinhos]
+export const stories: StorySource[] = [fazenda, bichinhosDeCasa, zoologico, arcoIris, patinhos, boaNoite]
 
 /** A história com todos os textos no idioma pedido. */
 function resolve(s: StorySource, lang: Lang): Story {

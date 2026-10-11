@@ -45,7 +45,8 @@ Todo o conteúdo fica em `src/content` como JSON:
   parada. Botão 🗣️ liga/desliga.
 - **Frases variadas** (`src/lib/phrases.ts`): elogios, comentários de erro, perguntas e finais são sorteados sem
   repetir o anterior — é o que mais tira a sensação de robô.
-- **Sons de bichos**: gravações reais em `public/sounds/` (12 animais, Wikimedia Commons). Tocar num bicho
+- **Sons de bichos**: gravações reais em `public/sounds/` (17 animais, Wikimedia Commons; o macaco é um gibão, não há gravação
+  livre de chimpanzé). Tocar num bicho
   toca o som e depois fala o nome; o “…faz muuu!” revelado também toca a gravação (`revealAudio`); no quiz,
   “Quem faz…?” toca o som de verdade. Para usar em outro elemento, adicione `"audio": "vaca.mp3"` no JSON.
   Sem arquivo (ou se falhar), a voz fala “vaca! muuu!”.

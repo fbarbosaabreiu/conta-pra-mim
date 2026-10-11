@@ -68,5 +68,54 @@
     "en": { "name": "bee", "sound": "bzzz" },
     "es": { "name": "abeja", "fem": true, "sound": "bzzz" },
     "fr": { "name": "abeille", "fem": true, "sound": "bzzz" }
+  },
+  {
+    "id": "galo", "emoji": "🐓", "audio": "galo.mp3",
+    "pt": { "name": "galo", "sound": "cocoricó" },
+    "en": { "name": "rooster", "sound": "cock-a-doodle-doo" },
+    "es": { "name": "gallo", "sound": "quiquiriquí" },
+    "fr": { "name": "coq", "sound": "cocorico" }
+  },
+  {
+    "id": "passarinho", "emoji": "🐦", "audio": "passarinho.mp3",
+    "pt": { "name": "passarinho", "sound": "piu piu" },
+    "en": { "name": "bird", "sound": "tweet tweet" },
+    "es": { "name": "pajarito", "sound": "pío pío" },
+    "fr": { "name": "oiseau", "sound": "cui-cui" }
+  },
+  {
+    "id": "cavalo", "emoji": "🐴", "audio": "cavalo.mp3",
+    "pt": { "name": "cavalo", "sound": "iiirrí" },
+    "en": { "name": "horse", "sound": "neigh" },
+    "es": { "name": "caballo", "sound": "iiihiii" },
+    "fr": { "name": "cheval", "sound": "hiii" }
+  },
+  {
+    "id": "elefante", "emoji": "🐘", "audio": "elefante.mp3",
+    "pt": { "name": "elefante", "sound": "fuuum" },
+    "en": { "name": "elephant", "sound": "toot" },
+    "es": { "name": "elefante", "sound": "tuuu" },
+    "fr": { "name": "éléphant", "sound": "pouêt" }
+  },
+  {
+    "id": "macaco", "emoji": "🐒", "audio": "macaco.mp3",
+    "pt": { "name": "macaco", "sound": "uh uh ah ah" },
+    "en": { "name": "monkey", "sound": "ooh ooh ah ah" },
+    "es": { "name": "mono", "sound": "uh uh ah ah" },
+    "fr": { "name": "singe", "sound": "ouh ouh ah ah" }
+  },
+  {
+    "id": "coruja", "emoji": "🦉", "audio": "coruja.mp3",
+    "pt": { "name": "coruja", "fem": true, "sound": "uhu" },
+    "en": { "name": "owl", "sound": "hoo hoo" },
+    "es": { "name": "lechuza", "fem": true, "sound": "uh uh" },
+    "fr": { "name": "chouette", "fem": true, "sound": "hou hou" }
+  },
+  {
+    "id": "grilo", "emoji": "🦗", "audio": "grilo.mp3",
+    "pt": { "name": "grilo", "sound": "cri cri" },
+    "en": { "name": "cricket", "sound": "chirp chirp" },
+    "es": { "name": "grillo", "sound": "cri cri" },
+    "fr": { "name": "grillon", "sound": "cri-cri" }
   }
 ]

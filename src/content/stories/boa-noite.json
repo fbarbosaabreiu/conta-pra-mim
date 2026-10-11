@@ -1,0 +1,152 @@
+{
+  "id": "boa-noite",
+  "title": { "pt": "Boa noite, bichinhos", "en": "Good night, animals", "es": "Buenas noches, animalitos", "fr": "Bonne nuit, les animaux" },
+  "cover": "🦉",
+  "color": "#6366f1",
+  "background": "linear-gradient(#1e1b4b 0%, #3730a3 60%, #14532d 60%, #166534 100%)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "🌙", "word": { "pt": "lua", "en": "moon", "es": "luna", "fr": "lune" }, "x": 70, "y": 26, "size": 26 },
+        { "emoji": "⭐", "word": { "pt": "estrela", "en": "star", "es": "estrella", "fr": "étoile" }, "x": 24, "y": 18, "size": 12 },
+        { "emoji": "⭐", "word": { "pt": "estrela", "en": "star", "es": "estrella", "fr": "étoile" }, "x": 40, "y": 40, "size": 9 },
+        { "emoji": "🏡", "word": { "pt": "casa", "en": "house", "es": "casa", "fr": "maison" }, "x": 30, "y": 68, "size": 22 }
+      ],
+      "text": {
+        "pt": "O sol foi dormir e a lua apareceu no céu.",
+        "en": "The sun went to sleep and the moon came out.",
+        "es": "El sol se fue a dormir y salió la luna.",
+        "fr": "Le soleil est allé dormir et la lune s’est levée."
+      },
+      "highlight": { "pt": ["lua"], "en": ["moon"], "es": ["luna"], "fr": ["lune"] },
+      "parentTip": {
+        "pt": "Aponte para a lua e diga “lua” devagar.",
+        "en": "Point to the moon and say “moon” slowly.",
+        "es": "Señale la luna y diga “luna” despacito.",
+        "fr": "Montrez la lune et dites « lune » lentement."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦉", "word": { "pt": "coruja", "en": "owl", "es": "lechuza", "fr": "chouette" },
+          "sound": { "pt": "uhu!", "en": "hoo hoo!", "es": "¡uh uh!", "fr": "hou hou !" },
+          "audio": "coruja.mp3", "x": 52, "y": 42, "size": 30
+        },
+        { "emoji": "🌳", "word": { "pt": "árvore", "en": "tree", "es": "árbol", "fr": "arbre" }, "x": 24, "y": 64, "size": 26 },
+        { "emoji": "🌙", "word": { "pt": "lua", "en": "moon", "es": "luna", "fr": "lune" }, "x": 82, "y": 16, "size": 12 }
+      ],
+      "text": {
+        "pt": "Lá na árvore, a coruja acordou e faz...",
+        "en": "Up in the tree, the owl woke up and says...",
+        "es": "Allá en el árbol, la lechuza se despertó y hace...",
+        "fr": "Dans l’arbre, la chouette s’est réveillée et fait..."
+      },
+      "reveal": { "pt": "uhu!", "en": "hoo hoo!", "es": "¡uh uh!", "fr": "hou hou !" },
+      "revealAudio": "coruja.mp3",
+      "accent": "#7c3aed",
+      "highlight": { "pt": ["coruja"], "en": ["owl"], "es": ["lechuza"], "fr": ["chouette"] },
+      "parentTip": {
+        "pt": "Faça olhos grandes de coruja com as mãos.",
+        "en": "Make big owl eyes with your hands.",
+        "es": "Haga ojos grandes de lechuza con las manos.",
+        "fr": "Faites de grands yeux de chouette avec vos mains."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦗", "word": { "pt": "grilo", "en": "cricket", "es": "grillo", "fr": "grillon" },
+          "sound": { "pt": "cri cri!", "en": "chirp chirp!", "es": "¡cri cri!", "fr": "cri-cri !" },
+          "audio": "grilo.mp3", "x": 50, "y": 68, "size": 26
+        },
+        { "emoji": "🌿", "word": { "pt": "grama", "en": "grass", "es": "hierba", "fr": "herbe" }, "x": 20, "y": 78, "size": 18 },
+        { "emoji": "🌿", "word": { "pt": "grama", "en": "grass", "es": "hierba", "fr": "herbe" }, "x": 82, "y": 80, "size": 16 }
+      ],
+      "text": {
+        "pt": "Escondido na grama, o grilo canta...",
+        "en": "Hidden in the grass, the cricket sings...",
+        "es": "Escondido en la hierba, el grillo canta...",
+        "fr": "Caché dans l’herbe, le grillon chante..."
+      },
+      "reveal": { "pt": "cri cri!", "en": "chirp chirp!", "es": "¡cri cri!", "fr": "cri-cri !" },
+      "revealAudio": "grilo.mp3",
+      "accent": "#15803d",
+      "highlight": { "pt": ["grilo"], "en": ["cricket"], "es": ["grillo"], "fr": ["grillon"] },
+      "parentTip": {
+        "pt": "Esfregue os dedinhos e faça “cri cri” bem baixinho.",
+        "en": "Rub your fingers together and go “chirp chirp” very softly.",
+        "es": "Frote los deditos y haga “cri cri” muy bajito.",
+        "fr": "Frottez vos doigts et faites « cri-cri » tout doucement."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐸", "word": { "pt": "sapo", "en": "frog", "es": "rana", "fr": "grenouille" },
+          "sound": { "pt": "croac!", "en": "ribbit!", "es": "¡croac!", "fr": "croâ !" },
+          "audio": "sapo.mp3", "x": 48, "y": 66, "size": 30
+        },
+        { "emoji": "💧", "word": { "pt": "água", "en": "water", "es": "agua", "fr": "eau" }, "x": 80, "y": 78, "size": 12 }
+      ],
+      "text": {
+        "pt": "Na lagoa, o sapo não quer dormir e faz...",
+        "en": "In the pond, the frog doesn’t want to sleep and says...",
+        "es": "En la laguna, la rana no quiere dormir y hace...",
+        "fr": "Dans la mare, la grenouille ne veut pas dormir et fait..."
+      },
+      "reveal": { "pt": "croac!", "en": "ribbit!", "es": "¡croac!", "fr": "croâ !" },
+      "revealAudio": "sapo.mp3",
+      "accent": "#16a34a",
+      "highlight": { "pt": ["sapo"], "en": ["frog"], "es": ["rana"], "fr": ["grenouille"] }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐴", "word": { "pt": "cavalo", "en": "horse", "es": "caballo", "fr": "cheval" },
+          "sound": { "pt": "iiirrí!", "en": "neigh!", "es": "¡iiihiii!", "fr": "hiii !" },
+          "audio": "cavalo.mp3", "x": 46, "y": 60, "size": 32
+        },
+        { "emoji": "🌾", "word": { "pt": "feno", "en": "hay", "es": "heno", "fr": "foin" }, "x": 80, "y": 76, "size": 14 }
+      ],
+      "text": {
+        "pt": "No estábulo, o cavalo faz...",
+        "en": "In the stable, the horse says...",
+        "es": "En el establo, el caballo hace...",
+        "fr": "Dans l’écurie, le cheval fait..."
+      },
+      "reveal": { "pt": "iiirrí!", "en": "neigh!", "es": "¡iiihiii!", "fr": "hiii !" },
+      "revealAudio": "cavalo.mp3",
+      "accent": "#92400e",
+      "highlight": { "pt": ["cavalo"], "en": ["horse"], "es": ["caballo"], "fr": ["cheval"] },
+      "parentTip": {
+        "pt": "Faça “pocotó, pocotó” batendo as mãos nas pernas, como o cavalo andando.",
+        "en": "Pat your legs and go “clip-clop, clip-clop”, like a horse walking.",
+        "es": "Golpee las piernas con las manos y haga “tacatá, tacatá”, como un caballo.",
+        "fr": "Tapez sur vos cuisses et faites « tagada, tagada », comme un cheval."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🌙", "word": { "pt": "lua", "en": "moon", "es": "luna", "fr": "lune" }, "x": 78, "y": 18, "size": 16 },
+        { "emoji": "🦉", "word": { "pt": "coruja", "en": "owl", "es": "lechuza", "fr": "chouette" }, "audio": "coruja.mp3", "x": 20, "y": 36, "size": 16 },
+        { "emoji": "🦗", "word": { "pt": "grilo", "en": "cricket", "es": "grillo", "fr": "grillon" }, "audio": "grilo.mp3", "x": 36, "y": 78, "size": 13 },
+        { "emoji": "🐸", "word": { "pt": "sapo", "en": "frog", "es": "rana", "fr": "grenouille" }, "audio": "sapo.mp3", "x": 60, "y": 74, "size": 16 },
+        { "emoji": "🐴", "word": { "pt": "cavalo", "en": "horse", "es": "caballo", "fr": "cheval" }, "audio": "cavalo.mp3", "x": 84, "y": 64, "size": 18 }
+      ],
+      "text": {
+        "pt": "Boa noite, bichinhos! Agora é hora de dormir.",
+        "en": "Good night, animals! Now it’s time to sleep.",
+        "es": "¡Buenas noches, animalitos! Ahora es hora de dormir.",
+        "fr": "Bonne nuit, les animaux ! C’est l’heure de dormir."
+      },
+      "highlight": { "pt": ["boa", "noite"], "en": ["good", "night"], "es": ["buenas", "noches"], "fr": ["bonne", "nuit"] },
+      "parentTip": {
+        "pt": "Boa para antes de dormir: vá falando cada vez mais baixinho.",
+        "en": "Great at bedtime: speak more and more softly as you go.",
+        "es": "Ideal para antes de dormir: hable cada vez más bajito.",
+        "fr": "Idéal avant le coucher : parlez de plus en plus doucement."
+      }
+    }
+  ]
+}

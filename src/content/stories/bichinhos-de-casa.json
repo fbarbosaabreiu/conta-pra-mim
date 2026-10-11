@@ -1,0 +1,144 @@
+{
+  "id": "bichinhos-de-casa",
+  "title": { "pt": "Os bichinhos de casa", "en": "Pets at home", "es": "Las mascotas de casa", "fr": "Les animaux de la maison" },
+  "cover": "🐶",
+  "color": "#fb7185",
+  "background": "linear-gradient(#fef3c7 0%, #fde68a 62%, #d6a77a 62%, #b7835a 100%)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "🛋️", "word": { "pt": "sofá", "en": "sofa", "es": "sofá", "fr": "canapé" }, "x": 38, "y": 62, "size": 30 },
+        { "emoji": "🪴", "word": { "pt": "planta", "en": "plant", "es": "planta", "fr": "plante" }, "x": 80, "y": 58, "size": 20 },
+        { "emoji": "🖼️", "word": { "pt": "quadro", "en": "picture", "es": "cuadro", "fr": "tableau" }, "x": 30, "y": 24, "size": 15 }
+      ],
+      "text": {
+        "pt": "Nesta casa moram uns bichinhos muito fofos.",
+        "en": "Some very cute animals live in this house.",
+        "es": "En esta casa viven unos animalitos muy tiernos.",
+        "fr": "Des petits animaux tout mignons vivent dans cette maison."
+      },
+      "highlight": { "pt": ["casa"], "en": ["house"], "es": ["casa"], "fr": ["maison"] },
+      "parentTip": {
+        "pt": "Pergunte: “quais bichinhos você conhece?”",
+        "en": "Ask: “which animals do you know?”",
+        "es": "Pregunte: “¿qué animalitos conoces?”",
+        "fr": "Demandez : « quels animaux connais-tu ? »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐕", "word": { "pt": "cachorro", "en": "dog", "es": "perro", "fr": "chien" },
+          "sound": { "pt": "au au!", "en": "woof woof!", "es": "¡guau guau!", "fr": "ouaf ouaf !" },
+          "audio": "cachorro.mp3", "x": 45, "y": 62, "size": 32
+        },
+        { "emoji": "🦴", "word": { "pt": "osso", "en": "bone", "es": "hueso", "fr": "os" }, "x": 80, "y": 80, "size": 12 }
+      ],
+      "text": {
+        "pt": "O cachorro abana o rabo e faz...",
+        "en": "The dog wags his tail and says...",
+        "es": "El perro mueve la cola y hace...",
+        "fr": "Le chien remue la queue et fait..."
+      },
+      "reveal": { "pt": "au au!", "en": "woof woof!", "es": "¡guau guau!", "fr": "ouaf ouaf !" },
+      "revealAudio": "cachorro.mp3",
+      "highlight": { "pt": ["cachorro"], "en": ["dog"], "es": ["perro"], "fr": ["chien"] },
+      "parentTip": {
+        "pt": "Faça “au au” e deixe a criança latir também.",
+        "en": "Say “woof woof” and let your child bark too.",
+        "es": "Diga “guau guau” y deje que el niño ladre también.",
+        "fr": "Dites « ouaf ouaf » et laissez l’enfant aboyer aussi."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐈", "word": { "pt": "gato", "en": "cat", "es": "gato", "fr": "chat" },
+          "sound": { "pt": "miau!", "en": "meow!", "es": "¡miau!", "fr": "miaou !" },
+          "audio": "gato.mp3", "x": 42, "y": 62, "size": 30
+        },
+        { "emoji": "🧶", "word": { "pt": "novelo", "en": "yarn", "es": "ovillo", "fr": "pelote" }, "x": 78, "y": 76, "size": 14 }
+      ],
+      "text": {
+        "pt": "O gato brinca com o novelo e faz...",
+        "en": "The cat plays with the yarn and says...",
+        "es": "El gato juega con el ovillo y hace...",
+        "fr": "Le chat joue avec la pelote et fait..."
+      },
+      "reveal": { "pt": "miau!", "en": "meow!", "es": "¡miau!", "fr": "miaou !" },
+      "revealAudio": "gato.mp3",
+      "highlight": { "pt": ["gato"], "en": ["cat"], "es": ["gato"], "fr": ["chat"] },
+      "parentTip": {
+        "pt": "Faça carinho de mentirinha no gato: “que gatinho macio!”",
+        "en": "Pretend to pet the cat: “what a soft kitty!”",
+        "es": "Acaricie al gato de mentirita: “¡qué gatito tan suave!”",
+        "fr": "Faites semblant de caresser le chat : « qu’il est doux ! »"
+      }
+    },
+    {
+      "background": "linear-gradient(#bae6fd 0%, #e0f2fe 62%, #d6a77a 62%, #b7835a 100%)",
+      "elements": [
+        {
+          "emoji": "🐦", "word": { "pt": "passarinho", "en": "little bird", "es": "pajarito", "fr": "oiseau" },
+          "sound": { "pt": "piu piu!", "en": "tweet tweet!", "es": "¡pío pío!", "fr": "cui-cui !" },
+          "audio": "passarinho.mp3", "x": 52, "y": 44, "size": 24
+        },
+        { "emoji": "🪟", "word": { "pt": "janela", "en": "window", "es": "ventana", "fr": "fenêtre" }, "x": 22, "y": 30, "size": 18 },
+        { "emoji": "☁️", "word": { "pt": "nuvem", "en": "cloud", "es": "nube", "fr": "nuage" }, "x": 80, "y": 20, "size": 14 }
+      ],
+      "text": {
+        "pt": "Na janela, o passarinho canta...",
+        "en": "At the window, the little bird sings...",
+        "es": "En la ventana, el pajarito canta...",
+        "fr": "À la fenêtre, l’oiseau chante..."
+      },
+      "reveal": { "pt": "piu piu!", "en": "tweet tweet!", "es": "¡pío pío!", "fr": "cui-cui !" },
+      "revealAudio": "passarinho.mp3",
+      "highlight": { "pt": ["passarinho"], "en": ["bird"], "es": ["pajarito"], "fr": ["l’oiseau"] }
+    },
+    {
+      "background": "linear-gradient(#7dd3fc, #0ea5e9)",
+      "elements": [
+        { "emoji": "🐠", "word": { "pt": "peixinho", "en": "little fish", "es": "pececito", "fr": "petit poisson" }, "x": 46, "y": 56, "size": 30 },
+        { "emoji": "🫧", "word": { "pt": "bolhas", "en": "bubbles", "es": "burbujas", "fr": "bulles" }, "x": 64, "y": 30, "size": 14 },
+        { "emoji": "🌿", "word": { "pt": "planta", "en": "plant", "es": "planta", "fr": "plante" }, "x": 16, "y": 78, "size": 18 }
+      ],
+      "text": {
+        "pt": "No aquário, o peixinho nada e faz bolhas...",
+        "en": "In the fish tank, the little fish swims and makes bubbles...",
+        "es": "En la pecera, el pececito nada y hace burbujas...",
+        "fr": "Dans l’aquarium, le petit poisson nage et fait des bulles..."
+      },
+      "reveal": { "pt": "blub blub!", "en": "blub blub!", "es": "¡glu glu!", "fr": "blub blub !" },
+      "accent": "#0369a1",
+      "highlight": { "pt": ["peixinho"], "en": ["fish"], "es": ["pececito"], "fr": ["poisson"] },
+      "parentTip": {
+        "pt": "Faça biquinho de peixe e “blub blub” junto com a criança.",
+        "en": "Make fish lips and go “blub blub” together.",
+        "es": "Haga boquita de pez y diga “glu glu” junto con el niño.",
+        "fr": "Faites une bouche de poisson et dites « blub blub » ensemble."
+      }
+    },
+    {
+      "elements": [
+        { "emoji": "🐕", "word": { "pt": "cachorro", "en": "dog", "es": "perro", "fr": "chien" }, "audio": "cachorro.mp3", "x": 20, "y": 66, "size": 20 },
+        { "emoji": "🐈", "word": { "pt": "gato", "en": "cat", "es": "gato", "fr": "chat" }, "audio": "gato.mp3", "x": 46, "y": 70, "size": 18 },
+        { "emoji": "🐦", "word": { "pt": "passarinho", "en": "little bird", "es": "pajarito", "fr": "oiseau" }, "audio": "passarinho.mp3", "x": 70, "y": 34, "size": 14 },
+        { "emoji": "🐠", "word": { "pt": "peixinho", "en": "little fish", "es": "pececito", "fr": "petit poisson" }, "x": 80, "y": 72, "size": 16 }
+      ],
+      "text": {
+        "pt": "Que bichinhos mais queridos! Qual é o seu favorito?",
+        "en": "What lovely pets! Which one is your favorite?",
+        "es": "¡Qué animalitos tan queridos! ¿Cuál es tu favorito?",
+        "fr": "Quels animaux adorables ! Lequel est ton préféré ?"
+      },
+      "highlight": { "pt": ["favorito"], "en": ["favorite"], "es": ["favorito"], "fr": ["préféré"] },
+      "parentTip": {
+        "pt": "Deixe a criança tocar no favorito e tentar dizer o nome.",
+        "en": "Let your child tap their favorite and try to say its name.",
+        "es": "Deje que el niño toque su favorito e intente decir su nombre.",
+        "fr": "Laissez l’enfant toucher son préféré et essayer de dire son nom."
+      }
+    }
+  ]
+}

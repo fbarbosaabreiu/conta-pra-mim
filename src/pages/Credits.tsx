@@ -16,6 +16,11 @@ const NAMES: Record<string, { emoji: string } & Record<Lang, string>> = {
   leao: { emoji: '🦁', pt: 'Leão', en: 'Lion', es: 'León', fr: 'Lion' },
   abelha: { emoji: '🐝', pt: 'Abelha', en: 'Bee', es: 'Abeja', fr: 'Abeille' },
   passarinho: { emoji: '🐦', pt: 'Passarinho', en: 'Bird', es: 'Pajarito', fr: 'Oiseau' },
+  cavalo: { emoji: '🐴', pt: 'Cavalo', en: 'Horse', es: 'Caballo', fr: 'Cheval' },
+  elefante: { emoji: '🐘', pt: 'Elefante', en: 'Elephant', es: 'Elefante', fr: 'Éléphant' },
+  macaco: { emoji: '🐒', pt: 'Macaco (gibão)', en: 'Monkey (gibbon)', es: 'Mono (gibón)', fr: 'Singe (gibbon)' },
+  coruja: { emoji: '🦉', pt: 'Coruja', en: 'Owl', es: 'Lechuza', fr: 'Chouette' },
+  grilo: { emoji: '🦗', pt: 'Grilo', en: 'Cricket', es: 'Grillo', fr: 'Grillon' },
 }
 
 /** Atribuição exigida pelas licenças CC BY / CC BY-SA das gravações. */
