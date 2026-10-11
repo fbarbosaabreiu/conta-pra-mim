@@ -48,8 +48,90 @@ function withAudio(play: (c: AudioContext) => void) {
 }
 
 // ---------- Gravações (MP3) ----------
-// Tocadas pelo mesmo AudioContext (já destravado no primeiro toque), o que funciona
-// no iOS mesmo fora de um gesto — ao contrário de new Audio().play().
+// No iPhone, o Web Audio é silenciado pela chave lateral (modo silencioso) e pode ficar
+// "interrupted" depois que a voz do sistema fala — e aí os sons dos bichos não saem.
+// Um <audio> comum não sofre disso, desde que tenha tocado uma vez dentro de um toque.
+// Por isso as gravações usam um único <audio>, destravado no 1º toque e reaproveitado;
+// o Web Audio fica como reserva. Tocar mídia também põe a página na categoria
+// "reprodução" do iOS, o que costuma destravar os efeitos no silencioso.
+
+let media: HTMLAudioElement | null = null
+let mediaUnlocked = false
+let stopMedia: (() => void) | null = null
+let silentUrl: string | null = null
+
+/** WAV mudo de 50 ms, gerado na hora (sem arquivo extra). */
+function silentWav(): string {
+  if (silentUrl) return silentUrl
+  const rate = 8000
+  const samples = 400
+  const buf = new ArrayBuffer(44 + samples * 2)
+  const v = new DataView(buf)
+  const str = (o: number, s: string) => [...s].forEach((ch, i) => v.setUint8(o + i, ch.charCodeAt(0)))
+  str(0, 'RIFF')
+  v.setUint32(4, 36 + samples * 2, true)
+  str(8, 'WAVEfmt ')
+  v.setUint32(16, 16, true)
+  v.setUint16(20, 1, true) // PCM
+  v.setUint16(22, 1, true) // mono
+  v.setUint32(24, rate, true)
+  v.setUint32(28, rate * 2, true)
+  v.setUint16(32, 2, true)
+  v.setUint16(34, 16, true)
+  str(36, 'data')
+  v.setUint32(40, samples * 2, true)
+  silentUrl = URL.createObjectURL(new Blob([buf], { type: 'audio/wav' }))
+  return silentUrl
+}
+
+function unlockMedia() {
+  if (mediaUnlocked) return
+  if (!media) {
+    media = new Audio()
+    media.preload = 'auto'
+    media.setAttribute('playsinline', '')
+  }
+  if (stopMedia) return // já tem uma gravação tocando
+  media.src = silentWav()
+  media.play().then(
+    () => (mediaUnlocked = true),
+    () => {},
+  )
+}
+
+for (const evt of ['touchend', 'click', 'keydown']) {
+  window.addEventListener(evt, unlockMedia, { capture: true, passive: true })
+}
+
+/** Toca pelo <audio>; rejeita se nem chegou a começar (para cair no Web Audio). */
+function playMedia(a: HTMLAudioElement, url: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    let started = false
+    const cleanup = () => {
+      a.onended = null
+      a.onerror = null
+      if (stopMedia === stop) stopMedia = null
+    }
+    const done = () => {
+      cleanup()
+      resolve()
+    }
+    const fail = () => {
+      cleanup()
+      if (started) resolve()
+      else reject(new Error(`não tocou: ${url}`))
+    }
+    const stop = () => {
+      a.pause()
+      done()
+    }
+    a.onended = done
+    a.onerror = fail
+    stopMedia = stop
+    a.src = url
+    a.play().then(() => (started = true), fail)
+  })
+}
 
 const buffers = new Map<string, Promise<AudioBuffer>>()
 let clipSource: AudioBufferSourceNode | null = null
@@ -72,6 +154,14 @@ function loadClip(c: AudioContext, url: string): Promise<AudioBuffer> {
 /** Toca um arquivo de áudio; resolve quando termina (ou é interrompido). */
 export async function playClipUrl(url: string): Promise<void> {
   if (!getSettings().sound) return
+  stopClip()
+  if (media && mediaUnlocked) {
+    try {
+      return await playMedia(media, url)
+    } catch {
+      // <audio> falhou: tenta pelo Web Audio
+    }
+  }
   const c = getContext()
   if (!c) throw new Error('sem Web Audio')
   if (c.state !== 'running') await c.resume()
@@ -91,6 +181,7 @@ export async function playClipUrl(url: string): Promise<void> {
 }
 
 export function stopClip() {
+  stopMedia?.()
   const src = clipSource
   clipSource = null
   try {
