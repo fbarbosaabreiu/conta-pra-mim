@@ -1,14 +1,26 @@
-import animals from '../../content/quiz/animais.json'
-import colors from '../../content/quiz/cores.json'
+import animalsData from '../../content/quiz/animais.json'
+import colorsData from '../../content/quiz/cores.json'
 import numbers from '../../content/quiz/numeros.json'
+import { variant } from '../../lib/phrases'
+import type { Lang } from '../../i18n'
+import { grammar, type CountNoun, type Noun } from '../../i18n/grammar'
 
 export type ThemeId = 'animais' | 'cores' | 'numeros'
 
-export const themes: { id: ThemeId; title: string; emoji: string; color: string }[] = [
-  { id: 'animais', title: 'Animais', emoji: '🐶', color: 'var(--color-leaf)' },
-  { id: 'cores', title: 'Cores', emoji: '🎨', color: 'var(--color-grape)' },
-  { id: 'numeros', title: 'Números', emoji: '🔢', color: 'var(--color-sun)' },
+/** Títulos em ui.themes. */
+export const themes: { id: ThemeId; emoji: string; color: string }[] = [
+  { id: 'animais', emoji: '🐶', color: 'var(--color-leaf)' },
+  { id: 'cores', emoji: '🎨', color: 'var(--color-grape)' },
+  { id: 'numeros', emoji: '🔢', color: 'var(--color-sun)' },
 ]
+
+type Animal = { id: string; emoji: string; audio: string } & Record<Lang, Noun & { sound: string }>
+type Color = { id: string; hex: string; name: Record<Lang, string> }
+type CountItem = { emoji: string } & Record<Lang, CountNoun>
+
+const animals: Animal[] = animalsData
+const colors: Color[] = colorsData
+const countItems: CountItem[] = numbers.items
 
 export interface QuizOption {
   id: string
@@ -24,13 +36,18 @@ export interface QuizOption {
 }
 
 export interface Question {
+  /** Texto na tela. */
   prompt: string
-  /** Gravação tocada logo depois da pergunta ("Quem faz…?" + o som de verdade). */
+  /** O que a voz fala (pode diferir: "Quem faz assim?" + o som de verdade). */
+  spoken: string
+  /** Gravação tocada logo depois da pergunta falada. */
   promptAudio?: string
   answerId: string
   options: QuizOption[]
   /** Comemoração mostrada no acerto, ex.: "O gato faz miau!". */
   success: string
+  /** Comemoração falada (sem onomatopeias, que a voz sintética lê mal). */
+  successSpoken: string
   /** Só nas perguntas de número: itens para a criança contar. */
   count?: { emoji: string; n: number; words: string[] }
 }
@@ -46,8 +63,6 @@ function shuffle<T>(list: T[]): T[] {
   return a
 }
 
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
-
 /** Sorteia a resposta (evitando repetir a anterior) e completa com distratores. */
 function withDistractors<T extends { id: string }>(pool: T[], numOptions: number, avoidId?: string) {
   const answer = pick(pool.filter((x) => x.id !== avoidId))
@@ -55,70 +70,87 @@ function withDistractors<T extends { id: string }>(pool: T[], numOptions: number
   return { answer, options: shuffle([answer, ...others]) }
 }
 
-function animalQuestion(numOptions: number, avoidId?: string): Question {
+function animalQuestion(lang: Lang, numOptions: number, avoidId?: string): Question {
+  const g = grammar[lang]
   const { answer, options } = withDistractors(animals, numOptions, avoidId)
   const opts = options.map((a) => ({
     id: a.id,
-    label: a.name,
+    label: a[lang].name,
     emoji: a.emoji,
-    thisIs: `${a.article === 'a' ? 'Essa' : 'Esse'} é ${a.article} ${a.name}.`,
+    thisIs: g.thisIs(a[lang]),
     audio: a.audio,
-    soundText: a.sound,
+    soundText: a[lang].sound,
   }))
-  const subject = `${answer.article} ${answer.name}`
+  const subject = answer[lang]
 
   if (Math.random() < 0.5) {
+    const prompt = variant('find', g.findPrompts(subject))
     return {
-      prompt: `Cadê ${subject}?`,
+      prompt,
+      spoken: prompt,
       answerId: answer.id,
       options: opts,
-      success: `${capitalize(subject)}!`,
+      success: g.found(subject),
+      successSpoken: g.foundSpoken(subject),
     }
   }
   return {
-    prompt: `Quem faz “${answer.sound}”?`,
+    prompt: g.soundPrompt(subject.sound),
+    spoken: variant('sound', g.soundSpoken),
     promptAudio: answer.audio,
     answerId: answer.id,
     options: opts,
-    success: `${capitalize(subject)} faz ${answer.sound}!`,
+    success: g.says(subject, subject.sound),
+    successSpoken: g.foundSpoken(subject),
   }
 }
 
-function colorQuestion(numOptions: number, avoidId?: string): Question {
+function colorQuestion(lang: Lang, numOptions: number, avoidId?: string): Question {
+  const g = grammar[lang]
   const { answer, options } = withDistractors(colors, numOptions, avoidId)
+  const prompt = variant('color', g.colorPrompts(answer.name[lang]))
   return {
-    prompt: `Toque no ${answer.name}`,
+    prompt,
+    spoken: prompt,
     answerId: answer.id,
-    options: options.map((c) => ({ id: c.id, label: c.name, color: c.hex, thisIs: `Esse é o ${c.name}.` })),
-    success: `${capitalize(answer.name)}!`,
+    options: options.map((c) => ({ id: c.id, label: c.name[lang], color: c.hex, thisIs: g.colorThisIs(c.name[lang]) })),
+    success: g.colorFound(answer.name[lang]),
+    successSpoken: g.colorFound(answer.name[lang]),
   }
 }
 
-function numberQuestion(numOptions: number, avoidId?: string): Question {
+function numberQuestion(lang: Lang, numOptions: number, avoidId?: string): Question {
+  const g = grammar[lang]
   // Começa contando até 3; com mais opções, vai até o máximo.
   const max = numOptions <= 2 ? 3 : numbers.max
   const pool = Array.from({ length: max }, (_, i) => ({ id: String(i + 1), n: i + 1 }))
   const { answer, options } = withDistractors(pool, numOptions, avoidId)
-  const item = pick(numbers.items)
-  const words = item.feminine ? numbers.words.feminine : numbers.words.masculine
+  const picked = pick(countItems)
+  const item = picked[lang]
+  const words = g.countWords(item.fem)
+
+  const prompt = variant('number', g.howManyPrompts(item))
+  const success = g.amount(answer.n, item)
 
   return {
-    prompt: `${item.feminine ? 'Quantas' : 'Quantos'} ${item.plural}?`,
+    prompt,
+    spoken: prompt,
     answerId: answer.id,
     options: options
       .sort((a, b) => a.n - b.n)
-      .map((o) => ({ id: o.id, label: words[o.n - 1], number: o.n, thisIs: `Esse é o ${o.n}.` })),
-    success: `${capitalize(words[answer.n - 1])} ${answer.n === 1 ? item.singular : item.plural}!`,
-    count: { emoji: item.emoji, n: answer.n, words },
+      .map((o) => ({ id: o.id, label: words[o.n - 1], number: o.n, thisIs: g.numberThisIs(o.n) })),
+    success,
+    successSpoken: success,
+    count: { emoji: picked.emoji, n: answer.n, words },
   }
 }
 
-const generators: Record<ThemeId, (numOptions: number, avoidId?: string) => Question> = {
+const generators: Record<ThemeId, (lang: Lang, numOptions: number, avoidId?: string) => Question> = {
   animais: animalQuestion,
   cores: colorQuestion,
   numeros: numberQuestion,
 }
 
-export function makeQuestion(theme: ThemeId, numOptions: number, avoidId?: string): Question {
-  return generators[theme](numOptions, avoidId)
+export function makeQuestion(theme: ThemeId, lang: Lang, numOptions: number, avoidId?: string): Question {
+  return generators[theme](lang, numOptions, avoidId)
 }

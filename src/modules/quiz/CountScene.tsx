@@ -2,16 +2,29 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { playPop } from '../../lib/sfx'
 import { speak } from '../../lib/speech'
+import { useT } from '../../i18n'
 
 /** Itens para contar: cada toque marca o item com o próximo número e o fala. */
-export function CountScene({ emoji, n, words }: { emoji: string; n: number; words: string[] }) {
+export function CountScene({
+  emoji,
+  n,
+  words,
+  onTap,
+}: {
+  emoji: string
+  n: number
+  words: string[]
+  onTap?: () => void
+}) {
+  const t = useT()
   const [order, setOrder] = useState<Record<number, number>>({})
   const counted = Object.keys(order).length
 
   function tap(i: number) {
+    onTap?.()
     if (order[i] !== undefined) return
     playPop()
-    void speak(words[counted], { pitch: 1.3 })
+    void speak(words[counted])
     setOrder({ ...order, [i]: counted + 1 })
   }
 
@@ -24,7 +37,7 @@ export function CountScene({ emoji, n, words }: { emoji: string; n: number; word
             onClick={() => tap(i)}
             whileTap={{ scale: 0.85 }}
             animate={order[i] ? { y: [0, -16, 0] } : {}}
-            aria-label={order[i] ? `Item ${order[i]}` : 'Contar este'}
+            aria-label={order[i] ? t.item(order[i]) : t.countThis}
             className={`relative text-[min(14vmin,5rem)] leading-none transition-opacity ${
               order[i] ? '' : 'opacity-90'
             }`}

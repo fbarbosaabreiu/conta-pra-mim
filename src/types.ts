@@ -44,3 +44,21 @@ export interface Story {
   background: string
   pages: StoryPage[]
 }
+
+// ---------- Como as histórias são escritas (src/content/stories/*.json) ----------
+// Os textos vêm em todos os idiomas; `getStory` resolve para o idioma atual,
+// e as telas recebem os tipos acima, com texto simples.
+
+import type { Lang, Text } from './i18n/langs'
+
+export type HotspotSource = Omit<Hotspot, 'word' | 'sound'> & { word: Text; sound?: Text }
+
+export type StoryPageSource = Omit<StoryPage, 'elements' | 'text' | 'reveal' | 'highlight' | 'parentTip'> & {
+  elements: HotspotSource[]
+  text: Text
+  reveal?: Text
+  highlight?: Record<Lang, string[]>
+  parentTip?: Text
+}
+
+export type StorySource = Omit<Story, 'title' | 'pages'> & { title: Text; pages: StoryPageSource[] }

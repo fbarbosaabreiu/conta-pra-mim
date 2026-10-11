@@ -1,9 +1,9 @@
 [
-  { "id": "vermelho", "name": "vermelho", "hex": "#ef4444" },
-  { "id": "azul", "name": "azul", "hex": "#3b82f6" },
-  { "id": "amarelo", "name": "amarelo", "hex": "#facc15" },
-  { "id": "verde", "name": "verde", "hex": "#22c55e" },
-  { "id": "laranja", "name": "laranja", "hex": "#f97316" },
-  { "id": "roxo", "name": "roxo", "hex": "#a855f7" },
-  { "id": "rosa", "name": "rosa", "hex": "#f472b6" }
+  { "id": "vermelho", "hex": "#ef4444", "name": { "pt": "vermelho", "en": "red", "es": "rojo", "fr": "rouge" } },
+  { "id": "azul", "hex": "#3b82f6", "name": { "pt": "azul", "en": "blue", "es": "azul", "fr": "bleu" } },
+  { "id": "amarelo", "hex": "#facc15", "name": { "pt": "amarelo", "en": "yellow", "es": "amarillo", "fr": "jaune" } },
+  { "id": "verde", "hex": "#22c55e", "name": { "pt": "verde", "en": "green", "es": "verde", "fr": "vert" } },
+  { "id": "laranja", "hex": "#f97316", "name": { "pt": "laranja", "en": "orange", "es": "naranja", "fr": "orange" } },
+  { "id": "roxo", "hex": "#a855f7", "name": { "pt": "roxo", "en": "purple", "es": "morado", "fr": "violet" } },
+  { "id": "rosa", "hex": "#f472b6", "name": { "pt": "rosa", "en": "pink", "es": "rosa", "fr": "rose" } }
 ]

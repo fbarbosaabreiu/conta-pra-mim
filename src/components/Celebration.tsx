@@ -49,6 +49,7 @@ export function Celebration({ visual, title, subtitle, onDone, durationMs = 2200
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={finish}
+      data-testid="celebration"
     >
       {pieces.map((p, i) => (
         <motion.span
@@ -73,7 +74,14 @@ export function Celebration({ visual, title, subtitle, onDone, durationMs = 2200
         animate={{ scale: 1, rotate: 0 }}
         transition={{ type: 'spring', stiffness: 260, damping: 14 }}
       >
-        {visual}
+        {visual && (
+          <motion.div
+            animate={{ rotate: [0, -8, 8, -8, 0], y: [0, -10, 0, -6, 0] }}
+            transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 0.2 }}
+          >
+            {visual}
+          </motion.div>
+        )}
         <p className="text-5xl font-bold text-coral">{title}</p>
         {subtitle && <p className="text-3xl font-semibold">{subtitle}</p>}
       </motion.div>

@@ -7,24 +7,36 @@ interface Props {
   onPick: (option: QuizOption) => boolean
   /** Pulsa a resposta certa depois de um erro, como dica. */
   hint: boolean
+  /** Posição, para as opções entrarem uma depois da outra. */
+  index: number
 }
 
-export function OptionButton({ option, onPick, hint }: Props) {
-  const shake = useAnimationControls()
+export function OptionButton({ option, onPick, hint, index }: Props) {
+  const react = useAnimationControls()
 
   function onClick() {
     if (!onPick(option)) {
-      void shake.start({ x: [0, -14, 14, -10, 10, 0], transition: { duration: 0.45 } })
+      // Um "balançar" brincalhão (o bicho mostrando quem é), não um "não" seco.
+      void react.start({
+        rotate: [0, -10, 10, -6, 6, 0],
+        y: [0, -12, 0, -6, 0],
+        transition: { duration: 0.7 },
+      })
     }
   }
 
   return (
     <motion.div
+      initial={{ scale: 0, y: 40 }}
+      animate={{ scale: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 260, damping: 16, delay: 0.25 + index * 0.15 }}
+    >
+    <motion.div
       animate={hint ? { scale: [1, 1.08, 1] } : { scale: 1 }}
       transition={hint ? { duration: 0.9, repeat: Infinity } : undefined}
     >
       <motion.button
-        animate={shake}
+        animate={react}
         whileTap={{ scale: 0.9 }}
         onClick={onClick}
         aria-label={option.label}
@@ -34,6 +46,7 @@ export function OptionButton({ option, onPick, hint }: Props) {
       >
         <OptionVisual option={option} />
       </motion.button>
+    </motion.div>
     </motion.div>
   )
 }

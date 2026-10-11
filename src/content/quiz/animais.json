@@ -1,12 +1,72 @@
 [
-  { "id": "gato", "name": "gato", "article": "o", "emoji": "🐱", "sound": "miau", "audio": "gato.mp3" },
-  { "id": "cachorro", "name": "cachorro", "article": "o", "emoji": "🐶", "sound": "au au", "audio": "cachorro.mp3" },
-  { "id": "vaca", "name": "vaca", "article": "a", "emoji": "🐮", "sound": "muuu", "audio": "vaca.mp3" },
-  { "id": "pato", "name": "pato", "article": "o", "emoji": "🦆", "sound": "quá quá", "audio": "pato.mp3" },
-  { "id": "porco", "name": "porquinho", "article": "o", "emoji": "🐷", "sound": "óinc óinc", "audio": "porco.mp3" },
-  { "id": "ovelha", "name": "ovelha", "article": "a", "emoji": "🐑", "sound": "méé", "audio": "ovelha.mp3" },
-  { "id": "galinha", "name": "galinha", "article": "a", "emoji": "🐔", "sound": "có có có", "audio": "galinha.mp3" },
-  { "id": "sapo", "name": "sapo", "article": "o", "emoji": "🐸", "sound": "croac", "audio": "sapo.mp3" },
-  { "id": "leao", "name": "leão", "article": "o", "emoji": "🦁", "sound": "rrroar", "audio": "leao.mp3" },
-  { "id": "abelha", "name": "abelha", "article": "a", "emoji": "🐝", "sound": "zzzz", "audio": "abelha.mp3" }
+  {
+    "id": "gato", "emoji": "🐱", "audio": "gato.mp3",
+    "pt": { "name": "gato", "sound": "miau" },
+    "en": { "name": "cat", "sound": "meow" },
+    "es": { "name": "gato", "sound": "miau" },
+    "fr": { "name": "chat", "sound": "miaou" }
+  },
+  {
+    "id": "cachorro", "emoji": "🐶", "audio": "cachorro.mp3",
+    "pt": { "name": "cachorro", "sound": "au au" },
+    "en": { "name": "dog", "sound": "woof woof" },
+    "es": { "name": "perro", "sound": "guau guau" },
+    "fr": { "name": "chien", "sound": "ouaf ouaf" }
+  },
+  {
+    "id": "vaca", "emoji": "🐮", "audio": "vaca.mp3",
+    "pt": { "name": "vaca", "fem": true, "sound": "muuu" },
+    "en": { "name": "cow", "sound": "moo" },
+    "es": { "name": "vaca", "fem": true, "sound": "muuu" },
+    "fr": { "name": "vache", "fem": true, "sound": "meuh" }
+  },
+  {
+    "id": "pato", "emoji": "🦆", "audio": "pato.mp3",
+    "pt": { "name": "pato", "sound": "quá quá" },
+    "en": { "name": "duck", "sound": "quack quack" },
+    "es": { "name": "pato", "sound": "cuac cuac" },
+    "fr": { "name": "canard", "sound": "coin coin" }
+  },
+  {
+    "id": "porco", "emoji": "🐷", "audio": "porco.mp3",
+    "pt": { "name": "porquinho", "sound": "óinc óinc" },
+    "en": { "name": "piggy", "sound": "oink oink" },
+    "es": { "name": "cerdito", "sound": "oinc oinc" },
+    "fr": { "name": "cochon", "sound": "groin groin" }
+  },
+  {
+    "id": "ovelha", "emoji": "🐑", "audio": "ovelha.mp3",
+    "pt": { "name": "ovelha", "fem": true, "sound": "méé" },
+    "en": { "name": "sheep", "sound": "baa" },
+    "es": { "name": "oveja", "fem": true, "sound": "beee" },
+    "fr": { "name": "mouton", "sound": "bêê" }
+  },
+  {
+    "id": "galinha", "emoji": "🐔", "audio": "galinha.mp3",
+    "pt": { "name": "galinha", "fem": true, "sound": "có có có" },
+    "en": { "name": "hen", "sound": "cluck cluck" },
+    "es": { "name": "gallina", "fem": true, "sound": "clo clo" },
+    "fr": { "name": "poule", "fem": true, "sound": "cot cot" }
+  },
+  {
+    "id": "sapo", "emoji": "🐸", "audio": "sapo.mp3",
+    "pt": { "name": "sapo", "sound": "croac" },
+    "en": { "name": "frog", "sound": "ribbit" },
+    "es": { "name": "rana", "fem": true, "sound": "croac" },
+    "fr": { "name": "grenouille", "fem": true, "sound": "croâ" }
+  },
+  {
+    "id": "leao", "emoji": "🦁", "audio": "leao.mp3",
+    "pt": { "name": "leão", "sound": "rrroar" },
+    "en": { "name": "lion", "sound": "roar" },
+    "es": { "name": "león", "sound": "grrr" },
+    "fr": { "name": "lion", "sound": "grrr" }
+  },
+  {
+    "id": "abelha", "emoji": "🐝", "audio": "abelha.mp3",
+    "pt": { "name": "abelha", "fem": true, "sound": "zzzz" },
+    "en": { "name": "bee", "sound": "bzzz" },
+    "es": { "name": "abeja", "fem": true, "sound": "bzzz" },
+    "fr": { "name": "abeille", "fem": true, "sound": "bzzz" }
+  }
 ]

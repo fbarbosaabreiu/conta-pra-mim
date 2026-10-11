@@ -1,14 +1,26 @@
 import { useSyncExternalStore } from 'react'
+import { LANGS, isLang, type Lang } from '../i18n/langs'
 
 export interface Settings {
   /** Liga/desliga todo o áudio do app. */
   sound: boolean
   /** Narração e falas (histórias, perguntas, nomes dos bichos). */
   voice: boolean
+  /** Idioma dos textos, das histórias e da voz. */
+  lang: Lang
 }
 
 const KEY = 'conta-pra-mim:settings'
-const defaults: Settings = { sound: true, voice: true }
+/** Na primeira vez, usa o idioma do aparelho se o app tiver; senão, português. */
+export function detectLang(): Lang {
+  for (const l of navigator.languages ?? [navigator.language]) {
+    const code = l?.slice(0, 2).toLowerCase()
+    if (isLang(code)) return code
+  }
+  return LANGS[0]
+}
+
+const defaults: Settings = { sound: true, voice: true, lang: detectLang() }
 
 let state: Settings = load()
 const listeners = new Set<() => void>()
@@ -16,7 +28,11 @@ const listeners = new Set<() => void>()
 function load(): Settings {
   try {
     const raw = localStorage.getItem(KEY)
-    if (raw) return { ...defaults, ...JSON.parse(raw) }
+    if (raw) {
+      const saved = { ...defaults, ...JSON.parse(raw) }
+      if (!isLang(saved.lang)) saved.lang = defaults.lang
+      return saved
+    }
   } catch {
     // armazenamento indisponível: usa o padrão
   }

@@ -1,81 +1,161 @@
 {
   "id": "fazenda",
-  "title": "Os sons da fazenda",
+  "title": { "pt": "Os sons da fazenda", "en": "Farm sounds", "es": "Los sonidos de la granja", "fr": "Les bruits de la ferme" },
   "cover": "🐮",
   "color": "#f59e0b",
   "background": "linear-gradient(#bae6fd 0%, #e0f2fe 58%, #86efac 58%, #4ade80 100%)",
   "pages": [
     {
       "elements": [
-        { "emoji": "☀️", "word": "sol", "x": 80, "y": 20, "size": 16 },
-        { "emoji": "🏡", "word": "casa", "x": 35, "y": 55, "size": 26 },
-        { "emoji": "🌳", "word": "árvore", "x": 76, "y": 60, "size": 22 }
+        { "emoji": "☀️", "word": { "pt": "sol", "en": "sun", "es": "sol", "fr": "soleil" }, "x": 80, "y": 20, "size": 16 },
+        { "emoji": "🏡", "word": { "pt": "casa", "en": "house", "es": "casa", "fr": "maison" }, "x": 35, "y": 55, "size": 26 },
+        { "emoji": "🌳", "word": { "pt": "árvore", "en": "tree", "es": "árbol", "fr": "arbre" }, "x": 76, "y": 60, "size": 22 }
       ],
-      "text": "Bom dia, fazenda! O sol acordou.",
-      "highlight": ["sol"],
-      "parentTip": "Aponte para o sol e diga “sol”. Espere a criança tentar repetir."
+      "text": {
+        "pt": "Bom dia, fazenda! O sol acordou.",
+        "en": "Good morning, farm! The sun woke up.",
+        "es": "¡Buenos días, granja! El sol se despertó.",
+        "fr": "Bonjour, la ferme ! Le soleil s’est réveillé."
+      },
+      "highlight": { "pt": ["sol"], "en": ["sun"], "es": ["sol"], "fr": ["soleil"] },
+      "parentTip": {
+        "pt": "Aponte para o sol e diga “sol”. Espere a criança tentar repetir.",
+        "en": "Point to the sun and say “sun”. Wait for your child to try saying it.",
+        "es": "Señale el sol y diga “sol”. Espere a que el niño intente repetirlo.",
+        "fr": "Montrez le soleil et dites « soleil ». Attendez que l’enfant essaie de répéter."
+      }
     },
     {
       "elements": [
-        { "emoji": "🐄", "word": "vaca", "sound": "muuu!", "audio": "vaca.mp3", "x": 50, "y": 62, "size": 34 }
+        {
+          "emoji": "🐄",
+          "word": { "pt": "vaca", "en": "cow", "es": "vaca", "fr": "vache" },
+          "sound": { "pt": "muuu!", "en": "moo!", "es": "¡muuu!", "fr": "meuh !" },
+          "audio": "vaca.mp3", "x": 50, "y": 62, "size": 34
+        }
       ],
-      "text": "A vaca faz...",
-      "reveal": "muuu!",
+      "text": { "pt": "A vaca faz...", "en": "The cow says...", "es": "La vaca hace...", "fr": "La vache fait..." },
+      "reveal": { "pt": "muuu!", "en": "moo!", "es": "¡muuu!", "fr": "meuh !" },
       "revealAudio": "vaca.mp3",
-      "highlight": ["vaca"],
-      "parentTip": "Leia devagar e pare no “faz...”. Dê alguns segundos para a criança completar."
+      "highlight": { "pt": ["vaca"], "en": ["cow"], "es": ["vaca"], "fr": ["vache"] },
+      "parentTip": {
+        "pt": "Leia devagar e pare no “faz...”. Dê alguns segundos para a criança completar.",
+        "en": "Read slowly and stop at “says...”. Give your child a few seconds to finish it.",
+        "es": "Lea despacio y pare en “hace...”. Dé unos segundos para que el niño complete.",
+        "fr": "Lisez lentement et arrêtez-vous sur « fait... ». Laissez quelques secondes à l’enfant pour compléter."
+      }
     },
     {
       "elements": [
-        { "emoji": "🐖", "word": "porquinho", "sound": "óinc óinc!", "audio": "porco.mp3", "x": 50, "y": 64, "size": 32 }
+        {
+          "emoji": "🐖",
+          "word": { "pt": "porquinho", "en": "piggy", "es": "cerdito", "fr": "cochon" },
+          "sound": { "pt": "óinc óinc!", "en": "oink oink!", "es": "¡oinc oinc!", "fr": "groin groin !" },
+          "audio": "porco.mp3", "x": 50, "y": 64, "size": 32
+        }
       ],
-      "text": "O porquinho faz...",
-      "reveal": "óinc óinc!",
+      "text": { "pt": "O porquinho faz...", "en": "The piggy says...", "es": "El cerdito hace...", "fr": "Le cochon fait..." },
+      "reveal": { "pt": "óinc óinc!", "en": "oink oink!", "es": "¡oinc oinc!", "fr": "groin groin !" },
       "revealAudio": "porco.mp3",
-      "highlight": ["porquinho"],
-      "parentTip": "Faça o som junto e exagere na expressão — bebês adoram imitar caretas."
+      "highlight": { "pt": ["porquinho"], "en": ["piggy"], "es": ["cerdito"], "fr": ["cochon"] },
+      "parentTip": {
+        "pt": "Faça o som junto e exagere na expressão — bebês adoram imitar caretas.",
+        "en": "Make the sound together and exaggerate your face — babies love copying funny faces.",
+        "es": "Hagan el sonido juntos y exagere la expresión: a los bebés les encanta imitar muecas.",
+        "fr": "Faites le bruit ensemble et exagérez l’expression — les bébés adorent imiter les grimaces."
+      }
     },
     {
       "elements": [
-        { "emoji": "🦆", "word": "pato", "sound": "quá quá!", "audio": "pato.mp3", "x": 45, "y": 64, "size": 30 },
-        { "emoji": "💧", "word": "água", "x": 78, "y": 76, "size": 12 }
+        {
+          "emoji": "🦆",
+          "word": { "pt": "pato", "en": "duck", "es": "pato", "fr": "canard" },
+          "sound": { "pt": "quá quá!", "en": "quack quack!", "es": "¡cuac cuac!", "fr": "coin coin !" },
+          "audio": "pato.mp3", "x": 45, "y": 64, "size": 30
+        },
+        { "emoji": "💧", "word": { "pt": "água", "en": "water", "es": "agua", "fr": "eau" }, "x": 78, "y": 76, "size": 12 }
       ],
-      "text": "O pato faz...",
-      "reveal": "quá quá!",
+      "text": { "pt": "O pato faz...", "en": "The duck says...", "es": "El pato hace...", "fr": "Le canard fait..." },
+      "reveal": { "pt": "quá quá!", "en": "quack quack!", "es": "¡cuac cuac!", "fr": "coin coin !" },
       "revealAudio": "pato.mp3",
-      "highlight": ["pato"],
-      "parentTip": "Abra e feche as mãos como um bico enquanto diz “quá quá”."
+      "highlight": { "pt": ["pato"], "en": ["duck"], "es": ["pato"], "fr": ["canard"] },
+      "parentTip": {
+        "pt": "Abra e feche as mãos como um bico enquanto diz “quá quá”.",
+        "en": "Open and close your hands like a beak while you say “quack quack”.",
+        "es": "Abra y cierre las manos como un pico mientras dice “cuac cuac”.",
+        "fr": "Ouvrez et fermez les mains comme un bec en disant « coin coin »."
+      }
     },
     {
       "elements": [
-        { "emoji": "🐑", "word": "ovelha", "sound": "méé!", "audio": "ovelha.mp3", "x": 50, "y": 63, "size": 32 }
+        {
+          "emoji": "🐑",
+          "word": { "pt": "ovelha", "en": "sheep", "es": "oveja", "fr": "mouton" },
+          "sound": { "pt": "méé!", "en": "baa!", "es": "¡beee!", "fr": "bêê !" },
+          "audio": "ovelha.mp3", "x": 50, "y": 63, "size": 32
+        }
       ],
-      "text": "A ovelha faz...",
-      "reveal": "méé!",
+      "text": { "pt": "A ovelha faz...", "en": "The sheep says...", "es": "La oveja hace...", "fr": "Le mouton fait..." },
+      "reveal": { "pt": "méé!", "en": "baa!", "es": "¡beee!", "fr": "bêê !" },
       "revealAudio": "ovelha.mp3",
-      "highlight": ["ovelha"]
+      "highlight": { "pt": ["ovelha"], "en": ["sheep"], "es": ["oveja"], "fr": ["mouton"] }
     },
     {
       "elements": [
-        { "emoji": "🐓", "word": "galo", "sound": "cocoricó!", "audio": "galo.mp3", "x": 50, "y": 60, "size": 32 },
-        { "emoji": "🌅", "word": "manhã", "x": 82, "y": 22, "size": 14 }
+        {
+          "emoji": "🐓",
+          "word": { "pt": "galo", "en": "rooster", "es": "gallo", "fr": "coq" },
+          "sound": { "pt": "cocoricó!", "en": "cock-a-doodle-doo!", "es": "¡quiquiriquí!", "fr": "cocorico !" },
+          "audio": "galo.mp3", "x": 50, "y": 60, "size": 32
+        },
+        { "emoji": "🌅", "word": { "pt": "manhã", "en": "morning", "es": "mañana", "fr": "matin" }, "x": 82, "y": 22, "size": 14 }
       ],
-      "text": "O galo faz...",
-      "reveal": "cocoricó!",
+      "text": { "pt": "O galo faz...", "en": "The rooster says...", "es": "El gallo hace...", "fr": "Le coq fait..." },
+      "reveal": { "pt": "cocoricó!", "en": "cock-a-doodle-doo!", "es": "¡quiquiriquí!", "fr": "cocorico !" },
       "revealAudio": "galo.mp3",
-      "highlight": ["galo"]
+      "highlight": { "pt": ["galo"], "en": ["rooster"], "es": ["gallo"], "fr": ["coq"] }
     },
     {
       "elements": [
-        { "emoji": "🐄", "word": "vaca", "sound": "muuu!", "audio": "vaca.mp3", "x": 18, "y": 52, "size": 18 },
-        { "emoji": "🐖", "word": "porquinho", "sound": "óinc!", "audio": "porco.mp3", "x": 42, "y": 68, "size": 17 },
-        { "emoji": "🦆", "word": "pato", "sound": "quá quá!", "audio": "pato.mp3", "x": 62, "y": 52, "size": 16 },
-        { "emoji": "🐑", "word": "ovelha", "sound": "méé!", "audio": "ovelha.mp3", "x": 82, "y": 68, "size": 17 },
-        { "emoji": "🐓", "word": "galo", "sound": "cocoricó!", "audio": "galo.mp3", "x": 50, "y": 30, "size": 15 }
+        {
+          "emoji": "🐄", "word": { "pt": "vaca", "en": "cow", "es": "vaca", "fr": "vache" },
+          "sound": { "pt": "muuu!", "en": "moo!", "es": "¡muuu!", "fr": "meuh !" },
+          "audio": "vaca.mp3", "x": 18, "y": 52, "size": 18
+        },
+        {
+          "emoji": "🐖", "word": { "pt": "porquinho", "en": "piggy", "es": "cerdito", "fr": "cochon" },
+          "sound": { "pt": "óinc!", "en": "oink!", "es": "¡oinc!", "fr": "groin !" },
+          "audio": "porco.mp3", "x": 42, "y": 68, "size": 17
+        },
+        {
+          "emoji": "🦆", "word": { "pt": "pato", "en": "duck", "es": "pato", "fr": "canard" },
+          "sound": { "pt": "quá quá!", "en": "quack quack!", "es": "¡cuac cuac!", "fr": "coin coin !" },
+          "audio": "pato.mp3", "x": 62, "y": 52, "size": 16
+        },
+        {
+          "emoji": "🐑", "word": { "pt": "ovelha", "en": "sheep", "es": "oveja", "fr": "mouton" },
+          "sound": { "pt": "méé!", "en": "baa!", "es": "¡beee!", "fr": "bêê !" },
+          "audio": "ovelha.mp3", "x": 82, "y": 68, "size": 17
+        },
+        {
+          "emoji": "🐓", "word": { "pt": "galo", "en": "rooster", "es": "gallo", "fr": "coq" },
+          "sound": { "pt": "cocoricó!", "en": "cock-a-doodle-doo!", "es": "¡quiquiriquí!", "fr": "cocorico !" },
+          "audio": "galo.mp3", "x": 50, "y": 30, "size": 15
+        }
       ],
-      "text": "Tchau, amigos da fazenda!",
-      "highlight": ["tchau"],
-      "parentTip": "Acene “tchau” junto com a criança. Pergunte: qual bichinho você mais gostou?"
+      "text": {
+        "pt": "Tchau, amigos da fazenda!",
+        "en": "Bye-bye, farm friends!",
+        "es": "¡Adiós, amigos de la granja!",
+        "fr": "Au revoir, les amis de la ferme !"
+      },
+      "highlight": { "pt": ["tchau"], "en": ["bye-bye"], "es": ["adiós"], "fr": ["au", "revoir"] },
+      "parentTip": {
+        "pt": "Acene “tchau” junto com a criança. Pergunte: qual bichinho você mais gostou?",
+        "en": "Wave “bye-bye” together with your child. Ask: which animal did you like best?",
+        "es": "Diga “adiós” con la mano junto con el niño. Pregunte: ¿qué animalito te gustó más?",
+        "fr": "Faites « au revoir » de la main avec l’enfant. Demandez : quel animal as-tu préféré ?"
+      }
     }
   ]
 }

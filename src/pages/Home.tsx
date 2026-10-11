@@ -3,8 +3,13 @@ import { motion } from 'framer-motion'
 import { Screen } from '../components/Screen'
 import { Tile } from '../components/Tile'
 import { SoundToggle, VoiceToggle } from '../components/AudioToggles'
+import { LanguagePicker } from '../components/LanguagePicker'
+import { useLang, useT } from '../i18n'
+import { HOW_TO_LINK } from './HowTo'
 
 export default function Home() {
+  const t = useT()
+  const lang = useLang()
   return (
     <Screen
       right={
@@ -25,17 +30,24 @@ export default function Home() {
             🧸
           </motion.div>
           <h1 className="mt-2 text-5xl font-bold sm:text-6xl">Fala Falinha</h1>
-          <p className="mt-2 text-xl opacity-70">Histórias e brincadeiras para falar</p>
+          <p className="mt-2 text-xl opacity-70">{t.tagline}</p>
         </div>
 
         <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
-          <Tile to="/historias" emoji="📖" label="Histórias" color="var(--color-coral)" big />
-          <Tile to="/quiz" emoji="🎯" label="Brincar" color="var(--color-sky)" big />
+          <Tile to="/historias" emoji="📖" label={t.stories} color="var(--color-coral)" big />
+          <Tile to="/quiz" emoji="🎯" label={t.play} color="var(--color-sky)" big />
         </div>
 
-        <Link to="/creditos" className="text-base underline opacity-60">
-          Créditos dos sons
-        </Link>
+        <LanguagePicker />
+
+        <div className="flex gap-6">
+          <Link to="/como-usar" className="text-base underline opacity-60">
+            ❓ {HOW_TO_LINK[lang]}
+          </Link>
+          <Link to="/creditos" className="text-base underline opacity-60">
+            {t.soundCredits}
+          </Link>
+        </div>
       </div>
     </Screen>
   )

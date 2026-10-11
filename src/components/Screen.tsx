@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { Link } from 'react-router'
 import { motion } from 'framer-motion'
 import { playTap } from '../lib/sfx'
+import { useT } from '../i18n'
 
 interface ScreenProps {
   title?: string
@@ -25,12 +26,13 @@ export function Screen({ title, back, right, children }: ScreenProps) {
 }
 
 export function BackButton({ to }: { to: string }) {
+  const t = useT()
   return (
     <motion.div whileTap={{ scale: 0.88 }}>
       <Link
         to={to}
         onClick={playTap}
-        aria-label="Voltar"
+        aria-label={t.back}
         className="tile-shadow flex size-14 items-center justify-center rounded-full bg-white text-3xl"
       >
         ⬅️

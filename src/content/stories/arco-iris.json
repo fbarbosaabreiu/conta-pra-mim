@@ -1,89 +1,165 @@
 {
   "id": "arco-iris",
-  "title": "As cores da Lelê",
+  "title": { "pt": "As cores da Lelê", "en": "Lelê’s colors", "es": "Los colores de Lelê", "fr": "Les couleurs de Lelê" },
   "cover": "🌈",
   "color": "#a78bfa",
   "background": "linear-gradient(#fdf4ff, #ede9fe)",
   "pages": [
     {
       "elements": [
-        { "emoji": "🐛", "word": "Lelê", "sound": "oi!", "x": 50, "y": 58, "size": 30 },
-        { "emoji": "🌿", "word": "folha", "x": 22, "y": 74, "size": 16 },
-        { "emoji": "🌼", "word": "flor", "x": 80, "y": 30, "size": 14 }
+        { "emoji": "🐛", "word": "Lelê", "sound": { "pt": "oi!", "en": "hi!", "es": "¡hola!", "fr": "coucou !" }, "x": 50, "y": 58, "size": 30 },
+        { "emoji": "🌿", "word": { "pt": "folha", "en": "leaf", "es": "hoja", "fr": "feuille" }, "x": 22, "y": 74, "size": 16 },
+        { "emoji": "🌼", "word": { "pt": "flor", "en": "flower", "es": "flor", "fr": "fleur" }, "x": 80, "y": 30, "size": 14 }
       ],
-      "text": "Esta é a Lelê, uma lagartinha que adora cores.",
-      "highlight": ["lelê", "cores"],
-      "parentTip": "Pergunte: “cadê a Lelê?” e ajude a criança a apontar."
+      "text": {
+        "pt": "Esta é a Lelê, uma lagartinha que adora cores.",
+        "en": "This is Lelê, a little caterpillar who loves colors.",
+        "es": "Esta es Lelê, una orugita a la que le encantan los colores.",
+        "fr": "Voici Lelê, une petite chenille qui adore les couleurs."
+      },
+      "highlight": { "pt": ["lelê", "cores"], "en": ["lelê", "colors"], "es": ["lelê", "colores"], "fr": ["lelê", "couleurs"] },
+      "parentTip": {
+        "pt": "Pergunte: “cadê a Lelê?” e ajude a criança a apontar.",
+        "en": "Ask: “where’s Lelê?” and help your child point.",
+        "es": "Pregunte: “¿dónde está Lelê?” y ayude al niño a señalar.",
+        "fr": "Demandez : « où est Lelê ? » et aidez l’enfant à montrer du doigt."
+      }
     },
     {
       "background": "linear-gradient(#fff1f2, #fecdd3)",
       "elements": [
-        { "emoji": "🍎", "word": "maçã", "sound": "vermelha!", "x": 58, "y": 52, "size": 30 },
+        {
+          "emoji": "🍎", "word": { "pt": "maçã", "en": "apple", "es": "manzana", "fr": "pomme" },
+          "sound": { "pt": "vermelha!", "en": "red!", "es": "¡roja!", "fr": "rouge !" }, "x": 58, "y": 52, "size": 30
+        },
         { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
       ],
-      "text": "Lelê achou uma maçã. A maçã é...",
-      "reveal": "vermelha!",
+      "text": {
+        "pt": "Lelê achou uma maçã. A maçã é...",
+        "en": "Lelê found an apple. The apple is...",
+        "es": "Lelê encontró una manzana. La manzana es...",
+        "fr": "Lelê a trouvé une pomme. La pomme est..."
+      },
+      "reveal": { "pt": "vermelha!", "en": "red!", "es": "¡roja!", "fr": "rouge !" },
       "accent": "#ef4444",
-      "highlight": ["maçã"],
-      "parentTip": "Depois de revelar, procure outra coisa vermelha perto de vocês."
+      "highlight": { "pt": ["maçã"], "en": ["apple"], "es": ["manzana"], "fr": ["pomme"] },
+      "parentTip": {
+        "pt": "Depois de revelar, procure outra coisa vermelha perto de vocês.",
+        "en": "After revealing, look for something else red around you.",
+        "es": "Después de revelar, busquen otra cosa roja cerca de ustedes.",
+        "fr": "Après avoir révélé, cherchez autre chose de rouge autour de vous."
+      }
     },
     {
       "background": "linear-gradient(#fefce8, #fef08a)",
       "elements": [
-        { "emoji": "🍌", "word": "banana", "sound": "amarela!", "x": 58, "y": 52, "size": 30 },
+        {
+          "emoji": "🍌", "word": { "pt": "banana", "en": "banana", "es": "plátano", "fr": "banane" },
+          "sound": { "pt": "amarela!", "en": "yellow!", "es": "¡amarillo!", "fr": "jaune !" }, "x": 58, "y": 52, "size": 30
+        },
         { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
       ],
-      "text": "Depois, achou uma banana. A banana é...",
-      "reveal": "amarela!",
+      "text": {
+        "pt": "Depois, achou uma banana. A banana é...",
+        "en": "Then she found a banana. The banana is...",
+        "es": "Después, encontró un plátano. El plátano es...",
+        "fr": "Ensuite, elle a trouvé une banane. La banane est..."
+      },
+      "reveal": { "pt": "amarela!", "en": "yellow!", "es": "¡amarillo!", "fr": "jaune !" },
       "accent": "#ca8a04",
-      "highlight": ["banana"]
+      "highlight": { "pt": ["banana"], "en": ["banana"], "es": ["plátano"], "fr": ["banane"] }
     },
     {
       "background": "linear-gradient(#f0fdf4, #bbf7d0)",
       "elements": [
-        { "emoji": "🐸", "word": "sapo", "sound": "verde!", "audio": "sapo.mp3", "x": 58, "y": 52, "size": 30 },
+        {
+          "emoji": "🐸", "word": { "pt": "sapo", "en": "frog", "es": "rana", "fr": "grenouille" },
+          "sound": { "pt": "verde!", "en": "green!", "es": "¡verde!", "fr": "verte !" },
+          "audio": "sapo.mp3", "x": 58, "y": 52, "size": 30
+        },
         { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
       ],
-      "text": "Olha, um sapo! O sapo é...",
-      "reveal": "verde!",
+      "text": {
+        "pt": "Olha, um sapo! O sapo é...",
+        "en": "Look, a frog! The frog is...",
+        "es": "¡Mira, una rana! La rana es...",
+        "fr": "Regarde, une grenouille ! La grenouille est..."
+      },
+      "reveal": { "pt": "verde!", "en": "green!", "es": "¡verde!", "fr": "verte !" },
       "accent": "#16a34a",
-      "highlight": ["sapo"],
-      "parentTip": "Bônus: o sapo faz “croac”! Veja se a criança imita."
+      "highlight": { "pt": ["sapo"], "en": ["frog"], "es": ["rana"], "fr": ["grenouille"] },
+      "parentTip": {
+        "pt": "Bônus: o sapo faz “croac”! Veja se a criança imita.",
+        "en": "Bonus: the frog says “ribbit”! See if your child copies it.",
+        "es": "Extra: ¡la rana hace “croac”! Vea si el niño la imita.",
+        "fr": "Bonus : la grenouille fait « croâ » ! Voyez si l’enfant l’imite."
+      }
     },
     {
       "background": "linear-gradient(#fff7ed, #fed7aa)",
       "elements": [
-        { "emoji": "🥕", "word": "cenoura", "sound": "laranja!", "x": 58, "y": 52, "size": 30 },
+        {
+          "emoji": "🥕", "word": { "pt": "cenoura", "en": "carrot", "es": "zanahoria", "fr": "carotte" },
+          "sound": { "pt": "laranja!", "en": "orange!", "es": "¡naranja!", "fr": "orange !" }, "x": 58, "y": 52, "size": 30
+        },
         { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
       ],
-      "text": "Hum, uma cenoura! A cenoura é...",
-      "reveal": "laranja!",
+      "text": {
+        "pt": "Hum, uma cenoura! A cenoura é...",
+        "en": "Yum, a carrot! The carrot is...",
+        "es": "¡Mmm, una zanahoria! La zanahoria es...",
+        "fr": "Miam, une carotte ! La carotte est..."
+      },
+      "reveal": { "pt": "laranja!", "en": "orange!", "es": "¡naranja!", "fr": "orange !" },
       "accent": "#ea580c",
-      "highlight": ["cenoura"]
+      "highlight": { "pt": ["cenoura"], "en": ["carrot"], "es": ["zanahoria"], "fr": ["carotte"] }
     },
     {
       "background": "linear-gradient(#7dd3fc, #e0f2fe)",
       "elements": [
-        { "emoji": "☁️", "word": "nuvem", "x": 30, "y": 28, "size": 20 },
-        { "emoji": "☁️", "word": "nuvem", "x": 74, "y": 40, "size": 16 },
-        { "emoji": "🐦", "word": "passarinho", "sound": "piu piu!", "audio": "passarinho.mp3", "x": 56, "y": 64, "size": 14 },
+        { "emoji": "☁️", "word": { "pt": "nuvem", "en": "cloud", "es": "nube", "fr": "nuage" }, "x": 30, "y": 28, "size": 20 },
+        { "emoji": "☁️", "word": { "pt": "nuvem", "en": "cloud", "es": "nube", "fr": "nuage" }, "x": 74, "y": 40, "size": 16 },
+        {
+          "emoji": "🐦", "word": { "pt": "passarinho", "en": "little bird", "es": "pajarito", "fr": "oiseau" },
+          "sound": { "pt": "piu piu!", "en": "tweet tweet!", "es": "¡pío pío!", "fr": "cui-cui !" },
+          "audio": "passarinho.mp3", "x": 56, "y": 64, "size": 14
+        },
         { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 80, "size": 15 }
       ],
-      "text": "Lelê olhou para cima. O céu é...",
-      "reveal": "azul!",
+      "text": {
+        "pt": "Lelê olhou para cima. O céu é...",
+        "en": "Lelê looked up. The sky is...",
+        "es": "Lelê miró hacia arriba. El cielo es...",
+        "fr": "Lelê a levé les yeux. Le ciel est..."
+      },
+      "reveal": { "pt": "azul!", "en": "blue!", "es": "¡azul!", "fr": "bleu !" },
       "accent": "#2563eb",
-      "highlight": ["céu"]
+      "highlight": { "pt": ["céu"], "en": ["sky"], "es": ["cielo"], "fr": ["ciel"] }
     },
     {
       "elements": [
-        { "emoji": "🌈", "word": "arco-íris", "x": 50, "y": 40, "size": 40 },
-        { "emoji": "🐛", "word": "Lelê", "sound": "que lindo!", "x": 50, "y": 78, "size": 16 }
+        { "emoji": "🌈", "word": { "pt": "arco-íris", "en": "rainbow", "es": "arcoíris", "fr": "arc-en-ciel" }, "x": 50, "y": 40, "size": 40 },
+        {
+          "emoji": "🐛", "word": "Lelê",
+          "sound": { "pt": "que lindo!", "en": "so pretty!", "es": "¡qué bonito!", "fr": "que c’est beau !" },
+          "x": 50, "y": 78, "size": 16
+        }
       ],
-      "text": "Todas as cores juntinhas formam um...",
-      "reveal": "arco-íris!",
+      "text": {
+        "pt": "Todas as cores juntinhas formam um...",
+        "en": "All the colors together make a...",
+        "es": "Todos los colores juntitos forman un...",
+        "fr": "Toutes les couleurs ensemble forment un..."
+      },
+      "reveal": { "pt": "arco-íris!", "en": "rainbow!", "es": "¡arcoíris!", "fr": "arc-en-ciel !" },
       "accent": "#9333ea",
-      "highlight": ["cores"],
-      "parentTip": "Aponte cada cor do arco-íris e diga o nome dela."
+      "highlight": { "pt": ["cores"], "en": ["colors"], "es": ["colores"], "fr": ["couleurs"] },
+      "parentTip": {
+        "pt": "Aponte cada cor do arco-íris e diga o nome dela.",
+        "en": "Point to each color of the rainbow and say its name.",
+        "es": "Señale cada color del arcoíris y diga su nombre.",
+        "fr": "Montrez chaque couleur de l’arc-en-ciel et dites son nom."
+      }
     }
   ]
 }

@@ -39,9 +39,32 @@ Todo o conteúdo fica em `src/content` como JSON:
 
 ## Notas
 
-- **Narração** (`src/lib/speech.ts`): usa a voz pt-BR do navegador. Lê cada página, pausa com “👂 Sua vez!”
-  e revela o final; no quiz lê as perguntas e nomeia o que a criança tocou. Botão 🗣️ liga/desliga.
-- **Sons de bichos**: tocar num elemento fala “Vaca! Muuu!”. Para usar gravações reais, coloque o arquivo em
-  `public/sounds/` e adicione `"audio": "vaca.mp3"` ao elemento no JSON da história (sem arquivo, volta para a voz).
+- **Narração** (`src/lib/speech.ts`): usa a melhor voz do navegador disponível (prefere vozes naturais/neurais).
+  Lê cada página acendendo a palavra falada, pausa com “👂 Sua vez!” e revela o final; tocar nos bichos durante a
+  narração não a interrompe. No quiz lê as perguntas, nomeia o que a criança tocou e só encoraja se ela ficar
+  parada. Botão 🗣️ liga/desliga.
+- **Frases variadas** (`src/lib/phrases.ts`): elogios, comentários de erro, perguntas e finais são sorteados sem
+  repetir o anterior — é o que mais tira a sensação de robô.
+- **Sons de bichos**: gravações reais em `public/sounds/` (12 animais, Wikimedia Commons). Tocar num bicho
+  toca o som e depois fala o nome; o “…faz muuu!” revelado também toca a gravação (`revealAudio`); no quiz,
+  “Quem faz…?” toca o som de verdade. Para usar em outro elemento, adicione `"audio": "vaca.mp3"` no JSON.
+  Sem arquivo (ou se falhar), a voz fala “vaca! muuu!”.
+- **Licenças**: autores e licenças estão em `src/content/sound-credits.json` e na tela “Créditos dos sons”.
+  Vários são CC BY / CC BY-SA: ao trocar ou adicionar um som, atualize os créditos.
 - Efeitos de toque/acerto são sintetizados (`src/lib/sfx.ts`); o botão 🔊 desliga todo o áudio.
 - Progresso (histórias lidas, quizzes completos) fica no `localStorage`.
+
+## Idiomas
+
+O app fala **português** (nativo), **inglês**, **espanhol** e **francês**. O idioma é escolhido na tela inicial;
+na primeira abertura vem o do aparelho (se for um dos quatro) ou português. Ele vale para os textos, as histórias,
+o quiz e a voz da narração (cada idioma usa uma voz do próprio idioma).
+
+- Textos da interface: `src/i18n/ui.ts`.
+- Frases do quiz com a gramática de cada idioma (artigos, gênero, plural, ¡¿ do espanhol, « » e espaços do
+  francês): `src/i18n/grammar.ts`. Frases variadas (elogios, finais etc.): `src/lib/phrases.ts`.
+- Conteúdo: nos JSON de `src/content`, cada texto vem com as quatro línguas — `{ "pt": "...", "en": "...",
+  "es": "...", "fr": "..." }` (histórias: `title`, `text`, `reveal`, `parentTip`, `word`, `sound`; `highlight`
+  é uma lista por idioma). Um texto igual em todas pode ser uma string só (ex.: `"word": "1"`). Bichos, cores e
+  itens de contagem têm o nome por idioma e `"fem": true` quando são femininos naquela língua.
+- Francês: escreva com espaço normal antes de `!` `?` `:` `»`; o app troca por espaço inseparável.

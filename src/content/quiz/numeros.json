@@ -1,15 +1,47 @@
 {
   "max": 5,
-  "words": {
-    "masculine": ["um", "dois", "três", "quatro", "cinco"],
-    "feminine": ["uma", "duas", "três", "quatro", "cinco"]
-  },
   "items": [
-    { "emoji": "🍎", "singular": "maçã", "plural": "maçãs", "feminine": true },
-    { "emoji": "🐥", "singular": "pintinho", "plural": "pintinhos", "feminine": false },
-    { "emoji": "⭐", "singular": "estrela", "plural": "estrelas", "feminine": true },
-    { "emoji": "🎈", "singular": "balão", "plural": "balões", "feminine": false },
-    { "emoji": "🚗", "singular": "carrinho", "plural": "carrinhos", "feminine": false },
-    { "emoji": "🍌", "singular": "banana", "plural": "bananas", "feminine": true }
+    {
+      "emoji": "🍎",
+      "pt": { "singular": "maçã", "plural": "maçãs", "fem": true },
+      "en": { "singular": "apple", "plural": "apples" },
+      "es": { "singular": "manzana", "plural": "manzanas", "fem": true },
+      "fr": { "singular": "pomme", "plural": "pommes", "fem": true }
+    },
+    {
+      "emoji": "🐥",
+      "pt": { "singular": "pintinho", "plural": "pintinhos" },
+      "en": { "singular": "chick", "plural": "chicks" },
+      "es": { "singular": "pollito", "plural": "pollitos" },
+      "fr": { "singular": "poussin", "plural": "poussins" }
+    },
+    {
+      "emoji": "⭐",
+      "pt": { "singular": "estrela", "plural": "estrelas", "fem": true },
+      "en": { "singular": "star", "plural": "stars" },
+      "es": { "singular": "estrella", "plural": "estrellas", "fem": true },
+      "fr": { "singular": "étoile", "plural": "étoiles", "fem": true }
+    },
+    {
+      "emoji": "🎈",
+      "pt": { "singular": "balão", "plural": "balões" },
+      "en": { "singular": "balloon", "plural": "balloons" },
+      "es": { "singular": "globo", "plural": "globos" },
+      "fr": { "singular": "ballon", "plural": "ballons" }
+    },
+    {
+      "emoji": "🚗",
+      "pt": { "singular": "carrinho", "plural": "carrinhos" },
+      "en": { "singular": "car", "plural": "cars" },
+      "es": { "singular": "cochecito", "plural": "cochecitos" },
+      "fr": { "singular": "voiture", "plural": "voitures", "fem": true }
+    },
+    {
+      "emoji": "🍌",
+      "pt": { "singular": "banana", "plural": "bananas", "fem": true },
+      "en": { "singular": "banana", "plural": "bananas" },
+      "es": { "singular": "plátano", "plural": "plátanos" },
+      "fr": { "singular": "banane", "plural": "bananes", "fem": true }
+    }
   ]
 }

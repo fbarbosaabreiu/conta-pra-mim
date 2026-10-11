@@ -1,72 +1,126 @@
 {
   "id": "patinhos",
-  "title": "Contando patinhos",
+  "title": { "pt": "Contando patinhos", "en": "Counting ducklings", "es": "Contando patitos", "fr": "On compte les canetons" },
   "cover": "🦆",
   "color": "#38bdf8",
   "background": "linear-gradient(#e0f2fe 0%, #e0f2fe 38%, #7dd3fc 38%, #38bdf8 100%)",
   "pages": [
     {
       "elements": [
-        { "emoji": "🦆", "word": "1", "sound": "um", "x": 50, "y": 62, "size": 26 }
+        { "emoji": "🦆", "word": "1", "sound": { "pt": "um", "en": "one", "es": "uno", "fr": "un" }, "x": 50, "y": 62, "size": 26 }
       ],
-      "text": "Um patinho foi nadar na lagoa.",
-      "highlight": ["um"],
-      "parentTip": "Toque no patinho junto com a criança e conte: “um!”."
+      "text": {
+        "pt": "Um patinho foi nadar na lagoa.",
+        "en": "One little duck went swimming in the pond.",
+        "es": "Un patito fue a nadar a la laguna.",
+        "fr": "Un caneton est allé nager dans la mare."
+      },
+      "highlight": { "pt": ["um"], "en": ["one"], "es": ["un"], "fr": ["un"] },
+      "parentTip": {
+        "pt": "Toque no patinho junto com a criança e conte: “um!”.",
+        "en": "Touch the duckling together with your child and count: “one!”.",
+        "es": "Toque el patito junto con el niño y cuente: “¡uno!”.",
+        "fr": "Touchez le caneton avec l’enfant et comptez : « un ! »."
+      }
     },
     {
       "elements": [
-        { "emoji": "🦆", "word": "1", "sound": "um", "x": 32, "y": 62, "size": 22 },
-        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 68, "y": 62, "size": 22 }
+        { "emoji": "🦆", "word": "1", "sound": { "pt": "um", "en": "one", "es": "uno", "fr": "un" }, "x": 32, "y": 62, "size": 22 },
+        { "emoji": "🦆", "word": "2", "sound": { "pt": "dois", "en": "two", "es": "dos", "fr": "deux" }, "x": 68, "y": 62, "size": 22 }
       ],
-      "text": "Chegou mais um patinho. Agora são...",
-      "reveal": "dois!",
-      "parentTip": "Toque em cada patinho contando em voz alta antes de revelar."
+      "text": {
+        "pt": "Chegou mais um patinho. Agora são...",
+        "en": "Another little duck came along. Now there are...",
+        "es": "Llegó otro patito. Ahora son...",
+        "fr": "Un autre caneton est arrivé. Maintenant, ils sont..."
+      },
+      "reveal": { "pt": "dois!", "en": "two!", "es": "¡dos!", "fr": "deux !" },
+      "parentTip": {
+        "pt": "Toque em cada patinho contando em voz alta antes de revelar.",
+        "en": "Touch each duckling, counting out loud, before revealing.",
+        "es": "Toque cada patito contando en voz alta antes de revelar.",
+        "fr": "Touchez chaque caneton en comptant à voix haute avant de révéler."
+      }
     },
     {
       "elements": [
-        { "emoji": "🦆", "word": "1", "sound": "um", "x": 20, "y": 66, "size": 19 },
-        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 50, "y": 56, "size": 19 },
-        { "emoji": "🦆", "word": "3", "sound": "três", "x": 80, "y": 66, "size": 19 }
+        { "emoji": "🦆", "word": "1", "sound": { "pt": "um", "en": "one", "es": "uno", "fr": "un" }, "x": 20, "y": 66, "size": 19 },
+        { "emoji": "🦆", "word": "2", "sound": { "pt": "dois", "en": "two", "es": "dos", "fr": "deux" }, "x": 50, "y": 56, "size": 19 },
+        { "emoji": "🦆", "word": "3", "sound": { "pt": "três", "en": "three", "es": "tres", "fr": "trois" }, "x": 80, "y": 66, "size": 19 }
       ],
-      "text": "Mais um patinho veio brincar. Agora são...",
-      "reveal": "três!"
+      "text": {
+        "pt": "Mais um patinho veio brincar. Agora são...",
+        "en": "One more little duck came to play. Now there are...",
+        "es": "Otro patito vino a jugar. Ahora son...",
+        "fr": "Encore un caneton est venu jouer. Maintenant, ils sont..."
+      },
+      "reveal": { "pt": "três!", "en": "three!", "es": "¡tres!", "fr": "trois !" }
     },
     {
       "elements": [
-        { "emoji": "🦆", "word": "1", "sound": "um", "x": 16, "y": 58, "size": 17 },
-        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 39, "y": 72, "size": 17 },
-        { "emoji": "🦆", "word": "3", "sound": "três", "x": 61, "y": 58, "size": 17 },
-        { "emoji": "🦆", "word": "4", "sound": "quatro", "x": 84, "y": 72, "size": 17 }
+        { "emoji": "🦆", "word": "1", "sound": { "pt": "um", "en": "one", "es": "uno", "fr": "un" }, "x": 16, "y": 58, "size": 17 },
+        { "emoji": "🦆", "word": "2", "sound": { "pt": "dois", "en": "two", "es": "dos", "fr": "deux" }, "x": 39, "y": 72, "size": 17 },
+        { "emoji": "🦆", "word": "3", "sound": { "pt": "três", "en": "three", "es": "tres", "fr": "trois" }, "x": 61, "y": 58, "size": 17 },
+        { "emoji": "🦆", "word": "4", "sound": { "pt": "quatro", "en": "four", "es": "cuatro", "fr": "quatre" }, "x": 84, "y": 72, "size": 17 }
       ],
-      "text": "Splash! Outro patinho pulou na água. Agora são...",
-      "reveal": "quatro!",
-      "highlight": ["splash"]
+      "text": {
+        "pt": "Splash! Outro patinho pulou na água. Agora são...",
+        "en": "Splash! Another little duck jumped in the water. Now there are...",
+        "es": "¡Splash! Otro patito saltó al agua. Ahora son...",
+        "fr": "Plouf ! Un autre caneton a sauté dans l’eau. Maintenant, ils sont..."
+      },
+      "reveal": { "pt": "quatro!", "en": "four!", "es": "¡cuatro!", "fr": "quatre !" },
+      "highlight": { "pt": ["splash"], "en": ["splash"], "es": ["splash"], "fr": ["plouf"] }
     },
     {
       "elements": [
-        { "emoji": "🦆", "word": "1", "sound": "um", "x": 14, "y": 62, "size": 15 },
-        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 32, "y": 76, "size": 15 },
-        { "emoji": "🦆", "word": "3", "sound": "três", "x": 50, "y": 60, "size": 15 },
-        { "emoji": "🦆", "word": "4", "sound": "quatro", "x": 68, "y": 76, "size": 15 },
-        { "emoji": "🦆", "word": "5", "sound": "cinco", "x": 86, "y": 62, "size": 15 }
+        { "emoji": "🦆", "word": "1", "sound": { "pt": "um", "en": "one", "es": "uno", "fr": "un" }, "x": 14, "y": 62, "size": 15 },
+        { "emoji": "🦆", "word": "2", "sound": { "pt": "dois", "en": "two", "es": "dos", "fr": "deux" }, "x": 32, "y": 76, "size": 15 },
+        { "emoji": "🦆", "word": "3", "sound": { "pt": "três", "en": "three", "es": "tres", "fr": "trois" }, "x": 50, "y": 60, "size": 15 },
+        { "emoji": "🦆", "word": "4", "sound": { "pt": "quatro", "en": "four", "es": "cuatro", "fr": "quatre" }, "x": 68, "y": 76, "size": 15 },
+        { "emoji": "🦆", "word": "5", "sound": { "pt": "cinco", "en": "five", "es": "cinco", "fr": "cinq" }, "x": 86, "y": 62, "size": 15 }
       ],
-      "text": "E mais um! Agora são...",
-      "reveal": "cinco!",
-      "parentTip": "Conte nos dedinhos da criança: um, dois, três, quatro, cinco."
+      "text": {
+        "pt": "E mais um! Agora são...",
+        "en": "And one more! Now there are...",
+        "es": "¡Y uno más! Ahora son...",
+        "fr": "Et encore un ! Maintenant, ils sont..."
+      },
+      "reveal": { "pt": "cinco!", "en": "five!", "es": "¡cinco!", "fr": "cinq !" },
+      "parentTip": {
+        "pt": "Conte nos dedinhos da criança: um, dois, três, quatro, cinco.",
+        "en": "Count on your child’s little fingers: one, two, three, four, five.",
+        "es": "Cuente con los deditos del niño: uno, dos, tres, cuatro, cinco.",
+        "fr": "Comptez sur les petits doigts de l’enfant : un, deux, trois, quatre, cinq."
+      }
     },
     {
       "background": "linear-gradient(#fde68a 0%, #fed7aa 38%, #7dd3fc 38%, #38bdf8 100%)",
       "elements": [
-        { "emoji": "🦆", "word": "mamãe pata", "sound": "quá quá!", "audio": "pato.mp3", "x": 26, "y": 58, "size": 26 },
+        {
+          "emoji": "🦆", "word": { "pt": "mamãe pata", "en": "mommy duck", "es": "mamá pata", "fr": "maman cane" },
+          "sound": { "pt": "quá quá!", "en": "quack quack!", "es": "¡cuac cuac!", "fr": "coin coin !" },
+          "audio": "pato.mp3", "x": 26, "y": 58, "size": 26
+        },
         { "emoji": "🐥", "word": "1", "x": 52, "y": 72, "size": 10 },
         { "emoji": "🐥", "word": "2", "x": 62, "y": 66, "size": 10 },
         { "emoji": "🐥", "word": "3", "x": 72, "y": 74, "size": 10 },
         { "emoji": "🐥", "word": "4", "x": 82, "y": 66, "size": 10 },
         { "emoji": "🐥", "word": "5", "x": 91, "y": 76, "size": 10 }
       ],
-      "text": "A mamãe pata chamou: quá quá! E todos voltaram para casa.",
-      "highlight": ["mamãe", "quá"],
-      "parentTip": "Pergunte: “o que a mamãe pata falou?”."
+      "text": {
+        "pt": "A mamãe pata chamou: quá quá! E todos voltaram para casa.",
+        "en": "Mommy duck called: quack quack! And everyone went back home.",
+        "es": "Mamá pata llamó: ¡cuac cuac! Y todos volvieron a casa.",
+        "fr": "Maman cane a appelé : coin coin ! Et tout le monde est rentré à la maison."
+      },
+      "highlight": { "pt": ["mamãe", "quá"], "en": ["mommy", "quack"], "es": ["mamá", "cuac"], "fr": ["maman", "coin"] },
+      "parentTip": {
+        "pt": "Pergunte: “o que a mamãe pata falou?”.",
+        "en": "Ask: “what did mommy duck say?”.",
+        "es": "Pregunte: “¿qué dijo mamá pata?”.",
+        "fr": "Demandez : « qu’a dit maman cane ? »."
+      }
     }
   ]
 }
