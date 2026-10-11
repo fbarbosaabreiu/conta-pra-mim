@@ -1,0 +1,89 @@
+{
+  "id": "arco-iris",
+  "title": "As cores da Lelê",
+  "cover": "🌈",
+  "color": "#a78bfa",
+  "background": "linear-gradient(#fdf4ff, #ede9fe)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "🐛", "word": "Lelê", "sound": "oi!", "x": 50, "y": 58, "size": 30 },
+        { "emoji": "🌿", "word": "folha", "x": 22, "y": 74, "size": 16 },
+        { "emoji": "🌼", "word": "flor", "x": 80, "y": 30, "size": 14 }
+      ],
+      "text": "Esta é a Lelê, uma lagartinha que adora cores.",
+      "highlight": ["lelê", "cores"],
+      "parentTip": "Pergunte: “cadê a Lelê?” e ajude a criança a apontar."
+    },
+    {
+      "background": "linear-gradient(#fff1f2, #fecdd3)",
+      "elements": [
+        { "emoji": "🍎", "word": "maçã", "sound": "vermelha!", "x": 58, "y": 52, "size": 30 },
+        { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
+      ],
+      "text": "Lelê achou uma maçã. A maçã é...",
+      "reveal": "vermelha!",
+      "accent": "#ef4444",
+      "highlight": ["maçã"],
+      "parentTip": "Depois de revelar, procure outra coisa vermelha perto de vocês."
+    },
+    {
+      "background": "linear-gradient(#fefce8, #fef08a)",
+      "elements": [
+        { "emoji": "🍌", "word": "banana", "sound": "amarela!", "x": 58, "y": 52, "size": 30 },
+        { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
+      ],
+      "text": "Depois, achou uma banana. A banana é...",
+      "reveal": "amarela!",
+      "accent": "#ca8a04",
+      "highlight": ["banana"]
+    },
+    {
+      "background": "linear-gradient(#f0fdf4, #bbf7d0)",
+      "elements": [
+        { "emoji": "🐸", "word": "sapo", "sound": "verde!", "x": 58, "y": 52, "size": 30 },
+        { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
+      ],
+      "text": "Olha, um sapo! O sapo é...",
+      "reveal": "verde!",
+      "accent": "#16a34a",
+      "highlight": ["sapo"],
+      "parentTip": "Bônus: o sapo faz “croac”! Veja se a criança imita."
+    },
+    {
+      "background": "linear-gradient(#fff7ed, #fed7aa)",
+      "elements": [
+        { "emoji": "🥕", "word": "cenoura", "sound": "laranja!", "x": 58, "y": 52, "size": 30 },
+        { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 74, "size": 15 }
+      ],
+      "text": "Hum, uma cenoura! A cenoura é...",
+      "reveal": "laranja!",
+      "accent": "#ea580c",
+      "highlight": ["cenoura"]
+    },
+    {
+      "background": "linear-gradient(#7dd3fc, #e0f2fe)",
+      "elements": [
+        { "emoji": "☁️", "word": "nuvem", "x": 30, "y": 28, "size": 20 },
+        { "emoji": "☁️", "word": "nuvem", "x": 74, "y": 40, "size": 16 },
+        { "emoji": "🐦", "word": "passarinho", "sound": "piu piu!", "x": 56, "y": 64, "size": 14 },
+        { "emoji": "🐛", "word": "Lelê", "x": 22, "y": 80, "size": 15 }
+      ],
+      "text": "Lelê olhou para cima. O céu é...",
+      "reveal": "azul!",
+      "accent": "#2563eb",
+      "highlight": ["céu"]
+    },
+    {
+      "elements": [
+        { "emoji": "🌈", "word": "arco-íris", "x": 50, "y": 40, "size": 40 },
+        { "emoji": "🐛", "word": "Lelê", "sound": "que lindo!", "x": 50, "y": 78, "size": 16 }
+      ],
+      "text": "Todas as cores juntinhas formam um...",
+      "reveal": "arco-íris!",
+      "accent": "#9333ea",
+      "highlight": ["cores"],
+      "parentTip": "Aponte cada cor do arco-íris e diga o nome dela."
+    }
+  ]
+}

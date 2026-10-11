@@ -1,0 +1,15 @@
+{
+  "max": 5,
+  "words": {
+    "masculine": ["um", "dois", "três", "quatro", "cinco"],
+    "feminine": ["uma", "duas", "três", "quatro", "cinco"]
+  },
+  "items": [
+    { "emoji": "🍎", "singular": "maçã", "plural": "maçãs", "feminine": true },
+    { "emoji": "🐥", "singular": "pintinho", "plural": "pintinhos", "feminine": false },
+    { "emoji": "⭐", "singular": "estrela", "plural": "estrelas", "feminine": true },
+    { "emoji": "🎈", "singular": "balão", "plural": "balões", "feminine": false },
+    { "emoji": "🚗", "singular": "carrinho", "plural": "carrinhos", "feminine": false },
+    { "emoji": "🍌", "singular": "banana", "plural": "bananas", "feminine": true }
+  ]
+}

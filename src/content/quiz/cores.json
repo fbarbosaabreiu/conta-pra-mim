@@ -1,0 +1,9 @@
+[
+  { "id": "vermelho", "name": "vermelho", "hex": "#ef4444" },
+  { "id": "azul", "name": "azul", "hex": "#3b82f6" },
+  { "id": "amarelo", "name": "amarelo", "hex": "#facc15" },
+  { "id": "verde", "name": "verde", "hex": "#22c55e" },
+  { "id": "laranja", "name": "laranja", "hex": "#f97316" },
+  { "id": "roxo", "name": "roxo", "hex": "#a855f7" },
+  { "id": "rosa", "name": "rosa", "hex": "#f472b6" }
+]

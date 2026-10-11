@@ -1,0 +1,72 @@
+{
+  "id": "patinhos",
+  "title": "Contando patinhos",
+  "cover": "🦆",
+  "color": "#38bdf8",
+  "background": "linear-gradient(#e0f2fe 0%, #e0f2fe 38%, #7dd3fc 38%, #38bdf8 100%)",
+  "pages": [
+    {
+      "elements": [
+        { "emoji": "🦆", "word": "1", "sound": "um", "x": 50, "y": 62, "size": 26 }
+      ],
+      "text": "Um patinho foi nadar na lagoa.",
+      "highlight": ["um"],
+      "parentTip": "Toque no patinho junto com a criança e conte: “um!”."
+    },
+    {
+      "elements": [
+        { "emoji": "🦆", "word": "1", "sound": "um", "x": 32, "y": 62, "size": 22 },
+        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 68, "y": 62, "size": 22 }
+      ],
+      "text": "Chegou mais um patinho. Agora são...",
+      "reveal": "dois!",
+      "parentTip": "Toque em cada patinho contando em voz alta antes de revelar."
+    },
+    {
+      "elements": [
+        { "emoji": "🦆", "word": "1", "sound": "um", "x": 20, "y": 66, "size": 19 },
+        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 50, "y": 56, "size": 19 },
+        { "emoji": "🦆", "word": "3", "sound": "três", "x": 80, "y": 66, "size": 19 }
+      ],
+      "text": "Mais um patinho veio brincar. Agora são...",
+      "reveal": "três!"
+    },
+    {
+      "elements": [
+        { "emoji": "🦆", "word": "1", "sound": "um", "x": 16, "y": 58, "size": 17 },
+        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 39, "y": 72, "size": 17 },
+        { "emoji": "🦆", "word": "3", "sound": "três", "x": 61, "y": 58, "size": 17 },
+        { "emoji": "🦆", "word": "4", "sound": "quatro", "x": 84, "y": 72, "size": 17 }
+      ],
+      "text": "Splash! Outro patinho pulou na água. Agora são...",
+      "reveal": "quatro!",
+      "highlight": ["splash"]
+    },
+    {
+      "elements": [
+        { "emoji": "🦆", "word": "1", "sound": "um", "x": 14, "y": 62, "size": 15 },
+        { "emoji": "🦆", "word": "2", "sound": "dois", "x": 32, "y": 76, "size": 15 },
+        { "emoji": "🦆", "word": "3", "sound": "três", "x": 50, "y": 60, "size": 15 },
+        { "emoji": "🦆", "word": "4", "sound": "quatro", "x": 68, "y": 76, "size": 15 },
+        { "emoji": "🦆", "word": "5", "sound": "cinco", "x": 86, "y": 62, "size": 15 }
+      ],
+      "text": "E mais um! Agora são...",
+      "reveal": "cinco!",
+      "parentTip": "Conte nos dedinhos da criança: um, dois, três, quatro, cinco."
+    },
+    {
+      "background": "linear-gradient(#fde68a 0%, #fed7aa 38%, #7dd3fc 38%, #38bdf8 100%)",
+      "elements": [
+        { "emoji": "🦆", "word": "mamãe pata", "sound": "quá quá!", "x": 26, "y": 58, "size": 26 },
+        { "emoji": "🐥", "word": "1", "x": 52, "y": 72, "size": 10 },
+        { "emoji": "🐥", "word": "2", "x": 62, "y": 66, "size": 10 },
+        { "emoji": "🐥", "word": "3", "x": 72, "y": 74, "size": 10 },
+        { "emoji": "🐥", "word": "4", "x": 82, "y": 66, "size": 10 },
+        { "emoji": "🐥", "word": "5", "x": 91, "y": 76, "size": 10 }
+      ],
+      "text": "A mamãe pata chamou: quá quá! E todos voltaram para casa.",
+      "highlight": ["mamãe", "quá"],
+      "parentTip": "Pergunte: “o que a mamãe pata falou?”."
+    }
+  ]
+}

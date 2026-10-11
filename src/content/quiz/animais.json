@@ -1,0 +1,12 @@
+[
+  { "id": "gato", "name": "gato", "article": "o", "emoji": "🐱", "sound": "miau" },
+  { "id": "cachorro", "name": "cachorro", "article": "o", "emoji": "🐶", "sound": "au au" },
+  { "id": "vaca", "name": "vaca", "article": "a", "emoji": "🐮", "sound": "muuu" },
+  { "id": "pato", "name": "pato", "article": "o", "emoji": "🦆", "sound": "quá quá" },
+  { "id": "porco", "name": "porquinho", "article": "o", "emoji": "🐷", "sound": "óinc óinc" },
+  { "id": "ovelha", "name": "ovelha", "article": "a", "emoji": "🐑", "sound": "méé" },
+  { "id": "galinha", "name": "galinha", "article": "a", "emoji": "🐔", "sound": "có có có" },
+  { "id": "sapo", "name": "sapo", "article": "o", "emoji": "🐸", "sound": "croac" },
+  { "id": "leao", "name": "leão", "article": "o", "emoji": "🦁", "sound": "rrroar" },
+  { "id": "abelha", "name": "abelha", "article": "a", "emoji": "🐝", "sound": "zzzz" }
+]

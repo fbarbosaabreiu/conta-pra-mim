@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka Variable", ui-rounded, system-ui, sans-serif;
+  --color-cream: #fff8e7;
+  --color-ink: #3d2c1e;
+  --color-sun: #ffb703;
+  --color-coral: #fb7185;
+  --color-sky: #38bdf8;
+  --color-leaf: #4ade80;
+  --color-grape: #a78bfa;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* Toques de bebê: sem seleção de texto, sem zoom por toque duplo, sem "puxar para atualizar". */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.tile-shadow {
+  box-shadow: 0 8px 0 rgb(0 0 0 / 0.15);
+}
