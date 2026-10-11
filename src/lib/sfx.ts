@@ -107,9 +107,11 @@ for (const evt of ['touchend', 'click', 'keydown']) {
 function playMedia(a: HTMLAudioElement, url: string): Promise<void> {
   return new Promise((resolve, reject) => {
     let started = false
+    // Só limpa os handlers se ainda forem desta gravação: quando uma gravação nova
+    // interrompe esta, o play() desta rejeita (AbortError) depois que a nova já se registrou.
     const cleanup = () => {
-      a.onended = null
-      a.onerror = null
+      if (a.onended === done) a.onended = null
+      if (a.onerror === fail) a.onerror = null
       if (stopMedia === stop) stopMedia = null
     }
     const done = () => {

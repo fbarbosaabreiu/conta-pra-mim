@@ -295,7 +295,11 @@ export default function HowTo() {
               </motion.span>
             </motion.div>
             <h1 className="text-4xl font-bold">{t.steps[step.id].title}</h1>
-            {t.steps[step.id].body && <p className="max-w-md text-xl leading-relaxed opacity-80">{t.steps[step.id].body}</p>}
+            {t.steps[step.id].body && (
+              <p className="max-w-md text-xl leading-relaxed opacity-80">
+                <WithAnswerButton text={t.steps[step.id].body} />
+              </p>
+            )}
             <StepExtra id={step.id} t={t} />
           </motion.section>
         </AnimatePresence>
@@ -380,6 +384,28 @@ function CowDemo({ hint, moo }: { hint: string; moo: string }) {
       </motion.button>
       <span className="h-7 text-xl font-semibold text-coral">{taps ? moo : hint}</span>
     </div>
+  )
+}
+
+/** No texto, o ❓ vira o mesmo botão amarelo redondo da história (o emoji solto parece um erro). */
+function WithAnswerButton({ text }: { text: string }) {
+  const parts = text.split('❓')
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part}
+          {i < parts.length - 1 && (
+            <span
+              className="mx-0.5 inline-flex size-8 items-center justify-center rounded-full bg-sun align-middle text-base"
+              aria-label="?"
+            >
+              ❓
+            </span>
+          )}
+        </span>
+      ))}
+    </>
   )
 }
 

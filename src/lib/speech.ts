@@ -71,6 +71,9 @@ function setSpeaking(v: boolean) {
   speaking = v
   listeners.forEach((l) => l())
 }
+/** Se há fala ou gravação tocando agora. */
+export const isSpeaking = () => speaking
+
 export function useSpeaking(): boolean {
   return useSyncExternalStore(
     (l) => {

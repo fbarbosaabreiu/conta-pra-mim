@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion, useAnimationControls, useIsPresent } from 'framer-motion'
 import type { Hotspot, StoryPage } from '../../types'
 import { playPop, playSuccess } from '../../lib/sfx'
-import { say, stopSpeaking, wait, type Part } from '../../lib/speech'
+import { isSpeaking, say, stopSpeaking, wait, type Part } from '../../lib/speech'
 import { useSettings } from '../../lib/settings'
 import { vary, YOUR_TURN } from '../../lib/phrases'
 import { Narrator } from '../../components/Narrator'
@@ -47,9 +47,13 @@ export function StoryPageView({ page, background }: Props) {
     let cancelled = false
     void (async () => {
       await wait(900) // deixa a página assentar antes de começar a falar
+      // Se a criança já tocou num bicho ou no ❓, deixa o som terminar em vez de cortá-lo.
+      while (!cancelled && isSpeaking()) await wait(150)
       if (cancelled) return
       setNarrating(true)
-      await say({ text: page.text, onWord: setActiveChar })
+      // Resposta já revelada: lê a frase inteira, com o final.
+      const early = revealedRef.current
+      await say({ text: page.text, onWord: setActiveChar }, ...(early ? revealParts(page) : []))
       if (cancelled) return
       setNarrating(false)
       if (!page.reveal || revealedRef.current) return
@@ -177,6 +181,16 @@ function hotspotSpeech(h: Hotspot): string {
   return h.word
 }
 
+/** Acima disso (em % da cena) o balão abre embaixo do elemento, senão é cortado pela borda de cima. */
+const BUBBLE_BELOW_Y = 35
+
+/** Posição do balão da palavra: embaixo perto do topo, e encostado no lado perto das bordas. */
+function bubblePlacement(h: Hotspot): string {
+  const vertical = h.y < BUBBLE_BELOW_Y ? 'top-full mt-1' : 'bottom-full mb-1'
+  const horizontal = h.x > 72 ? 'right-0' : h.x < 28 ? 'left-0' : 'left-1/2 -translate-x-1/2'
+  return `${vertical} ${horizontal}`
+}
+
 function HotspotItem({ hotspot, index, quiet }: { hotspot: Hotspot; index: number; quiet: boolean }) {
   const controls = useAnimationControls()
   const [showWord, setShowWord] = useState(false)
@@ -229,8 +243,8 @@ function HotspotItem({ hotspot, index, quiet }: { hotspot: Hotspot; index: numbe
       <AnimatePresence>
         {showWord && (
           <motion.div
-            className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1 -translate-x-1/2 rounded-2xl bg-white px-4 py-1 text-center whitespace-nowrap shadow-lg"
-            initial={{ opacity: 0, y: 10, scale: 0.6 }}
+            className={`pointer-events-none absolute z-10 rounded-2xl bg-white px-4 py-1 text-center whitespace-nowrap shadow-lg ${bubblePlacement(hotspot)}`}
+            initial={{ opacity: 0, y: hotspot.y < BUBBLE_BELOW_Y ? -10 : 10, scale: 0.6 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.6 }}
           >
