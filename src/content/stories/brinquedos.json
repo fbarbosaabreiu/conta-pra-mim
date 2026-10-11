@@ -1,0 +1,392 @@
+{
+  "id": "brinquedos",
+  "title": {
+    "pt": "Meus brinquedos",
+    "en": "My toys",
+    "es": "Mis juguetes",
+    "fr": "Mes jouets"
+  },
+  "cover": "⚽",
+  "color": "#ef4444",
+  "background": "linear-gradient(#fef2f2 0%, #fee2e2 62%, #fca5a5 62%, #f87171 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🧩",
+          "word": {
+            "pt": "quebra-cabeça",
+            "en": "puzzle",
+            "es": "rompecabezas",
+            "fr": "puzzle"
+          },
+          "x": 26,
+          "y": 62,
+          "size": 22
+        },
+        {
+          "emoji": "🪀",
+          "word": {
+            "pt": "ioiô",
+            "en": "yo-yo",
+            "es": "yoyó",
+            "fr": "yoyo"
+          },
+          "x": 74,
+          "y": 60,
+          "size": 18
+        }
+      ],
+      "text": {
+        "pt": "Que bagunça gostosa! Vamos brincar com os brinquedos?",
+        "en": "What a fun mess! Shall we play with our toys?",
+        "es": "¡Qué lío tan divertido! ¿Jugamos con los juguetes?",
+        "fr": "Quel joyeux bazar ! On joue avec les jouets ?"
+      },
+      "highlight": {
+        "pt": [
+          "brinquedos"
+        ],
+        "en": [
+          "toys"
+        ],
+        "es": [
+          "juguetes"
+        ],
+        "fr": [
+          "jouets"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “qual é o seu brinquedo favorito?”",
+        "en": "Ask: “what’s your favorite toy?”",
+        "es": "Pregunte: “¿cuál es tu juguete favorito?”",
+        "fr": "Demandez : « quel est ton jouet préféré ? »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "⚽",
+          "word": {
+            "pt": "bola",
+            "en": "ball",
+            "es": "pelota",
+            "fr": "ballon"
+          },
+          "x": 50,
+          "y": 62,
+          "size": 30
+        }
+      ],
+      "text": {
+        "pt": "A bola é redonda e...",
+        "en": "The ball is round and it...",
+        "es": "La pelota es redonda y...",
+        "fr": "Le ballon est rond et il..."
+      },
+      "reveal": {
+        "pt": "pula!",
+        "en": "bounces!",
+        "es": "¡rebota!",
+        "fr": "rebondit !"
+      },
+      "accent": "#16a34a",
+      "highlight": {
+        "pt": [
+          "bola"
+        ],
+        "en": [
+          "ball"
+        ],
+        "es": [
+          "pelota"
+        ],
+        "fr": [
+          "ballon"
+        ]
+      },
+      "parentTip": {
+        "pt": "Role uma bola de verdade e diga “rola, rola!”",
+        "en": "Roll a real ball and say “roll, roll!”",
+        "es": "Haga rodar una pelota de verdad y diga “¡rueda, rueda!”",
+        "fr": "Faites rouler un vrai ballon et dites « roule, roule ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🧱",
+          "word": {
+            "pt": "bloquinho",
+            "en": "block",
+            "es": "bloque",
+            "fr": "cube"
+          },
+          "x": 40,
+          "y": 70,
+          "size": 18
+        },
+        {
+          "emoji": "🧱",
+          "word": {
+            "pt": "bloquinho",
+            "en": "block",
+            "es": "bloque",
+            "fr": "cube"
+          },
+          "x": 40,
+          "y": 52,
+          "size": 18
+        },
+        {
+          "emoji": "🧱",
+          "word": {
+            "pt": "bloquinho",
+            "en": "block",
+            "es": "bloque",
+            "fr": "cube"
+          },
+          "x": 40,
+          "y": 34,
+          "size": 18
+        }
+      ],
+      "text": {
+        "pt": "Um bloquinho em cima do outro faz uma...",
+        "en": "One block on top of another makes a...",
+        "es": "Un bloque encima de otro hace una...",
+        "fr": "Un cube sur un autre, ça fait une..."
+      },
+      "reveal": {
+        "pt": "torre!",
+        "en": "tower!",
+        "es": "¡torre!",
+        "fr": "tour !"
+      },
+      "accent": "#b91c1c",
+      "highlight": {
+        "pt": [
+          "bloquinho"
+        ],
+        "en": [
+          "block"
+        ],
+        "es": [
+          "bloque"
+        ],
+        "fr": [
+          "cube"
+        ]
+      },
+      "parentTip": {
+        "pt": "Contem os bloquinhos juntos: um, dois, três!",
+        "en": "Count the blocks together: one, two, three!",
+        "es": "Cuenten juntos los bloques: ¡uno, dos, tres!",
+        "fr": "Comptez les cubes ensemble : un, deux, trois !"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🚗",
+          "word": {
+            "pt": "carrinho",
+            "en": "toy car",
+            "es": "cochecito",
+            "fr": "petite voiture"
+          },
+          "x": 50,
+          "y": 66,
+          "size": 30
+        }
+      ],
+      "text": {
+        "pt": "O carrinho anda bem...",
+        "en": "The toy car goes really...",
+        "es": "El cochecito va muy...",
+        "fr": "La petite voiture roule très..."
+      },
+      "reveal": {
+        "pt": "rápido!",
+        "en": "fast!",
+        "es": "¡rápido!",
+        "fr": "vite !"
+      },
+      "accent": "#2563eb",
+      "highlight": {
+        "pt": [
+          "carrinho"
+        ],
+        "en": [
+          "toy",
+          "car"
+        ],
+        "es": [
+          "cochecito"
+        ],
+        "fr": [
+          "petite",
+          "voiture"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça “vrum vrum” empurrando um carrinho de verdade.",
+        "en": "Go “vroom vroom” while pushing a real toy car.",
+        "es": "Haga “brum brum” empujando un cochecito de verdad.",
+        "fr": "Faites « vroum vroum » en poussant une vraie petite voiture."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🪁",
+          "word": {
+            "pt": "pipa",
+            "en": "kite",
+            "es": "cometa",
+            "fr": "cerf-volant"
+          },
+          "x": 56,
+          "y": 30,
+          "size": 28
+        },
+        {
+          "emoji": "☁️",
+          "word": {
+            "pt": "nuvem",
+            "en": "cloud",
+            "es": "nube",
+            "fr": "nuage"
+          },
+          "x": 22,
+          "y": 22,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Com o vento, a pipa sobe bem...",
+        "en": "With the wind, the kite goes up really...",
+        "es": "Con el viento, la cometa sube muy...",
+        "fr": "Avec le vent, le cerf-volant monte très..."
+      },
+      "reveal": {
+        "pt": "alto!",
+        "en": "high!",
+        "es": "¡alto!",
+        "fr": "haut !"
+      },
+      "accent": "#7c3aed",
+      "highlight": {
+        "pt": [
+          "pipa"
+        ],
+        "en": [
+          "kite"
+        ],
+        "es": [
+          "cometa"
+        ],
+        "fr": [
+          "cerf-volant"
+        ]
+      },
+      "parentTip": {
+        "pt": "Levante os braços bem alto e depois abaixe: “alto, baixo!”",
+        "en": "Raise your arms up high, then down: “high, low!”",
+        "es": "Levante los brazos bien alto y luego bájelos: “¡alto, bajo!”",
+        "fr": "Levez les bras très haut, puis baissez-les : « haut, bas ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "⚽",
+          "word": {
+            "pt": "bola",
+            "en": "ball",
+            "es": "pelota",
+            "fr": "ballon"
+          },
+          "x": 22,
+          "y": 70,
+          "size": 16
+        },
+        {
+          "emoji": "🧱",
+          "word": {
+            "pt": "bloquinho",
+            "en": "block",
+            "es": "bloque",
+            "fr": "cube"
+          },
+          "x": 44,
+          "y": 74,
+          "size": 14
+        },
+        {
+          "emoji": "🚗",
+          "word": {
+            "pt": "carrinho",
+            "en": "toy car",
+            "es": "cochecito",
+            "fr": "petite voiture"
+          },
+          "x": 66,
+          "y": 72,
+          "size": 16
+        },
+        {
+          "emoji": "🪁",
+          "word": {
+            "pt": "pipa",
+            "en": "kite",
+            "es": "cometa",
+            "fr": "cerf-volant"
+          },
+          "x": 70,
+          "y": 30,
+          "size": 16
+        },
+        {
+          "emoji": "🧺",
+          "word": {
+            "pt": "cesto",
+            "en": "basket",
+            "es": "cesto",
+            "fr": "panier"
+          },
+          "x": 86,
+          "y": 76,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Acabou a brincadeira! Agora vamos guardar tudo no cesto.",
+        "en": "Playtime’s over! Now let’s put everything in the basket.",
+        "es": "¡Se acabó el juego! Ahora guardamos todo en el cesto.",
+        "fr": "Fini de jouer ! Maintenant, on range tout dans le panier."
+      },
+      "highlight": {
+        "pt": [
+          "guardar"
+        ],
+        "en": [
+          "basket"
+        ],
+        "es": [
+          "cesto"
+        ],
+        "fr": [
+          "panier"
+        ]
+      },
+      "parentTip": {
+        "pt": "Transforme a arrumação em brincadeira: “quem guarda primeiro?”",
+        "en": "Make tidying a game: “who can put it away first?”",
+        "es": "Convierta el orden en un juego: “¿quién guarda primero?”",
+        "fr": "Faites du rangement un jeu : « qui range en premier ? »"
+      }
+    }
+  ]
+}

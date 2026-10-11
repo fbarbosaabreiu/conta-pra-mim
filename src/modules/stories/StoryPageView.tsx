@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion, useAnimationControls, useIsPresent } from 'framer-motion'
 import type { Hotspot, StoryPage } from '../../types'
 import { playPop, playSuccess } from '../../lib/sfx'
@@ -81,6 +81,7 @@ export function StoryPageView({ page, background }: Props) {
   return (
     <div className="flex flex-1 flex-col gap-3">
       <div
+        data-scene
         className="relative min-h-[45dvh] flex-1 overflow-hidden rounded-[2rem] shadow-inner"
         style={{ background: page.background ?? background }}
       >
@@ -181,24 +182,49 @@ function hotspotSpeech(h: Hotspot): string {
   return h.word
 }
 
-/** Acima disso (em % da cena) o balão abre embaixo do elemento, senão é cortado pela borda de cima. */
-const BUBBLE_BELOW_Y = 35
+/** Folga entre o balão e a borda da cena / o elemento, em px. */
+const GAP = 6
 
-/** Posição do balão da palavra: embaixo perto do topo, e encostado no lado perto das bordas. */
-function bubblePlacement(h: Hotspot): string {
-  const vertical = h.y < BUBBLE_BELOW_Y ? 'top-full mt-1' : 'bottom-full mb-1'
-  const horizontal = h.x > 72 ? 'right-0' : h.x < 28 ? 'left-0' : 'left-1/2 -translate-x-1/2'
-  return `${vertical} ${horizontal}`
+/**
+ * Onde o balão da palavra cabe: acima do elemento se houver espaço, senão embaixo, e — se o
+ * elemento ocupa a cena quase toda — encostado no topo da cena. Na horizontal, empurra para dentro.
+ * Posições em px relativas ao elemento (o balão é filho dele).
+ */
+function placeBubble(holder: HTMLElement, bubble: HTMLElement) {
+  const scene = holder.closest('[data-scene]')
+  const h = holder.getBoundingClientRect()
+  if (!scene) return { left: h.width / 2 - bubble.offsetWidth / 2, top: -bubble.offsetHeight - GAP, below: false }
+  const s = scene.getBoundingClientRect()
+  const w = bubble.offsetWidth
+  const bh = bubble.offsetHeight
+  let left = h.width / 2 - w / 2
+  const absLeft = h.left + left
+  if (absLeft < s.left + GAP) left += s.left + GAP - absLeft
+  else if (absLeft + w > s.right - GAP) left -= absLeft + w - (s.right - GAP)
+  const fitsAbove = h.top - bh - GAP >= s.top + GAP
+  const fitsBelow = h.bottom + bh + GAP <= s.bottom - GAP
+  if (fitsAbove) return { left, top: -bh - GAP, below: false }
+  if (fitsBelow) return { left, top: h.height + GAP, below: true }
+  return { left, top: s.top + GAP - h.top, below: true }
 }
 
 function HotspotItem({ hotspot, index, quiet }: { hotspot: Hotspot; index: number; quiet: boolean }) {
   const controls = useAnimationControls()
   const [showWord, setShowWord] = useState(false)
+  const holderRef = useRef<HTMLDivElement>(null)
+  const bubbleRef = useRef<HTMLDivElement>(null)
+  const [bubblePos, setBubblePos] = useState<{ left: number; top: number; below: boolean } | null>(null)
   const named = useRef(false)
   const busy = useRef(false)
   const size = hotspot.size ?? 16
   // Cada elemento "respira" num ritmo próprio, para a cena não parecer parada.
   const idle = useMemo(() => ({ duration: 2.4 + Math.random() * 1.6, delay: Math.random() * 1.5 }), [])
+
+  // Mede antes de pintar, para o balão já aparecer no lugar certo.
+  useLayoutEffect(() => {
+    if (!showWord) return setBubblePos(null)
+    if (holderRef.current && bubbleRef.current) setBubblePos(placeBubble(holderRef.current, bubbleRef.current))
+  }, [showWord])
 
   useEffect(() => {
     if (!showWord) return
@@ -237,14 +263,21 @@ function HotspotItem({ hotspot, index, quiet }: { hotspot: Hotspot; index: numbe
 
   return (
     <div
+      ref={holderRef}
       className="absolute -translate-x-1/2 -translate-y-1/2"
       style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
     >
       <AnimatePresence>
         {showWord && (
           <motion.div
-            className={`pointer-events-none absolute z-10 rounded-2xl bg-white px-4 py-1 text-center whitespace-nowrap shadow-lg ${bubblePlacement(hotspot)}`}
-            initial={{ opacity: 0, y: hotspot.y < BUBBLE_BELOW_Y ? -10 : 10, scale: 0.6 }}
+            ref={bubbleRef}
+            className="pointer-events-none absolute top-0 left-0 z-10 rounded-2xl bg-white px-4 py-1 text-center whitespace-nowrap shadow-lg"
+            style={{
+              left: bubblePos?.left ?? 0,
+              top: bubblePos?.top ?? 0,
+              visibility: bubblePos ? 'visible' : 'hidden',
+            }}
+            initial={{ opacity: 0, y: bubblePos?.below ? -10 : 10, scale: 0.6 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.6 }}
           >

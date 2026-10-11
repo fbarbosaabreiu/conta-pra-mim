@@ -1,0 +1,354 @@
+{
+  "id": "parque",
+  "title": {
+    "pt": "No parquinho",
+    "en": "At the playground",
+    "es": "En el parque",
+    "fr": "Au parc"
+  },
+  "cover": "🛝",
+  "color": "#65a30d",
+  "background": "linear-gradient(#bae6fd 0%, #e0f2fe 50%, #bef264 50%, #65a30d 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🌳",
+          "word": {
+            "pt": "árvore",
+            "en": "tree",
+            "es": "árbol",
+            "fr": "arbre"
+          },
+          "x": 20,
+          "y": 50,
+          "size": 26
+        },
+        {
+          "emoji": "🌷",
+          "word": {
+            "pt": "flor",
+            "en": "flower",
+            "es": "flor",
+            "fr": "fleur"
+          },
+          "x": 76,
+          "y": 72,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Vamos brincar no parquinho!",
+        "en": "Let’s play at the playground!",
+        "es": "¡Vamos a jugar al parque!",
+        "fr": "Allons jouer au parc !"
+      },
+      "highlight": {
+        "pt": [
+          "parquinho"
+        ],
+        "en": [
+          "playground"
+        ],
+        "es": [
+          "parque"
+        ],
+        "fr": [
+          "parc"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “do que você mais gosta no parquinho?”",
+        "en": "Ask: “what do you like best at the playground?”",
+        "es": "Pregunte: “¿qué es lo que más te gusta del parque?”",
+        "fr": "Demandez : « qu’est-ce que tu préfères au parc ? »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🛝",
+          "word": {
+            "pt": "escorregador",
+            "en": "slide",
+            "es": "tobogán",
+            "fr": "toboggan"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 36
+        }
+      ],
+      "text": {
+        "pt": "Subimos a escada e descemos o escorregador bem...",
+        "en": "We climb the ladder and go down the slide really...",
+        "es": "Subimos la escalera y bajamos por el tobogán muy...",
+        "fr": "On monte l’échelle et on descend le toboggan très..."
+      },
+      "reveal": {
+        "pt": "rápido!",
+        "en": "fast!",
+        "es": "¡rápido!",
+        "fr": "vite !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "escorregador"
+        ],
+        "en": [
+          "slide"
+        ],
+        "es": [
+          "tobogán"
+        ],
+        "fr": [
+          "toboggan"
+        ]
+      },
+      "parentTip": {
+        "pt": "Deslize a mão como se fosse descendo o escorregador: “uiii!”",
+        "en": "Slide your hand down like going down the slide: “wheee!”",
+        "es": "Deslice la mano como si bajara el tobogán: “¡uiii!”",
+        "fr": "Faites glisser la main comme sur le toboggan : « youpiii ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🫧",
+          "word": {
+            "pt": "bolhas",
+            "en": "bubbles",
+            "es": "burbujas",
+            "fr": "bulles"
+          },
+          "x": 50,
+          "y": 44,
+          "size": 30
+        },
+        {
+          "emoji": "🫧",
+          "word": {
+            "pt": "bolhas",
+            "en": "bubbles",
+            "es": "burbujas",
+            "fr": "bulles"
+          },
+          "x": 22,
+          "y": 30,
+          "size": 14
+        },
+        {
+          "emoji": "🫧",
+          "word": {
+            "pt": "bolhas",
+            "en": "bubbles",
+            "es": "burbujas",
+            "fr": "bulles"
+          },
+          "x": 78,
+          "y": 30,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "Sopramos as bolhas de sabão, e elas fazem...",
+        "en": "We blow soap bubbles, and they go...",
+        "es": "Soplamos pompas de jabón, y hacen...",
+        "fr": "On souffle des bulles de savon, et elles font..."
+      },
+      "reveal": {
+        "pt": "pop!",
+        "en": "pop!",
+        "es": "¡pop!",
+        "fr": "pop !"
+      },
+      "accent": "#0891b2",
+      "highlight": {
+        "pt": [
+          "bolhas"
+        ],
+        "en": [
+          "bubbles"
+        ],
+        "es": [],
+        "fr": [
+          "bulles"
+        ]
+      },
+      "parentTip": {
+        "pt": "Sopre de verdade e deixe a criança tentar estourar as bolhas.",
+        "en": "Really blow and let your child try to pop the bubbles.",
+        "es": "Sople de verdad y deje que el niño intente reventar las burbujas.",
+        "fr": "Soufflez pour de vrai et laissez l’enfant éclater les bulles."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "⛲",
+          "word": {
+            "pt": "fonte",
+            "en": "fountain",
+            "es": "fuente",
+            "fr": "fontaine"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "A água da fonte faz...",
+        "en": "The water in the fountain goes...",
+        "es": "El agua de la fuente hace...",
+        "fr": "L’eau de la fontaine fait..."
+      },
+      "reveal": {
+        "pt": "splash!",
+        "en": "splash!",
+        "es": "¡chof!",
+        "fr": "plouf !"
+      },
+      "accent": "#0284c7",
+      "highlight": {
+        "pt": [
+          "fonte"
+        ],
+        "en": [
+          "fountain"
+        ],
+        "es": [
+          "fuente"
+        ],
+        "fr": [
+          "fontaine"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça chuvinha com os dedos em cima da criança: “splash!”",
+        "en": "Make rain with your fingers over your child: “splash!”",
+        "es": "Haga lluvia con los dedos sobre el niño: “¡chof!”",
+        "fr": "Faites la pluie avec vos doigts sur l’enfant : « plouf ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍦",
+          "word": {
+            "pt": "sorvete",
+            "en": "ice cream",
+            "es": "helado",
+            "fr": "glace"
+          },
+          "x": 50,
+          "y": 58,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "Hum! O sorvete é bem...",
+        "en": "Yum! The ice cream is really...",
+        "es": "¡Mmm! El helado está muy...",
+        "fr": "Miam ! La glace est très..."
+      },
+      "reveal": {
+        "pt": "geladinho!",
+        "en": "cold!",
+        "es": "¡fresquito!",
+        "fr": "froide !"
+      },
+      "accent": "#db2777",
+      "highlight": {
+        "pt": [
+          "sorvete"
+        ],
+        "en": [
+          "ice",
+          "cream"
+        ],
+        "es": [
+          "helado"
+        ],
+        "fr": [
+          "glace"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça de conta que lambe um sorvete e diga “hum, delícia!”",
+        "en": "Pretend to lick an ice cream and say “yum, delicious!”",
+        "es": "Haga como que lame un helado y diga “¡mmm, qué rico!”",
+        "fr": "Faites semblant de lécher une glace : « miam, délicieux ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🛝",
+          "word": {
+            "pt": "escorregador",
+            "en": "slide",
+            "es": "tobogán",
+            "fr": "toboggan"
+          },
+          "x": 26,
+          "y": 62,
+          "size": 20
+        },
+        {
+          "emoji": "⛲",
+          "word": {
+            "pt": "fonte",
+            "en": "fountain",
+            "es": "fuente",
+            "fr": "fontaine"
+          },
+          "x": 70,
+          "y": 62,
+          "size": 20
+        },
+        {
+          "emoji": "🍦",
+          "word": {
+            "pt": "sorvete",
+            "en": "ice cream",
+            "es": "helado",
+            "fr": "glace"
+          },
+          "x": 50,
+          "y": 80,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Que dia divertido! Tchau, parquinho!",
+        "en": "What a fun day! Bye-bye, playground!",
+        "es": "¡Qué día tan divertido! ¡Adiós, parque!",
+        "fr": "Quelle journée amusante ! Au revoir, le parc !"
+      },
+      "highlight": {
+        "pt": [
+          "tchau"
+        ],
+        "en": [
+          "bye-bye"
+        ],
+        "es": [
+          "adiós"
+        ],
+        "fr": [
+          "au",
+          "revoir"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “o que a gente fez hoje?” e relembrem juntos.",
+        "en": "Ask: “what did we do today?” and remember together.",
+        "es": "Pregunte: “¿qué hicimos hoy?” y recuérdenlo juntos.",
+        "fr": "Demandez : « qu’est-ce qu’on a fait aujourd’hui ? » et rappelez-vous ensemble."
+      }
+    }
+  ]
+}

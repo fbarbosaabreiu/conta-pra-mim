@@ -1,0 +1,313 @@
+{
+  "id": "dormir",
+  "title": {
+    "pt": "Hora de dormir",
+    "en": "Bedtime",
+    "es": "La hora de dormir",
+    "fr": "L’heure de dormir"
+  },
+  "cover": "🛏️",
+  "color": "#6366f1",
+  "background": "linear-gradient(#312e81 0%, #4338ca 62%, #a78bfa 62%, #8b5cf6 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🌙",
+          "word": {
+            "pt": "lua",
+            "en": "moon",
+            "es": "luna",
+            "fr": "lune"
+          },
+          "x": 74,
+          "y": 24,
+          "size": 22
+        },
+        {
+          "emoji": "⭐",
+          "word": {
+            "pt": "estrela",
+            "en": "star",
+            "es": "estrella",
+            "fr": "étoile"
+          },
+          "x": 26,
+          "y": 20,
+          "size": 10
+        },
+        {
+          "emoji": "🏠",
+          "word": {
+            "pt": "casa",
+            "en": "house",
+            "es": "casa",
+            "fr": "maison"
+          },
+          "x": 34,
+          "y": 62,
+          "size": 24
+        }
+      ],
+      "text": {
+        "pt": "Já escureceu. A lua está no céu.",
+        "en": "It’s dark now. The moon is in the sky.",
+        "es": "Ya oscureció. La luna está en el cielo.",
+        "fr": "Il fait nuit. La lune est dans le ciel."
+      },
+      "highlight": {
+        "pt": [
+          "lua"
+        ],
+        "en": [
+          "moon"
+        ],
+        "es": [
+          "luna"
+        ],
+        "fr": [
+          "lune"
+        ]
+      },
+      "parentTip": {
+        "pt": "Fale cada vez mais devagar e baixinho nesta história.",
+        "en": "Speak slower and softer as this story goes on.",
+        "es": "Hable cada vez más despacio y bajito en este cuento.",
+        "fr": "Parlez de plus en plus lentement et doucement dans cette histoire."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🛁",
+          "word": {
+            "pt": "banheira",
+            "en": "bathtub",
+            "es": "bañera",
+            "fr": "baignoire"
+          },
+          "x": 50,
+          "y": 64,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "Primeiro, um banho morno e...",
+        "en": "First, a warm bath and...",
+        "es": "Primero, un baño tibio y...",
+        "fr": "D’abord, un bain tiède et..."
+      },
+      "reveal": {
+        "pt": "pijama!",
+        "en": "pajamas!",
+        "es": "¡pijama!",
+        "fr": "pyjama !"
+      },
+      "accent": "#7c3aed",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Repita a rotina de verdade da criança: banho, pijama, história.",
+        "en": "Repeat your child’s real routine: bath, pajamas, story.",
+        "es": "Repita la rutina real del niño: baño, pijama, cuento.",
+        "fr": "Reprenez la vraie routine de l’enfant : bain, pyjama, histoire."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "📖",
+          "word": {
+            "pt": "livro",
+            "en": "book",
+            "es": "libro",
+            "fr": "livre"
+          },
+          "x": 50,
+          "y": 62,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "Na cama, a gente lê um...",
+        "en": "In bed, we read a...",
+        "es": "En la cama, leemos un...",
+        "fr": "Au lit, on lit un..."
+      },
+      "reveal": {
+        "pt": "livro!",
+        "en": "book!",
+        "es": "¡libro!",
+        "fr": "livre !"
+      },
+      "accent": "#2563eb",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Mostre um livro de verdade e deixe a criança virar a página.",
+        "en": "Show a real book and let your child turn the page.",
+        "es": "Muestre un libro de verdad y deje que el niño pase la página.",
+        "fr": "Montrez un vrai livre et laissez l’enfant tourner la page."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "⏰",
+          "word": {
+            "pt": "relógio",
+            "en": "clock",
+            "es": "reloj",
+            "fr": "réveil"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "O relógio faz bem baixinho...",
+        "en": "The clock goes very softly...",
+        "es": "El reloj hace muy bajito...",
+        "fr": "Le réveil fait tout doucement..."
+      },
+      "reveal": {
+        "pt": "tic tac!",
+        "en": "tick tock!",
+        "es": "¡tic tac!",
+        "fr": "tic tac !"
+      },
+      "accent": "#a16207",
+      "highlight": {
+        "pt": [
+          "relógio"
+        ],
+        "en": [
+          "clock"
+        ],
+        "es": [
+          "reloj"
+        ],
+        "fr": [
+          "réveil"
+        ]
+      },
+      "parentTip": {
+        "pt": "Balance o dedo de um lado para o outro: “tic tac, tic tac”.",
+        "en": "Swing your finger side to side: “tick tock, tick tock”.",
+        "es": "Mueva el dedo de un lado a otro: “tic tac, tic tac”.",
+        "fr": "Balancez le doigt de gauche à droite : « tic tac, tic tac »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "💡",
+          "word": {
+            "pt": "luz",
+            "en": "light",
+            "es": "luz",
+            "fr": "lumière"
+          },
+          "x": 50,
+          "y": 46,
+          "size": 30
+        }
+      ],
+      "text": {
+        "pt": "Agora apagamos a...",
+        "en": "Now we turn off the...",
+        "es": "Ahora apagamos la...",
+        "fr": "Maintenant, on éteint la..."
+      },
+      "reveal": {
+        "pt": "luz!",
+        "en": "light!",
+        "es": "¡luz!",
+        "fr": "lumière !"
+      },
+      "accent": "#ca8a04",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Faça “clique!” como se apertasse o interruptor.",
+        "en": "Go “click!” as if flipping the switch.",
+        "es": "Haga “¡clic!” como si apretara el interruptor.",
+        "fr": "Faites « clic ! » comme si vous appuyiez sur l’interrupteur."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🛏️",
+          "word": {
+            "pt": "cama",
+            "en": "bed",
+            "es": "cama",
+            "fr": "lit"
+          },
+          "x": 50,
+          "y": 66,
+          "size": 36
+        },
+        {
+          "emoji": "🌙",
+          "word": {
+            "pt": "lua",
+            "en": "moon",
+            "es": "luna",
+            "fr": "lune"
+          },
+          "x": 80,
+          "y": 20,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Boa noite! Agora é hora de...",
+        "en": "Good night! Now it’s time to...",
+        "es": "¡Buenas noches! Ahora es hora de...",
+        "fr": "Bonne nuit ! Maintenant, c’est l’heure de..."
+      },
+      "reveal": {
+        "pt": "dormir!",
+        "en": "sleep!",
+        "es": "¡dormir!",
+        "fr": "dormir !"
+      },
+      "accent": "#6366f1",
+      "highlight": {
+        "pt": [
+          "noite"
+        ],
+        "en": [
+          "night"
+        ],
+        "es": [
+          "noches"
+        ],
+        "fr": [
+          "nuit"
+        ]
+      },
+      "parentTip": {
+        "pt": "Dê um beijinho de boa noite e fale bem baixinho.",
+        "en": "Give a good-night kiss and whisper.",
+        "es": "Dé un besito de buenas noches y hable muy bajito.",
+        "fr": "Faites un bisou de bonne nuit et chuchotez."
+      }
+    }
+  ]
+}

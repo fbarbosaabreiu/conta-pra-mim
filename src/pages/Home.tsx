@@ -41,14 +41,14 @@ export default function Home() {
 
         <LanguagePicker />
 
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <Link to="/como-usar" className="text-base underline opacity-60">
+        <div className="flex flex-wrap justify-center gap-x-5">
+          <Link to="/como-usar" className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60">
             ❓ {HOW_TO_LINK[lang]}
           </Link>
-          <Link to="/creditos" className="text-base underline opacity-60">
+          <Link to="/creditos" className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60">
             {t.soundCredits}
           </Link>
-          <Link to="/privacidade" className="text-base underline opacity-60">
+          <Link to="/privacidade" className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60">
             {PRIVACY_LINK[lang]}
           </Link>
         </div>

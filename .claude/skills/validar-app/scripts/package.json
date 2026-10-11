@@ -1,0 +1,10 @@
+{
+  "name": "validar-app-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Ferramentas da skill validar-app (não fazem parte do build do app).",
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "playwright-core": "^1.64.0"
+  }
+}

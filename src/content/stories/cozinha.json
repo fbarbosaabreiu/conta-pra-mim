@@ -1,0 +1,345 @@
+{
+  "id": "cozinha",
+  "title": {
+    "pt": "Na cozinha",
+    "en": "In the kitchen",
+    "es": "En la cocina",
+    "fr": "Dans la cuisine"
+  },
+  "cover": "🍳",
+  "color": "#f97316",
+  "background": "linear-gradient(#fff7ed 0%, #ffedd5 60%, #fdba74 60%, #fb923c 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🍳",
+          "word": {
+            "pt": "frigideira",
+            "en": "pan",
+            "es": "sartén",
+            "fr": "poêle"
+          },
+          "x": 30,
+          "y": 64,
+          "size": 26
+        },
+        {
+          "emoji": "🥄",
+          "word": {
+            "pt": "colher",
+            "en": "spoon",
+            "es": "cuchara",
+            "fr": "cuillère"
+          },
+          "x": 70,
+          "y": 62,
+          "size": 22
+        }
+      ],
+      "text": {
+        "pt": "Na cozinha a gente prepara a comida.",
+        "en": "In the kitchen we make food.",
+        "es": "En la cocina preparamos la comida.",
+        "fr": "Dans la cuisine, on prépare à manger."
+      },
+      "highlight": {
+        "pt": [
+          "cozinha"
+        ],
+        "en": [
+          "kitchen"
+        ],
+        "es": [
+          "cocina"
+        ],
+        "fr": [
+          "cuisine"
+        ]
+      },
+      "parentTip": {
+        "pt": "Na cozinha de verdade, deixe a criança segurar uma colher e nomear as coisas.",
+        "en": "In the real kitchen, let your child hold a spoon and name things.",
+        "es": "En la cocina de verdad, deje que el niño sostenga una cuchara y nombre las cosas.",
+        "fr": "Dans la vraie cuisine, laissez l’enfant tenir une cuillère et nommer les choses."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🥛",
+          "word": {
+            "pt": "copo",
+            "en": "glass",
+            "es": "vaso",
+            "fr": "verre"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 30
+        }
+      ],
+      "text": {
+        "pt": "Dentro do copo tem...",
+        "en": "In the glass there’s...",
+        "es": "Dentro del vaso hay...",
+        "fr": "Dans le verre, il y a du..."
+      },
+      "reveal": {
+        "pt": "leite!",
+        "en": "milk!",
+        "es": "¡leche!",
+        "fr": "lait !"
+      },
+      "accent": "#0284c7",
+      "highlight": {
+        "pt": [
+          "copo"
+        ],
+        "en": [
+          "glass"
+        ],
+        "es": [
+          "vaso"
+        ],
+        "fr": [
+          "verre"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça de conta que está bebendo: “glub glub”.",
+        "en": "Pretend to drink: “gulp gulp”.",
+        "es": "Haga como que bebe: “glu glu”.",
+        "fr": "Faites semblant de boire : « glou glou »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🥣",
+          "word": {
+            "pt": "tigela",
+            "en": "bowl",
+            "es": "tazón",
+            "fr": "bol"
+          },
+          "x": 50,
+          "y": 64,
+          "size": 30
+        },
+        {
+          "emoji": "🥄",
+          "word": {
+            "pt": "colher",
+            "en": "spoon",
+            "es": "cuchara",
+            "fr": "cuillère"
+          },
+          "x": 76,
+          "y": 46,
+          "size": 18
+        }
+      ],
+      "text": {
+        "pt": "Mexemos a papinha com a...",
+        "en": "We stir the porridge with the...",
+        "es": "Revolvemos la papilla con la...",
+        "fr": "On mélange la bouillie avec la..."
+      },
+      "reveal": {
+        "pt": "colher!",
+        "en": "spoon!",
+        "es": "¡cuchara!",
+        "fr": "cuillère !"
+      },
+      "accent": "#a16207",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Faça movimentos de mexer em círculo junto com a criança.",
+        "en": "Make stirring circles together with your child.",
+        "es": "Hagan juntos movimientos de revolver en círculo.",
+        "fr": "Faites des cercles pour mélanger, ensemble."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍲",
+          "word": {
+            "pt": "panela",
+            "en": "pot",
+            "es": "olla",
+            "fr": "marmite"
+          },
+          "x": 50,
+          "y": 64,
+          "size": 32
+        },
+        {
+          "emoji": "🔥",
+          "word": {
+            "pt": "fogo",
+            "en": "fire",
+            "es": "fuego",
+            "fr": "feu"
+          },
+          "x": 50,
+          "y": 86,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "Cuidado! A panela está muito...",
+        "en": "Careful! The pot is very...",
+        "es": "¡Cuidado! La olla está muy...",
+        "fr": "Attention ! La marmite est très..."
+      },
+      "reveal": {
+        "pt": "quente!",
+        "en": "hot!",
+        "es": "¡caliente!",
+        "fr": "chaude !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "panela"
+        ],
+        "en": [
+          "pot"
+        ],
+        "es": [
+          "olla"
+        ],
+        "fr": [
+          "marmite"
+        ]
+      },
+      "parentTip": {
+        "pt": "Ensine: “quente, não pode pôr a mão!” e faça cara de assustado.",
+        "en": "Teach: “hot, don’t touch!” and make a surprised face.",
+        "es": "Enseñe: “¡caliente, no se toca!” y ponga cara de susto.",
+        "fr": "Apprenez : « chaud, on ne touche pas ! » avec une tête surprise."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🧊",
+          "word": {
+            "pt": "gelo",
+            "en": "ice",
+            "es": "hielo",
+            "fr": "glaçon"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 28
+        },
+        {
+          "emoji": "🍦",
+          "word": {
+            "pt": "sorvete",
+            "en": "ice cream",
+            "es": "helado",
+            "fr": "glace"
+          },
+          "x": 80,
+          "y": 66,
+          "size": 18
+        }
+      ],
+      "text": {
+        "pt": "O gelo é bem...",
+        "en": "The ice is really...",
+        "es": "El hielo está muy...",
+        "fr": "Le glaçon est très..."
+      },
+      "reveal": {
+        "pt": "gelado!",
+        "en": "cold!",
+        "es": "¡frío!",
+        "fr": "froid !"
+      },
+      "accent": "#0891b2",
+      "highlight": {
+        "pt": [
+          "gelo"
+        ],
+        "en": [
+          "ice"
+        ],
+        "es": [
+          "hielo"
+        ],
+        "fr": [
+          "glaçon"
+        ]
+      },
+      "parentTip": {
+        "pt": "Encoste algo gelado na mão da criança e diga “gelado!”.",
+        "en": "Touch something cold to your child’s hand and say “cold!”.",
+        "es": "Acerque algo frío a la mano del niño y diga “¡frío!”.",
+        "fr": "Posez quelque chose de froid sur la main de l’enfant et dites « froid ! »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍽️",
+          "word": {
+            "pt": "prato",
+            "en": "plate",
+            "es": "plato",
+            "fr": "assiette"
+          },
+          "x": 50,
+          "y": 64,
+          "size": 32
+        },
+        {
+          "emoji": "🍞",
+          "word": {
+            "pt": "pão",
+            "en": "bread",
+            "es": "pan",
+            "fr": "pain"
+          },
+          "x": 80,
+          "y": 40,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "A comida está pronta! Vamos...",
+        "en": "Food’s ready! Let’s...",
+        "es": "¡La comida está lista! Vamos a...",
+        "fr": "Le repas est prêt ! On va..."
+      },
+      "reveal": {
+        "pt": "comer!",
+        "en": "eat!",
+        "es": "¡comer!",
+        "fr": "manger !"
+      },
+      "accent": "#ea580c",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Diga “nham nham!” e esfregue a barriga.",
+        "en": "Say “yum yum!” and rub your tummy.",
+        "es": "Diga “¡ñam ñam!” y frótese la panza.",
+        "fr": "Dites « miam miam ! » en vous frottant le ventre."
+      }
+    }
+  ]
+}

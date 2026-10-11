@@ -1,0 +1,320 @@
+{
+  "id": "frutas",
+  "title": {
+    "pt": "Hora da fruta",
+    "en": "Fruit time",
+    "es": "La hora de la fruta",
+    "fr": "L’heure des fruits"
+  },
+  "cover": "🍓",
+  "color": "#e11d48",
+  "background": "linear-gradient(#fff1f2, #ffe4e6)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🧺",
+          "word": {
+            "pt": "cesta",
+            "en": "basket",
+            "es": "cesta",
+            "fr": "panier"
+          },
+          "x": 50,
+          "y": 64,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "Na cesta tem muitas frutas gostosas!",
+        "en": "The basket is full of yummy fruit!",
+        "es": "¡En la cesta hay muchas frutas ricas!",
+        "fr": "Dans le panier, il y a plein de bons fruits !"
+      },
+      "highlight": {
+        "pt": [
+          "frutas"
+        ],
+        "en": [
+          "fruit"
+        ],
+        "es": [
+          "frutas"
+        ],
+        "fr": [
+          "fruits"
+        ]
+      },
+      "parentTip": {
+        "pt": "Na hora do lanche, mostre uma fruta de verdade e diga o nome.",
+        "en": "At snack time, show a real fruit and say its name.",
+        "es": "A la hora de la merienda, muestre una fruta de verdad y diga su nombre.",
+        "fr": "Au goûter, montrez un vrai fruit et dites son nom."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍉",
+          "word": {
+            "pt": "melancia",
+            "en": "watermelon",
+            "es": "sandía",
+            "fr": "pastèque"
+          },
+          "x": 50,
+          "y": 62,
+          "size": 36
+        }
+      ],
+      "text": {
+        "pt": "A melancia é verde por fora e por dentro é...",
+        "en": "The watermelon is green outside and inside it’s...",
+        "es": "La sandía es verde por fuera y por dentro es...",
+        "fr": "La pastèque est verte dehors et dedans elle est..."
+      },
+      "reveal": {
+        "pt": "vermelha!",
+        "en": "red!",
+        "es": "¡roja!",
+        "fr": "rouge !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "melancia"
+        ],
+        "en": [
+          "watermelon"
+        ],
+        "es": [
+          "sandía"
+        ],
+        "fr": [
+          "pastèque"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “o que mais é vermelho?”",
+        "en": "Ask: “what else is red?”",
+        "es": "Pregunte: “¿qué más es rojo?”",
+        "fr": "Demandez : « qu’est-ce qui est rouge aussi ? »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍇",
+          "word": {
+            "pt": "uva",
+            "en": "grapes",
+            "es": "uvas",
+            "fr": "raisin"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "A uva é pequenininha e...",
+        "en": "Grapes are tiny and...",
+        "es": "La uva es chiquitita y...",
+        "fr": "Le raisin est tout petit et..."
+      },
+      "reveal": {
+        "pt": "redondinha!",
+        "en": "round!",
+        "es": "¡redondita!",
+        "fr": "tout rond !"
+      },
+      "accent": "#7c3aed",
+      "highlight": {
+        "pt": [
+          "uva"
+        ],
+        "en": [
+          "grapes"
+        ],
+        "es": [],
+        "fr": [
+          "raisin"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça um círculo com os dedos: “redondo!”",
+        "en": "Make a circle with your fingers: “round!”",
+        "es": "Haga un círculo con los dedos: “¡redondo!”",
+        "fr": "Faites un rond avec vos doigts : « rond ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍌",
+          "word": {
+            "pt": "banana",
+            "en": "banana",
+            "es": "plátano",
+            "fr": "banane"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "Antes de comer, descascamos a...",
+        "en": "Before eating it, we peel the...",
+        "es": "Antes de comerlo, pelamos el...",
+        "fr": "Avant de la manger, on épluche la..."
+      },
+      "reveal": {
+        "pt": "banana!",
+        "en": "banana!",
+        "es": "¡plátano!",
+        "fr": "banane !"
+      },
+      "accent": "#ca8a04",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Faça de conta que descasca uma banana, devagar.",
+        "en": "Pretend to peel a banana, slowly.",
+        "es": "Haga como que pela un plátano, despacio.",
+        "fr": "Faites semblant d’éplucher une banane, doucement."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍓",
+          "word": {
+            "pt": "morango",
+            "en": "strawberry",
+            "es": "fresa",
+            "fr": "fraise"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "O morango é docinho! Hum, que...",
+        "en": "The strawberry is sweet! Mmm, so...",
+        "es": "¡La fresa es dulcecita! Mmm, qué...",
+        "fr": "La fraise est sucrée ! Mmm, c’est..."
+      },
+      "reveal": {
+        "pt": "delícia!",
+        "en": "yummy!",
+        "es": "¡rica!",
+        "fr": "délicieux !"
+      },
+      "accent": "#e11d48",
+      "highlight": {
+        "pt": [
+          "morango"
+        ],
+        "en": [
+          "strawberry"
+        ],
+        "es": [
+          "fresa"
+        ],
+        "fr": [
+          "fraise"
+        ]
+      },
+      "parentTip": {
+        "pt": "Diga “nham nham!” e deixe a criança imitar.",
+        "en": "Say “yum yum!” and let your child copy you.",
+        "es": "Diga “¡ñam ñam!” y deje que el niño lo imite.",
+        "fr": "Dites « miam miam ! » et laissez l’enfant imiter."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🍉",
+          "word": {
+            "pt": "melancia",
+            "en": "watermelon",
+            "es": "sandía",
+            "fr": "pastèque"
+          },
+          "x": 22,
+          "y": 66,
+          "size": 18
+        },
+        {
+          "emoji": "🍇",
+          "word": {
+            "pt": "uva",
+            "en": "grapes",
+            "es": "uvas",
+            "fr": "raisin"
+          },
+          "x": 42,
+          "y": 70,
+          "size": 15
+        },
+        {
+          "emoji": "🍌",
+          "word": {
+            "pt": "banana",
+            "en": "banana",
+            "es": "plátano",
+            "fr": "banane"
+          },
+          "x": 62,
+          "y": 68,
+          "size": 15
+        },
+        {
+          "emoji": "🍓",
+          "word": {
+            "pt": "morango",
+            "en": "strawberry",
+            "es": "fresa",
+            "fr": "fraise"
+          },
+          "x": 82,
+          "y": 70,
+          "size": 15
+        }
+      ],
+      "text": {
+        "pt": "Qual fruta você quer comer agora?",
+        "en": "Which fruit do you want to eat now?",
+        "es": "¿Qué fruta quieres comer ahora?",
+        "fr": "Quel fruit veux-tu manger maintenant ?"
+      },
+      "highlight": {
+        "pt": [
+          "fruta"
+        ],
+        "en": [
+          "fruit"
+        ],
+        "es": [
+          "fruta"
+        ],
+        "fr": [
+          "fruit"
+        ]
+      },
+      "parentTip": {
+        "pt": "Deixe a criança tocar na fruta preferida e tentar dizer o nome.",
+        "en": "Let your child tap their favorite fruit and try to say its name.",
+        "es": "Deje que el niño toque su fruta favorita e intente decir su nombre.",
+        "fr": "Laissez l’enfant toucher son fruit préféré et essayer de dire son nom."
+      }
+    }
+  ]
+}

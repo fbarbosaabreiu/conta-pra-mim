@@ -1,0 +1,342 @@
+{
+  "id": "musica",
+  "title": {
+    "pt": "Vamos fazer música",
+    "en": "Let’s make music",
+    "es": "Hagamos música",
+    "fr": "Faisons de la musique"
+  },
+  "cover": "🥁",
+  "color": "#d946ef",
+  "background": "linear-gradient(#fdf4ff, #fae8ff)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🎵",
+          "word": {
+            "pt": "nota",
+            "en": "note",
+            "es": "nota",
+            "fr": "note"
+          },
+          "x": 30,
+          "y": 36,
+          "size": 18
+        },
+        {
+          "emoji": "🎶",
+          "word": {
+            "pt": "música",
+            "en": "music",
+            "es": "música",
+            "fr": "musique"
+          },
+          "x": 70,
+          "y": 46,
+          "size": 20
+        }
+      ],
+      "text": {
+        "pt": "Vamos fazer música! Cada instrumento tem um som.",
+        "en": "Let’s make music! Every instrument has its own sound.",
+        "es": "¡Hagamos música! Cada instrumento tiene un sonido.",
+        "fr": "Faisons de la musique ! Chaque instrument a son propre son."
+      },
+      "highlight": {
+        "pt": [
+          "música"
+        ],
+        "en": [
+          "music"
+        ],
+        "es": [
+          "música"
+        ],
+        "fr": [
+          "musique"
+        ]
+      },
+      "parentTip": {
+        "pt": "Bata palmas no ritmo enquanto lê.",
+        "en": "Clap along to the rhythm as you read.",
+        "es": "Dé palmas al ritmo mientras lee.",
+        "fr": "Tapez dans les mains en rythme pendant la lecture."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🥁",
+          "word": {
+            "pt": "tambor",
+            "en": "drum",
+            "es": "tambor",
+            "fr": "tambour"
+          },
+          "x": 50,
+          "y": 62,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "O tambor faz...",
+        "en": "The drum goes...",
+        "es": "El tambor hace...",
+        "fr": "Le tambour fait..."
+      },
+      "reveal": {
+        "pt": "tum tum!",
+        "en": "boom boom!",
+        "es": "¡pom pom!",
+        "fr": "boum boum !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "tambor"
+        ],
+        "en": [
+          "drum"
+        ],
+        "es": [
+          "tambor"
+        ],
+        "fr": [
+          "tambour"
+        ]
+      },
+      "parentTip": {
+        "pt": "Batuque na mesa ou numa panela: “tum tum!”",
+        "en": "Drum on the table or a pot: “boom boom!”",
+        "es": "Toque en la mesa o en una olla: “¡pom pom!”",
+        "fr": "Tapez sur la table ou une casserole : « boum boum ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🎸",
+          "word": {
+            "pt": "violão",
+            "en": "guitar",
+            "es": "guitarra",
+            "fr": "guitare"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "O violão faz...",
+        "en": "The guitar goes...",
+        "es": "La guitarra hace...",
+        "fr": "La guitare fait..."
+      },
+      "reveal": {
+        "pt": "plim plim!",
+        "en": "strum strum!",
+        "es": "¡plin plin!",
+        "fr": "plink plink !"
+      },
+      "accent": "#b45309",
+      "highlight": {
+        "pt": [
+          "violão"
+        ],
+        "en": [
+          "guitar"
+        ],
+        "es": [
+          "guitarra"
+        ],
+        "fr": [
+          "guitare"
+        ]
+      },
+      "parentTip": {
+        "pt": "Finja tocar violão e cante uma musiquinha que a criança conhece.",
+        "en": "Pretend to play guitar and sing a song your child knows.",
+        "es": "Haga como que toca la guitarra y cante una canción que el niño conozca.",
+        "fr": "Faites semblant de jouer de la guitare et chantez une chanson que l’enfant connaît."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🎺",
+          "word": {
+            "pt": "trompete",
+            "en": "trumpet",
+            "es": "trompeta",
+            "fr": "trompette"
+          },
+          "x": 50,
+          "y": 58,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "O trompete faz...",
+        "en": "The trumpet goes...",
+        "es": "La trompeta hace...",
+        "fr": "La trompette fait..."
+      },
+      "reveal": {
+        "pt": "tu tu ru!",
+        "en": "toot toot!",
+        "es": "¡tu tu ru!",
+        "fr": "ta ta ta !"
+      },
+      "accent": "#ca8a04",
+      "highlight": {
+        "pt": [
+          "trompete"
+        ],
+        "en": [
+          "trumpet"
+        ],
+        "es": [
+          "trompeta"
+        ],
+        "fr": [
+          "trompette"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça um tubinho com a mão na boca e “toque” o trompete.",
+        "en": "Make a tube with your hand at your mouth and “play” the trumpet.",
+        "es": "Haga un tubito con la mano en la boca y “toque” la trompeta.",
+        "fr": "Faites un tube avec la main devant la bouche et « jouez » de la trompette."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🔔",
+          "word": {
+            "pt": "sino",
+            "en": "bell",
+            "es": "campana",
+            "fr": "cloche"
+          },
+          "x": 50,
+          "y": 52,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "O sino balança e faz...",
+        "en": "The bell swings and goes...",
+        "es": "La campana se mueve y hace...",
+        "fr": "La cloche se balance et fait..."
+      },
+      "reveal": {
+        "pt": "blém blém!",
+        "en": "ding dong!",
+        "es": "¡din don!",
+        "fr": "ding dong !"
+      },
+      "accent": "#a16207",
+      "highlight": {
+        "pt": [
+          "sino"
+        ],
+        "en": [
+          "bell"
+        ],
+        "es": [
+          "campana"
+        ],
+        "fr": [
+          "cloche"
+        ]
+      },
+      "parentTip": {
+        "pt": "Balance o corpo de um lado para o outro como o sino.",
+        "en": "Sway side to side like the bell.",
+        "es": "Balancéese de un lado a otro como la campana.",
+        "fr": "Balancez-vous de gauche à droite comme la cloche."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🥁",
+          "word": {
+            "pt": "tambor",
+            "en": "drum",
+            "es": "tambor",
+            "fr": "tambour"
+          },
+          "x": 22,
+          "y": 66,
+          "size": 18
+        },
+        {
+          "emoji": "🎸",
+          "word": {
+            "pt": "violão",
+            "en": "guitar",
+            "es": "guitarra",
+            "fr": "guitare"
+          },
+          "x": 44,
+          "y": 62,
+          "size": 18
+        },
+        {
+          "emoji": "🎺",
+          "word": {
+            "pt": "trompete",
+            "en": "trumpet",
+            "es": "trompeta",
+            "fr": "trompette"
+          },
+          "x": 66,
+          "y": 64,
+          "size": 16
+        },
+        {
+          "emoji": "🔔",
+          "word": {
+            "pt": "sino",
+            "en": "bell",
+            "es": "campana",
+            "fr": "cloche"
+          },
+          "x": 84,
+          "y": 44,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Agora todos juntos: é uma banda!",
+        "en": "Now all together: it’s a band!",
+        "es": "¡Ahora todos juntos: es una banda!",
+        "fr": "Maintenant tous ensemble : c’est un orchestre !"
+      },
+      "highlight": {
+        "pt": [
+          "banda"
+        ],
+        "en": [
+          "band"
+        ],
+        "es": [
+          "banda"
+        ],
+        "fr": [
+          "orchestre"
+        ]
+      },
+      "parentTip": {
+        "pt": "Toque nos instrumentos e dancem juntos.",
+        "en": "Tap the instruments and dance together.",
+        "es": "Toque los instrumentos y bailen juntos.",
+        "fr": "Touchez les instruments et dansez ensemble."
+      }
+    }
+  ]
+}

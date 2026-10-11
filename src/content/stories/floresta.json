@@ -1,0 +1,434 @@
+{
+  "id": "floresta",
+  "title": {
+    "pt": "Passeio na floresta",
+    "en": "A walk in the forest",
+    "es": "Paseo por el bosque",
+    "fr": "Promenade en forêt"
+  },
+  "cover": "🐺",
+  "color": "#15803d",
+  "background": "linear-gradient(#dcfce7 0%, #bbf7d0 55%, #4d7c0f 55%, #365314 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🌲",
+          "word": {
+            "pt": "pinheiro",
+            "en": "pine tree",
+            "es": "pino",
+            "fr": "sapin"
+          },
+          "x": 20,
+          "y": 52,
+          "size": 28
+        },
+        {
+          "emoji": "🌲",
+          "word": {
+            "pt": "pinheiro",
+            "en": "pine tree",
+            "es": "pino",
+            "fr": "sapin"
+          },
+          "x": 80,
+          "y": 50,
+          "size": 24
+        },
+        {
+          "emoji": "🍄",
+          "word": {
+            "pt": "cogumelo",
+            "en": "mushroom",
+            "es": "seta",
+            "fr": "champignon"
+          },
+          "x": 52,
+          "y": 78,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Shhh... vamos andar bem quietinhos na floresta.",
+        "en": "Shhh... let’s walk very quietly in the forest.",
+        "es": "Shhh... vamos a caminar muy calladitos por el bosque.",
+        "fr": "Chut... marchons tout doucement dans la forêt."
+      },
+      "highlight": {
+        "pt": [
+          "floresta"
+        ],
+        "en": [
+          "forest"
+        ],
+        "es": [
+          "bosque"
+        ],
+        "fr": [
+          "forêt"
+        ]
+      },
+      "parentTip": {
+        "pt": "Fale baixinho e coloque o dedo na boca: “shhh”.",
+        "en": "Whisper and put a finger to your lips: “shhh”.",
+        "es": "Hable bajito y ponga el dedo en la boca: “shhh”.",
+        "fr": "Parlez tout bas, le doigt sur la bouche : « chut »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐺",
+          "word": {
+            "pt": "lobo",
+            "en": "wolf",
+            "es": "lobo",
+            "fr": "loup"
+          },
+          "sound": {
+            "pt": "auuuu!",
+            "en": "awoooo!",
+            "es": "¡auuuu!",
+            "fr": "ahouuu !"
+          },
+          "audio": "lobo.mp3",
+          "x": 50,
+          "y": 60,
+          "size": 32
+        },
+        {
+          "emoji": "🌕",
+          "word": {
+            "pt": "lua",
+            "en": "moon",
+            "es": "luna",
+            "fr": "lune"
+          },
+          "x": 80,
+          "y": 18,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "O lobo olha para a lua e uiva...",
+        "en": "The wolf looks at the moon and howls...",
+        "es": "El lobo mira la luna y aúlla...",
+        "fr": "Le loup regarde la lune et hurle..."
+      },
+      "reveal": {
+        "pt": "auuuu!",
+        "en": "awoooo!",
+        "es": "¡auuuu!",
+        "fr": "ahouuu !"
+      },
+      "revealAudio": "lobo.mp3",
+      "accent": "#475569",
+      "highlight": {
+        "pt": [
+          "lobo"
+        ],
+        "en": [
+          "wolf"
+        ],
+        "es": [
+          "lobo"
+        ],
+        "fr": [
+          "loup"
+        ]
+      },
+      "parentTip": {
+        "pt": "Levante o queixo e uive junto: “auuuu!”.",
+        "en": "Lift your chin and howl together: “awoooo!”.",
+        "es": "Levante la barbilla y aúllen juntos: “¡auuuu!”.",
+        "fr": "Levez le menton et hurlez ensemble : « ahouuu ! »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🌳",
+          "word": {
+            "pt": "árvore",
+            "en": "tree",
+            "es": "árbol",
+            "fr": "arbre"
+          },
+          "x": 32,
+          "y": 54,
+          "size": 34
+        },
+        {
+          "emoji": "🐦",
+          "word": {
+            "pt": "pica-pau",
+            "en": "woodpecker",
+            "es": "pájaro carpintero",
+            "fr": "pic-vert"
+          },
+          "sound": {
+            "pt": "toc toc toc!",
+            "en": "tap tap tap!",
+            "es": "¡toc toc toc!",
+            "fr": "toc toc toc !"
+          },
+          "audio": "picapau.mp3",
+          "x": 64,
+          "y": 40,
+          "size": 22
+        }
+      ],
+      "text": {
+        "pt": "Na árvore, o pica-pau bate o bico e faz...",
+        "en": "In the tree, the woodpecker pecks and goes...",
+        "es": "En el árbol, el pájaro carpintero pica y hace...",
+        "fr": "Dans l’arbre, le pic-vert tape du bec et fait..."
+      },
+      "reveal": {
+        "pt": "toc toc toc!",
+        "en": "tap tap tap!",
+        "es": "¡toc toc toc!",
+        "fr": "toc toc toc !"
+      },
+      "revealAudio": "picapau.mp3",
+      "accent": "#b45309",
+      "highlight": {
+        "pt": [
+          "pica-pau"
+        ],
+        "en": [
+          "woodpecker"
+        ],
+        "es": [
+          "pájaro",
+          "carpintero"
+        ],
+        "fr": [
+          "pic-vert"
+        ]
+      },
+      "parentTip": {
+        "pt": "Bata de leve na mesa com o dedo: “toc toc toc”.",
+        "en": "Tap lightly on the table with a finger: “tap tap tap”.",
+        "es": "Golpee suave la mesa con el dedo: “toc toc toc”.",
+        "fr": "Tapez doucement sur la table avec un doigt : « toc toc toc »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐻",
+          "word": {
+            "pt": "urso",
+            "en": "bear",
+            "es": "oso",
+            "fr": "ours"
+          },
+          "x": 46,
+          "y": 62,
+          "size": 34
+        },
+        {
+          "emoji": "🍯",
+          "word": {
+            "pt": "mel",
+            "en": "honey",
+            "es": "miel",
+            "fr": "miel"
+          },
+          "x": 80,
+          "y": 76,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "O urso comeu mel e agora está com...",
+        "en": "The bear ate honey and now he’s...",
+        "es": "El oso comió miel y ahora tiene...",
+        "fr": "L’ours a mangé du miel et maintenant il a..."
+      },
+      "reveal": {
+        "pt": "sono!",
+        "en": "sleepy!",
+        "es": "¡sueño!",
+        "fr": "sommeil !"
+      },
+      "accent": "#92400e",
+      "highlight": {
+        "pt": [
+          "urso"
+        ],
+        "en": [
+          "bear"
+        ],
+        "es": [
+          "oso"
+        ],
+        "fr": [
+          "l’ours"
+        ]
+      },
+      "parentTip": {
+        "pt": "Boceje e espreguice junto com a criança, como o urso.",
+        "en": "Yawn and stretch together, like the bear.",
+        "es": "Bostecen y estírense juntos, como el oso.",
+        "fr": "Bâillez et étirez-vous ensemble, comme l’ours."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐿️",
+          "word": {
+            "pt": "esquilo",
+            "en": "squirrel",
+            "es": "ardilla",
+            "fr": "écureuil"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 30
+        },
+        {
+          "emoji": "🌰",
+          "word": {
+            "pt": "castanha",
+            "en": "nut",
+            "es": "castaña",
+            "fr": "noisette"
+          },
+          "x": 76,
+          "y": 78,
+          "size": 12
+        },
+        {
+          "emoji": "🌰",
+          "word": {
+            "pt": "castanha",
+            "en": "nut",
+            "es": "castaña",
+            "fr": "noisette"
+          },
+          "x": 24,
+          "y": 80,
+          "size": 10
+        }
+      ],
+      "text": {
+        "pt": "O esquilo guarda para o inverno as...",
+        "en": "For winter, the squirrel saves its...",
+        "es": "Para el invierno, la ardilla guarda sus...",
+        "fr": "Pour l’hiver, l’écureuil garde ses..."
+      },
+      "reveal": {
+        "pt": "castanhas!",
+        "en": "nuts!",
+        "es": "¡castañas!",
+        "fr": "noisettes !"
+      },
+      "accent": "#a16207",
+      "highlight": {
+        "pt": [
+          "esquilo"
+        ],
+        "en": [
+          "squirrel"
+        ],
+        "es": [
+          "ardilla"
+        ],
+        "fr": [
+          "l’écureuil"
+        ]
+      },
+      "parentTip": {
+        "pt": "Conte as castanhas tocando em cada uma.",
+        "en": "Count the nuts by tapping each one.",
+        "es": "Cuente las castañas tocando cada una.",
+        "fr": "Comptez les noisettes en touchant chacune."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐺",
+          "word": {
+            "pt": "lobo",
+            "en": "wolf",
+            "es": "lobo",
+            "fr": "loup"
+          },
+          "audio": "lobo.mp3",
+          "x": 18,
+          "y": 64,
+          "size": 18
+        },
+        {
+          "emoji": "🐦",
+          "word": {
+            "pt": "pica-pau",
+            "en": "woodpecker",
+            "es": "pájaro carpintero",
+            "fr": "pic-vert"
+          },
+          "audio": "picapau.mp3",
+          "x": 40,
+          "y": 36,
+          "size": 14
+        },
+        {
+          "emoji": "🐻",
+          "word": {
+            "pt": "urso",
+            "en": "bear",
+            "es": "oso",
+            "fr": "ours"
+          },
+          "x": 62,
+          "y": 66,
+          "size": 20
+        },
+        {
+          "emoji": "🐿️",
+          "word": {
+            "pt": "esquilo",
+            "en": "squirrel",
+            "es": "ardilla",
+            "fr": "écureuil"
+          },
+          "x": 84,
+          "y": 70,
+          "size": 15
+        }
+      ],
+      "text": {
+        "pt": "Tchau, floresta! Os bichinhos vão descansar.",
+        "en": "Bye-bye, forest! The animals are going to rest.",
+        "es": "¡Adiós, bosque! Los animalitos van a descansar.",
+        "fr": "Au revoir, la forêt ! Les animaux vont se reposer."
+      },
+      "highlight": {
+        "pt": [
+          "tchau"
+        ],
+        "en": [
+          "bye-bye"
+        ],
+        "es": [
+          "adiós"
+        ],
+        "fr": [
+          "au",
+          "revoir"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “quem uivou?” e “quem fez toc toc?”",
+        "en": "Ask: “who howled?” and “who went tap tap?”",
+        "es": "Pregunte: “¿quién aulló?” y “¿quién hizo toc toc?”",
+        "fr": "Demandez : « qui a hurlé ? » et « qui a fait toc toc ? »"
+      }
+    }
+  ]
+}

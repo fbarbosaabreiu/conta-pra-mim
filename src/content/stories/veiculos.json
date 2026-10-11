@@ -1,0 +1,332 @@
+{
+  "id": "veiculos",
+  "title": {
+    "pt": "Na rua: os veículos",
+    "en": "On the street: vehicles",
+    "es": "En la calle: los vehículos",
+    "fr": "Dans la rue : les véhicules"
+  },
+  "cover": "🚗",
+  "color": "#2563eb",
+  "background": "linear-gradient(#e0f2fe 0%, #f0f9ff 55%, #9ca3af 55%, #6b7280 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🚦",
+          "word": {
+            "pt": "semáforo",
+            "en": "traffic light",
+            "es": "semáforo",
+            "fr": "feu"
+          },
+          "x": 24,
+          "y": 46,
+          "size": 24
+        },
+        {
+          "emoji": "🏙️",
+          "word": {
+            "pt": "cidade",
+            "en": "city",
+            "es": "ciudad",
+            "fr": "ville"
+          },
+          "x": 70,
+          "y": 34,
+          "size": 22
+        }
+      ],
+      "text": {
+        "pt": "Na rua passam muitos carros. O semáforo ficou verde: pode...",
+        "en": "Lots of cars go by on the street. The light turned green: we can...",
+        "es": "Por la calle pasan muchos coches. El semáforo se puso verde: se puede...",
+        "fr": "Dans la rue passent plein de voitures. Le feu est vert : on peut..."
+      },
+      "reveal": {
+        "pt": "passar!",
+        "en": "go!",
+        "es": "¡pasar!",
+        "fr": "passer !"
+      },
+      "accent": "#16a34a",
+      "highlight": {
+        "pt": [
+          "semáforo"
+        ],
+        "en": [
+          "light"
+        ],
+        "es": [
+          "semáforo"
+        ],
+        "fr": [
+          "feu"
+        ]
+      },
+      "parentTip": {
+        "pt": "Na rua de verdade, mostre o semáforo: “vermelho para, verde passa”.",
+        "en": "On a real street, point to the traffic light: “red stops, green goes”.",
+        "es": "En la calle de verdad, muestre el semáforo: “rojo para, verde pasa”.",
+        "fr": "Dans la vraie rue, montrez le feu : « rouge on s’arrête, vert on passe »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🚗",
+          "word": {
+            "pt": "carro",
+            "en": "car",
+            "es": "coche",
+            "fr": "voiture"
+          },
+          "x": 50,
+          "y": 72,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "O carro buzina e faz...",
+        "en": "The car honks and goes...",
+        "es": "El coche toca la bocina y hace...",
+        "fr": "La voiture klaxonne et fait..."
+      },
+      "reveal": {
+        "pt": "bi bi!",
+        "en": "beep beep!",
+        "es": "¡pi pi!",
+        "fr": "tut tut !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "carro"
+        ],
+        "en": [
+          "car"
+        ],
+        "es": [
+          "coche"
+        ],
+        "fr": [
+          "voiture"
+        ]
+      },
+      "parentTip": {
+        "pt": "Aperte o nariz da criança como uma buzina: “bi bi!”",
+        "en": "Press your child’s nose like a horn: “beep beep!”",
+        "es": "Apriete la nariz del niño como una bocina: “¡pi pi!”",
+        "fr": "Appuyez sur le nez de l’enfant comme un klaxon : « tut tut ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🏍️",
+          "word": {
+            "pt": "moto",
+            "en": "motorcycle",
+            "es": "moto",
+            "fr": "moto"
+          },
+          "x": 50,
+          "y": 72,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "A moto acelera e faz...",
+        "en": "The motorcycle speeds up and goes...",
+        "es": "La moto acelera y hace...",
+        "fr": "La moto accélère et fait..."
+      },
+      "reveal": {
+        "pt": "vrum vrum!",
+        "en": "vroom vroom!",
+        "es": "¡brum brum!",
+        "fr": "vroum vroum !"
+      },
+      "accent": "#1f2937",
+      "highlight": {
+        "pt": [
+          "moto"
+        ],
+        "en": [
+          "motorcycle"
+        ],
+        "es": [
+          "moto"
+        ],
+        "fr": [
+          "moto"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça de conta que segura o guidão: “vrum vrum!”",
+        "en": "Pretend to hold the handlebars: “vroom vroom!”",
+        "es": "Haga como que agarra el manillar: “¡brum brum!”",
+        "fr": "Faites semblant de tenir le guidon : « vroum vroum ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🚲",
+          "word": {
+            "pt": "bicicleta",
+            "en": "bicycle",
+            "es": "bicicleta",
+            "fr": "vélo"
+          },
+          "x": 50,
+          "y": 70,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "A bicicleta toca a campainha...",
+        "en": "The bicycle rings its bell...",
+        "es": "La bicicleta toca el timbre...",
+        "fr": "Le vélo sonne sa sonnette..."
+      },
+      "reveal": {
+        "pt": "trim trim!",
+        "en": "ring ring!",
+        "es": "¡rin rin!",
+        "fr": "dring dring !"
+      },
+      "accent": "#0891b2",
+      "highlight": {
+        "pt": [
+          "bicicleta"
+        ],
+        "en": [
+          "bicycle"
+        ],
+        "es": [
+          "bicicleta"
+        ],
+        "fr": [
+          "vélo"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pedale no ar com as perninhas da criança deitada.",
+        "en": "Pedal in the air with your child’s legs while they lie down.",
+        "es": "Pedalee en el aire con las piernitas del niño acostado.",
+        "fr": "Faites pédaler les jambes de l’enfant allongé."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🚑",
+          "word": {
+            "pt": "ambulância",
+            "en": "ambulance",
+            "es": "ambulancia",
+            "fr": "ambulance"
+          },
+          "x": 50,
+          "y": 70,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "A ambulância vai ajudar alguém e faz...",
+        "en": "The ambulance goes to help someone and goes...",
+        "es": "La ambulancia va a ayudar a alguien y hace...",
+        "fr": "L’ambulance va aider quelqu’un et fait..."
+      },
+      "reveal": {
+        "pt": "uiuu uiuu!",
+        "en": "nee-naw!",
+        "es": "¡ninoni!",
+        "fr": "pin-pon !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "ambulância"
+        ],
+        "en": [
+          "ambulance"
+        ],
+        "es": [
+          "ambulancia"
+        ],
+        "fr": [
+          "l’ambulance"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça o som da sirene subindo e descendo a voz.",
+        "en": "Make the siren sound by moving your voice up and down.",
+        "es": "Haga el sonido de la sirena subiendo y bajando la voz.",
+        "fr": "Faites la sirène en montant et en descendant la voix."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🚌",
+          "word": {
+            "pt": "ônibus",
+            "en": "bus",
+            "es": "autobús",
+            "fr": "bus"
+          },
+          "x": 50,
+          "y": 70,
+          "size": 34
+        },
+        {
+          "emoji": "🚏",
+          "word": {
+            "pt": "ponto",
+            "en": "bus stop",
+            "es": "parada",
+            "fr": "arrêt"
+          },
+          "x": 84,
+          "y": 60,
+          "size": 16
+        }
+      ],
+      "text": {
+        "pt": "O ônibus para no ponto. Todo mundo vai...",
+        "en": "The bus stops at the bus stop. Everybody gets...",
+        "es": "El autobús para en la parada. Todos van a...",
+        "fr": "Le bus s’arrête à l’arrêt. Tout le monde va..."
+      },
+      "reveal": {
+        "pt": "subir!",
+        "en": "on!",
+        "es": "¡subir!",
+        "fr": "monter !"
+      },
+      "accent": "#ca8a04",
+      "highlight": {
+        "pt": [
+          "ônibus"
+        ],
+        "en": [
+          "bus"
+        ],
+        "es": [
+          "autobús"
+        ],
+        "fr": [
+          "bus"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “qual veículo você mais gosta?”",
+        "en": "Ask: “which vehicle do you like best?”",
+        "es": "Pregunte: “¿qué vehículo te gusta más?”",
+        "fr": "Demandez : « quel véhicule préfères-tu ? »"
+      }
+    }
+  ]
+}

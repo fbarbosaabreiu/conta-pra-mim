@@ -1,0 +1,400 @@
+{
+  "id": "selva",
+  "title": {
+    "pt": "Aventura na selva",
+    "en": "Jungle adventure",
+    "es": "Aventura en la selva",
+    "fr": "Aventure dans la jungle"
+  },
+  "cover": "🦜",
+  "color": "#16a34a",
+  "background": "linear-gradient(#d9f99d 0%, #bef264 45%, #16a34a 45%, #14532d 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🌴",
+          "word": {
+            "pt": "palmeira",
+            "en": "palm tree",
+            "es": "palmera",
+            "fr": "palmier"
+          },
+          "x": 22,
+          "y": 50,
+          "size": 30
+        },
+        {
+          "emoji": "🌺",
+          "word": {
+            "pt": "flor",
+            "en": "flower",
+            "es": "flor",
+            "fr": "fleur"
+          },
+          "x": 76,
+          "y": 70,
+          "size": 14
+        },
+        {
+          "emoji": "🦋",
+          "word": {
+            "pt": "borboleta",
+            "en": "butterfly",
+            "es": "mariposa",
+            "fr": "papillon"
+          },
+          "x": 64,
+          "y": 30,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "Vamos explorar a selva! Quantas plantas!",
+        "en": "Let’s explore the jungle! So many plants!",
+        "es": "¡Vamos a explorar la selva! ¡Cuántas plantas!",
+        "fr": "Explorons la jungle ! Que de plantes !"
+      },
+      "highlight": {
+        "pt": [
+          "selva"
+        ],
+        "en": [
+          "jungle"
+        ],
+        "es": [
+          "selva"
+        ],
+        "fr": [
+          "jungle"
+        ]
+      },
+      "parentTip": {
+        "pt": "Finja que está abrindo caminho entre as folhas.",
+        "en": "Pretend you’re pushing through the leaves.",
+        "es": "Finja que abre camino entre las hojas.",
+        "fr": "Faites semblant d’écarter les feuilles."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦜",
+          "word": {
+            "pt": "papagaio",
+            "en": "parrot",
+            "es": "loro",
+            "fr": "perroquet"
+          },
+          "sound": {
+            "pt": "curupaco!",
+            "en": "squawk!",
+            "es": "¡cruac!",
+            "fr": "kraaa !"
+          },
+          "audio": "papagaio.mp3",
+          "x": 52,
+          "y": 44,
+          "size": 30
+        },
+        {
+          "emoji": "🌳",
+          "word": {
+            "pt": "árvore",
+            "en": "tree",
+            "es": "árbol",
+            "fr": "arbre"
+          },
+          "x": 22,
+          "y": 60,
+          "size": 26
+        }
+      ],
+      "text": {
+        "pt": "O papagaio colorido faz...",
+        "en": "The colorful parrot says...",
+        "es": "El loro de colores hace...",
+        "fr": "Le perroquet coloré fait..."
+      },
+      "reveal": {
+        "pt": "curupaco!",
+        "en": "squawk!",
+        "es": "¡cruac!",
+        "fr": "kraaa !"
+      },
+      "revealAudio": "papagaio.mp3",
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "papagaio"
+        ],
+        "en": [
+          "parrot"
+        ],
+        "es": [
+          "loro"
+        ],
+        "fr": [
+          "perroquet"
+        ]
+      },
+      "parentTip": {
+        "pt": "O papagaio repete o que a gente fala! Diga uma palavra e peça para a criança repetir.",
+        "en": "Parrots repeat what we say! Say a word and ask your child to repeat it.",
+        "es": "¡El loro repite lo que decimos! Diga una palabra y pida al niño que la repita.",
+        "fr": "Le perroquet répète ce qu’on dit ! Dites un mot et demandez à l’enfant de le répéter."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐆",
+          "word": {
+            "pt": "onça",
+            "en": "jaguar",
+            "es": "jaguar",
+            "fr": "jaguar"
+          },
+          "x": 50,
+          "y": 64,
+          "size": 36
+        }
+      ],
+      "text": {
+        "pt": "A onça tem a pele toda...",
+        "en": "The jaguar’s fur is all...",
+        "es": "El jaguar tiene la piel toda...",
+        "fr": "Le jaguar a le pelage tout..."
+      },
+      "reveal": {
+        "pt": "pintadinha!",
+        "en": "spotty!",
+        "es": "¡manchada!",
+        "fr": "tacheté !"
+      },
+      "accent": "#b45309",
+      "highlight": {
+        "pt": [
+          "onça"
+        ],
+        "en": [
+          "jaguar’s"
+        ],
+        "es": [
+          "jaguar"
+        ],
+        "fr": [
+          "jaguar"
+        ]
+      },
+      "parentTip": {
+        "pt": "Conte as pintinhas da onça com o dedinho.",
+        "en": "Count the jaguar’s spots with your finger.",
+        "es": "Cuente las manchas del jaguar con el dedito.",
+        "fr": "Comptez les taches du jaguar avec le doigt."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐍",
+          "word": {
+            "pt": "cobra",
+            "en": "snake",
+            "es": "serpiente",
+            "fr": "serpent"
+          },
+          "x": 50,
+          "y": 66,
+          "size": 34
+        },
+        {
+          "emoji": "🍃",
+          "word": {
+            "pt": "folha",
+            "en": "leaf",
+            "es": "hoja",
+            "fr": "feuille"
+          },
+          "x": 80,
+          "y": 80,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "A cobra rasteja no chão e faz...",
+        "en": "The snake slithers on the ground and goes...",
+        "es": "La serpiente se arrastra por el suelo y hace...",
+        "fr": "Le serpent rampe sur le sol et fait..."
+      },
+      "reveal": {
+        "pt": "ssss!",
+        "en": "hiss!",
+        "es": "¡ssss!",
+        "fr": "ssss !"
+      },
+      "accent": "#15803d",
+      "highlight": {
+        "pt": [
+          "cobra"
+        ],
+        "en": [
+          "snake"
+        ],
+        "es": [
+          "serpiente"
+        ],
+        "fr": [
+          "serpent"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça “ssss” mexendo o braço como uma cobra.",
+        "en": "Go “hiss” while wiggling your arm like a snake.",
+        "es": "Haga “ssss” moviendo el brazo como una serpiente.",
+        "fr": "Faites « ssss » en ondulant le bras comme un serpent."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐊",
+          "word": {
+            "pt": "jacaré",
+            "en": "alligator",
+            "es": "caimán",
+            "fr": "caïman"
+          },
+          "x": 50,
+          "y": 70,
+          "size": 38
+        },
+        {
+          "emoji": "💧",
+          "word": {
+            "pt": "água",
+            "en": "water",
+            "es": "agua",
+            "fr": "eau"
+          },
+          "x": 82,
+          "y": 84,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "O jacaré abre a boca bem...",
+        "en": "The alligator opens its mouth really...",
+        "es": "El caimán abre la boca muy...",
+        "fr": "Le caïman ouvre la bouche très..."
+      },
+      "reveal": {
+        "pt": "grande!",
+        "en": "wide!",
+        "es": "¡grande!",
+        "fr": "grand !"
+      },
+      "accent": "#166534",
+      "highlight": {
+        "pt": [
+          "jacaré"
+        ],
+        "en": [
+          "alligator"
+        ],
+        "es": [
+          "caimán"
+        ],
+        "fr": [
+          "caïman"
+        ]
+      },
+      "parentTip": {
+        "pt": "Abra e feche os braços como a boca do jacaré: nhac!",
+        "en": "Open and close your arms like the alligator’s mouth: chomp!",
+        "es": "Abra y cierre los brazos como la boca del caimán: ¡ñam!",
+        "fr": "Ouvrez et fermez les bras comme la gueule du caïman : crac !"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦜",
+          "word": {
+            "pt": "papagaio",
+            "en": "parrot",
+            "es": "loro",
+            "fr": "perroquet"
+          },
+          "audio": "papagaio.mp3",
+          "x": 22,
+          "y": 34,
+          "size": 16
+        },
+        {
+          "emoji": "🐆",
+          "word": {
+            "pt": "onça",
+            "en": "jaguar",
+            "es": "jaguar",
+            "fr": "jaguar"
+          },
+          "x": 48,
+          "y": 66,
+          "size": 20
+        },
+        {
+          "emoji": "🐍",
+          "word": {
+            "pt": "cobra",
+            "en": "snake",
+            "es": "serpiente",
+            "fr": "serpent"
+          },
+          "x": 74,
+          "y": 76,
+          "size": 16
+        },
+        {
+          "emoji": "🐊",
+          "word": {
+            "pt": "jacaré",
+            "en": "alligator",
+            "es": "caimán",
+            "fr": "caïman"
+          },
+          "x": 26,
+          "y": 82,
+          "size": 18
+        }
+      ],
+      "text": {
+        "pt": "Que aventura! Tchau, selva!",
+        "en": "What an adventure! Bye-bye, jungle!",
+        "es": "¡Qué aventura! ¡Adiós, selva!",
+        "fr": "Quelle aventure ! Au revoir, la jungle !"
+      },
+      "highlight": {
+        "pt": [
+          "tchau"
+        ],
+        "en": [
+          "bye-bye"
+        ],
+        "es": [
+          "adiós"
+        ],
+        "fr": [
+          "au",
+          "revoir"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “qual bicho você achou mais engraçado?”",
+        "en": "Ask: “which animal did you think was the funniest?”",
+        "es": "Pregunte: “¿qué animal te pareció más gracioso?”",
+        "fr": "Demandez : « quel animal était le plus rigolo ? »"
+      }
+    }
+  ]
+}

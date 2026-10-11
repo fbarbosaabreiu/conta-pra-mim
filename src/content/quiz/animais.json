@@ -117,5 +117,75 @@
     "en": { "name": "cricket", "sound": "chirp chirp" },
     "es": { "name": "grillo", "sound": "cri cri" },
     "fr": { "name": "grillon", "sound": "cri-cri" }
+  },
+  {
+    "id": "burro", "emoji": "🫏", "audio": "burro.mp3",
+    "pt": { "name": "burro", "sound": "ió ió" },
+    "en": { "name": "donkey", "sound": "hee-haw" },
+    "es": { "name": "burro", "sound": "iii-aaa" },
+    "fr": { "name": "âne", "sound": "hi-han" }
+  },
+  {
+    "id": "cabra", "emoji": "🐐", "audio": "cabra.mp3",
+    "pt": { "name": "cabra", "fem": true, "sound": "bééé" },
+    "en": { "name": "goat", "sound": "maa" },
+    "es": { "name": "cabra", "fem": true, "sound": "meee" },
+    "fr": { "name": "chèvre", "fem": true, "sound": "mêê" }
+  },
+  {
+    "id": "ganso", "emoji": "🪿", "audio": "ganso.mp3",
+    "pt": { "name": "ganso", "sound": "quém quém" },
+    "en": { "name": "goose", "sound": "honk honk" },
+    "es": { "name": "ganso", "sound": "cua cua" },
+    "fr": { "name": "oie", "fem": true, "sound": "kak kak" }
+  },
+  {
+    "id": "peru", "emoji": "🦃", "audio": "peru.mp3",
+    "pt": { "name": "peru", "sound": "glu glu" },
+    "en": { "name": "turkey", "sound": "gobble gobble" },
+    "es": { "name": "pavo", "sound": "glu glu" },
+    "fr": { "name": "dindon", "sound": "glou glou" }
+  },
+  {
+    "id": "gaivota", "emoji": "🕊️", "audio": "gaivota.mp3",
+    "pt": { "name": "gaivota", "fem": true, "sound": "quiá quiá" },
+    "en": { "name": "seagull", "sound": "squawk" },
+    "es": { "name": "gaviota", "fem": true, "sound": "quia quia" },
+    "fr": { "name": "mouette", "fem": true, "sound": "kiou kiou" }
+  },
+  {
+    "id": "golfinho", "emoji": "🐬", "audio": "golfinho.mp3",
+    "pt": { "name": "golfinho", "sound": "iiii" },
+    "en": { "name": "dolphin", "sound": "eeee" },
+    "es": { "name": "delfín", "sound": "iiii" },
+    "fr": { "name": "dauphin", "sound": "iiii" }
+  },
+  {
+    "id": "baleia", "emoji": "🐋", "audio": "baleia.mp3",
+    "pt": { "name": "baleia", "fem": true, "sound": "uuuuu" },
+    "en": { "name": "whale", "sound": "ooooo" },
+    "es": { "name": "ballena", "fem": true, "sound": "uuuuu" },
+    "fr": { "name": "baleine", "fem": true, "sound": "ouuuu" }
+  },
+  {
+    "id": "lobo", "emoji": "🐺", "audio": "lobo.mp3",
+    "pt": { "name": "lobo", "sound": "auuuu" },
+    "en": { "name": "wolf", "sound": "awoooo" },
+    "es": { "name": "lobo", "sound": "auuuu" },
+    "fr": { "name": "loup", "sound": "ahouuu" }
+  },
+  {
+    "id": "picapau", "emoji": "🐦", "audio": "picapau.mp3",
+    "pt": { "name": "pica-pau", "sound": "toc toc toc" },
+    "en": { "name": "woodpecker", "sound": "tap tap tap" },
+    "es": { "name": "pájaro carpintero", "sound": "toc toc toc" },
+    "fr": { "name": "pic-vert", "sound": "toc toc toc" }
+  },
+  {
+    "id": "papagaio", "emoji": "🦜", "audio": "papagaio.mp3",
+    "pt": { "name": "papagaio", "sound": "curupaco" },
+    "en": { "name": "parrot", "sound": "squawk" },
+    "es": { "name": "loro", "sound": "cruac" },
+    "fr": { "name": "perroquet", "sound": "kraaa" }
   }
 ]

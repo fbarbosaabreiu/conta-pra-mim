@@ -1,0 +1,391 @@
+{
+  "id": "banho",
+  "title": {
+    "pt": "Hora do banho",
+    "en": "Bath time",
+    "es": "La hora del baño",
+    "fr": "L’heure du bain"
+  },
+  "cover": "🛁",
+  "color": "#38bdf8",
+  "background": "linear-gradient(#e0f2fe 0%, #f0f9ff 60%, #bae6fd 60%, #7dd3fc 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🛁",
+          "word": {
+            "pt": "banheira",
+            "en": "bathtub",
+            "es": "bañera",
+            "fr": "baignoire"
+          },
+          "x": 50,
+          "y": 66,
+          "size": 36
+        },
+        {
+          "emoji": "🫧",
+          "word": {
+            "pt": "bolhas",
+            "en": "bubbles",
+            "es": "burbujas",
+            "fr": "bulles"
+          },
+          "x": 74,
+          "y": 40,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Hora do banho! A banheira está cheia de...",
+        "en": "Bath time! The bathtub is full of...",
+        "es": "¡Hora del baño! La bañera está llena de...",
+        "fr": "L’heure du bain ! La baignoire est pleine d’..."
+      },
+      "reveal": {
+        "pt": "água!",
+        "en": "water!",
+        "es": "¡agua!",
+        "fr": "eau !"
+      },
+      "accent": "#0284c7",
+      "highlight": {
+        "pt": [
+          "banheira"
+        ],
+        "en": [
+          "bathtub"
+        ],
+        "es": [
+          "bañera"
+        ],
+        "fr": [
+          "baignoire"
+        ]
+      },
+      "parentTip": {
+        "pt": "Na hora do banho de verdade, nomeie cada coisa que vocês usam.",
+        "en": "During a real bath, name each thing you use.",
+        "es": "Durante el baño de verdad, nombre cada cosa que usan.",
+        "fr": "Pendant le vrai bain, nommez chaque chose que vous utilisez."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦆",
+          "word": {
+            "pt": "patinho",
+            "en": "rubber duck",
+            "es": "patito",
+            "fr": "canard"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 30
+        },
+        {
+          "emoji": "🫧",
+          "word": {
+            "pt": "bolhas",
+            "en": "bubbles",
+            "es": "burbujas",
+            "fr": "bulles"
+          },
+          "x": 24,
+          "y": 40,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "O patinho de borracha boia e faz...",
+        "en": "The rubber duck floats and goes...",
+        "es": "El patito de goma flota y hace...",
+        "fr": "Le petit canard flotte et fait..."
+      },
+      "reveal": {
+        "pt": "quá quá!",
+        "en": "quack quack!",
+        "es": "¡cuac cuac!",
+        "fr": "coin coin !"
+      },
+      "accent": "#ca8a04",
+      "highlight": {
+        "pt": [
+          "patinho"
+        ],
+        "en": [
+          "rubber",
+          "duck"
+        ],
+        "es": [
+          "patito"
+        ],
+        "fr": [
+          "canard"
+        ]
+      },
+      "parentTip": {
+        "pt": "Aperte um brinquedo de verdade e deixe a criança imitar o som.",
+        "en": "Squeeze a real toy and let your child copy the sound.",
+        "es": "Apriete un juguete de verdad y deje que el niño imite el sonido.",
+        "fr": "Pressez un vrai jouet et laissez l’enfant imiter le son."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🧼",
+          "word": {
+            "pt": "sabonete",
+            "en": "soap",
+            "es": "jabón",
+            "fr": "savon"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 30
+        },
+        {
+          "emoji": "🫧",
+          "word": {
+            "pt": "espuma",
+            "en": "foam",
+            "es": "espuma",
+            "fr": "mousse"
+          },
+          "x": 74,
+          "y": 36,
+          "size": 16
+        },
+        {
+          "emoji": "🫧",
+          "word": {
+            "pt": "espuma",
+            "en": "foam",
+            "es": "espuma",
+            "fr": "mousse"
+          },
+          "x": 24,
+          "y": 34,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "Com o sabonete, fazemos muita...",
+        "en": "With the soap, we make lots of...",
+        "es": "Con el jabón hacemos mucha...",
+        "fr": "Avec le savon, on fait plein de..."
+      },
+      "reveal": {
+        "pt": "espuma!",
+        "en": "bubbles!",
+        "es": "¡espuma!",
+        "fr": "mousse !"
+      },
+      "accent": "#db2777",
+      "highlight": {
+        "pt": [
+          "sabonete"
+        ],
+        "en": [
+          "soap"
+        ],
+        "es": [
+          "jabón"
+        ],
+        "fr": [
+          "savon"
+        ]
+      },
+      "parentTip": {
+        "pt": "Esfregue as mãos como se estivesse com sabonete.",
+        "en": "Rub your hands as if you had soap.",
+        "es": "Frótese las manos como si tuviera jabón.",
+        "fr": "Frottez-vous les mains comme avec du savon."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🧽",
+          "word": {
+            "pt": "esponja",
+            "en": "sponge",
+            "es": "esponja",
+            "fr": "éponge"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 30
+        },
+        {
+          "emoji": "🦶",
+          "word": {
+            "pt": "pé",
+            "en": "foot",
+            "es": "pie",
+            "fr": "pied"
+          },
+          "x": 24,
+          "y": 74,
+          "size": 14
+        },
+        {
+          "emoji": "✋",
+          "word": {
+            "pt": "mão",
+            "en": "hand",
+            "es": "mano",
+            "fr": "main"
+          },
+          "x": 78,
+          "y": 40,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "A esponja limpa a barriga, o pé e a...",
+        "en": "The sponge cleans your tummy, your foot and your...",
+        "es": "La esponja limpia la panza, el pie y la...",
+        "fr": "L’éponge lave le ventre, le pied et la..."
+      },
+      "reveal": {
+        "pt": "mão!",
+        "en": "hand!",
+        "es": "¡mano!",
+        "fr": "main !"
+      },
+      "accent": "#ca8a04",
+      "highlight": {
+        "pt": [
+          "esponja"
+        ],
+        "en": [
+          "sponge"
+        ],
+        "es": [
+          "esponja"
+        ],
+        "fr": [
+          "l’éponge"
+        ]
+      },
+      "parentTip": {
+        "pt": "Toque em cada parte do corpo da criança enquanto fala o nome.",
+        "en": "Touch each body part of your child as you say its name.",
+        "es": "Toque cada parte del cuerpo del niño mientras dice su nombre.",
+        "fr": "Touchez chaque partie du corps de l’enfant en disant son nom."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🧴",
+          "word": {
+            "pt": "creminho",
+            "en": "lotion",
+            "es": "crema",
+            "fr": "crème"
+          },
+          "x": 50,
+          "y": 60,
+          "size": 30
+        },
+        {
+          "emoji": "✋",
+          "word": {
+            "pt": "mão",
+            "en": "hand",
+            "es": "mano",
+            "fr": "main"
+          },
+          "x": 78,
+          "y": 40,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Depois do banho, passamos o...",
+        "en": "After the bath, we rub on the...",
+        "es": "Después del baño, nos ponemos la...",
+        "fr": "Après le bain, on met de la..."
+      },
+      "reveal": {
+        "pt": "creminho!",
+        "en": "lotion!",
+        "es": "¡crema!",
+        "fr": "crème !"
+      },
+      "accent": "#0369a1",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Faça massagem nos bracinhos e diga “creminho, creminho!”",
+        "en": "Massage your child’s arms and say “lotion, lotion!”",
+        "es": "Masajee los bracitos y diga “¡crema, crema!”",
+        "fr": "Massez les petits bras en disant « crème, crème ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🪥",
+          "word": {
+            "pt": "escova",
+            "en": "toothbrush",
+            "es": "cepillo",
+            "fr": "brosse à dents"
+          },
+          "x": 44,
+          "y": 60,
+          "size": 30
+        },
+        {
+          "emoji": "🦷",
+          "word": {
+            "pt": "dente",
+            "en": "tooth",
+            "es": "diente",
+            "fr": "dent"
+          },
+          "x": 76,
+          "y": 54,
+          "size": 16
+        }
+      ],
+      "text": {
+        "pt": "E antes de dormir, escovamos os...",
+        "en": "And before bed, we brush our...",
+        "es": "Y antes de dormir, cepillamos los...",
+        "fr": "Et avant de dormir, on brosse les..."
+      },
+      "reveal": {
+        "pt": "dentes!",
+        "en": "teeth!",
+        "es": "¡dientes!",
+        "fr": "dents !"
+      },
+      "accent": "#0891b2",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": [
+          "brosse"
+        ]
+      },
+      "parentTip": {
+        "pt": "Mostre os dentes num sorriso grande e escove de mentirinha.",
+        "en": "Show your teeth in a big smile and pretend to brush.",
+        "es": "Muestre los dientes en una gran sonrisa y cepíllelos de mentirita.",
+        "fr": "Montrez vos dents avec un grand sourire et faites semblant de brosser."
+      }
+    }
+  ]
+}

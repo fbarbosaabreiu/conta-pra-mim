@@ -1,0 +1,427 @@
+{
+  "id": "no-sitio",
+  "title": {
+    "pt": "Um dia no sítio",
+    "en": "A day on the farm",
+    "es": "Un día en la granja",
+    "fr": "Une journée à la ferme"
+  },
+  "cover": "🫏",
+  "color": "#84cc16",
+  "background": "linear-gradient(#bae6fd 0%, #e0f2fe 55%, #bbf7d0 55%, #86efac 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "🌻",
+          "word": {
+            "pt": "girassol",
+            "en": "sunflower",
+            "es": "girasol",
+            "fr": "tournesol"
+          },
+          "x": 22,
+          "y": 62,
+          "size": 22
+        },
+        {
+          "emoji": "🚜",
+          "word": {
+            "pt": "trator",
+            "en": "tractor",
+            "es": "tractor",
+            "fr": "tracteur"
+          },
+          "x": 66,
+          "y": 64,
+          "size": 26
+        },
+        {
+          "emoji": "☁️",
+          "word": {
+            "pt": "nuvem",
+            "en": "cloud",
+            "es": "nube",
+            "fr": "nuage"
+          },
+          "x": 74,
+          "y": 20,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Hoje vamos passear no sítio do vovô!",
+        "en": "Today we’re visiting Grandpa’s farm!",
+        "es": "¡Hoy vamos de paseo a la granja del abuelo!",
+        "fr": "Aujourd’hui, on va à la ferme de papi !"
+      },
+      "highlight": {
+        "pt": [
+          "sítio"
+        ],
+        "en": [
+          "farm"
+        ],
+        "es": [
+          "granja"
+        ],
+        "fr": [
+          "ferme"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “que bichos moram no sítio?”",
+        "en": "Ask: “which animals live on a farm?”",
+        "es": "Pregunte: “¿qué animales viven en la granja?”",
+        "fr": "Demandez : « quels animaux vivent à la ferme ? »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🫏",
+          "word": {
+            "pt": "burro",
+            "en": "donkey",
+            "es": "burro",
+            "fr": "âne"
+          },
+          "sound": {
+            "pt": "ió ió!",
+            "en": "hee-haw!",
+            "es": "¡iii-aaa!",
+            "fr": "hi-han !"
+          },
+          "audio": "burro.mp3",
+          "x": 50,
+          "y": 60,
+          "size": 34
+        },
+        {
+          "emoji": "🥕",
+          "word": {
+            "pt": "cenoura",
+            "en": "carrot",
+            "es": "zanahoria",
+            "fr": "carotte"
+          },
+          "x": 82,
+          "y": 76,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "O burro mexe as orelhas e faz...",
+        "en": "The donkey wiggles his ears and says...",
+        "es": "El burro mueve las orejas y hace...",
+        "fr": "L’âne remue les oreilles et fait..."
+      },
+      "reveal": {
+        "pt": "ió ió!",
+        "en": "hee-haw!",
+        "es": "¡iii-aaa!",
+        "fr": "hi-han !"
+      },
+      "revealAudio": "burro.mp3",
+      "accent": "#78716c",
+      "highlight": {
+        "pt": [
+          "burro"
+        ],
+        "en": [
+          "donkey"
+        ],
+        "es": [
+          "burro"
+        ],
+        "fr": [
+          "l’âne"
+        ]
+      },
+      "parentTip": {
+        "pt": "Coloque as mãos na cabeça como orelhas de burro e balance.",
+        "en": "Put your hands on your head like donkey ears and wiggle them.",
+        "es": "Ponga las manos en la cabeza como orejas de burro y muévalas.",
+        "fr": "Mettez vos mains sur la tête comme des oreilles d’âne et remuez-les."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐐",
+          "word": {
+            "pt": "cabra",
+            "en": "goat",
+            "es": "cabra",
+            "fr": "chèvre"
+          },
+          "sound": {
+            "pt": "bééé!",
+            "en": "maa!",
+            "es": "¡meee!",
+            "fr": "mêê !"
+          },
+          "audio": "cabra.mp3",
+          "x": 50,
+          "y": 60,
+          "size": 32
+        },
+        {
+          "emoji": "🌿",
+          "word": {
+            "pt": "capim",
+            "en": "grass",
+            "es": "pasto",
+            "fr": "herbe"
+          },
+          "x": 20,
+          "y": 78,
+          "size": 16
+        }
+      ],
+      "text": {
+        "pt": "A cabra come capim e faz...",
+        "en": "The goat eats grass and says...",
+        "es": "La cabra come pasto y hace...",
+        "fr": "La chèvre mange de l’herbe et fait..."
+      },
+      "reveal": {
+        "pt": "bééé!",
+        "en": "maa!",
+        "es": "¡meee!",
+        "fr": "mêê !"
+      },
+      "revealAudio": "cabra.mp3",
+      "accent": "#a16207",
+      "highlight": {
+        "pt": [
+          "cabra"
+        ],
+        "en": [
+          "goat"
+        ],
+        "es": [
+          "cabra"
+        ],
+        "fr": [
+          "chèvre"
+        ]
+      },
+      "parentTip": {
+        "pt": "Compare com a ovelha: as duas fazem “béé”, mas são bichos diferentes!",
+        "en": "Compare it with the sheep: both say “baa”, but they’re different animals!",
+        "es": "Compárela con la oveja: las dos hacen “bee”, ¡pero son animales distintos!",
+        "fr": "Comparez avec le mouton : les deux font « bêê », mais ce sont des animaux différents !"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🪿",
+          "word": {
+            "pt": "ganso",
+            "en": "goose",
+            "es": "ganso",
+            "fr": "oie"
+          },
+          "sound": {
+            "pt": "quém quém!",
+            "en": "honk honk!",
+            "es": "¡cua cua!",
+            "fr": "kak kak !"
+          },
+          "audio": "ganso.mp3",
+          "x": 50,
+          "y": 60,
+          "size": 32
+        },
+        {
+          "emoji": "💧",
+          "word": {
+            "pt": "água",
+            "en": "water",
+            "es": "agua",
+            "fr": "eau"
+          },
+          "x": 80,
+          "y": 78,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "O ganso estica o pescoço e faz...",
+        "en": "The goose stretches its neck and says...",
+        "es": "El ganso estira el cuello y hace...",
+        "fr": "L’oie tend le cou et fait..."
+      },
+      "reveal": {
+        "pt": "quém quém!",
+        "en": "honk honk!",
+        "es": "¡cua cua!",
+        "fr": "kak kak !"
+      },
+      "revealAudio": "ganso.mp3",
+      "accent": "#0369a1",
+      "highlight": {
+        "pt": [
+          "ganso"
+        ],
+        "en": [
+          "goose"
+        ],
+        "es": [
+          "ganso"
+        ],
+        "fr": [
+          "l’oie"
+        ]
+      },
+      "parentTip": {
+        "pt": "Estique o pescoço junto com a criança, como o ganso.",
+        "en": "Stretch your necks together, like the goose.",
+        "es": "Estiren el cuello juntos, como el ganso.",
+        "fr": "Tendez le cou ensemble, comme l’oie."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦃",
+          "word": {
+            "pt": "peru",
+            "en": "turkey",
+            "es": "pavo",
+            "fr": "dindon"
+          },
+          "sound": {
+            "pt": "glu glu!",
+            "en": "gobble gobble!",
+            "es": "¡glu glu!",
+            "fr": "glou glou !"
+          },
+          "audio": "peru.mp3",
+          "x": 50,
+          "y": 60,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "O peru abre a cauda colorida e faz...",
+        "en": "The turkey opens its colorful tail and says...",
+        "es": "El pavo abre su cola de colores y hace...",
+        "fr": "Le dindon ouvre sa queue colorée et fait..."
+      },
+      "reveal": {
+        "pt": "glu glu!",
+        "en": "gobble gobble!",
+        "es": "¡glu glu!",
+        "fr": "glou glou !"
+      },
+      "revealAudio": "peru.mp3",
+      "accent": "#b91c1c",
+      "highlight": {
+        "pt": [
+          "peru"
+        ],
+        "en": [
+          "turkey"
+        ],
+        "es": [
+          "pavo"
+        ],
+        "fr": [
+          "dindon"
+        ]
+      },
+      "parentTip": {
+        "pt": "Abra os braços como a cauda do peru e faça “glu glu”.",
+        "en": "Spread your arms like the turkey’s tail and say “gobble gobble”.",
+        "es": "Abra los brazos como la cola del pavo y haga “glu glu”.",
+        "fr": "Ouvrez les bras comme la queue du dindon et faites « glou glou »."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🫏",
+          "word": {
+            "pt": "burro",
+            "en": "donkey",
+            "es": "burro",
+            "fr": "âne"
+          },
+          "audio": "burro.mp3",
+          "x": 18,
+          "y": 64,
+          "size": 18
+        },
+        {
+          "emoji": "🐐",
+          "word": {
+            "pt": "cabra",
+            "en": "goat",
+            "es": "cabra",
+            "fr": "chèvre"
+          },
+          "audio": "cabra.mp3",
+          "x": 40,
+          "y": 70,
+          "size": 16
+        },
+        {
+          "emoji": "🪿",
+          "word": {
+            "pt": "ganso",
+            "en": "goose",
+            "es": "ganso",
+            "fr": "oie"
+          },
+          "audio": "ganso.mp3",
+          "x": 62,
+          "y": 66,
+          "size": 16
+        },
+        {
+          "emoji": "🦃",
+          "word": {
+            "pt": "peru",
+            "en": "turkey",
+            "es": "pavo",
+            "fr": "dindon"
+          },
+          "audio": "peru.mp3",
+          "x": 84,
+          "y": 64,
+          "size": 17
+        }
+      ],
+      "text": {
+        "pt": "Tchau, bichinhos do sítio! Até a próxima!",
+        "en": "Bye-bye, farm animals! See you next time!",
+        "es": "¡Adiós, animalitos de la granja! ¡Hasta la próxima!",
+        "fr": "Au revoir, les animaux de la ferme ! À la prochaine !"
+      },
+      "highlight": {
+        "pt": [
+          "tchau"
+        ],
+        "en": [
+          "bye-bye"
+        ],
+        "es": [
+          "adiós"
+        ],
+        "fr": [
+          "au",
+          "revoir"
+        ]
+      },
+      "parentTip": {
+        "pt": "Toque em cada bicho e deixe a criança imitar o som.",
+        "en": "Tap each animal and let your child copy the sound.",
+        "es": "Toque cada animal y deje que el niño imite el sonido.",
+        "fr": "Touchez chaque animal et laissez l’enfant imiter le son."
+      }
+    }
+  ]
+}

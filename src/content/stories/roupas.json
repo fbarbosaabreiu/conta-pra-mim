@@ -1,0 +1,333 @@
+{
+  "id": "roupas",
+  "title": {
+    "pt": "Vamos nos vestir",
+    "en": "Let’s get dressed",
+    "es": "Vamos a vestirnos",
+    "fr": "On s’habille"
+  },
+  "cover": "👕",
+  "color": "#8b5cf6",
+  "background": "linear-gradient(#f5f3ff, #ede9fe)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "👕",
+          "word": {
+            "pt": "camiseta",
+            "en": "t-shirt",
+            "es": "camiseta",
+            "fr": "t-shirt"
+          },
+          "x": 50,
+          "y": 56,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "Bom dia! Primeiro, vestimos a...",
+        "en": "Good morning! First, we put on the...",
+        "es": "¡Buenos días! Primero, nos ponemos la...",
+        "fr": "Bonjour ! D’abord, on met le..."
+      },
+      "reveal": {
+        "pt": "camiseta!",
+        "en": "t-shirt!",
+        "es": "¡camiseta!",
+        "fr": "t-shirt !"
+      },
+      "accent": "#7c3aed",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Na hora de vestir de verdade, fale o nome de cada roupa.",
+        "en": "When really getting dressed, say the name of each piece of clothing.",
+        "es": "Al vestirse de verdad, diga el nombre de cada prenda.",
+        "fr": "Quand vous habillez l’enfant, dites le nom de chaque vêtement."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "👖",
+          "word": {
+            "pt": "calça",
+            "en": "pants",
+            "es": "pantalón",
+            "fr": "pantalon"
+          },
+          "x": 50,
+          "y": 58,
+          "size": 34
+        }
+      ],
+      "text": {
+        "pt": "Depois, a perna entra na...",
+        "en": "Then, our legs go in the...",
+        "es": "Después, las piernas entran en el...",
+        "fr": "Ensuite, les jambes vont dans le..."
+      },
+      "reveal": {
+        "pt": "calça!",
+        "en": "pants!",
+        "es": "¡pantalón!",
+        "fr": "pantalon !"
+      },
+      "accent": "#1d4ed8",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Pergunte: “cadê a perna?” e deixe a criança mostrar.",
+        "en": "Ask: “where’s your leg?” and let your child show you.",
+        "es": "Pregunte: “¿dónde está la pierna?” y deje que el niño la muestre.",
+        "fr": "Demandez : « où est ta jambe ? » et laissez l’enfant montrer."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🧦",
+          "word": {
+            "pt": "meias",
+            "en": "socks",
+            "es": "calcetines",
+            "fr": "chaussettes"
+          },
+          "x": 50,
+          "y": 62,
+          "size": 30
+        },
+        {
+          "emoji": "🦶",
+          "word": {
+            "pt": "pé",
+            "en": "foot",
+            "es": "pie",
+            "fr": "pied"
+          },
+          "x": 22,
+          "y": 78,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Nos pezinhos, colocamos as...",
+        "en": "On our little feet, we put our...",
+        "es": "En los piecitos, nos ponemos los...",
+        "fr": "Sur nos petits pieds, on met les..."
+      },
+      "reveal": {
+        "pt": "meias!",
+        "en": "socks!",
+        "es": "¡calcetines!",
+        "fr": "chaussettes !"
+      },
+      "accent": "#db2777",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Faça cócegas no pé antes de colocar a meia.",
+        "en": "Tickle the foot before putting on the sock.",
+        "es": "Hágale cosquillas en el pie antes de ponerle el calcetín.",
+        "fr": "Chatouillez le pied avant de mettre la chaussette."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "👟",
+          "word": {
+            "pt": "tênis",
+            "en": "sneakers",
+            "es": "zapatillas",
+            "fr": "baskets"
+          },
+          "x": 50,
+          "y": 62,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "E para sair, calçamos o...",
+        "en": "And to go out, we put on our...",
+        "es": "Y para salir, nos ponemos las...",
+        "fr": "Et pour sortir, on met les..."
+      },
+      "reveal": {
+        "pt": "tênis!",
+        "en": "sneakers!",
+        "es": "¡zapatillas!",
+        "fr": "baskets !"
+      },
+      "accent": "#16a34a",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Bata os pés no chão: “pé direito, pé esquerdo!”",
+        "en": "Stomp your feet: “right foot, left foot!”",
+        "es": "Pise fuerte: “¡pie derecho, pie izquierdo!”",
+        "fr": "Tapez des pieds : « pied droit, pied gauche ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🧢",
+          "word": {
+            "pt": "boné",
+            "en": "cap",
+            "es": "gorra",
+            "fr": "casquette"
+          },
+          "x": 50,
+          "y": 50,
+          "size": 30
+        },
+        {
+          "emoji": "☀️",
+          "word": {
+            "pt": "sol",
+            "en": "sun",
+            "es": "sol",
+            "fr": "soleil"
+          },
+          "x": 80,
+          "y": 18,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Está sol! Na cabeça, colocamos o...",
+        "en": "It’s sunny! On our head, we put the...",
+        "es": "¡Hace sol! En la cabeza, nos ponemos la...",
+        "fr": "Il fait soleil ! Sur la tête, on met la..."
+      },
+      "reveal": {
+        "pt": "boné!",
+        "en": "cap!",
+        "es": "¡gorra!",
+        "fr": "casquette !"
+      },
+      "accent": "#ea580c",
+      "highlight": {
+        "pt": [],
+        "en": [],
+        "es": [],
+        "fr": []
+      },
+      "parentTip": {
+        "pt": "Coloque a mão na cabeça da criança: “cabeça!”",
+        "en": "Put your hand on your child’s head: “head!”",
+        "es": "Ponga la mano en la cabeza del niño: “¡cabeza!”",
+        "fr": "Posez la main sur la tête de l’enfant : « tête ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "👕",
+          "word": {
+            "pt": "camiseta",
+            "en": "t-shirt",
+            "es": "camiseta",
+            "fr": "t-shirt"
+          },
+          "x": 22,
+          "y": 40,
+          "size": 16
+        },
+        {
+          "emoji": "👖",
+          "word": {
+            "pt": "calça",
+            "en": "pants",
+            "es": "pantalón",
+            "fr": "pantalon"
+          },
+          "x": 50,
+          "y": 44,
+          "size": 16
+        },
+        {
+          "emoji": "🧦",
+          "word": {
+            "pt": "meias",
+            "en": "socks",
+            "es": "calcetines",
+            "fr": "chaussettes"
+          },
+          "x": 30,
+          "y": 76,
+          "size": 14
+        },
+        {
+          "emoji": "👟",
+          "word": {
+            "pt": "tênis",
+            "en": "sneakers",
+            "es": "zapatillas",
+            "fr": "baskets"
+          },
+          "x": 60,
+          "y": 78,
+          "size": 14
+        },
+        {
+          "emoji": "🧢",
+          "word": {
+            "pt": "boné",
+            "en": "cap",
+            "es": "gorra",
+            "fr": "casquette"
+          },
+          "x": 80,
+          "y": 40,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Pronto! Já estamos vestidos. Vamos passear!",
+        "en": "All set! We’re dressed. Let’s go out!",
+        "es": "¡Listo! Ya estamos vestidos. ¡Vamos a pasear!",
+        "fr": "C’est prêt ! On est habillés. On va se promener !"
+      },
+      "highlight": {
+        "pt": [
+          "pronto"
+        ],
+        "en": [
+          "set"
+        ],
+        "es": [
+          "listo"
+        ],
+        "fr": [
+          "prêt"
+        ]
+      },
+      "parentTip": {
+        "pt": "Toque em cada roupa e peça para a criança dizer o nome.",
+        "en": "Tap each item and ask your child to say its name.",
+        "es": "Toque cada prenda y pida al niño que diga su nombre.",
+        "fr": "Touchez chaque vêtement et demandez à l’enfant de dire son nom."
+      }
+    }
+  ]
+}

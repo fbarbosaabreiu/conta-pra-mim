@@ -1,0 +1,418 @@
+{
+  "id": "praia",
+  "title": {
+    "pt": "Na praia e no mar",
+    "en": "At the beach and in the sea",
+    "es": "En la playa y en el mar",
+    "fr": "À la plage et dans la mer"
+  },
+  "cover": "🐬",
+  "color": "#0ea5e9",
+  "background": "linear-gradient(#bae6fd 0%, #e0f2fe 40%, #38bdf8 40%, #0284c7 78%, #fde68a 78%, #fcd34d 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "☀️",
+          "word": {
+            "pt": "sol",
+            "en": "sun",
+            "es": "sol",
+            "fr": "soleil"
+          },
+          "x": 80,
+          "y": 16,
+          "size": 14
+        },
+        {
+          "emoji": "⛱️",
+          "word": {
+            "pt": "guarda-sol",
+            "en": "beach umbrella",
+            "es": "sombrilla",
+            "fr": "parasol"
+          },
+          "x": 26,
+          "y": 66,
+          "size": 24
+        },
+        {
+          "emoji": "🐚",
+          "word": {
+            "pt": "concha",
+            "en": "shell",
+            "es": "concha",
+            "fr": "coquillage"
+          },
+          "x": 70,
+          "y": 88,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "Que dia bonito! Vamos para a praia!",
+        "en": "What a lovely day! Let’s go to the beach!",
+        "es": "¡Qué día tan bonito! ¡Vamos a la playa!",
+        "fr": "Quelle belle journée ! Allons à la plage !"
+      },
+      "highlight": {
+        "pt": [
+          "praia"
+        ],
+        "en": [
+          "beach"
+        ],
+        "es": [
+          "playa"
+        ],
+        "fr": [
+          "plage"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “o que tem na praia?” e aponte cada coisa.",
+        "en": "Ask: “what’s at the beach?” and point to each thing.",
+        "es": "Pregunte: “¿qué hay en la playa?” y señale cada cosa.",
+        "fr": "Demandez : « qu’y a-t-il à la plage ? » et montrez chaque chose."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🕊️",
+          "word": {
+            "pt": "gaivota",
+            "en": "seagull",
+            "es": "gaviota",
+            "fr": "mouette"
+          },
+          "sound": {
+            "pt": "quiá quiá!",
+            "en": "squawk!",
+            "es": "¡quia quia!",
+            "fr": "kiou kiou !"
+          },
+          "audio": "gaivota.mp3",
+          "x": 50,
+          "y": 26,
+          "size": 26
+        },
+        {
+          "emoji": "🌊",
+          "word": {
+            "pt": "onda",
+            "en": "wave",
+            "es": "ola",
+            "fr": "vague"
+          },
+          "x": 30,
+          "y": 60,
+          "size": 18
+        }
+      ],
+      "text": {
+        "pt": "A gaivota voa sobre o mar e faz...",
+        "en": "The seagull flies over the sea and says...",
+        "es": "La gaviota vuela sobre el mar y hace...",
+        "fr": "La mouette vole au-dessus de la mer et fait..."
+      },
+      "reveal": {
+        "pt": "quiá quiá!",
+        "en": "squawk!",
+        "es": "¡quia quia!",
+        "fr": "kiou kiou !"
+      },
+      "revealAudio": "gaivota.mp3",
+      "accent": "#475569",
+      "highlight": {
+        "pt": [
+          "gaivota"
+        ],
+        "en": [
+          "seagull"
+        ],
+        "es": [
+          "gaviota"
+        ],
+        "fr": [
+          "mouette"
+        ]
+      },
+      "parentTip": {
+        "pt": "Abra os braços e “voe” como a gaivota.",
+        "en": "Spread your arms and “fly” like the seagull.",
+        "es": "Abra los brazos y “vuele” como la gaviota.",
+        "fr": "Ouvrez les bras et « volez » comme la mouette."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐬",
+          "word": {
+            "pt": "golfinho",
+            "en": "dolphin",
+            "es": "delfín",
+            "fr": "dauphin"
+          },
+          "sound": {
+            "pt": "iiii!",
+            "en": "eeee!",
+            "es": "¡iiii!",
+            "fr": "iiii !"
+          },
+          "audio": "golfinho.mp3",
+          "x": 50,
+          "y": 58,
+          "size": 32
+        },
+        {
+          "emoji": "💦",
+          "word": {
+            "pt": "água",
+            "en": "water",
+            "es": "agua",
+            "fr": "eau"
+          },
+          "x": 76,
+          "y": 44,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "O golfinho pula na água e faz...",
+        "en": "The dolphin jumps in the water and goes...",
+        "es": "El delfín salta en el agua y hace...",
+        "fr": "Le dauphin saute dans l’eau et fait..."
+      },
+      "reveal": {
+        "pt": "iiii!",
+        "en": "eeee!",
+        "es": "¡iiii!",
+        "fr": "iiii !"
+      },
+      "revealAudio": "golfinho.mp3",
+      "accent": "#0369a1",
+      "highlight": {
+        "pt": [
+          "golfinho"
+        ],
+        "en": [
+          "dolphin"
+        ],
+        "es": [
+          "delfín"
+        ],
+        "fr": [
+          "dauphin"
+        ]
+      },
+      "parentTip": {
+        "pt": "Faça um “iiii” bem fininho, como o golfinho.",
+        "en": "Make a very high “eeee”, like the dolphin.",
+        "es": "Haga un “iiii” bien agudo, como el delfín.",
+        "fr": "Faites un « iiii » très aigu, comme le dauphin."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🐋",
+          "word": {
+            "pt": "baleia",
+            "en": "whale",
+            "es": "ballena",
+            "fr": "baleine"
+          },
+          "sound": {
+            "pt": "uuuuu!",
+            "en": "ooooo!",
+            "es": "¡uuuuu!",
+            "fr": "ouuuu !"
+          },
+          "audio": "baleia.mp3",
+          "x": 50,
+          "y": 62,
+          "size": 40
+        }
+      ],
+      "text": {
+        "pt": "A baleia é enorme e canta...",
+        "en": "The whale is huge and sings...",
+        "es": "La ballena es enorme y canta...",
+        "fr": "La baleine est énorme et chante..."
+      },
+      "reveal": {
+        "pt": "uuuuu!",
+        "en": "ooooo!",
+        "es": "¡uuuuu!",
+        "fr": "ouuuu !"
+      },
+      "revealAudio": "baleia.mp3",
+      "accent": "#1d4ed8",
+      "highlight": {
+        "pt": [
+          "baleia"
+        ],
+        "en": [
+          "whale"
+        ],
+        "es": [
+          "ballena"
+        ],
+        "fr": [
+          "baleine"
+        ]
+      },
+      "parentTip": {
+        "pt": "Abra bem os braços: a baleia é o maior bicho do mundo!",
+        "en": "Open your arms wide: the whale is the biggest animal in the world!",
+        "es": "Abra bien los brazos: ¡la ballena es el animal más grande del mundo!",
+        "fr": "Ouvrez grand les bras : la baleine est le plus gros animal du monde !"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🦀",
+          "word": {
+            "pt": "caranguejo",
+            "en": "crab",
+            "es": "cangrejo",
+            "fr": "crabe"
+          },
+          "x": 50,
+          "y": 86,
+          "size": 26
+        },
+        {
+          "emoji": "🐚",
+          "word": {
+            "pt": "concha",
+            "en": "shell",
+            "es": "concha",
+            "fr": "coquillage"
+          },
+          "x": 20,
+          "y": 88,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "Na areia, o caranguejo anda de...",
+        "en": "On the sand, the crab walks...",
+        "es": "En la arena, el cangrejo camina de...",
+        "fr": "Sur le sable, le crabe marche de..."
+      },
+      "reveal": {
+        "pt": "lado!",
+        "en": "sideways!",
+        "es": "¡lado!",
+        "fr": "côté !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "caranguejo"
+        ],
+        "en": [
+          "crab"
+        ],
+        "es": [
+          "cangrejo"
+        ],
+        "fr": [
+          "crabe"
+        ]
+      },
+      "parentTip": {
+        "pt": "Ande de lado junto com a criança, como o caranguejo.",
+        "en": "Walk sideways together, like the crab.",
+        "es": "Caminen de lado juntos, como el cangrejo.",
+        "fr": "Marchez de côté ensemble, comme le crabe."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🕊️",
+          "word": {
+            "pt": "gaivota",
+            "en": "seagull",
+            "es": "gaviota",
+            "fr": "mouette"
+          },
+          "audio": "gaivota.mp3",
+          "x": 22,
+          "y": 22,
+          "size": 14
+        },
+        {
+          "emoji": "🐬",
+          "word": {
+            "pt": "golfinho",
+            "en": "dolphin",
+            "es": "delfín",
+            "fr": "dauphin"
+          },
+          "audio": "golfinho.mp3",
+          "x": 44,
+          "y": 56,
+          "size": 18
+        },
+        {
+          "emoji": "🐋",
+          "word": {
+            "pt": "baleia",
+            "en": "whale",
+            "es": "ballena",
+            "fr": "baleine"
+          },
+          "audio": "baleia.mp3",
+          "x": 74,
+          "y": 58,
+          "size": 22
+        },
+        {
+          "emoji": "🦀",
+          "word": {
+            "pt": "caranguejo",
+            "en": "crab",
+            "es": "cangrejo",
+            "fr": "crabe"
+          },
+          "x": 30,
+          "y": 88,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Tchau, mar! Tchau, bichinhos da praia!",
+        "en": "Bye-bye, sea! Bye-bye, beach animals!",
+        "es": "¡Adiós, mar! ¡Adiós, animalitos de la playa!",
+        "fr": "Au revoir, la mer ! Au revoir, les animaux de la plage !"
+      },
+      "highlight": {
+        "pt": [
+          "tchau"
+        ],
+        "en": [
+          "bye-bye"
+        ],
+        "es": [
+          "adiós"
+        ],
+        "fr": [
+          "au",
+          "au"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “qual bicho mora dentro do mar?”",
+        "en": "Ask: “which animals live in the sea?”",
+        "es": "Pregunte: “¿qué animales viven en el mar?”",
+        "fr": "Demandez : « quels animaux vivent dans la mer ? »"
+      }
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "id": "ceu",
+  "title": {
+    "pt": "Lá no céu",
+    "en": "Up in the sky",
+    "es": "Allá en el cielo",
+    "fr": "Là-haut dans le ciel"
+  },
+  "cover": "✈️",
+  "color": "#0ea5e9",
+  "background": "linear-gradient(#7dd3fc 0%, #bae6fd 70%, #bbf7d0 70%, #86efac 100%)",
+  "pages": [
+    {
+      "elements": [
+        {
+          "emoji": "☁️",
+          "word": {
+            "pt": "nuvem",
+            "en": "cloud",
+            "es": "nube",
+            "fr": "nuage"
+          },
+          "x": 26,
+          "y": 30,
+          "size": 20
+        },
+        {
+          "emoji": "☀️",
+          "word": {
+            "pt": "sol",
+            "en": "sun",
+            "es": "sol",
+            "fr": "soleil"
+          },
+          "x": 78,
+          "y": 22,
+          "size": 16
+        },
+        {
+          "emoji": "🪁",
+          "word": {
+            "pt": "pipa",
+            "en": "kite",
+            "es": "cometa",
+            "fr": "cerf-volant"
+          },
+          "x": 56,
+          "y": 44,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "Olha para cima! O que está voando no céu?",
+        "en": "Look up! What’s flying in the sky?",
+        "es": "¡Mira hacia arriba! ¿Qué vuela en el cielo?",
+        "fr": "Regarde en haut ! Qu’est-ce qui vole dans le ciel ?"
+      },
+      "highlight": {
+        "pt": [
+          "céu"
+        ],
+        "en": [
+          "sky"
+        ],
+        "es": [
+          "cielo"
+        ],
+        "fr": [
+          "ciel"
+        ]
+      },
+      "parentTip": {
+        "pt": "Lá fora, olhem juntos para o céu e procurem nuvens.",
+        "en": "Outside, look at the sky together and find clouds.",
+        "es": "Afuera, miren juntos el cielo y busquen nubes.",
+        "fr": "Dehors, regardez le ciel ensemble et cherchez des nuages."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "✈️",
+          "word": {
+            "pt": "avião",
+            "en": "airplane",
+            "es": "avión",
+            "fr": "avion"
+          },
+          "x": 50,
+          "y": 44,
+          "size": 32
+        },
+        {
+          "emoji": "☁️",
+          "word": {
+            "pt": "nuvem",
+            "en": "cloud",
+            "es": "nube",
+            "fr": "nuage"
+          },
+          "x": 20,
+          "y": 70,
+          "size": 14
+        }
+      ],
+      "text": {
+        "pt": "O avião voa bem alto e faz...",
+        "en": "The airplane flies really high and goes...",
+        "es": "El avión vuela muy alto y hace...",
+        "fr": "L’avion vole très haut et fait..."
+      },
+      "reveal": {
+        "pt": "vuuum!",
+        "en": "zoom!",
+        "es": "¡fiuuu!",
+        "fr": "vrrroum !"
+      },
+      "accent": "#2563eb",
+      "highlight": {
+        "pt": [
+          "avião"
+        ],
+        "en": [
+          "airplane"
+        ],
+        "es": [
+          "avión"
+        ],
+        "fr": [
+          "l’avion"
+        ]
+      },
+      "parentTip": {
+        "pt": "Abra os braços como asas e “voe” pela sala.",
+        "en": "Spread your arms like wings and “fly” around the room.",
+        "es": "Abra los brazos como alas y “vuele” por la sala.",
+        "fr": "Ouvrez les bras comme des ailes et « volez » dans la pièce."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🚁",
+          "word": {
+            "pt": "helicóptero",
+            "en": "helicopter",
+            "es": "helicóptero",
+            "fr": "hélicoptère"
+          },
+          "x": 50,
+          "y": 46,
+          "size": 32
+        }
+      ],
+      "text": {
+        "pt": "O helicóptero gira a hélice e faz...",
+        "en": "The helicopter spins its blades and goes...",
+        "es": "El helicóptero gira la hélice y hace...",
+        "fr": "L’hélicoptère fait tourner ses pales et fait..."
+      },
+      "reveal": {
+        "pt": "tac tac tac!",
+        "en": "chop chop chop!",
+        "es": "¡tac tac tac!",
+        "fr": "tchop tchop tchop !"
+      },
+      "accent": "#dc2626",
+      "highlight": {
+        "pt": [
+          "helicóptero"
+        ],
+        "en": [
+          "helicopter"
+        ],
+        "es": [
+          "helicóptero"
+        ],
+        "fr": [
+          "l’hélicoptère"
+        ]
+      },
+      "parentTip": {
+        "pt": "Gire o braço em círculos, como a hélice.",
+        "en": "Spin your arm in circles, like the blades.",
+        "es": "Gire el brazo en círculos, como la hélice.",
+        "fr": "Faites tourner le bras en cercle, comme les pales."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🎈",
+          "word": {
+            "pt": "balão",
+            "en": "balloon",
+            "es": "globo",
+            "fr": "ballon"
+          },
+          "x": 50,
+          "y": 46,
+          "size": 30
+        }
+      ],
+      "text": {
+        "pt": "O balão escapou da mão e subiu...",
+        "en": "The balloon slipped away and floated...",
+        "es": "El globo se escapó de la mano y subió...",
+        "fr": "Le ballon s’est envolé et il est monté..."
+      },
+      "reveal": {
+        "pt": "lá no alto!",
+        "en": "way up high!",
+        "es": "¡muy alto!",
+        "fr": "tout là-haut !"
+      },
+      "accent": "#db2777",
+      "highlight": {
+        "pt": [
+          "balão"
+        ],
+        "en": [
+          "balloon"
+        ],
+        "es": [
+          "globo"
+        ],
+        "fr": [
+          "ballon"
+        ]
+      },
+      "parentTip": {
+        "pt": "Diga “tchau, balão!” acenando para cima.",
+        "en": "Say “bye-bye, balloon!” and wave up high.",
+        "es": "Diga “¡adiós, globo!” saludando hacia arriba.",
+        "fr": "Dites « au revoir, ballon ! » en agitant la main vers le haut."
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "🚀",
+          "word": {
+            "pt": "foguete",
+            "en": "rocket",
+            "es": "cohete",
+            "fr": "fusée"
+          },
+          "x": 50,
+          "y": 50,
+          "size": 32
+        },
+        {
+          "emoji": "⭐",
+          "word": {
+            "pt": "estrela",
+            "en": "star",
+            "es": "estrella",
+            "fr": "étoile"
+          },
+          "x": 80,
+          "y": 22,
+          "size": 12
+        }
+      ],
+      "text": {
+        "pt": "Três, dois, um... O foguete vai até a...",
+        "en": "Three, two, one... The rocket goes all the way to the...",
+        "es": "Tres, dos, uno... El cohete va hasta la...",
+        "fr": "Trois, deux, un... La fusée va jusqu’à la..."
+      },
+      "reveal": {
+        "pt": "lua!",
+        "en": "moon!",
+        "es": "¡luna!",
+        "fr": "lune !"
+      },
+      "accent": "#7c3aed",
+      "highlight": {
+        "pt": [
+          "foguete"
+        ],
+        "en": [
+          "rocket"
+        ],
+        "es": [
+          "cohete"
+        ],
+        "fr": [
+          "fusée"
+        ]
+      },
+      "parentTip": {
+        "pt": "Contem juntos “três, dois, um” e pulem: “decolar!”",
+        "en": "Count “three, two, one” together and jump: “blast off!”",
+        "es": "Cuenten juntos “tres, dos, uno” y salten: “¡despegue!”",
+        "fr": "Comptez « trois, deux, un » ensemble et sautez : « décollage ! »"
+      }
+    },
+    {
+      "elements": [
+        {
+          "emoji": "✈️",
+          "word": {
+            "pt": "avião",
+            "en": "airplane",
+            "es": "avión",
+            "fr": "avion"
+          },
+          "x": 24,
+          "y": 30,
+          "size": 16
+        },
+        {
+          "emoji": "🚁",
+          "word": {
+            "pt": "helicóptero",
+            "en": "helicopter",
+            "es": "helicóptero",
+            "fr": "hélicoptère"
+          },
+          "x": 70,
+          "y": 34,
+          "size": 16
+        },
+        {
+          "emoji": "🎈",
+          "word": {
+            "pt": "balão",
+            "en": "balloon",
+            "es": "globo",
+            "fr": "ballon"
+          },
+          "x": 46,
+          "y": 52,
+          "size": 14
+        },
+        {
+          "emoji": "🚀",
+          "word": {
+            "pt": "foguete",
+            "en": "rocket",
+            "es": "cohete",
+            "fr": "fusée"
+          },
+          "x": 84,
+          "y": 58,
+          "size": 16
+        }
+      ],
+      "text": {
+        "pt": "Quanta coisa voando! Tchau, céu!",
+        "en": "So many things flying! Bye-bye, sky!",
+        "es": "¡Cuántas cosas vuelan! ¡Adiós, cielo!",
+        "fr": "Que de choses qui volent ! Au revoir, le ciel !"
+      },
+      "highlight": {
+        "pt": [
+          "tchau"
+        ],
+        "en": [
+          "bye-bye"
+        ],
+        "es": [
+          "adiós"
+        ],
+        "fr": [
+          "au",
+          "revoir"
+        ]
+      },
+      "parentTip": {
+        "pt": "Pergunte: “o que voa mais alto?”",
+        "en": "Ask: “what flies the highest?”",
+        "es": "Pregunte: “¿qué vuela más alto?”",
+        "fr": "Demandez : « qu’est-ce qui vole le plus haut ? »"
+      }
+    }
+  ]
+}

@@ -67,7 +67,7 @@
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:Maullido_de_gata_hembra_joven.ogg",
-    "changes": "recortado, volume normalizado e convertido para MP3"
+    "changes": "recortado, ruído grave filtrado, volume normalizado e convertido para MP3"
   },
   {
     "id": "cachorro",
@@ -167,6 +167,106 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:Gryllus_campestris_02_(HS).ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "burro",
+    "file": "burro.mp3",
+    "title": "157763 felix-blume a-donkey-is-braying-in-his-enclosure-in-south-of-france.wav",
+    "author": "felix-blume",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:157763_felix-blume_a-donkey-is-braying-in-his-enclosure-in-south-of-france.wav",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "cabra",
+    "file": "cabra.mp3",
+    "title": "Herd of goats bleating.ogg",
+    "author": "stephan",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Herd_of_goats_bleating.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "ganso",
+    "file": "ganso.mp3",
+    "title": "Geese Honking (loud).ogg",
+    "author": "U.S. Fish and Wildlife Service",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Geese_Honking_(loud).ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "peru",
+    "file": "peru.mp3",
+    "title": "Gobbler.ogg",
+    "author": "bod",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Gobbler.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "gaivota",
+    "file": "gaivota.mp3",
+    "title": "Möwengeschrei.ogg",
+    "author": "Moehre1992",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:M%C3%B6wengeschrei.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "golfinho",
+    "file": "golfinho.mp3",
+    "title": "161691 felixblume dolphin-screaming-underwater-in-caribbean-sea-mexico.wav",
+    "author": "The user Felix.Blume https://freesound.org/people/felix.blume/",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:161691_felixblume_dolphin-screaming-underwater-in-caribbean-sea-mexico.wav",
+    "changes": "recortado, volume normalizado e convertido para MP3; ruído reduzido"
+  },
+  {
+    "id": "baleia",
+    "file": "baleia.mp3",
+    "title": "Humpbackwhale2.ogg",
+    "author": "Spyrogumas",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Humpbackwhale2.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "lobo",
+    "file": "lobo.mp3",
+    "title": "Wolf howls.ogg",
+    "author": "U.S. Fish and Wildlife Service",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Wolf_howls.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3; ruído reduzido"
+  },
+  {
+    "id": "picapau",
+    "file": "picapau.mp3",
+    "title": "Woodpecker tapping.ogg",
+    "author": "U.S. Fish and Wildlife Service",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Woodpecker_tapping.ogg",
+    "changes": "recortado, volume normalizado e convertido para MP3"
+  },
+  {
+    "id": "papagaio",
+    "file": "papagaio.mp3",
+    "title": "Scarlet macaw 01.wav",
+    "author": "Ganesh Mohan T",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Scarlet_macaw_01.wav",
     "changes": "recortado, volume normalizado e convertido para MP3"
   }
 ]

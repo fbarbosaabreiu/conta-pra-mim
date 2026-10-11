@@ -21,6 +21,16 @@ const NAMES: Record<string, { emoji: string } & Record<Lang, string>> = {
   macaco: { emoji: '🐒', pt: 'Macaco (gibão)', en: 'Monkey (gibbon)', es: 'Mono (gibón)', fr: 'Singe (gibbon)' },
   coruja: { emoji: '🦉', pt: 'Coruja', en: 'Owl', es: 'Lechuza', fr: 'Chouette' },
   grilo: { emoji: '🦗', pt: 'Grilo', en: 'Cricket', es: 'Grillo', fr: 'Grillon' },
+  burro: { emoji: '🫏', pt: 'Burro', en: 'Donkey', es: 'Burro', fr: 'Âne' },
+  cabra: { emoji: '🐐', pt: 'Cabra', en: 'Goat', es: 'Cabra', fr: 'Chèvre' },
+  ganso: { emoji: '🪿', pt: 'Ganso', en: 'Goose', es: 'Ganso', fr: 'Oie' },
+  peru: { emoji: '🦃', pt: 'Peru', en: 'Turkey', es: 'Pavo', fr: 'Dindon' },
+  gaivota: { emoji: '🕊️', pt: 'Gaivota', en: 'Seagull', es: 'Gaviota', fr: 'Mouette' },
+  golfinho: { emoji: '🐬', pt: 'Golfinho', en: 'Dolphin', es: 'Delfín', fr: 'Dauphin' },
+  baleia: { emoji: '🐋', pt: 'Baleia', en: 'Whale', es: 'Ballena', fr: 'Baleine' },
+  lobo: { emoji: '🐺', pt: 'Lobo', en: 'Wolf', es: 'Lobo', fr: 'Loup' },
+  picapau: { emoji: '🐦', pt: 'Pica-pau', en: 'Woodpecker', es: 'Pájaro carpintero', fr: 'Pic-vert' },
+  papagaio: { emoji: '🦜', pt: 'Papagaio (arara)', en: 'Parrot (macaw)', es: 'Loro (guacamayo)', fr: 'Perroquet (ara)' },
 }
 
 /** Atribuição exigida pelas licenças CC BY / CC BY-SA das gravações. */
@@ -37,7 +47,7 @@ export default function Credits() {
           <li key={c.id} className="rounded-2xl bg-white p-4 shadow-sm">
             <button
               onClick={() => void say({ clip: c.file })}
-              className="text-2xl font-semibold active:scale-95"
+              className="inline-flex min-h-11 items-center text-2xl font-semibold active:scale-95"
               aria-label={t.listenTo(name?.[lang] ?? c.id)}
             >
               {name ? `${name.emoji} ${name[lang]}` : c.id} 🔈
