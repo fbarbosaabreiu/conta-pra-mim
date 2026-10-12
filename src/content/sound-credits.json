@@ -62,12 +62,12 @@
   {
     "id": "gato",
     "file": "gato.mp3",
-    "title": "Maullido de gata hembra joven.ogg",
-    "author": "George Miquilena",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "https://commons.wikimedia.org/wiki/File:Maullido_de_gata_hembra_joven.ogg",
-    "changes": "recortado, ruído grave filtrado, volume normalizado e convertido para MP3"
+    "title": "Meow.ogg",
+    "author": "Dcrosby (English Wikipedia)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Meow.ogg",
+    "changes": "ruído reduzido, volume normalizado e convertido para MP3"
   },
   {
     "id": "cachorro",
@@ -82,22 +82,22 @@
   {
     "id": "sapo",
     "file": "sapo.mp3",
-    "title": "Marsh frog (Pelophylax ridibundus) call.ogg",
-    "author": "Llivermore",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Marsh_frog_(Pelophylax_ridibundus)_call.ogg",
-    "changes": "recortado, volume normalizado e convertido para MP3; ruído reduzido"
+    "title": "Frog.ogg",
+    "author": "egomassive (Freesound)",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://freesound.org/people/egomassive/sounds/536759/",
+    "changes": "recortado, volume normalizado e convertido para MP3"
   },
   {
     "id": "leao",
     "file": "leao.mp3",
-    "title": "Lion raring-sound1TamilNadu178.ogg",
-    "author": "தகவலுழவன் (த*உழவன்)",
-    "license": "Public domain",
-    "licenseUrl": null,
-    "source": "https://commons.wikimedia.org/wiki/File:Lion_raring-sound1TamilNadu178.ogg",
-    "changes": "recortado (primeiro rugido), volume normalizado e convertido para MP3"
+    "title": "lion.wav",
+    "author": "SGAK (Freesound)",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://freesound.org/people/SGAK/sounds/467762/",
+    "changes": "recortado, volume normalizado e convertido para MP3"
   },
   {
     "id": "abelha",
@@ -142,11 +142,11 @@
   {
     "id": "macaco",
     "file": "macaco.mp3",
-    "title": "Hylobates-pileatus-pileated-gibbon-calling-singing-1.oga",
-    "author": "Rushenb",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Hylobates-pileatus-pileated-gibbon-calling-singing-1.oga",
+    "title": "monkey scream.wav",
+    "author": "saraonsins (Freesound)",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://freesound.org/people/saraonsins/sounds/219816/",
     "changes": "recortado, volume normalizado e convertido para MP3"
   },
   {

@@ -35,7 +35,7 @@ const pt = {
   nextPage: 'Próxima página',
   pageOf: (n: number, total: number) => `Página ${n} de ${total}`,
   creditsIntro:
-    'Gravações reais de animais do Wikimedia Commons. Todas foram recortadas, tiveram o volume normalizado e foram convertidas para MP3. Toque no nome para ouvir.',
+    'Gravações reais de animais do Wikimedia Commons e do Freesound. Todas foram recortadas, tiveram o volume normalizado e foram convertidas para MP3. Toque no nome para ouvir.',
   creditsShareAlike: 'Os arquivos adaptados sob CC BY-SA continuam disponíveis sob a mesma licença.',
   listenTo: (name: string) => `Ouvir ${name}`,
 }
@@ -73,7 +73,7 @@ const en: UI = {
   nextPage: 'Next page',
   pageOf: (n, total) => `Page ${n} of ${total}`,
   creditsIntro:
-    'Real animal recordings from Wikimedia Commons. All of them were trimmed, volume-normalized and converted to MP3. Tap a name to listen.',
+    'Real animal recordings from Wikimedia Commons and Freesound. All of them were trimmed, volume-normalized and converted to MP3. Tap a name to listen.',
   creditsShareAlike: 'Files adapted under CC BY-SA remain available under the same license.',
   listenTo: (name) => `Listen to ${name}`,
 }
@@ -109,7 +109,7 @@ const es: UI = {
   nextPage: 'Página siguiente',
   pageOf: (n, total) => `Página ${n} de ${total}`,
   creditsIntro:
-    'Grabaciones reales de animales de Wikimedia Commons. Todas fueron recortadas, normalizadas en volumen y convertidas a MP3. Toca un nombre para escuchar.',
+    'Grabaciones reales de animales de Wikimedia Commons y Freesound. Todas fueron recortadas, normalizadas en volumen y convertidas a MP3. Toca un nombre para escuchar.',
   creditsShareAlike: 'Los archivos adaptados bajo CC BY-SA siguen disponibles bajo la misma licencia.',
   listenTo: (name) => `Escuchar ${name}`,
 }
@@ -145,7 +145,7 @@ const fr: UI = {
   nextPage: 'Page suivante',
   pageOf: (n, total) => `Page ${n} sur ${total}`,
   creditsIntro:
-    'Vrais enregistrements d’animaux de Wikimedia Commons. Tous ont été découpés, leur volume normalisé et convertis en MP3. Touchez un nom pour écouter.',
+    'Vrais enregistrements d’animaux de Wikimedia Commons et de Freesound. Tous ont été découpés, leur volume normalisé et convertis en MP3. Touchez un nom pour écouter.',
   creditsShareAlike: 'Les fichiers adaptés sous CC BY-SA restent disponibles sous la même licence.',
   listenTo: (name) => `Écouter ${name}`,
 }
