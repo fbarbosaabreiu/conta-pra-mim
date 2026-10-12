@@ -57,9 +57,14 @@ Todo o conteúdo fica em `src/content` como JSON:
 
 ## Login (Supabase)
 
-O adulto entra com o e-mail e um **código de 6 números** (sem senha); a primeira vez já cria a conta.
-Código em vez de link mágico porque, no iPhone, o app instalado na Tela de Início não recebe a sessão
-aberta pelo link (ele abre no Safari). Código: `src/lib/auth.ts` e `src/pages/Login.tsx`.
+O adulto entra com **e-mail e senha**; “Criar conta” já entra direto, sem e-mail de confirmação.
+O único e-mail é o de **esqueci a senha**: o link volta para o site, que pede a senha nova
+(`src/lib/auth.ts` lê e limpa o `#access_token=…` antes do HashRouter). Código: `src/lib/auth.ts`
+e `src/pages/Login.tsx`.
+
+Por que não um código de 6 números por e-mail: o Supabase só deixa mudar o texto dos e-mails com um
+SMTP próprio (Resend, Brevo…). E link mágico não serve no iPhone: o app instalado na Tela de Início
+não recebe a sessão aberta pelo link (ela fica no Safari).
 
 **Sem as chaves o login fica desligado** e o app abre direto (é assim em desenvolvimento e nos testes).
 Para ligar:
@@ -68,13 +73,13 @@ Para ligar:
 2. Coloque a URL e a chave pública (*anon* / *publishable*) no `.env.production` — as duas são públicas:
    ```
    VITE_SUPABASE_URL=https://xxxxxxxx.supabase.co
-   VITE_SUPABASE_ANON_KEY=eyJ...
+   VITE_SUPABASE_ANON_KEY=sb_publishable_...
    ```
    Para testar localmente, as mesmas linhas num `.env.local` (não vai para o Git).
 3. No painel do Supabase:
    - **Authentication → URL Configuration → Site URL**: `https://falafalinha.com`.
-   - **Authentication → Emails → Templates**: nos modelos **Magic Link** e **Confirm signup**, troque o
-     link pelo código, por exemplo: `<h2>Seu código do Fala Falinha</h2><p style="font-size:32px">{{ .Token }}</p>`.
+   - **Authentication → Sign In / Providers → Email**: desligue **Confirm email** (senão “Criar conta”
+     manda um e-mail de confirmação em vez de entrar).
    - **SQL Editor** → rode uma vez (permite o botão “Apagar minha conta” da tela de privacidade):
      ```sql
      create or replace function public.delete_my_account()
@@ -83,11 +88,11 @@ Para ligar:
      revoke execute on function public.delete_my_account() from public, anon;
      grant execute on function public.delete_my_account() to authenticated;
      ```
-   - **E-mail de verdade**: o envio embutido do Supabase manda só poucos e-mails por hora (é para teste).
-     Para uso real, configure um SMTP em **Authentication → Emails → SMTP Settings** (ex.: Resend, Brevo).
+   - **Opcional**: o envio de e-mail embutido do Supabase manda só poucos e-mails por hora (só afeta
+     “esqueci a senha”). Para mais, configure um SMTP em **Authentication → Emails → SMTP Settings**.
 
-A tela de privacidade mostra o que a conta guarda (só o e-mail) e permite sair e apagar a conta.
-Teste do login sem conta real (Supabase simulado): `.claude/skills/validar-app/scripts/auth.mjs`.
+A tela de privacidade mostra o que a conta guarda (o e-mail e a senha embaralhada) e permite sair e
+apagar a conta. Teste do login sem conta real (Supabase simulado): `.claude/skills/validar-app/scripts/auth.mjs`.
 
 ## Validando antes de publicar
 

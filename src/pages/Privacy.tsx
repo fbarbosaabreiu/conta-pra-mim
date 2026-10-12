@@ -71,7 +71,7 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'A medição foi desligada, mas não deu para apagar agora (sem internet?). Tente de novo mais tarde.',
     accountTitle: 'Sua conta',
     account: [
-      'Para entrar, guardamos só o e-mail do adulto, no Supabase (servidores em São Paulo, Brasil).',
+      'Para entrar, guardamos só o e-mail do adulto e a senha embaralhada (nem nós conseguimos lê-la), no Supabase (servidores em São Paulo, Brasil).',
       'O e-mail serve apenas para o acesso: não mandamos propaganda nem o compartilhamos.',
       'Você pode apagar a conta quando quiser, aqui embaixo.',
     ],
@@ -111,7 +111,7 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'Measurement was turned off, but the data couldn’t be erased right now (offline?). Please try again later.',
     accountTitle: 'Your account',
     account: [
-      'To sign in, we only store the grown-up’s email, at Supabase (servers in São Paulo, Brazil).',
+      'To sign in, we only store the grown-up’s email and a scrambled password (not even we can read it), at Supabase (servers in São Paulo, Brazil).',
       'The email is only used for access: we don’t send ads or share it.',
       'You can delete your account at any time, below.',
     ],
@@ -151,7 +151,7 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'La medición se desactivó, pero no se pudieron borrar los datos ahora (¿sin internet?). Inténtalo más tarde.',
     accountTitle: 'Tu cuenta',
     account: [
-      'Para entrar, solo guardamos el correo del adulto, en Supabase (servidores en São Paulo, Brasil).',
+      'Para entrar, solo guardamos el correo del adulto y la contraseña cifrada (ni nosotros podemos leerla), en Supabase (servidores en São Paulo, Brasil).',
       'El correo solo sirve para el acceso: no enviamos publicidad ni lo compartimos.',
       'Puedes borrar tu cuenta cuando quieras, aquí abajo.',
     ],
@@ -191,7 +191,7 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'La mesure est désactivée, mais l’effacement n’a pas pu se faire (hors ligne ?). Réessayez plus tard.',
     accountTitle: 'Votre compte',
     account: [
-      'Pour se connecter, nous gardons uniquement l’e-mail de l’adulte, chez Supabase (serveurs à São Paulo, Brésil).',
+      'Pour se connecter, nous gardons uniquement l’e-mail de l’adulte et le mot de passe chiffré (même nous ne pouvons pas le lire), chez Supabase (serveurs à São Paulo, Brésil).',
       'L’e-mail sert seulement à l’accès : pas de publicité, aucun partage.',
       'Vous pouvez supprimer votre compte à tout moment, ci-dessous.',
     ],

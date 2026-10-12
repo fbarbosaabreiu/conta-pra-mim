@@ -72,8 +72,10 @@ VITE_SUPABASE_URL=https://fake-projeto.supabase.co VITE_SUPABASE_ANON_KEY=teste 
 APP_URL=http://localhost:5174/# node .claude/skills/validar-app/scripts/auth.mjs <pasta-de-saida>
 ```
 
-Confere: sem sessão só abre a tela de entrar (e a privacidade); e-mail inválido e código errado mostram
-aviso; código certo entra e a sessão sobrevive a recarregar; “Sair” e “Apagar minha conta” funcionam.
+Confere: sem sessão só abre a tela de entrar (e a privacidade); e-mail inválido, senha errada, senha
+curta e e-mail já cadastrado mostram aviso; entrar e criar conta abrem o app e a sessão sobrevive a
+recarregar; “esqueci a senha” manda o link, o link volta pedindo a senha nova (e o link vencido avisa);
+“Sair” e “Apagar minha conta” funcionam.
 Pare o servidor da porta 5174 no fim.
 
 ## 5. Qualidade dos sons
