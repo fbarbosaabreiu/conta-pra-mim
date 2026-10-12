@@ -265,7 +265,7 @@ export function ConsentBanner() {
               >
                 {t.decline}
               </button>
-              <Link to="/privacidade" className="ml-auto text-base underline opacity-70">
+              <Link to="/privacidade" className="ml-auto inline-flex min-h-11 items-center px-1 text-base underline opacity-70">
                 {t.more}
               </Link>
             </div>

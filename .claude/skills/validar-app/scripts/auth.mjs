@@ -84,6 +84,9 @@ const signOut = async () => {
 const toLogin = async () => {
   await page.goto(`${BASE}/entrar`)
   await page.waitForTimeout(600)
+  // já estava em /entrar (ex.: em "esqueci a senha"): o goto não recarrega
+  if (await page.getByRole('button', { name: 'Voltar' }).isVisible().catch(() => false))
+    await page.getByRole('button', { name: 'Voltar' }).click()
   if (await page.getByRole('button', { name: 'Já tenho conta. Entrar' }).isVisible().catch(() => false))
     await page.getByRole('button', { name: 'Já tenho conta. Entrar' }).click()
 }
