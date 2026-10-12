@@ -9,6 +9,14 @@ A main publica direto em https://falafalinha.com (GitHub Actions). Por isso **ne
 esta skill passar**. Os scripts ficam em `.claude/skills/validar-app/scripts/` (mesmas dependências da
 skill `validar-app`; na primeira vez: `cd .claude/skills/validar-app/scripts && npm install && cd -`).
 
+## No GitHub (automático)
+
+O workflow `.github/workflows/deploy.yml` roda esta regressão (`--rapido`, Chrome no Ubuntu) a cada
+push na main **antes** de publicar: se ela falhar, o deploy não acontece e o site fica na versão
+anterior. O relatório aparece no resumo da execução (`gh run view <id>`), e as imagens no artefato
+`regressao`. Em outro ramo, `gh workflow run deploy.yml --ref <ramo>` roda só a regressão.
+Mesmo assim, rode localmente antes do push: é mais rápido descobrir aqui do que no GitHub.
+
 ## 1. Antes de publicar
 
 Da raiz do repositório, com o código que vai subir já no disco:

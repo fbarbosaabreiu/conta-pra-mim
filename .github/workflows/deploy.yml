@@ -1,5 +1,10 @@
-# Publica o app no GitHub Pages a cada push na main.
+# Publica o app no GitHub Pages a cada push na main — só depois da regressão passar.
 # No GitHub: Settings → Pages → Source: "GitHub Actions".
+#
+# A regressão (.claude/skills/regressao) compara a versão nova com o que está no ar e roda os testes
+# de histórias, quizzes, sons, usabilidade e conta. Se falhar, nada é publicado e o site continua
+# na versão anterior. Relatório e imagens: aba "Summary" da execução → artefato "regressao".
+# Em outros ramos, "Run workflow" roda só a regressão (sem publicar).
 name: Deploy
 
 on:
@@ -13,11 +18,45 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+  regressao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - name: Ferramentas de teste
+        run: npm ci
+        working-directory: .claude/skills/validar-app/scripts
+      - name: Fontes de emoji (o app usa emojis em tudo)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-color-emoji
+      - name: Regressão
+        run: node .claude/skills/validar-app/scripts/regressao.mjs --rapido
+        env:
+          BROWSER: chrome
+      - name: Relatório no resumo da execução
+        if: always()
+        run: test -f regressao/relatorio.md && cat regressao/relatorio.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: regressao
+          path: regressao/
+          retention-days: 14
+
   build:
+    needs: regressao
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

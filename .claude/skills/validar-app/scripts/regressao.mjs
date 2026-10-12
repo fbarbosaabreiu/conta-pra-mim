@@ -52,11 +52,21 @@ async function serve(args, port, env = {}) {
 const node = (script, args = [], env = {}) => [process.execPath, [join(HERE, script), ...args], env]
 const LOCAL = `http://localhost:${LOCAL_PORT}/`
 const results = []
-const step = async (label, [cmd, args, env], judge = (r) => r.code === 0) => {
+// Etapas no navegador podem falhar por instabilidade (animação, máquina lenta): repetem uma vez,
+// e o relatório diz que só passaram na 2ª tentativa.
+const step = async (label, [cmd, args, env], judge = (r) => r.code === 0, retry = false) => {
   process.stdout.write(`▶ ${label}… `)
-  const r = await run(label.replace(/\W+/g, '-').toLowerCase(), cmd, args, env)
-  const verdict = judge(r)
-  const summary = (r.out.match(/(\d+\/\d+ [^\n]+)\s*$/) ?? [])[1] ?? (r.code === 0 ? 'ok' : `saiu com código ${r.code}`)
+  const slug = label.replace(/\W+/g, '-').toLowerCase()
+  let r = await run(slug, cmd, args, env)
+  let verdict = judge(r)
+  let note = ''
+  if (verdict === false && retry) {
+    writeFileSync(join(OUT, `log-${slug}-1a-tentativa.txt`), r.out)
+    r = await run(slug, cmd, args, env)
+    verdict = judge(r)
+    note = verdict === false ? ' (falhou 2 vezes)' : ' — só na 2ª tentativa (1ª em log-*-1a-tentativa.txt)'
+  }
+  const summary = ((r.out.match(/(\d+\/\d+ [^\n]+)\s*$/) ?? [])[1] ?? (r.code === 0 ? 'ok' : `saiu com código ${r.code}`)) + note
   results.push({ label, verdict, summary, out: r.out, secs: r.secs })
   console.log(`${verdict === true ? '✅' : verdict === 'revisar' ? '⚠️' : '❌'} ${summary} (${r.secs}s)`)
   return verdict
@@ -72,12 +82,12 @@ try {
 
   await step('Inventário: nada da produção sumiu', node('inventory.mjs', [OUT, ...accept], local))
   await step('Comparação visual com a produção', node('visual.mjs', [OUT], local), (r) => (r.code !== 0 ? false : /⚠️/.test(r.out) ? 'revisar' : true))
-  await step('Fluxo completo (histórias, quizzes, sons)', node('e2e.mjs', fast ? ['pt'] : [], local))
-  await step('Usabilidade no celular', node('usability.mjs', fast ? [OUT, 'pt'] : [OUT], local))
+  await step('Fluxo completo (histórias, quizzes, sons)', node('e2e.mjs', fast ? ['pt'] : [], local), undefined, true)
+  await step('Usabilidade no celular', node('usability.mjs', fast ? [OUT, 'pt'] : [OUT], local), undefined, true)
   await step('Qualidade dos sons', node('audio_report.mjs', [OUT]), (r) => (r.code !== 0 ? false : /⚠️/.test(r.out) ? 'revisar' : true))
 
   const authEnv = { VITE_SUPABASE_URL: 'https://fake-projeto.supabase.co', VITE_SUPABASE_ANON_KEY: 'teste' }
-  if (await serve([], AUTH_PORT, authEnv)) await step('Conta (Supabase simulado)', node('auth.mjs', [OUT], { APP_URL: `http://localhost:${AUTH_PORT}/#` }))
+  if (await serve([], AUTH_PORT, authEnv)) await step('Conta (Supabase simulado)', node('auth.mjs', [OUT], { APP_URL: `http://localhost:${AUTH_PORT}/#` }), undefined, true)
   else results.push({ label: 'Conta (Supabase simulado)', verdict: false, summary: `servidor não subiu na porta ${AUTH_PORT}`, out: '' })
 } catch (e) {
   results.push({ label: 'Interrompido', verdict: false, summary: e.message, out: '' })
