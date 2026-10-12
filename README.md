@@ -55,19 +55,23 @@ Todo o conteúdo fica em `src/content` como JSON:
 - Efeitos de toque/acerto são sintetizados (`src/lib/sfx.ts`); o botão 🔊 desliga todo o áudio.
 - Progresso (histórias lidas, quizzes completos) fica no `localStorage`.
 
-## Login (Supabase)
+## Conta opcional (Supabase)
 
-O adulto entra com **e-mail e senha**; “Criar conta” já entra direto, sem e-mail de confirmação.
-O único e-mail é o de **esqueci a senha**: o link volta para o site, que pede a senha nova
-(`src/lib/auth.ts` lê e limpa o `#access_token=…` antes do HashRouter). Código: `src/lib/auth.ts`
-e `src/pages/Login.tsx`.
+O app abre direto, sem cadastro. Quem quiser cria uma conta (**e-mail e senha**, em `/entrar`, pelo
+botão “Salvar progresso” da tela inicial) para guardar o progresso e continuar em outro aparelho.
+“Criar conta” já entra, sem e-mail de confirmação. O único e-mail é o de **esqueci a senha**: o link
+volta para o site, que pede a senha nova (`src/lib/auth.ts` lê e limpa o `#access_token=…` antes do
+HashRouter). Código: `src/lib/auth.ts`, `src/lib/progress.ts` e `src/pages/Login.tsx`.
+
+**Progresso:** fica no aparelho (`localStorage`) e, com conta, também na tabela `progress` do
+Supabase. Ao entrar, junta os dois (fica o maior número de cada história/brincadeira); depois, cada
+história ou brincadeira feita atualiza a cópia da conta.
 
 Por que não um código de 6 números por e-mail: o Supabase só deixa mudar o texto dos e-mails com um
 SMTP próprio (Resend, Brevo…). E link mágico não serve no iPhone: o app instalado na Tela de Início
 não recebe a sessão aberta pelo link (ela fica no Safari).
 
-**Sem as chaves o login fica desligado** e o app abre direto (é assim em desenvolvimento e nos testes).
-Para ligar:
+**Sem as chaves a conta fica desligada** (é assim em desenvolvimento e nos testes). Para ligar:
 
 1. Crie o projeto em [supabase.com](https://supabase.com) (região São Paulo).
 2. Coloque a URL e a chave pública (*anon* / *publishable*) no `.env.production` — as duas são públicas:
@@ -78,21 +82,46 @@ Para ligar:
    Para testar localmente, as mesmas linhas num `.env.local` (não vai para o Git).
 3. No painel do Supabase:
    - **Authentication → URL Configuration → Site URL**: `https://falafalinha.com`.
-   - **Authentication → Sign In / Providers → Email**: desligue **Confirm email** (senão “Criar conta”
-     manda um e-mail de confirmação em vez de entrar).
-   - **SQL Editor** → rode uma vez (permite o botão “Apagar minha conta” da tela de privacidade):
+   - **Authentication → Sign In / Providers → Email**: desligue **Confirm email**.
+   - **SQL Editor** → rode uma vez:
      ```sql
+     -- botão "Apagar minha conta" da tela de privacidade
      create or replace function public.delete_my_account()
      returns void language sql security definer set search_path = ''
      as $$ delete from auth.users where id = auth.uid(); $$;
      revoke execute on function public.delete_my_account() from public, anon;
      grant execute on function public.delete_my_account() to authenticated;
+
+     -- progresso de cada conta (apagado junto com a conta)
+     create table if not exists public.progress (
+       user_id uuid primary key references auth.users on delete cascade,
+       data jsonb not null default '{}',
+       updated_at timestamptz not null default now()
+     );
+     alter table public.progress enable row level security;
+     create policy "cada um vê o seu progresso" on public.progress
+       for all to authenticated using (auth.uid() = user_id) with check (auth.uid() = user_id);
+     grant select, insert, update on public.progress to authenticated;
+     notify pgrst, 'reload schema';
      ```
    - **Opcional**: o envio de e-mail embutido do Supabase manda só poucos e-mails por hora (só afeta
      “esqueci a senha”). Para mais, configure um SMTP em **Authentication → Emails → SMTP Settings**.
 
-A tela de privacidade mostra o que a conta guarda (o e-mail e a senha embaralhada) e permite sair e
-apagar a conta. Teste do login sem conta real (Supabase simulado): `.claude/skills/validar-app/scripts/auth.mjs`.
+A tela de privacidade explica o que a conta guarda e permite entrar, sair e apagar a conta.
+Teste sem conta real (Supabase simulado): `.claude/skills/validar-app/scripts/auth.mjs`.
+
+## Divulgação
+
+- **Página de apresentação:** `public/sobre/index.html` → https://falafalinha.com/sobre/ (HTML puro, nos
+  4 idiomas, fora do app; o service worker não a troca pelo app). Imagens: `public/sobre/tela-*.png` e a
+  prévia de link `public/og.png` (1200×630, também usada pelo `index.html`).
+- **Origem dos links:** divulgue com uma marca, como `https://falafalinha.com/?origem=instagram`
+  (também vale `?utm_source=`). O app guarda a primeira marca do aparelho, tira-a do endereço e, com
+  consentimento, envia o evento `arrival`; o painel mostra “De onde vêm”. Marcas já usadas pelo app:
+  `indicacao` (botão “Indicar para outra família”) e `site` (botões da página /sobre).
+  Código: `src/lib/referral.ts`.
+- **Indicar:** `src/lib/share.ts` abre a folha de compartilhar do celular (ou o WhatsApp Web) com um
+  texto pronto e o link `?origem=indicacao`; cada toque gera o evento `share`.
 
 ## Validando antes de publicar
 
@@ -101,6 +130,16 @@ usabilidade no celular (rolagem, área de toque, balões dentro da cena), todas 
 navegador e a qualidade de cada som (volume, distorção, graves que o celular não toca, ruído), com uma
 folha de espectrogramas para conferir no olho. No Claude Code: `/validar-app`. Os passos e comandos
 estão no `SKILL.md`.
+
+**Antes de todo push na main** (que publica direto no site), rode a regressão — ela compara a versão
+nova com o que está no ar e roda todos os testes; depois do deploy, o `smoke.mjs` confere o site:
+
+```bash
+node .claude/skills/validar-app/scripts/regressao.mjs     # relatório em regressao/relatorio.md
+node .claude/skills/validar-app/scripts/smoke.mjs         # depois do deploy
+```
+
+Detalhes em `.claude/skills/regressao/SKILL.md` (no Claude Code: `/regressao`).
 
 ## Idiomas
 

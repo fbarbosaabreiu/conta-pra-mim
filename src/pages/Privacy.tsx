@@ -34,6 +34,7 @@ interface Copy {
   accountTitle: string
   account: string[]
   signedInAs: (email: string) => string
+  signIn: string
   signOut: string
   deleteAccount: string
   deleteConfirm: string
@@ -57,6 +58,7 @@ const COPY: Record<Lang, Copy> = {
       'Quando o app é aberto e quais histórias e brincadeiras são usadas.',
       'Data e hora, idioma do app e tipo de aparelho (iPhone, Android…).',
       'Cidade e país aproximados, deduzidos da conexão de internet.',
+      'Por onde o app chegou até você, quando o link tem essa marca (ex.: indicação, Instagram).',
     ],
     neverTitle: 'O que nunca é registrado',
     never: ['Nomes, e-mail ou telefone (a medição nunca usa o e-mail da sua conta).', 'Fotos, voz ou o que a criança fala.', 'Localização exata (GPS) ou o endereço de internet.'],
@@ -71,11 +73,13 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'A medição foi desligada, mas não deu para apagar agora (sem internet?). Tente de novo mais tarde.',
     accountTitle: 'Sua conta',
     account: [
-      'Para entrar, guardamos só o e-mail do adulto e a senha embaralhada (nem nós conseguimos lê-la), no Supabase (servidores em São Paulo, Brasil).',
+      'A conta é opcional e serve para guardar o progresso e usá-lo em outro aparelho.',
+      'Com conta, guardamos só o e-mail do adulto, a senha embaralhada (nem nós conseguimos lê-la) e o progresso (quantas vezes cada história e brincadeira foi feita), no Supabase (servidores em São Paulo, Brasil).',
       'O e-mail serve apenas para o acesso: não mandamos propaganda nem o compartilhamos.',
       'Você pode apagar a conta quando quiser, aqui embaixo.',
     ],
     signedInAs: (e) => `Conectado como ${e}`,
+    signIn: 'Entrar ou criar conta',
     signOut: 'Sair',
     deleteAccount: 'Apagar minha conta',
     deleteConfirm: 'Apagar sua conta e seu e-mail? Isso não pode ser desfeito.',
@@ -97,6 +101,7 @@ const COPY: Record<Lang, Copy> = {
       'When the app is opened and which stories and games are used.',
       'Date and time, app language and device type (iPhone, Android…).',
       'Approximate city and country, inferred from the internet connection.',
+      'How the app reached you, when the link carries that tag (e.g. a referral, Instagram).',
     ],
     neverTitle: 'What is never recorded',
     never: ['Names, email or phone number (measurement never uses your account email).', 'Photos, voice or what your child says.', 'Exact location (GPS) or the IP address.'],
@@ -111,11 +116,13 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'Measurement was turned off, but the data couldn’t be erased right now (offline?). Please try again later.',
     accountTitle: 'Your account',
     account: [
-      'To sign in, we only store the grown-up’s email and a scrambled password (not even we can read it), at Supabase (servers in São Paulo, Brazil).',
+      'An account is optional: it saves progress so you can use it on another device.',
+      'With an account, we only store the grown-up’s email, a scrambled password (not even we can read it) and the progress (how many times each story and game was done), at Supabase (servers in São Paulo, Brazil).',
       'The email is only used for access: we don’t send ads or share it.',
       'You can delete your account at any time, below.',
     ],
     signedInAs: (e) => `Signed in as ${e}`,
+    signIn: 'Sign in or create an account',
     signOut: 'Sign out',
     deleteAccount: 'Delete my account',
     deleteConfirm: 'Delete your account and email? This cannot be undone.',
@@ -137,6 +144,7 @@ const COPY: Record<Lang, Copy> = {
       'Cuándo se abre la app y qué cuentos y juegos se usan.',
       'Fecha y hora, idioma de la app y tipo de dispositivo (iPhone, Android…).',
       'Ciudad y país aproximados, deducidos de la conexión a internet.',
+      'Cómo llegó la app hasta ti, cuando el enlace trae esa marca (ej.: recomendación, Instagram).',
     ],
     neverTitle: 'Qué nunca se registra',
     never: ['Nombres, correo o teléfono (la medición nunca usa el correo de tu cuenta).', 'Fotos, voz ni lo que dice el niño.', 'Ubicación exacta (GPS) ni la dirección IP.'],
@@ -151,11 +159,13 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'La medición se desactivó, pero no se pudieron borrar los datos ahora (¿sin internet?). Inténtalo más tarde.',
     accountTitle: 'Tu cuenta',
     account: [
-      'Para entrar, solo guardamos el correo del adulto y la contraseña cifrada (ni nosotros podemos leerla), en Supabase (servidores en São Paulo, Brasil).',
+      'La cuenta es opcional: sirve para guardar el progreso y usarlo en otro dispositivo.',
+      'Con cuenta, solo guardamos el correo del adulto, la contraseña cifrada (ni nosotros podemos leerla) y el progreso (cuántas veces se hizo cada cuento y juego), en Supabase (servidores en São Paulo, Brasil).',
       'El correo solo sirve para el acceso: no enviamos publicidad ni lo compartimos.',
       'Puedes borrar tu cuenta cuando quieras, aquí abajo.',
     ],
     signedInAs: (e) => `Conectado como ${e}`,
+    signIn: 'Entrar o crear cuenta',
     signOut: 'Salir',
     deleteAccount: 'Borrar mi cuenta',
     deleteConfirm: '¿Borrar tu cuenta y tu correo? No se puede deshacer.',
@@ -177,6 +187,7 @@ const COPY: Record<Lang, Copy> = {
       'Quand l’appli est ouverte et quelles histoires et quels jeux sont utilisés.',
       'Date et heure, langue de l’appli et type d’appareil (iPhone, Android…).',
       'Ville et pays approximatifs, déduits de la connexion internet.',
+      'Comment l’appli est arrivée jusqu’à vous, quand le lien porte cette marque (ex. : recommandation, Instagram).',
     ],
     neverTitle: 'Ce qui n’est jamais enregistré',
     never: ['Noms, e-mail ou téléphone (la mesure n’utilise jamais l’e-mail de votre compte).', 'Photos, voix ou ce que dit l’enfant.', 'Position exacte (GPS) ou l’adresse IP.'],
@@ -191,11 +202,13 @@ const COPY: Record<Lang, Copy> = {
     eraseFailed: 'La mesure est désactivée, mais l’effacement n’a pas pu se faire (hors ligne ?). Réessayez plus tard.',
     accountTitle: 'Votre compte',
     account: [
-      'Pour se connecter, nous gardons uniquement l’e-mail de l’adulte et le mot de passe chiffré (même nous ne pouvons pas le lire), chez Supabase (serveurs à São Paulo, Brésil).',
+      'Le compte est facultatif : il sert à garder la progression et à la retrouver sur un autre appareil.',
+      'Avec un compte, nous gardons uniquement l’e-mail de l’adulte, le mot de passe chiffré (même nous ne pouvons pas le lire) et la progression (combien de fois chaque histoire et chaque jeu ont été faits), chez Supabase (serveurs à São Paulo, Brésil).',
       'L’e-mail sert seulement à l’accès : pas de publicité, aucun partage.',
       'Vous pouvez supprimer votre compte à tout moment, ci-dessous.',
     ],
     signedInAs: (e) => `Connecté : ${e}`,
+    signIn: 'Se connecter ou créer un compte',
     signOut: 'Se déconnecter',
     deleteAccount: 'Supprimer mon compte',
     deleteConfirm: 'Supprimer votre compte et votre e-mail ? C’est définitif.',
@@ -301,6 +314,14 @@ export default function Privacy() {
                 <li key={c}>🔐 {c}</li>
               ))}
             </ul>
+            {session === null && (
+              <Link
+                to="/entrar"
+                className="mt-3 inline-flex min-h-11 items-center rounded-full bg-black/5 px-5 py-2.5 font-semibold active:scale-95"
+              >
+                {t.signIn}
+              </Link>
+            )}
             {session && (
               <div className="mt-3 rounded-3xl bg-white p-4 shadow-sm">
                 <p className="font-semibold">{t.signedInAs(session.user.email ?? '')}</p>

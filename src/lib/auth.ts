@@ -1,4 +1,5 @@
-// Login com Supabase: o adulto entra com e-mail e senha. Criar a conta não manda e-mail
+// Conta opcional com Supabase: o app abre sem login; quem quiser cria uma conta (e-mail e senha)
+// para guardar o progresso e levá-lo para outro aparelho. Criar a conta não manda e-mail
 // ("Confirm email" desligado no painel), então funciona igual no app instalado no iPhone.
 // O único e-mail é o de "esqueci a senha": o link abre o site, que pede a senha nova.
 //
@@ -7,6 +8,7 @@
 
 import { useEffect, useState } from 'react'
 import { createClient, type Session } from '@supabase/supabase-js'
+import { getProgress, mergeProgress, onProgressChange, setProgress, type Progress } from './progress'
 
 const url = import.meta.env.VITE_SUPABASE_URL as string | undefined
 const key = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined
@@ -25,7 +27,9 @@ export const supabase = authEnabled
 const linkParams = /(^|[#&])(access_token|error_code)=/.test(location.hash)
   ? new URLSearchParams(location.hash.slice(1))
   : null
-if (linkParams) history.replaceState(null, '', `${location.pathname}${location.search}#/`)
+// (link vencido: abre a tela de entrar, que avisa e oferece mandar outro)
+if (linkParams)
+  history.replaceState(null, '', `${location.pathname}${location.search}#/${linkParams.get('error_code') ? 'entrar' : ''}`)
 
 /** Veio do link de "esqueci a senha": a tela de entrar pede a senha nova. */
 export const recoveryLink = Boolean(supabase && linkParams?.get('type') === 'recovery' && linkParams.get('access_token'))
@@ -93,4 +97,40 @@ export async function deleteAccount(): Promise<void> {
   const { error } = await supabase!.rpc('delete_my_account')
   if (error) throw error
   await supabase!.auth.signOut()
+}
+
+// ---------- Progresso na conta ----------
+// Tabela `progress` (SQL no README): uma linha por conta, protegida por RLS. Ao entrar, junta o
+// progresso deste aparelho com o da conta; depois, cada história/brincadeira feita atualiza a cópia.
+
+async function pushProgress(userId: string, p: Progress) {
+  await supabase!.from('progress').upsert({ user_id: userId, data: p, updated_at: new Date().toISOString() })
+}
+
+async function pullProgress(userId: string) {
+  const { data, error } = await supabase!.from('progress').select('data').eq('user_id', userId).maybeSingle()
+  if (error) return // sem internet ou tabela ainda não criada: fica só neste aparelho
+  const remote = (data?.data ?? null) as Partial<Progress> | null
+  const merged = mergeProgress(getProgress(), remote)
+  setProgress(merged, false)
+  // só envia se este aparelho tinha algo que a conta ainda não tinha
+  const sameAsRemote = remote !== null && JSON.stringify(mergeProgress(remote as Progress, null)) === JSON.stringify(merged)
+  if (!sameAsRemote) await pushProgress(userId, merged)
+}
+
+if (supabase) {
+  let userId: string | null = null
+  let timer: ReturnType<typeof setTimeout> | undefined
+  supabase.auth.onAuthStateChange((_event, s) => {
+    const id = s?.user.id ?? null
+    // fora do callback: o Supabase não deixa chamar a API de dentro dele
+    if (id && id !== userId) setTimeout(() => void pullProgress(id))
+    userId = id
+  })
+  onProgressChange((p) => {
+    if (!userId) return
+    const id = userId
+    clearTimeout(timer)
+    timer = setTimeout(() => void pushProgress(id, p), 1500)
+  })
 }

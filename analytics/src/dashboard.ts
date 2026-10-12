@@ -36,6 +36,8 @@ export interface DashboardData {
   }[]
   platforms: { key: string | null; devices: number }[]
   langs: { key: string | null; devices: number }[]
+  origins: { key: string | null; devices: number }[]
+  growth: { shares: number; sharers: number; signups: number }
 }
 
 const CSS = `
@@ -142,6 +144,9 @@ function client(D: DashboardData) {
       'terminou o quiz <b>' + esc(THEMES[e.theme ?? ''] ?? e.theme) + '</b>' + (e.value != null ? ' (' + e.value + '/5 de primeira)' : ''),
     onboarding_done: () => 'viu o “Como usar”',
     onboarding_skip: () => 'pulou o “Como usar”',
+    arrival: (e) => 'chegou pelo link <b>' + esc(e.theme) + '</b>',
+    share: () => 'indicou o app para outra família',
+    signup: () => 'criou uma conta',
   }
 
   // ----- tooltip compartilhado -----
@@ -318,6 +323,10 @@ function client(D: DashboardData) {
     )
   $('platforms').innerHTML = small(D.platforms, {})
   $('langs').innerHTML = small(D.langs, LANGS)
+  $('origins').innerHTML = small(D.origins, { '': 'sem marca (direto)', indicacao: 'indicação (botão do app)', site: 'página /sobre' })
+  $('growth').innerHTML =
+    '<p class="sub" style="margin:0 0 6px">💌 <b>' + D.growth.shares + '</b> indicações, por <b>' + D.growth.sharers +
+    '</b> aparelho(s)</p><p class="sub" style="margin:0">🔐 <b>' + D.growth.signups + '</b> conta(s) criada(s)</p>'
 
   // ----- quando (mapa de calor dia x hora, hora local do aparelho) -----
   ;(() => {
@@ -430,6 +439,17 @@ export function renderDashboard(data: DashboardData): string {
       <h2>Idioma</h2>
       <p class="sub">Aparelhos por idioma do app.</p>
       <div id="langs"></div>
+    </section>
+
+    <section class="card half">
+      <h2>De onde vêm</h2>
+      <p class="sub">Aparelhos por origem do link (<code>?origem=…</code>). Só conta quem aceitou a medição.</p>
+      <div id="origins"></div>
+    </section>
+    <section class="card half">
+      <h2>Divulgação</h2>
+      <p class="sub">Indicações pelo botão do app e contas criadas no período.</p>
+      <div id="growth"></div>
     </section>
 
     <section class="card half">

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fala Falinha · Histórias para bebês aprenderem a falar</title>
+<meta name="description" content="App grátis com histórias, sons de bichos, cores e números para bebês e crianças de 0 a 4 anos aprenderem a falar. Em português, inglês, espanhol e francês. Funciona no celular, sem anúncios.">
+<link rel="canonical" href="https://falafalinha.com/sobre/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://falafalinha.com/sobre/">
+<meta property="og:title" content="Fala Falinha · Histórias para bebês aprenderem a falar">
+<meta property="og:description" content="Histórias com sons de bichos, cores e números para bebês de 0 a 4 anos. Grátis, sem anúncios, em 4 idiomas.">
+<meta property="og:image" content="https://falafalinha.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffb703">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../icon.svg">
+<link rel="apple-touch-icon" href="../apple-touch-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fff8e7; --ink: #3d2c1e; --sun: #ffb703; --coral: #fb7185;
+    --sky: #38bdf8; --leaf: #4ade80; --grape: #a78bfa; --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--cream); color: var(--ink);
+    font: 400 18px/1.55 Fredoka, system-ui, sans-serif;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; text-decoration: none; }
+  .brand img { width: 40px; height: 40px; }
+  .langs { display: flex; gap: 6px; flex-wrap: wrap; }
+  .langs button {
+    font: inherit; font-size: 15px; font-weight: 600; min-height: 44px; padding: 0 14px;
+    border: 0; border-radius: 999px; background: #fff; color: var(--ink); cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] { background: var(--coral); color: #fff; }
+
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding: 24px 0 48px; }
+  h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; font-weight: 700; }
+  .lead { font-size: 20px; margin: 0 0 24px; opacity: .85; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px;
+    border-radius: 999px; background: var(--coral); color: #fff; font-weight: 600; font-size: 21px;
+    text-decoration: none; box-shadow: 0 6px 0 rgba(61,44,30,.15);
+  }
+  .btn:active { transform: translateY(2px); }
+  .link { min-height: 44px; display: inline-flex; align-items: center; font-weight: 600; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; padding: 0; list-style: none; }
+  .badges li { background: #fff; border-radius: 999px; padding: 6px 14px; font-size: 15px; font-weight: 500; }
+  .phones { display: flex; justify-content: center; gap: 14px; }
+  .phones img {
+    width: min(46%, 220px); height: auto; border-radius: 28px; border: 6px solid #fff;
+    box-shadow: 0 12px 30px rgba(61,44,30,.18); background: #fff;
+  }
+  .phones img:nth-child(2) { margin-top: 48px; }
+
+  section.block { padding: 40px 0; }
+  h2 { font-size: clamp(26px, 4vw, 36px); margin: 0 0 20px; font-weight: 700; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--card); border-radius: 28px; padding: 22px; }
+  .card .ico { font-size: 40px; line-height: 1; }
+  .card h3 { margin: 10px 0 6px; font-size: 21px; }
+  .card p { margin: 0; opacity: .85; }
+  .tint-sun { background: #fff1c7; } .tint-sky { background: #dff3fd; } .tint-leaf { background: #defbe8; }
+  .tint-grape { background: #efe9ff; } .tint-coral { background: #ffe4e8; }
+
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .steps ol { margin: 8px 0 0; padding-left: 22px; }
+  .steps li { margin: 4px 0; }
+
+  details { background: #fff; border-radius: 22px; padding: 4px 20px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; min-height: 52px; display: flex; align-items: center; }
+  details p { margin: 0 0 16px; opacity: .85; }
+
+  .final { text-align: center; padding: 48px 0 56px; }
+  .final p { margin: 0 0 20px; font-size: 20px; }
+  footer { padding: 24px 0 40px; font-size: 15px; opacity: .7; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  footer a { min-height: 44px; display: inline-flex; align-items: center; }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding-top: 8px; }
+    .cards, .steps { grid-template-columns: 1fr; }
+    .phones img:nth-child(2) { margin-top: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/?origem=site"><img src="../icon.svg" alt="" width="40" height="40">Fala Falinha</a>
+    <nav class="langs" aria-label="Idioma">
+      <button type="button" data-lang="pt" aria-pressed="true">Português</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" data-lang="es" aria-pressed="false">Español</button>
+      <button type="button" data-lang="fr" aria-pressed="false">Français</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1 data-i18n="h1">Histórias para o seu bebê aprender a falar</h1>
+        <p class="lead" data-i18n="lead">Histórias com sons de bichos, cores e números para ler junto com a criança, de 0 a 4 anos. A voz do app conta, a criança toca e repete.</p>
+        <div class="cta">
+          <a class="btn" href="/?origem=site" data-i18n="cta">Abrir o app grátis</a>
+          <a class="link" href="#instalar" data-i18n="ctaInstall">Como instalar no celular</a>
+        </div>
+        <ul class="badges">
+          <li data-i18n="b1">✅ Grátis</li>
+          <li data-i18n="b2">🚫 Sem anúncios</li>
+          <li data-i18n="b3">🌎 4 idiomas</li>
+          <li data-i18n="b4">📶 Funciona sem internet</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <img src="tela-historia.png" width="390" height="844" alt="Uma página de história com os bichos da fazenda" data-i18n-alt="altStory">
+        <img src="tela-quiz.png" width="390" height="844" alt="O jogo de adivinhar o bicho" data-i18n-alt="altQuiz">
+      </div>
+    </div>
+
+    <section class="block">
+      <h2 data-i18n="whatTitle">O que tem no app</h2>
+      <div class="cards">
+        <div class="card tint-sun"><div class="ico">📖</div><h3 data-i18n="f1t">20 histórias</h3><p data-i18n="f1">Bichos, cores, números e a rotina do dia (banho, comida, roupa). Toque em cada coisa para ouvir o nome e o som.</p></div>
+        <div class="card tint-sky"><div class="ico">🎯</div><h3 data-i18n="f2t">Brincadeiras</h3><p data-i18n="f2">“Cadê a vaca?”, cores e números: a criança procura, toca e ganha festa a cada acerto.</p></div>
+        <div class="card tint-grape"><div class="ico">🌙</div><h3 data-i18n="f3t">Soninho</h3><p data-i18n="f3">Histórias calminhas para a hora de dormir, em tela escura e com um timer que encerra sozinho.</p></div>
+        <div class="card tint-leaf"><div class="ico">🐮</div><h3 data-i18n="f4t">Sons de verdade</h3><p data-i18n="f4">27 bichos com sons gravados de verdade: vaca, leão, sapo, baleia…</p></div>
+        <div class="card tint-coral"><div class="ico">👶</div><h3 data-i18n="f5t">Por idade</h3><p data-i18n="f5">Sugestões para cada fase, de 0 a 4 anos, e dicas para estimular a fala fora da tela.</p></div>
+        <div class="card"><div class="ico">💬</div><h3 data-i18n="f6t">4 idiomas</h3><p data-i18n="f6">Português, inglês, espanhol e francês: ótimo para famílias bilíngues.</p></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 data-i18n="howTitle">Feito para usar junto</h2>
+      <div class="cards">
+        <div class="card"><div class="ico">🤗</div><h3 data-i18n="h1t">No colo</h3><p data-i18n="h1p">O app foi pensado para o adulto e a criança juntos: você aponta, repete e conversa sobre a figura.</p></div>
+        <div class="card"><div class="ico">⏱️</div><h3 data-i18n="h2t">Pouquinho por vez</h3><p data-i18n="h2p">Sessões curtas, com um lembrete gentil de pausa, seguindo as recomendações de tempo de tela para cada idade.</p></div>
+        <div class="card"><div class="ico">🔒</div><h3 data-i18n="h3t">Sem cadastro obrigatório</h3><p data-i18n="h3p">Abra e use. A conta é opcional, só para guardar o progresso. Nada de anúncios nem de dados da criança.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="instalar">
+      <h2 data-i18n="installTitle">Como instalar no celular</h2>
+      <div class="steps">
+        <div class="card">
+          <h3>📱 iPhone / iPad</h3>
+          <ol>
+            <li data-i18n="i1">Abra <b>falafalinha.com</b> no Safari.</li>
+            <li data-i18n="i2">Toque em <b>Compartilhar</b> (o quadrado com a seta).</li>
+            <li data-i18n="i3">Escolha <b>Adicionar à Tela de Início</b>.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>🤖 Android</h3>
+          <ol>
+            <li data-i18n="a1">Abra <b>falafalinha.com</b> no Chrome.</li>
+            <li data-i18n="a2">Toque no menu <b>⋮</b>.</li>
+            <li data-i18n="a3">Escolha <b>Instalar app</b> (ou <b>Adicionar à tela inicial</b>).</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 data-i18n="faqTitle">Perguntas frequentes</h2>
+      <details><summary data-i18n="q1">É grátis mesmo?</summary><p data-i18n="r1">Sim. Abra e use, sem cartão e sem cadastro.</p></details>
+      <details><summary data-i18n="q2">Para qual idade?</summary><p data-i18n="r2">De 0 a 4 anos. O app sugere histórias e brincadeiras para a fase da criança.</p></details>
+      <details><summary data-i18n="q3">Precisa de internet?</summary><p data-i18n="r3">Só na primeira vez. Depois de instalado, funciona até no modo avião.</p></details>
+      <details><summary data-i18n="q4">Tem anúncios ou compras?</summary><p data-i18n="r4">Não. E não coletamos dados da criança. A medição de uso é anônima e só acontece se o adulto permitir.</p></details>
+      <details><summary data-i18n="q5">Para que serve a conta?</summary><p data-i18n="r5">É opcional: guarda o progresso (histórias e brincadeiras feitas) para continuar em outro aparelho.</p></details>
+    </section>
+
+    <section class="final">
+      <h2 data-i18n="finalTitle">Vamos contar uma história?</h2>
+      <p data-i18n="finalP">Leva 10 segundos para começar.</p>
+      <a class="btn" href="/?origem=site" data-i18n="cta">Abrir o app grátis</a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/#/privacidade" data-i18n="privacy">Privacidade</a>
+    <a href="/#/creditos" data-i18n="credits">Créditos dos sons</a>
+  </footer>
+</div>
+
+<script>
+  var T = {
+    en: {
+      title: 'Fala Falinha · Stories to help babies learn to talk',
+      h1: 'Stories to help your baby learn to talk',
+      lead: 'Stories with animal sounds, colors and numbers to read together with your child, ages 0 to 4. The app’s voice tells the story, your child taps and repeats.',
+      cta: 'Open the free app', ctaInstall: 'How to install on your phone',
+      b1: '✅ Free', b2: '🚫 No ads', b3: '🌎 4 languages', b4: '📶 Works offline',
+      altStory: 'A story page with farm animals', altQuiz: 'The guess-the-animal game',
+      whatTitle: 'What’s inside',
+      f1t: '20 stories', f1: 'Animals, colors, numbers and daily routine (bath, food, clothes). Tap each thing to hear its name and sound.',
+      f2t: 'Games', f2: '“Where’s the cow?”, colors and numbers: your child looks, taps and gets a party for every right answer.',
+      f3t: 'Sleepy time', f3: 'Calm bedtime stories on a dark screen, with a timer that ends on its own.',
+      f4t: 'Real sounds', f4: '27 animals with real recorded sounds: cow, lion, frog, whale…',
+      f5t: 'By age', f5: 'Suggestions for each stage, from 0 to 4, plus tips to encourage speech away from the screen.',
+      f6t: '4 languages', f6: 'Portuguese, English, Spanish and French: great for bilingual families.',
+      howTitle: 'Made to use together',
+      h1t: 'On your lap', h1p: 'The app is designed for grown-up and child together: you point, repeat and talk about the picture.',
+      h2t: 'A little at a time', h2p: 'Short sessions with a gentle break reminder, following screen-time guidance for each age.',
+      h3t: 'No sign-up required', h3p: 'Just open and use it. An account is optional, only to save progress. No ads and no data about your child.',
+      installTitle: 'How to install on your phone',
+      i1: 'Open <b>falafalinha.com</b> in Safari.', i2: 'Tap <b>Share</b> (the square with an arrow).', i3: 'Choose <b>Add to Home Screen</b>.',
+      a1: 'Open <b>falafalinha.com</b> in Chrome.', a2: 'Tap the <b>⋮</b> menu.', a3: 'Choose <b>Install app</b> (or <b>Add to Home screen</b>).',
+      faqTitle: 'FAQ',
+      q1: 'Is it really free?', r1: 'Yes. Just open and use it, no card and no sign-up.',
+      q2: 'What ages is it for?', r2: 'From 0 to 4. The app suggests stories and games for your child’s stage.',
+      q3: 'Does it need internet?', r3: 'Only the first time. Once installed, it even works in airplane mode.',
+      q4: 'Are there ads or purchases?', r4: 'No. And we don’t collect data about your child. Usage measurement is anonymous and only happens if the grown-up allows it.',
+      q5: 'What is the account for?', r5: 'It’s optional: it saves progress (stories and games done) so you can continue on another device.',
+      finalTitle: 'Shall we tell a story?', finalP: 'It takes 10 seconds to start.',
+      privacy: 'Privacy', credits: 'Sound credits'
+    },
+    es: {
+      title: 'Fala Falinha · Cuentos para que los bebés aprendan a hablar',
+      h1: 'Cuentos para que tu bebé aprenda a hablar',
+      lead: 'Cuentos con sonidos de animales, colores y números para leer junto con el niño, de 0 a 4 años. La voz de la app cuenta, el niño toca y repite.',
+      cta: 'Abrir la app gratis', ctaInstall: 'Cómo instalar en el celular',
+      b1: '✅ Gratis', b2: '🚫 Sin anuncios', b3: '🌎 4 idiomas', b4: '📶 Funciona sin internet',
+      altStory: 'Una página de cuento con los animales de la granja', altQuiz: 'El juego de adivinar el animal',
+      whatTitle: 'Qué hay en la app',
+      f1t: '20 cuentos', f1: 'Animales, colores, números y la rutina del día (baño, comida, ropa). Toca cada cosa para oír su nombre y su sonido.',
+      f2t: 'Juegos', f2: '“¿Dónde está la vaca?”, colores y números: el niño busca, toca y recibe una fiesta en cada acierto.',
+      f3t: 'Hora de dormir', f3: 'Cuentos tranquilos para dormir, en pantalla oscura y con un temporizador que termina solo.',
+      f4t: 'Sonidos reales', f4: '27 animales con sonidos grabados de verdad: vaca, león, rana, ballena…',
+      f5t: 'Por edad', f5: 'Sugerencias para cada etapa, de 0 a 4 años, y consejos para estimular el habla fuera de la pantalla.',
+      f6t: '4 idiomas', f6: 'Portugués, inglés, español y francés: ideal para familias bilingües.',
+      howTitle: 'Hecha para usar juntos',
+      h1t: 'En el regazo', h1p: 'La app está pensada para el adulto y el niño juntos: tú señalas, repites y conversas sobre la imagen.',
+      h2t: 'Poquito a la vez', h2p: 'Sesiones cortas, con un recordatorio amable de pausa, siguiendo las recomendaciones de tiempo de pantalla para cada edad.',
+      h3t: 'Sin registro obligatorio', h3p: 'Abre y usa. La cuenta es opcional, solo para guardar el progreso. Sin anuncios ni datos del niño.',
+      installTitle: 'Cómo instalar en el celular',
+      i1: 'Abre <b>falafalinha.com</b> en Safari.', i2: 'Toca <b>Compartir</b> (el cuadrado con la flecha).', i3: 'Elige <b>Agregar a inicio</b>.',
+      a1: 'Abre <b>falafalinha.com</b> en Chrome.', a2: 'Toca el menú <b>⋮</b>.', a3: 'Elige <b>Instalar app</b> (o <b>Agregar a la pantalla principal</b>).',
+      faqTitle: 'Preguntas frecuentes',
+      q1: '¿Es gratis de verdad?', r1: 'Sí. Abre y usa, sin tarjeta y sin registro.',
+      q2: '¿Para qué edad?', r2: 'De 0 a 4 años. La app sugiere cuentos y juegos para la etapa del niño.',
+      q3: '¿Necesita internet?', r3: 'Solo la primera vez. Después de instalada, funciona hasta en modo avión.',
+      q4: '¿Tiene anuncios o compras?', r4: 'No. Y no recopilamos datos del niño. La medición de uso es anónima y solo ocurre si el adulto lo permite.',
+      q5: '¿Para qué sirve la cuenta?', r5: 'Es opcional: guarda el progreso (cuentos y juegos hechos) para seguir en otro dispositivo.',
+      finalTitle: '¿Contamos un cuento?', finalP: 'Empezar lleva 10 segundos.',
+      privacy: 'Privacidad', credits: 'Créditos de los sonidos'
+    },
+    fr: {
+      title: 'Fala Falinha · Des histoires pour aider bébé à parler',
+      h1: 'Des histoires pour aider votre bébé à parler',
+      lead: 'Des histoires avec des cris d’animaux, des couleurs et des chiffres, à lire avec l’enfant, de 0 à 4 ans. La voix de l’appli raconte, l’enfant touche et répète.',
+      cta: 'Ouvrir l’appli gratuite', ctaInstall: 'Comment l’installer sur le téléphone',
+      b1: '✅ Gratuit', b2: '🚫 Sans publicité', b3: '🌎 4 langues', b4: '📶 Marche hors ligne',
+      altStory: 'Une page d’histoire avec les animaux de la ferme', altQuiz: 'Le jeu pour deviner l’animal',
+      whatTitle: 'Ce qu’il y a dans l’appli',
+      f1t: '20 histoires', f1: 'Animaux, couleurs, chiffres et la routine du jour (bain, repas, habits). Touchez chaque chose pour entendre son nom et son cri.',
+      f2t: 'Jeux', f2: '« Où est la vache ? », couleurs et chiffres : l’enfant cherche, touche et a droit à une fête à chaque bonne réponse.',
+      f3t: 'Dodo', f3: 'Des histoires calmes pour s’endormir, sur un écran sombre et avec une minuterie qui s’arrête toute seule.',
+      f4t: 'De vrais sons', f4: '27 animaux avec de vrais sons enregistrés : vache, lion, grenouille, baleine…',
+      f5t: 'Par âge', f5: 'Des suggestions pour chaque étape, de 0 à 4 ans, et des idées pour encourager la parole loin de l’écran.',
+      f6t: '4 langues', f6: 'Portugais, anglais, espagnol et français : idéal pour les familles bilingues.',
+      howTitle: 'Fait pour être utilisé ensemble',
+      h1t: 'Sur les genoux', h1p: 'L’appli est pensée pour l’adulte et l’enfant ensemble : vous montrez, répétez et parlez de l’image.',
+      h2t: 'Un petit peu à la fois', h2p: 'Des sessions courtes, avec un rappel doux de pause, selon les recommandations de temps d’écran pour chaque âge.',
+      h3t: 'Sans inscription obligatoire', h3p: 'Ouvrez et utilisez. Le compte est facultatif, seulement pour garder la progression. Pas de pub ni de données sur l’enfant.',
+      installTitle: 'Comment l’installer sur le téléphone',
+      i1: 'Ouvrez <b>falafalinha.com</b> dans Safari.', i2: 'Touchez <b>Partager</b> (le carré avec la flèche).', i3: 'Choisissez <b>Sur l’écran d’accueil</b>.',
+      a1: 'Ouvrez <b>falafalinha.com</b> dans Chrome.', a2: 'Touchez le menu <b>⋮</b>.', a3: 'Choisissez <b>Installer l’appli</b> (ou <b>Ajouter à l’écran d’accueil</b>).',
+      faqTitle: 'Questions fréquentes',
+      q1: 'C’est vraiment gratuit ?', r1: 'Oui. Ouvrez et utilisez, sans carte et sans inscription.',
+      q2: 'Pour quel âge ?', r2: 'De 0 à 4 ans. L’appli propose des histoires et des jeux adaptés à l’étape de l’enfant.',
+      q3: 'Faut-il internet ?', r3: 'Seulement la première fois. Une fois installée, elle marche même en mode avion.',
+      q4: 'Y a-t-il des pubs ou des achats ?', r4: 'Non. Et nous ne collectons aucune donnée sur l’enfant. La mesure d’usage est anonyme et n’a lieu que si l’adulte l’accepte.',
+      q5: 'À quoi sert le compte ?', r5: 'Il est facultatif : il garde la progression (histoires et jeux faits) pour continuer sur un autre appareil.',
+      finalTitle: 'On raconte une histoire ?', finalP: 'Il faut 10 secondes pour commencer.',
+      privacy: 'Confidentialité', credits: 'Crédits des sons'
+    }
+  };
+  var LOCALE = { pt: 'pt-BR', en: 'en', es: 'es', fr: 'fr' };
+  var original = {};
+  document.querySelectorAll('[data-i18n]').forEach(function (el) { original[el.getAttribute('data-i18n')] = el.innerHTML; });
+  document.querySelectorAll('[data-i18n-alt]').forEach(function (el) { original[el.getAttribute('data-i18n-alt')] = el.alt; });
+  original.title = document.title;
+
+  function apply(lang) {
+    var t = T[lang] || original;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n'); if (t[k] != null) el.innerHTML = t[k]; else el.innerHTML = original[k];
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-alt'); el.alt = t[k] != null ? t[k] : original[k];
+    });
+    document.title = t.title || original.title;
+    document.documentElement.lang = LOCALE[lang] || 'pt-BR';
+    document.querySelectorAll('.langs button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    // o app abre no mesmo idioma
+    document.querySelectorAll('a[href^="/?origem="]').forEach(function (a) { a.href = '/?origem=site&lang=' + lang; });
+    try { localStorage.setItem('fala-falinha:sobre-lang', lang); } catch (e) {}
+  }
+
+  var start = new URLSearchParams(location.search).get('lang');
+  if (!T[start] && start !== 'pt') {
+    try { start = localStorage.getItem('fala-falinha:sobre-lang'); } catch (e) { start = null; }
+  }
+  if (!T[start] && start !== 'pt') start = (navigator.language || 'pt').slice(0, 2);
+  if (T[start]) apply(start);
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.lang); });
+  });
+</script>
+</body>
+</html>

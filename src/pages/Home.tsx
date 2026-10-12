@@ -8,15 +8,37 @@ import { useLang, useT } from '../i18n'
 import { HOW_TO_LINK } from './HowTo'
 import { PRIVACY_LINK } from './Privacy'
 import { BedtimeTile } from '../modules/bedtime/BedtimeTile'
-import { authEnabled, signOut } from '../lib/auth'
+import { authEnabled, signOut, useSession } from '../lib/auth'
+import { shareApp } from '../lib/share'
 import type { Lang } from '../i18n'
 import { AgeBar } from '../components/AgePicker'
 
 const SIGN_OUT: Record<Lang, string> = { pt: 'Sair', en: 'Sign out', es: 'Salir', fr: 'Se déconnecter' }
+const SHARE: Record<Lang, string> = {
+  pt: 'Indicar para outra família',
+  en: 'Share with another family',
+  es: 'Recomendar a otra familia',
+  fr: 'Recommander à une autre famille',
+}
+const SAVE: Record<Lang, string> = {
+  pt: 'Salvar progresso',
+  en: 'Save progress',
+  es: 'Guardar progreso',
+  fr: 'Garder la progression',
+}
+const SAVED: Record<Lang, string> = {
+  pt: 'Progresso salvo na conta',
+  en: 'Progress saved to your account',
+  es: 'Progreso guardado en la cuenta',
+  fr: 'Progression enregistrée sur le compte',
+}
+
+const pill = 'tile-shadow inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-lg font-semibold active:scale-95'
 
 export default function Home() {
   const t = useT()
   const lang = useLang()
+  const session = useSession()
   return (
     <Screen
       right={
@@ -50,6 +72,23 @@ export default function Home() {
 
         <LanguagePicker />
 
+        {/* Para o adulto: indicar o app e (opcional) guardar o progresso numa conta */}
+        <div className="flex flex-wrap justify-center gap-3">
+          <button type="button" onClick={() => void shareApp(lang)} className={pill}>
+            <span aria-hidden>💌</span> {SHARE[lang]}
+          </button>
+          {authEnabled && session === null && (
+            <Link to="/entrar" className={pill}>
+              <span aria-hidden>💾</span> {SAVE[lang]}
+            </Link>
+          )}
+          {session && (
+            <p className="inline-flex min-h-12 items-center gap-2 px-2 text-base opacity-70">
+              <span aria-hidden>✅</span> {SAVED[lang]}
+            </p>
+          )}
+        </div>
+
         <div className="flex flex-wrap justify-center gap-x-5">
           <Link to="/como-usar" className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60">
             ❓ {HOW_TO_LINK[lang]}
@@ -60,7 +99,7 @@ export default function Home() {
           <Link to="/privacidade" className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60">
             {PRIVACY_LINK[lang]}
           </Link>
-          {authEnabled && (
+          {session && (
             <button
               onClick={() => void signOut()}
               className="inline-flex min-h-11 items-center px-1 text-base underline opacity-60"

@@ -1,5 +1,6 @@
-// Login com Supabase simulado (sem conta real): entrar com e-mail e senha, criar conta, esqueci a
-// senha (inclusive o link que volta do e-mail), sessão, sair, privacidade e apagar conta.
+// Conta opcional com Supabase simulado (sem conta real): o app abre sem login; "Salvar progresso"
+// leva a criar conta / entrar; esqueci a senha (inclusive o link que volta do e-mail); progresso
+// juntado com o da conta; sessão, sair, privacidade e apagar conta.
 // Precisa de um servidor com chaves de mentira, por exemplo:
 //   VITE_SUPABASE_URL=https://fake-projeto.supabase.co VITE_SUPABASE_ANON_KEY=teste npx vite --port 5174
 // Uso: APP_URL=http://localhost:5174/# node auth.mjs <pasta-de-saida>
@@ -19,6 +20,7 @@ await ctx.addInitScript(() => {
 
 // ---- Supabase de mentira (contas: mae@exemplo.com / senha123)
 const calls = []
+const pushed = []
 let password = 'senha123'
 const user = { id: '00000000-0000-0000-0000-000000000001', aud: 'authenticated', role: 'authenticated', email: 'mae@exemplo.com', app_metadata: {}, user_metadata: {}, identities: [{}], created_at: new Date().toISOString() }
 const b64 = (o) => Buffer.from(JSON.stringify(o)).toString('base64url')
@@ -54,6 +56,12 @@ await ctx.route(/fake-projeto\.supabase\.co/, async (route) => {
   if (url.pathname === '/auth/v1/user') return json(200, user)
   if (url.pathname === '/auth/v1/logout') return route.fulfill({ status: 204 })
   if (url.pathname === '/rest/v1/rpc/delete_my_account') return route.fulfill({ status: 204 })
+  if (url.pathname === '/rest/v1/progress' && req.method() === 'GET')
+    return json(200, { data: { storiesRead: { praia: 5 }, quizzesDone: { cores: 2 } } })
+  if (url.pathname === '/rest/v1/progress') {
+    pushed.push(body)
+    return route.fulfill({ status: 201 })
+  }
   return json(404, {})
 })
 
@@ -73,20 +81,30 @@ const signOut = async () => {
   await page.getByRole('button', { name: 'Sair' }).click()
   await page.waitForTimeout(800)
 }
+const toLogin = async () => {
+  await page.goto(`${BASE}/entrar`)
+  await page.waitForTimeout(600)
+  if (await page.getByRole('button', { name: 'Já tenho conta. Entrar' }).isVisible().catch(() => false))
+    await page.getByRole('button', { name: 'Já tenho conta. Entrar' }).click()
+}
 
-// 1. Sem sessão → tela de entrar
+// 1. Sem sessão o app abre direto; "Salvar progresso" leva a criar conta
 await page.goto(`${BASE}/`)
 await page.waitForTimeout(800)
-r.check('sem sessão abre a tela de entrar', await page.getByRole('button', { name: 'Entrar', exact: true }).isVisible())
-r.check('história não abre sem login', !(await inside()))
-await page.screenshot({ path: `${OUT}/login-1-entrar.png` })
-
-// 2. Privacidade abre sem login
-await page.getByRole('link', { name: 'Privacidade' }).click()
+r.check('sem sessão o app abre direto', await inside())
+await page.getByRole('link', { name: /Salvar progresso/ }).click()
 await page.waitForTimeout(600)
-r.check('privacidade abre sem login', await page.getByRole('heading', { name: 'Sua conta' }).isVisible())
-await page.goto(`${BASE}/`)
-await page.waitForTimeout(500)
+r.check('"Salvar progresso" abre criar conta', await page.getByRole('button', { name: 'Criar conta' }).isVisible())
+await page.screenshot({ path: `${OUT}/login-1-criar.png` })
+await page.getByRole('link', { name: 'Agora não' }).click()
+await page.waitForTimeout(600)
+r.check('"Agora não" volta para o app', await inside())
+
+// 2. Privacidade oferece entrar
+await page.goto(`${BASE}/privacidade`)
+await page.waitForTimeout(600)
+r.check('privacidade oferece entrar ou criar conta', await page.getByRole('link', { name: 'Entrar ou criar conta' }).isVisible())
+await toLogin()
 
 // 3. E-mail inválido e senha errada
 await fill('sem-arroba', 'qualquer')
@@ -102,11 +120,15 @@ r.check('senha errada mostra aviso amigável', (await alert()).includes('E-mail 
 await page.getByRole('button', { name: 'Mostrar senha' }).click()
 r.check('botão mostra a senha', (await page.getByLabel(/Senha/).getAttribute('type')) === 'text')
 
-// 5. Senha certa → entra (e-mail com maiúscula e espaço)
+// 5. Senha certa → entra (e-mail com maiúscula e espaço) e junta o progresso com o da conta
+await page.evaluate(() => localStorage.setItem('conta-pra-mim:progress', JSON.stringify({ storiesRead: { praia: 1, fazenda: 2 }, quizzesDone: {} })))
 await fill('Mae@Exemplo.com ', 'senha123')
 await page.getByRole('button', { name: 'Entrar', exact: true }).click()
-await page.waitForTimeout(1200)
-r.check('senha certa abre o app', await inside())
+await page.waitForTimeout(2000)
+r.check('senha certa volta para o app', await inside())
+const local = await page.evaluate(() => JSON.parse(localStorage.getItem('conta-pra-mim:progress')))
+r.check('progresso da conta juntado com o do aparelho', local.storiesRead.praia === 5 && local.storiesRead.fazenda === 2 && local.quizzesDone.cores === 2, JSON.stringify(local))
+r.check('progresso juntado enviado para a conta', pushed.some((b) => b?.data?.storiesRead?.fazenda === 2), JSON.stringify(pushed))
 await page.screenshot({ path: `${OUT}/login-2-dentro.png` })
 
 // 6. Sessão continua depois de recarregar
@@ -121,10 +143,11 @@ r.check('privacidade mostra o e-mail da conta', await page.getByText('Conectado 
 
 // 8. Sair
 await signOut()
-r.check('sair volta para a tela de entrar', await page.getByRole('button', { name: 'Entrar', exact: true }).isVisible())
+r.check('sair continua no app e oferece salvar progresso', (await inside()) && (await page.getByRole('link', { name: /Salvar progresso/ }).isVisible()))
 
 // 9. Criar conta: senha curta, e-mail que já existe, conta nova
-await page.getByRole('button', { name: 'Primeira vez? Criar conta' }).click()
+await page.goto(`${BASE}/entrar`)
+await page.waitForTimeout(600)
 await fill('novo@exemplo.com', '123')
 await page.getByRole('button', { name: 'Criar conta' }).click()
 await page.waitForTimeout(300)
@@ -141,6 +164,7 @@ r.check('conta nova entra direto', await inside())
 await signOut()
 
 // 10. Esqueci a senha → manda o link
+await toLogin()
 await page.getByRole('button', { name: 'Esqueci a senha' }).click()
 await fill('mae@exemplo.com', null)
 await page.getByRole('button', { name: 'Mandar link' }).click()
@@ -169,8 +193,8 @@ await page.goto(`${root}#error=access_denied&error_code=otp_expired&error_descri
 await page.waitForTimeout(800)
 r.check('link vencido avisa e oferece outro', (await alert()).includes('venceu') && (await page.getByRole('button', { name: 'Mandar link' }).isVisible()))
 
-// 13. Volta, entra com a senha nova e apaga a conta
-await page.getByRole('button', { name: 'Voltar' }).click()
+// 13. Entra com a senha nova e apaga a conta
+await toLogin()
 await fill('mae@exemplo.com', 'nova-senha')
 await page.getByRole('button', { name: 'Entrar', exact: true }).click()
 await page.waitForTimeout(1000)

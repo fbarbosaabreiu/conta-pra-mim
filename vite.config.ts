@@ -33,6 +33,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,woff2,png,webp,mp3}'],
+        // A página de apresentação (/sobre/) é um site à parte: o app instalado não a substitui pelo index.html.
+        navigateFallbackDenylist: [/^\/sobre/],
       },
     }),
   ],

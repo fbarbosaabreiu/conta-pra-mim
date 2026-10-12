@@ -38,6 +38,9 @@ const EVENT_NAMES = new Set([
   'quiz_complete',
   'onboarding_done',
   'onboarding_skip',
+  'arrival',
+  'share',
+  'signup',
 ])
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
 const SLUG = /^[a-z0-9-]{1,40}$/
@@ -238,7 +241,7 @@ async function loadDashboard(env: Env, days: number): Promise<DashboardData> {
       .all<T>()
       .then((r) => r.results)
 
-  const [totals, newDevices, daily, storyStats, catalog, quiz, places, heat, devices, recent, platforms, langs] =
+  const [totals, newDevices, daily, storyStats, catalog, quiz, places, heat, devices, recent, platforms, langs, origins, growth] =
     await Promise.all([
       q<DashboardData['totals']>(
         `SELECT COUNT(DISTINCT device) AS devices, COUNT(DISTINCT session) AS sessions,
@@ -263,7 +266,7 @@ async function loadDashboard(env: Env, days: number): Promise<DashboardData> {
       q<DashboardData['quiz'][number]>(
         `SELECT theme, SUM(name = 'quiz_start') AS starts, SUM(name = 'quiz_complete') AS completes,
                 COUNT(DISTINCT device) AS devices
-         FROM events WHERE ts >= ? AND theme IS NOT NULL GROUP BY theme ORDER BY starts DESC`,
+         FROM events WHERE ts >= ? AND name IN ('quiz_start', 'quiz_complete') GROUP BY theme ORDER BY starts DESC`,
         since,
       ),
       q<DashboardData['places'][number]>(
@@ -295,6 +298,20 @@ async function loadDashboard(env: Env, days: number): Promise<DashboardData> {
         `SELECT lang AS key, COUNT(DISTINCT device) AS devices FROM events WHERE ts >= ? GROUP BY lang ORDER BY devices DESC`,
         since,
       ),
+      // Origem do link (evento "arrival", uma vez por aparelho); aparelhos sem marca entram como null.
+      q<{ key: string; devices: number }>(
+        `SELECT o.theme AS key, COUNT(*) AS devices
+         FROM (SELECT DISTINCT device FROM events WHERE ts >= ? AND name = 'app_open') d
+         LEFT JOIN (SELECT device, MIN(theme) AS theme FROM events WHERE name = 'arrival' GROUP BY device) o USING (device)
+         GROUP BY o.theme ORDER BY devices DESC`,
+        since,
+      ),
+      q<DashboardData['growth']>(
+        `SELECT SUM(name = 'share') AS shares, COUNT(DISTINCT CASE WHEN name = 'share' THEN device END) AS sharers,
+                SUM(name = 'signup') AS signups
+         FROM events WHERE ts >= ?`,
+        since,
+      ),
     ])
 
   // Junta catálogo + estatísticas: histórias nunca abertas aparecem com zero.
@@ -320,5 +337,7 @@ async function loadDashboard(env: Env, days: number): Promise<DashboardData> {
     recent,
     platforms,
     langs,
+    origins,
+    growth: { shares: growth[0]?.shares ?? 0, sharers: growth[0]?.sharers ?? 0, signups: growth[0]?.signups ?? 0 },
   }
 }

@@ -1,9 +1,10 @@
 import { useState, type FormEvent } from 'react'
-import { Link } from 'react-router'
+import { Link, Navigate } from 'react-router'
 import { motion } from 'framer-motion'
 import { LanguagePicker } from '../components/LanguagePicker'
 import { useLang, type Lang } from '../i18n'
-import { recoveryLinkFailed, sendPasswordReset, setNewPassword, signIn, signUp } from '../lib/auth'
+import { recoveryLinkFailed, sendPasswordReset, setNewPassword, signIn, signUp, useSession } from '../lib/auth'
+import { track } from '../lib/analytics'
 import { PRIVACY_LINK } from './Privacy'
 
 const NB = ' '
@@ -24,6 +25,7 @@ type Texts = {
   toSignin: string
   forgot: string
   back: string
+  later: string
   resetSent: string
   badEmail: string
   shortPassword: string
@@ -40,8 +42,8 @@ type Texts = {
 const T: Record<Lang, Texts> = {
   pt: {
     intro: {
-      signin: 'Para o adulto: entre com seu e-mail e senha.',
-      signup: 'Para o adulto: crie sua conta com seu e-mail e uma senha.',
+      signin: 'Para o adulto: entre para recuperar o progresso guardado.',
+      signup: 'Para o adulto: crie uma conta grátis para guardar o progresso e continuar em outro aparelho. É opcional.',
       forgot: 'Digite seu e-mail e mandaremos um link para criar uma senha nova.',
       recovery: 'Escolha sua senha nova.',
     },
@@ -56,6 +58,7 @@ const T: Record<Lang, Texts> = {
     toSignin: 'Já tenho conta. Entrar',
     forgot: 'Esqueci a senha',
     back: 'Voltar',
+    later: 'Agora não',
     resetSent: 'Se esse e-mail tiver conta, mandamos um link para criar uma senha nova. Veja também o spam.',
     badEmail: 'Confira o e-mail digitado.',
     shortPassword: `A senha precisa ter pelo menos ${MIN_PASSWORD} caracteres.`,
@@ -70,8 +73,8 @@ const T: Record<Lang, Texts> = {
   },
   en: {
     intro: {
-      signin: 'For the grown-up: sign in with your email and password.',
-      signup: 'For the grown-up: create your account with your email and a password.',
+      signin: 'For the grown-up: sign in to get your saved progress back.',
+      signup: 'For the grown-up: create a free account to save progress and continue on another device. It’s optional.',
       forgot: 'Enter your email and we’ll send you a link to create a new password.',
       recovery: 'Choose your new password.',
     },
@@ -86,6 +89,7 @@ const T: Record<Lang, Texts> = {
     toSignin: 'I have an account. Sign in',
     forgot: 'Forgot password',
     back: 'Back',
+    later: 'Not now',
     resetSent: 'If this email has an account, we sent a link to create a new password. Check your spam folder too.',
     badEmail: 'Please check the email address.',
     shortPassword: `The password needs at least ${MIN_PASSWORD} characters.`,
@@ -100,8 +104,8 @@ const T: Record<Lang, Texts> = {
   },
   es: {
     intro: {
-      signin: 'Para el adulto: entra con tu correo y contraseña.',
-      signup: 'Para el adulto: crea tu cuenta con tu correo y una contraseña.',
+      signin: 'Para el adulto: entra para recuperar el progreso guardado.',
+      signup: 'Para el adulto: crea una cuenta gratis para guardar el progreso y seguir en otro dispositivo. Es opcional.',
       forgot: 'Escribe tu correo y te enviaremos un enlace para crear una contraseña nueva.',
       recovery: 'Elige tu contraseña nueva.',
     },
@@ -116,6 +120,7 @@ const T: Record<Lang, Texts> = {
     toSignin: 'Ya tengo cuenta. Entrar',
     forgot: 'Olvidé la contraseña',
     back: 'Volver',
+    later: 'Ahora no',
     resetSent: 'Si este correo tiene cuenta, enviamos un enlace para crear una contraseña nueva. Revisa también el spam.',
     badEmail: 'Revisa el correo escrito.',
     shortPassword: `La contraseña necesita al menos ${MIN_PASSWORD} caracteres.`,
@@ -130,8 +135,8 @@ const T: Record<Lang, Texts> = {
   },
   fr: {
     intro: {
-      signin: `Pour l’adulte${NB}: connectez-vous avec votre e-mail et votre mot de passe.`,
-      signup: `Pour l’adulte${NB}: créez votre compte avec votre e-mail et un mot de passe.`,
+      signin: `Pour l’adulte${NB}: connectez-vous pour retrouver la progression enregistrée.`,
+      signup: `Pour l’adulte${NB}: créez un compte gratuit pour garder la progression et continuer sur un autre appareil. C’est facultatif.`,
       forgot: 'Saisissez votre e-mail et nous vous enverrons un lien pour créer un nouveau mot de passe.',
       recovery: 'Choisissez votre nouveau mot de passe.',
     },
@@ -146,6 +151,7 @@ const T: Record<Lang, Texts> = {
     toSignin: 'J’ai déjà un compte. Se connecter',
     forgot: 'Mot de passe oublié',
     back: 'Retour',
+    later: 'Pas maintenant',
     resetSent: 'Si cet e-mail a un compte, nous avons envoyé un lien pour créer un nouveau mot de passe. Regardez aussi les spams.',
     badEmail: 'Vérifiez l’adresse e-mail.',
     shortPassword: `Le mot de passe doit avoir au moins ${MIN_PASSWORD} caractères.`,
@@ -186,7 +192,8 @@ const secondary = 'min-h-11 underline opacity-70'
 export default function Login({ recovery = false, onRecovered }: { recovery?: boolean; onRecovered?: () => void }) {
   const lang = useLang()
   const t = T[lang]
-  const [mode, setMode] = useState<Mode>(recovery ? 'recovery' : recoveryLinkFailed ? 'forgot' : 'signin')
+  const session = useSession()
+  const [mode, setMode] = useState<Mode>(recovery ? 'recovery' : recoveryLinkFailed ? 'forgot' : 'signup')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -214,9 +221,12 @@ export default function Login({ recovery = false, onRecovered }: { recovery?: bo
     setError('')
     setInfo('')
     try {
-      // ao entrar, a sessão nova chega pelo onAuthStateChange e o app abre sozinho
+      // ao entrar, a sessão nova chega pelo onAuthStateChange e a tela volta para o início
       if (mode === 'signin') await signIn(clean, password)
-      else if (mode === 'signup') await signUp(clean, password)
+      else if (mode === 'signup') {
+        await signUp(clean, password)
+        track('signup')
+      }
       else if (mode === 'forgot') {
         await sendPasswordReset(clean)
         setInfo(t.resetSent)
@@ -230,6 +240,9 @@ export default function Login({ recovery = false, onRecovered }: { recovery?: bo
       setBusy(false)
     }
   }
+
+  // Já entrou (ou acabou de entrar): volta para o app.
+  if (session && !recovery) return <Navigate to="/" replace />
 
   return (
     <div className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-6 px-4 py-8">
@@ -321,6 +334,16 @@ export default function Login({ recovery = false, onRecovered }: { recovery?: bo
         <p className="text-center text-lg font-semibold" role="status">
           ✅ {info}
         </p>
+      )}
+
+      {recovery ? (
+        <button type="button" className={secondary} onClick={() => onRecovered?.()}>
+          {t.later}
+        </button>
+      ) : (
+        <Link to="/" className={`${secondary} inline-flex items-center`}>
+          {t.later}
+        </Link>
       )}
 
       <LanguagePicker />

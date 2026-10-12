@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Navigate, Route, Routes, useLocation } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import { LANG_INFO, tr, useLang } from './i18n'
 import Privacy, { ConsentBanner } from './pages/Privacy'
 import { initAnalytics } from './lib/analytics'
@@ -15,7 +15,7 @@ import QuizRunner from './modules/quiz/QuizRunner'
 import BedtimeHome from './modules/bedtime/BedtimeHome'
 import BedtimePlayer from './modules/bedtime/BedtimePlayer'
 import { bedtimeAnalyticsId, bedtimeStories } from './content/bedtime'
-import { authEnabled, recoveryLink, useSession } from './lib/auth'
+import { authEnabled, recoveryLink } from './lib/auth'
 import Login from './pages/Login'
 import AgeGuide from './pages/AgeGuide'
 import { SessionReminder } from './components/SessionReminder'
@@ -41,16 +41,10 @@ export default function App() {
     [],
   )
 
-  // Login (só quando o Supabase está configurado): sem sessão, abre a tela de entrar.
-  // A privacidade fica aberta, para ser lida antes de criar a conta.
-  // Quem chega pelo link de "esqueci a senha" escolhe a senha nova antes de entrar.
-  const session = useSession()
-  const { pathname } = useLocation()
+  // A conta é opcional (só para guardar o progresso): o app abre sem login e a tela de entrar fica
+  // em /entrar. Quem chega pelo link de "esqueci a senha" escolhe a senha nova antes de seguir.
   const [recovering, setRecovering] = useState(recoveryLink)
   if (recovering) return <Login recovery onRecovered={() => setRecovering(false)} />
-  if (authEnabled && !session && pathname !== '/privacidade') {
-    return session === undefined ? null : <Login />
-  }
 
   return (
     <>
@@ -68,6 +62,7 @@ export default function App() {
       <Route path="/dormir/:id" element={<BedtimePlayer />} />
       <Route path="/creditos" element={<Credits />} />
       <Route path="/privacidade" element={<Privacy />} />
+      {authEnabled && <Route path="/entrar" element={<Login />} />}
       <Route path="/guia" element={<AgeGuide />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

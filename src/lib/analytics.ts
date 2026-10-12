@@ -4,6 +4,7 @@
 
 import { useSyncExternalStore } from 'react'
 import { getSettings } from './settings'
+import { getOrigin } from './referral'
 
 const ENDPOINT = (import.meta.env.VITE_ANALYTICS_URL as string | undefined)?.replace(/\/$/, '')
 export const analyticsEnabled = !!ENDPOINT
@@ -11,6 +12,7 @@ export const analyticsEnabled = !!ENDPOINT
 const CONSENT_KEY = 'fala-falinha:analytics-consent'
 const DEVICE_KEY = 'fala-falinha:device'
 const CATALOG_KEY = 'fala-falinha:catalog-sent'
+const ORIGIN_SENT_KEY = 'fala-falinha:origem-sent'
 /** Depois de tanto tempo com o app em segundo plano, a volta conta como nova sessão. */
 const SESSION_IDLE_MS = 30 * 60 * 1000
 
@@ -23,6 +25,9 @@ export type EventName =
   | 'quiz_complete'
   | 'onboarding_done'
   | 'onboarding_skip'
+  | 'arrival' // de onde a família chegou (theme = origem do link); uma vez por aparelho
+  | 'share' // tocou em "Indicar para outra família"
+  | 'signup' // criou a conta (opcional) para guardar o progresso
 
 interface QueuedEvent {
   name: EventName
@@ -81,6 +86,7 @@ export function setConsent(value: 'granted' | 'denied') {
   if (value === 'denied') {
     queue = []
     write(DEVICE_KEY, null) // sem consentimento, o aparelho deixa de ter código
+    write(ORIGIN_SENT_KEY, null)
   }
   listeners.forEach((l) => l())
   if (value === 'granted') startSession()
@@ -168,6 +174,11 @@ function flush() {
 function startSession() {
   session = uuid()
   track('app_open')
+  const origin = getOrigin()
+  if (origin && !read(ORIGIN_SENT_KEY)) {
+    track('arrival', { theme: origin })
+    write(ORIGIN_SENT_KEY, '1')
+  }
 }
 
 /** Chamado uma vez ao abrir o app: começa a sessão e cuida de enviar ao sair. */
