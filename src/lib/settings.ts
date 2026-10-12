@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react'
 import { LANGS, isLang, type Lang } from '../i18n/langs'
+import { isAge, type AgeId } from './age'
 
 export interface Settings {
   /** Liga/desliga todo o áudio do app. */
@@ -8,6 +9,8 @@ export interface Settings {
   voice: boolean
   /** Idioma dos textos, das histórias e da voz. */
   lang: Lang
+  /** Faixa etária escolhida pelos pais (null = ainda não escolheu). */
+  age: AgeId | null
 }
 
 const KEY = 'conta-pra-mim:settings'
@@ -20,7 +23,7 @@ export function detectLang(): Lang {
   return LANGS[0]
 }
 
-const defaults: Settings = { sound: true, voice: true, lang: detectLang() }
+const defaults: Settings = { sound: true, voice: true, lang: detectLang(), age: null }
 
 let state: Settings = load()
 const listeners = new Set<() => void>()
@@ -31,6 +34,7 @@ function load(): Settings {
     if (raw) {
       const saved = { ...defaults, ...JSON.parse(raw) }
       if (!isLang(saved.lang)) saved.lang = defaults.lang
+      if (!isAge(saved.age)) saved.age = null
       return saved
     }
   } catch {

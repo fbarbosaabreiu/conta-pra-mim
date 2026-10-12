@@ -17,6 +17,8 @@ import BedtimePlayer from './modules/bedtime/BedtimePlayer'
 import { bedtimeAnalyticsId, bedtimeStories } from './content/bedtime'
 import { authEnabled, recoveryLink, useSession } from './lib/auth'
 import Login from './pages/Login'
+import AgeGuide from './pages/AgeGuide'
+import { SessionReminder } from './components/SessionReminder'
 
 /** Avaliado a cada vez que "/" abre (o App não re-renderiza ao trocar de rota). */
 function HomeOrOnboarding() {
@@ -53,6 +55,7 @@ export default function App() {
   return (
     <>
     <ConsentBanner />
+    <SessionReminder />
     <Routes>
       {/* Primeira abertura: mostra o "Como usar" (que tem "Pular"). Links diretos não são desviados. */}
       <Route path="/" element={<HomeOrOnboarding />} />
@@ -65,6 +68,7 @@ export default function App() {
       <Route path="/dormir/:id" element={<BedtimePlayer />} />
       <Route path="/creditos" element={<Credits />} />
       <Route path="/privacidade" element={<Privacy />} />
+      <Route path="/guia" element={<AgeGuide />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
     </>

@@ -10,6 +10,7 @@ import { PRIVACY_LINK } from './Privacy'
 import { BedtimeTile } from '../modules/bedtime/BedtimeTile'
 import { authEnabled, signOut } from '../lib/auth'
 import type { Lang } from '../i18n'
+import { AgeBar } from '../components/AgePicker'
 
 const SIGN_OUT: Record<Lang, string> = { pt: 'Sair', en: 'Sign out', es: 'Salir', fr: 'Se déconnecter' }
 
@@ -38,6 +39,8 @@ export default function Home() {
           <h1 className="mt-2 text-5xl font-bold sm:text-6xl">Fala Falinha</h1>
           <p className="mt-2 text-xl opacity-70">{t.tagline}</p>
         </div>
+
+        <AgeBar />
 
         <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
           <Tile to="/historias" emoji="📖" label={t.stories} color="var(--color-coral)" big />
