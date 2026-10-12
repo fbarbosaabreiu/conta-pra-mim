@@ -151,10 +151,10 @@ r.check('sair continua no app e oferece salvar progresso', (await inside()) && (
 // 9. Criar conta: senha curta, e-mail que já existe, conta nova
 await page.goto(`${BASE}/entrar`)
 await page.waitForTimeout(600)
-await fill('novo@exemplo.com', '123')
+await fill('novo@exemplo.com', 'senha12')
 await page.getByRole('button', { name: 'Criar conta' }).click()
 await page.waitForTimeout(300)
-r.check('criar conta pede senha de 6+', (await alert()).includes('pelo menos 6'))
+r.check('criar conta pede senha de 8+ (7 não serve)', (await alert()).includes('pelo menos 8'))
 await fill('mae@exemplo.com', 'senha456')
 await page.getByRole('button', { name: 'Criar conta' }).click()
 await page.waitForTimeout(600)

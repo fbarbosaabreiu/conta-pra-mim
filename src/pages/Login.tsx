@@ -8,7 +8,7 @@ import { track } from '../lib/analytics'
 import { PRIVACY_LINK } from './Privacy'
 
 const NB = ' '
-const MIN_PASSWORD = 6
+const MIN_PASSWORD = 8
 
 type Mode = 'signin' | 'signup' | 'forgot' | 'recovery'
 
