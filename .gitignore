@@ -3,6 +3,7 @@ dist
 dev-dist
 *.local
 validacao
+/regressao
 # Worker de medição: senha local e estado do wrangler
 analytics/.dev.vars
 analytics/.wrangler
